@@ -41,5 +41,16 @@ namespace TPNT
             }
         }
 
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExist(typeof(frmCuocTrienLam));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmCuocTrienLam f = new frmCuocTrienLam();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

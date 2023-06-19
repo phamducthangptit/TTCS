@@ -37,10 +37,13 @@
     <Reference Include="DevExpress.Data.v22.2" />
     <Reference Include="DevExpress.Utils.v22.2" />
     <Reference Include="DevExpress.Sparkline.v22.2.Core" />
-    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2" />
     <Reference Include="DevExpress.Printing.v22.2.Core" />
     <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCuocTrienLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuocTrienLam.Designer.cs">
+      <DependentUpon>frmCuocTrienLam.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +81,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTPNT.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TPNTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPNTDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCuocTrienLam.resx">
+      <DependentUpon>frmCuocTrienLam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +125,17 @@
     </None>
     <None Include="dsTPNT.xss">
       <DependentUpon>dsTPNT.xsd</DependentUpon>
+    </None>
+    <None Include="TPNTDataSet1.xsc">
+      <DependentUpon>TPNTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TPNTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TPNTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TPNTDataSet1.xss">
+      <DependentUpon>TPNTDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

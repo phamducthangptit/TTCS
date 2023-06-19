@@ -3126,410 +3126,366 @@
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Abs">
       <summary>
-        <para>Returns the absolute value of a specified numeric operand.</para>
-        <para>If a specified operand is not numeric, the System.NotSupportedException is thrown.</para>
-        <para>To create the Abs operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Abs(Field1)”).</para>
+        <para>Returns the absolute value of a numeric operand.</para>
+        <para>If the operand is not numeric, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Acos">
       <summary>
-        <para>Returns the angle (in radians) whose cosine is a specified numeric operand.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Acos operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Acos(Field1)”).</para>
+        <para>Returns the arccosine of the numeric operand. The arccosine is the angle in the range 0 (zero) to π radians, whose cosine is the numeric operand.</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.AddDays">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the date that is a specified number of days from a specific date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the original date;</para>
-        <para>2 - the time period (in days) from the original date. This number can be negative or positive. Its decimal part is part of a day.</para>
-        <para>To create the AddDays operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“AddDays(Field1, Field2)”).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> value that is the specified number of days before or after a specified start date.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.Double"/> value that is the number of days before or after the start date. This number can be negative or positive. Its decimal part is a fraction of a day.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.AddHours">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the date that is a specified number of hours from a specific date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the original date;</para>
-        <para>2 - the time period (in hours) from the original date. This number can be negative or positive. Its decimal part is part of an hour.</para>
-        <para>To create the AddHours operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“AddHours(Field1, Field2)”).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> value that is the specified number of days before or after a specified start date.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.Double"/> value that is the number of hours before or after the start date. This number can be negative or positive. Its decimal part is a fraction of an hour.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.AddMilliSeconds">
       <summary>
-        <para>Returns a System.DateTime object that contains a date that is the specified number of milliseconds from a set date.</para>
-        <para>Define operands as follows:</para>
-        <para />
-        <para>Use the CriteriaOperator.Parse method to create the AddMilliSeconds operator: CriteriaOperator.FromLambda&lt;MyTestClass&gt;(x =&gt; x.SomeDate.AddMilliseconds(500) == DateTime.Now); CriteriaOperator.Parse(&quot;AddMilliseconds(Field1, Field2)&quot;).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> value that is the specified number of milliseconds before or after a specified start date.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.Double"/> value that is the number of milliseconds before or after the start date. This number can be negative or positive. Its decimal part is a fraction of a millisecond.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.AddMinutes">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the date that is a specified number of minutes from a specific date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the original date;</para>
-        <para>2 - the time period (in minutes) from the original date. This number can be negative or positive. Its decimal part is part of a minute.</para>
-        <para>To create the AddMinutes operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“AddMinutes(Field1, Field2)”).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> value that is the specified number of minutes before or after a specified start date.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.Double"/> value that is the number of minutes before or after the start date. This number can be negative or positive. Its decimal part is a fraction of a minute.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.AddMonths">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the date that is a specified number of months from a specific date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the original date;</para>
-        <para>2 - the time period (in months) from the original date. This number can be negative or positive.</para>
-        <para>To create the AddMonths operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“AddMonths(Field1, Field2)”).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> value that is the specified number of months before or after a specified start date.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the integer value that is the number of months before or after the start date. This number can be negative or positive.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.AddSeconds">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the date that is a specified number of seconds from a specific date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the original date;</para>
-        <para>2 - the time period (in seconds) from the original date. This number can be negative or positive. Its decimal part is part of a second.</para>
-        <para>To create the AddSeconds operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“AddSeconds(Field1, Field2)”).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> value that is the specified number of seconds before or after a specified start date.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.Double"/> value that is the number of seconds before or after the start date. This number can be negative or positive. Its decimal part is a fraction of a second.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.AddTicks">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the date that is a specified number of ticks from a specific date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the original date;</para>
-        <para>2 - the time period (in 100-nanosecond ticks) from the original date. This number can be negative or positive.</para>
-        <para>To create the AddTicks operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“AddTicks(Field1, Field2)”).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> value that is the specified number of ticks before or after a specified start date.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the integer number that is the number of 100-nanosecond ticks. This number can be negative or positive.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.AddTimeSpan">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the date that is a specified time period from a specific date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the original date;</para>
-        <para>2 &#0045; a <see cref="T:System.TimeSpan"/> object representing the time period from the original date.</para>
-        <para>To create the AddTimeSpan operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“AddTimeSpan(Field1, Field2)”).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> value that differs by a specified amount of time from a specified date.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.TimeSpan"/> object that is the time period before or after the start date.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.AddYears">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the date that is a specified number of years from a specific date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the original date;</para>
-        <para>2 - the time period (in years) from the original date. This number can be negative or positive.</para>
-        <para>To create the AddYears operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“AddYears(Field1, Field2)”).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> value that is the specified number of years before or after a specified start date.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the integer value that is the number of years before or after the start date. This number can be negative or positive.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Ascii">
       <summary>
-        <para>Returns the ASCII code of the first character in a specified string operand.</para>
-        <para>If a specified operand represents an empty string, null is returned.</para>
-        <para>To create the Ascii operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Ascii(Field1)”).</para>
+        <para>Returns the ASCII code of the first character in a string operand.</para>
+        <para>If the argument is an empty string, the null value is returned.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Asin">
       <summary>
-        <para>Returns the angle (in radians) whose sine is a specified numeric operand.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Asin operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Asin(Field1)”).</para>
+        <para>Returns the arcsine of the numeric operand. The arcsine is the angle in the range -π/2 to π/2 radians, whose sine is the numeric operand.</para>
+        <para>If the specified operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Atn">
       <summary>
-        <para>Returns the angle (in radians) whose tangent is a specified numeric operand.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Atn operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Atn(Field1)”).</para>
+        <para>Returns the arctangent (the inverse tangent function) of the numeric operand. The arctangent is the angle in the range -π/2 to π/2 radians, whose tangent is the numeric operand.</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Atn2">
       <summary>
-        <para>Returns the angle (in radians) whose tangent is the quotient of two specified numeric operands.</para>
-        <para>The operator requires two operands representing the Cartesian coordinates (x, y) of a point:</para>
-        <para>1 &#0045; the y coordinate;</para>
-        <para>2 &#0045; the x coordinate.</para>
-        <para>If specified operands cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Atn2 operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Atn2(y, x)”).</para>
+        <para>Returns the arctangent (the inverse tangent function) of the quotient of the two specified numeric operands. The arctangent is the angle in the range -π/2 to π/2 radians.</para>
+        <para>The operands are:</para>
+        <para>1 - the y coordinate of a point in Cartesian coordinates (x, y).</para>
+        <para>2 - the x coordinate of a point in Cartesian coordinates (x, y).</para>
+        <para>If the specified operands cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.BigMul">
       <summary>
-        <para>Calculates the product of two specified numeric operands.</para>
-        <para>The operator requires two operands representing the integer values to be multiplied.</para>
-        <para>If the specified operands do not represent integer values, the System.NotSupportedException is thrown.</para>
-        <para>To create the BigMul operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“BigMul(Field1, Field2)”).</para>
+        <para>Calculates the full product of two integer operands.</para>
+        <para>If the specified operands cannot be converted to <see cref="T:System.Int32"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Ceiling">
       <summary>
-        <para>Returns the smallest integer greater than or equal to a specified numeric operand. The rounding provided by this operator is called rounding toward positive infinity.</para>
-        <para>If a specified operand is not numeric, the System.NotSupportedException is thrown.</para>
-        <para>To create the Ceiling operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Ceiling(Field1)”).</para>
+        <para>Returns the smallest integral value greater than or equal to the specified numeric operand.</para>
+        <para>If the specified operand is not numeric, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Char">
       <summary>
-        <para>Converts a specified numeric operand to a Unicode character.</para>
-        <para>If a specified operand cannot be converted to a decimal or integer number, the System.NotSupportedException is thrown.</para>
-        <para>To create the Char operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Char(Field1)”).</para>
+        <para>Converts a numeric operand to a Unicode character.</para>
+        <para>If the specified operand is not numeric, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.CharIndex">
       <summary>
-        <para>Returns the index of the first occurrence of a specified substring in a specified string.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 - a substring to search for;</para>
-        <para>2 - a string to be searched in;</para>
-        <para>3 - (optional) an integer that specifies the zero-based index at which the search starts. If this operand is not specified, the search begins from the start of the string;</para>
+        <para>Returns the index of the first occurrence of a specified string within another string.</para>
+        <para>The operands are:</para>
+        <para>1 - a string that you want to find in another string.</para>
+        <para>2 - a string that contains the string you are searching for.</para>
+        <para>3 - (optional) an integer that specifies the zero-based index at which the search starts. If this operand is not specified, the search begins from the start of the string.</para>
         <para>4 - (optional) an integer that specifies the number of characters to examine, starting from the specified position. If this operand is not specified, the search continues until the end of the string.</para>
         <para>This function performs a word (case-sensitive and culture-sensitive) search using the current culture. If a specified substring is found, the function returns its index. Otherwise, -1 is returned.</para>
-        <para>To create the CharIndex operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“CharIndex(Field1, Field2)”), CriteriaOperator.Parse(“CharIndex(Field1, Field2, Field3)”), or CriteriaOperator.Parse(“CharIndex(Field1, Field2, Field3, Field4)”).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Concat">
       <summary>
-        <para>Concatenates one or more strings.</para>
-        <para>If you use the CriteriaOperator.FromLambda method to create the Concat operator, use the following syntax: CriteriaOperator.FromLambda&lt;Order(o=&gt;o.OrderName==”Test”+”Value”);</para>
-        <para>If you use the CriteriaOperator.Parse method to create the Concat operator, use the following syntax: CriteriaOperator.Parse(“OrderName=Concat(‘Test’,’Value’)”);</para>
-        <para />
+        <para>Concatenates the specified strings.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Contains">
       <summary>
-        <para>Returns True if one string occurs within another string; otherwise, False is returned.</para>
-        <para>This function requires two string operands:</para>
-        <para>1 - a string to be searched;</para>
-        <para>2 - a substring to search.</para>
-        <para>To create the Contains operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Contains(String, SubString)”);</para>
+        <para>Returns True if the specified string occurs within another specified string; otherwise, False.</para>
+        <para>The operands are:</para>
+        <para>1 - a string that contains the string you are searching for.</para>
+        <para>2 - a string that you want to find in another string.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Cos">
       <summary>
-        <para>Returns the cosine of a specified numeric operand representing an angle, measured in radians.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Cos operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Cos(Field1)”).</para>
+        <para>Returns the cosine of the numeric operand, in radians.</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Cosh">
       <summary>
-        <para>Returns the hyperbolic cosine of a specified numeric operand representing an angle, measured in radians.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Cosh operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Cosh(Field1)”).</para>
+        <para>Returns the hyperbolic cosine of the numeric operand, in radians.</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Custom">
       <summary>
-        <para>Identifies a custom operation. This operation is executed on the client side if its operands represent constants. A custom operation is executed on the server side only if its operands cannot be evaluated locally. To learn how to implement custom operators, refer to the How to: Implement a Custom Criteria Language Function Operator topic.</para>
-        <para>The eXpress Persistent Objects framework provides two custom function operators &#0045; <see cref="T:DevExpress.Xpo.Metadata.IsExactTypeFunction"/> and <see cref="T:DevExpress.Xpo.Metadata.IsInstanceOfTypeFunction"/>.</para>
+        <para>Identifies a custom operation. This operation is executed on the client side if its operands are constants. A custom operation is executed on the server side only if its operands cannot be evaluated locally. For more information on how to implement custom operators, review the following help topic: How to: Implement a Custom Criteria Language Function Operator.</para>
+        <para>The eXpress Persistent Objects framework provides two custom function operators - <see cref="T:DevExpress.Xpo.Metadata.IsExactTypeFunction"/> and <see cref="T:DevExpress.Xpo.Metadata.IsInstanceOfTypeFunction"/>.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.CustomNonDeterministic">
       <summary>
         <para>Identifies a custom nondeterministic operation.</para>
         <para>Unlike a standard custom operation, a custom nondeterministic operation is always executed on the server side, regardless of whether its operands are constants.</para>
-        <para>Refer to the How to: Implement a Custom Criteria Language Function Operator topic, to learn how to implement custom operators.</para>
+        <para>For more information on how to implement custom operators, review the following help topic: How to: Implement a Custom Criteria Language Function Operator.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.DateDiffDay">
       <summary>
-        <para>Returns the count of day boundaries crossed between the specified starting date and ending date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the starting date;</para>
-        <para>2 &#0045; a <see cref="T:System.DateTime"/> object representing the ending date.</para>
-        <para>To create the DateDiffDay operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“DateDiffDay(StartDate, EndDate)”).</para>
+        <para>Returns the number of day boundaries between the specified dates.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.DateTime"/> value that is the end date.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.DateDiffHour">
       <summary>
-        <para>Returns the count of hour boundaries crossed between the specified starting date and ending date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the starting date;</para>
-        <para>2 &#0045; a <see cref="T:System.DateTime"/> object representing the ending date.</para>
-        <para>To create the DateDiffHour operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“DateDiffHour(StartDate, EndDate)”).</para>
+        <para>Returns the number of hour boundaries between the specified dates.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.DateTime"/> value that is the end date.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.DateDiffMilliSecond">
       <summary>
-        <para>Returns the count of millisecond boundaries crossed between the specified starting date and ending date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the starting date;</para>
-        <para>2 &#0045; a <see cref="T:System.DateTime"/> object representing the ending date.</para>
-        <para>To create the DateDiffMilliSecond operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“DateDiffMilliSecond(StartDate, EndDate)”).</para>
+        <para>Returns the number of millisecond boundaries between the specified dates.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.DateTime"/> value that is the end date.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.DateDiffMinute">
       <summary>
-        <para>Returns the count of minute boundaries crossed between the specified starting date and ending date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the starting date;</para>
-        <para>2 &#0045; a <see cref="T:System.DateTime"/> object representing the ending date.</para>
-        <para>To create the DateDiffMinute operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“DateDiffMinute(StartDate, EndDate)”).</para>
+        <para>Returns the number of minute boundaries between the specified dates.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.DateTime"/> value that is the end date.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.DateDiffMonth">
       <summary>
-        <para>Returns the count of month boundaries crossed between the specified starting date and ending date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the starting date;</para>
-        <para>2 &#0045; a <see cref="T:System.DateTime"/> object representing the ending date.</para>
-        <para>To create the DateDiffMonth operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“DateDiffMonth(StartDate, EndDate)”).</para>
+        <para>Returns the number of month boundaries between the specified dates.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.DateTime"/> value that is the end date.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.DateDiffSecond">
       <summary>
-        <para>Returns the count of second boundaries crossed between the specified starting date and ending date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the starting date;</para>
-        <para>2 &#0045; a <see cref="T:System.DateTime"/> object representing the ending date.</para>
-        <para>To create the DateDiffSecond operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“DateDiffSecond(StartDate, EndDate)”).</para>
+        <para>Returns the number of second boundaries between the specified dates.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.DateTime"/> value that is the end date.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.DateDiffTick">
       <summary>
-        <para>Returns the count of tick boundaries crossed between the specified starting date and ending date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the starting date;</para>
-        <para>2 &#0045; a <see cref="T:System.DateTime"/> object representing the ending date.</para>
-        <para>To create the DateDiffTick operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“DateDiffTick(StartDate, EndDate)”).</para>
+        <para>Returns the number of tick boundaries between the specified dates.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.DateTime"/> value that is the end date.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.DateDiffYear">
       <summary>
-        <para>Returns the count of year boundaries crossed between the specified starting date and ending date.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 &#0045; a <see cref="T:System.DateTime"/> object representing the starting date;</para>
-        <para>2 &#0045; a <see cref="T:System.DateTime"/> object representing the ending date.</para>
-        <para>To create the DateDiffYear operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“DateDiffYear(StartDate, EndDate)”).</para>
+        <para>Returns the number of year boundaries between the specified dates.</para>
+        <para>The operands are:</para>
+        <para>1 - the <see cref="T:System.DateTime"/> value that is the start date.</para>
+        <para>2 - the <see cref="T:System.DateTime"/> value that is the end date.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.EndsWith">
       <summary>
-        <para>Returns True if the end of one string matches another string; otherwise, False is returned.</para>
-        <para>This function requires two string operands:</para>
-        <para>1 - a string to be searched;</para>
-        <para>2 - a substring to search at the end of the first string.</para>
-        <para>To create the EndsWith operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“EndsWith(String, SubString)”);</para>
+        <para>Returns True if the end of one specified string matches another specified string; otherwise, False.</para>
+        <para>The operands are:</para>
+        <para>1 - a string that contains the string you are searching for.</para>
+        <para>2 - a string to compare to the substring at the end of another string.</para>
+        <para>To create the EndsWith operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(&quot;EndsWith(String, SubString)&quot;).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Exp">
       <summary>
         <para>Returns the number e raised to the power specified by a numeric operand.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>Exp reverses <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Log"/>. Use the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Power"/> operand to calculate powers of other bases.</para>
-        <para>To create the Exp operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Exp(Field1)”).</para>
+        <para>If the specified operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
+        <para>The Exp function reverses the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Log"/> function. Use the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Power"/> operand to calculate powers of other bases.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Floor">
       <summary>
-        <para>Returns the largest integer less than or equal to a specified numeric operand. The rounding provided by this operator is called rounding toward negative infinity.</para>
-        <para>If a specified operand is not numeric, the System.NotSupportedException is thrown.</para>
-        <para>To create the Floor operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Floor(Field1)”).</para>
+        <para>Returns the largest integral value less than or equal to the specified numeric operand.</para>
+        <para>If the specified operand is not numeric, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetDate">
       <summary>
-        <para>Returns the date part of a specified date.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value represents a <see cref="T:System.DateTime"/> object with the same date part, and the time part set to 00:00:00.</para>
-        <para>To create the GetDate operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“GetDate(Field1)”).</para>
+        <para>Returns the date part of the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is a <see cref="T:System.DateTime"/> object with the same date part. The time part is 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetDay">
       <summary>
-        <para>Gets the day part of a specified date.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value ranges between 1 and 31.</para>
-        <para>To create the GetDay operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“GetDay(Field1)”).</para>
+        <para>Gets the day of the month in the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is an integer in the range between 1 and 31.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetDayOfWeek">
       <summary>
-        <para>Gets a specified date’s day of the week.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value represents a <see cref="T:System.Int32"/> equivalent of a <see cref="T:System.DayOfWeek"/> enumerated constant representing a day of the week.</para>
-        <para>To create the GetDayOfWeek operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“GetDayOfWeek(Field1)”).</para>
+        <para>Gets the day of the week in the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is an integer value of the <see cref="T:System.DayOfWeek"/> enumeration. It does not depend on the current culture.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetDayOfYear">
       <summary>
-        <para>Gets a specified date’s day of the year.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value ranges between 1 and 366.</para>
-        <para>To create the GetDayOfYear operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“GetDayOfYear(Field1)”).</para>
+        <para>Gets the day of the year in the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is an integer in the range between 1 and 366.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetHour">
       <summary>
-        <para>Gets the hour part of a specified date.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value ranges between 0 and 23.</para>
-        <para>To create the GetHour operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“GetHour(Field1)”).</para>
+        <para>Returns the hours value in the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is an integer in the range between 0 and 23.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetMilliSecond">
       <summary>
-        <para>Gets the milliseconds part of a specified date.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value ranges between 0 and 999.</para>
-        <para>To create the GetMilliSecond operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“GetMilliSecond(Field1)”).</para>
+        <para>Returns the milliseconds value in the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is an integer in the range between 0 and 999.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetMinute">
       <summary>
-        <para>Gets the minute part of a specified date.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value ranges between 0 and 59.</para>
-        <para>To create the GetMinute operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“GetMinute(Field1)”).</para>
+        <para>Returns the minutes value in the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is an integer in the range between 0 and 59.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetMonth">
       <summary>
-        <para>Gets the month part of a specified date.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value ranges between 1 and 12.</para>
-        <para>To create the GetMonth operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“GetMonth(Field1)”).</para>
+        <para>Gets the month in the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is an integer and depends on the current calendar.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetSecond">
       <summary>
-        <para>Gets the seconds part of a specified date.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value ranges between 0 and 59.</para>
-        <para>To create the GetSecond operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“GetSecond(Field1)”).</para>
+        <para>Returns the seconds value in the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is an integer in the range between 0 and 59.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetTimeOfDay">
       <summary>
-        <para>Gets the time part of a specified date.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value represents a <see cref="T:System.Int64"/> object that is equal to the number of 100&#0045;nanosecond ticks that have elapsed since midnight.</para>
-        <para>To create the GetTimeOfDay operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“GetTimeOfDay(Field1)”).</para>
+        <para>Gets the time part of the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is the <see cref="T:System.Int64"/> object that is the number of 100-nanosecond ticks that have elapsed since midnight.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.GetYear">
       <summary>
-        <para>Gets the year part of a specified date.</para>
-        <para>This operator requires an operand of the <see cref="T:System.DateTime"/> type.</para>
-        <para>The return value ranges between 1 and 9999.</para>
-        <para>To create the GetYear operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“GetYear(Field1)”).</para>
+        <para>Gets the year in the specified date.</para>
+        <para>The operand must be of the <see cref="T:System.DateTime"/> type.</para>
+        <para>The return value is an integer in the range between 1 and 9999.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Iif">
       <summary>
-        <para>Returns one of several specified values depending upon the values of logical expressions.</para>
-        <para>The function can take 2N+1 arguments (N &#0045; the number of specified logical expressions):</para>
+        <para>Returns one of the specified values depending upon the values of logical expressions.</para>
+        <para>The function can take 2N+1 arguments (where N is the number of specified logical expressions):</para>
+        <para />
+        <para />
+        <para />
         <para />
         <para />
         <para>Examples:</para>
-        <para>Iif(Name = ‘Bob’, 1, 0)</para>
-        <para>Iif(Name = ‘Bob’, 1, Name = ‘Dan’, 2, Name = ‘Sam’, 3, 0)</para>
+        <para>Iif(Name = &#39;Bob&#39;, 1, 0)</para>
+        <para>Iif(Name = &#39;Bob&#39;, 1, Name = &#39;Dan&#39;, 2, Name = &#39;Sam&#39;, 3, 0)</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Insert">
       <summary>
-        <para>Inserts a specified string at a certain position within another.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 - a string in which the insertion is to be performed;</para>
-        <para>2 - an integer that specifies the zero-based index position of the insertion;</para>
-        <para>3 - a string to insert.</para>
-        <para>To create the Insert operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Insert(Field1, Field2, Field3)”).</para>
+        <para>Returns a new string in which a specified string is inserted at a specified index position into another specified string.</para>
+        <para>The operands are:</para>
+        <para>1 - the string into which another string should be inserted.</para>
+        <para>2 - the zero-based index position of the insertion.</para>
+        <para>3 - the string to insert.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsApril">
@@ -3605,17 +3561,14 @@
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsNull">
       <summary>
         <para>Compares the first operand with the NULL value.</para>
-        <para>This function requires one or two operands of the  <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> class. The value returned depends upon the number of arguments.</para>
-        <para>If a single operand is passed, the function returns true if the operand is null, otherwise, false is returned.</para>
-        <para>If two operands are passed, the function returns the second operand if the first operand is null, otherwise, the first operand is returned.</para>
-        <para>To create the IsNull operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“IsNull(Field1)”) or CriteriaOperator.Parse(“IsNull(Field1AndTrueResult, FalseResult)”).</para>
+        <para>This function requires one or two operands of the  <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> class. The returned value depends on the number of arguments.</para>
+        <para>If a single operand is passed, the function returns True if the operand is null; otherwise, False.</para>
+        <para>If two operands are passed, the function returns the second operand if the first operand is null. Otherwise, the function returns the first operand.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsNullOrEmpty">
       <summary>
-        <para>Indicates whether a specified operand is a null reference or an empty string.</para>
-        <para>The function returns true if a specified operand is null or an empty string, otherwise, false is returned.</para>
-        <para>To create the IsNullOrEmpty operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“IsNullOrEmpty(Field1)”).</para>
+        <para>Returns True if the specified value is null or an empty string. Otherwise, returns False.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsOctober">
@@ -3656,17 +3609,13 @@
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsOutlookIntervalLaterThisMonth">
       <summary>
         <para>The Boolean Is Later This Month operator for date/time values. Requires one argument.</para>
-        <para />
-        <para>The operator is defined as follows:</para>
-        <para>Last Day of Next Week &lt; date &lt; First Day of Next Month</para>
+        <para>The operator is defined as follows: Last Day of Next Week &lt; date &lt; First Day of Next Month</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsOutlookIntervalLaterThisWeek">
       <summary>
         <para>The Boolean Is Later This Week operator for date/time values. Requires one argument.</para>
-        <para />
-        <para>The operator is defined as follows:</para>
-        <para>Day After Tomorrow &lt;= date &lt; First Day of Next Week</para>
+        <para>The operator is defined as follows: Day After Tomorrow &lt;= date &lt; First Day of Next Week</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsOutlookIntervalLaterThisYear">
@@ -3704,7 +3653,8 @@
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsSameDay">
       <summary>
-        <para>Returns True if the specified date/time values fall within the same day.</para>
+        <para>Returns True if the specified date/time value falls within the same day.</para>
+        <para>To create the IsSameDay operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“IsSameDay(StartDate)”).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsSeptember">
@@ -3721,164 +3671,145 @@
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsThisWeek">
       <summary>
         <para>Returns True if the specified date falls within the current week.</para>
-        <para>To create the IsThisWeek operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“IsThisWeek(StartDate)”).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsThisYear">
       <summary>
         <para>Returns True if the specified date falls within the current year.</para>
-        <para>To create the IsThisYear operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“IsThisYear(StartDate)”).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.IsYearToDate">
       <summary>
-        <para>Returns True if the specified date falls within the year-to-date period. This period starts from the first day of the current year and continues up to the current date (including this current date).</para>
+        <para>Returns True if the specified date falls within the period that starts from the first day of the current year and continues until the current date (including the current date).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Len">
       <summary>
         <para>Returns the length of the string specified by an operand.</para>
-        <para>The operand should be an object of the <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> type.</para>
-        <para>To create the Len operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Len(Field1)”);</para>
+        <para>To create the Len operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(&quot;Len(Field1)&quot;).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeDayAfterTomorrow">
       <summary>
-        <para>Returns the DateTime value corresponding to the day after Tomorrow.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value that has the date part that is two days after the current date, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeLastMonth">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the previous month.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value that has the date part that is one month before the current date, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeLastWeek">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the previous week.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value that has the date part that is 7 days before the start of the current week, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeLastYear">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the previous year.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value that has the date part that is the first day of the previous year, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeNextMonth">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of next month.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value that has the date part that is the first day of the next month, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeNextWeek">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the following week.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value that has the date part that is 7 days after the start of the current week, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeNextYear">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the following year.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that corresponds to the first day of the next year, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeNow">
       <summary>
-        <para>Returns the DateTime value corresponding to the current moment in time.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value that is the current moment in time.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeThisMonth">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the current month.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that is the first day of the current month, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeThisWeek">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the current week.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that is the first day of the current week, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeThisYear">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the current year.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that is the first day of the current year, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeToday">
       <summary>
-        <para>Returns the DateTime value corresponding to Today.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that is the start of the current day, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeTomorrow">
       <summary>
-        <para>Returns the DateTime value corresponding to Tomorrow.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that is the next day, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeTwoMonthsAway">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the month after next.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that is the first day of the month after the next month, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeTwoWeeksAway">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the week after next.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that is the first day of the week after the next week, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeTwoYearsAway">
       <summary>
-        <para>Returns the DateTime value corresponding to the first day of the year after next.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that is the first day of the year after the next year, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeYearBeforeToday">
       <summary>
-        <para>Returns the DateTime value corresponding to the day one year ago.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that is the date one year ago, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.LocalDateTimeYesterday">
       <summary>
-        <para>Returns the DateTime value corresponding to Yesterday.</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value with the date part that is the previous day, and the time part of 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Log">
       <summary>
-        <para>Returns the logarithm of a specified numeric operand. The return value depends upon the number of operands.</para>
-        <para>If one operand is passed, the natural (base e) logarithm of a specified operand is returned.</para>
-        <para>If two operands are passed, the logarithm of a specified operand in a specified base is returned. The operands should be defined as follows:</para>
-        <para>1 - a number whose logarithm is to be calculated;</para>
+        <para>Returns the logarithm of the specified numeric operand. The return value depends upon the number of operands.</para>
+        <para>If one operand is passed, the function returns the natural (base e) logarithm of a specified operand.</para>
+        <para>If two operands are passed, the function returns the logarithm of the specified operand to the specified base. The operands are:</para>
+        <para>1 - a number whose logarithm is to be calculated.</para>
         <para>2 - the base of the logarithm.</para>
-        <para>If specified operands cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>Log reverses <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Exp"/>. To calculate the base 10 logarithm, use <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Log10"/>.</para>
-        <para>To create the Log operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Log(Field1)”) or CriteriaOperator.Parse(“Log(Field1, Field2)”).</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
+        <para>The Log function reverses the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Exp"/> function. To calculate the base-10 logarithm, use the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Log10"/> function.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Log10">
       <summary>
-        <para>Returns the base 10 logarithm of a specified numeric operand.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>Log10 reverses <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Power"/>. Use the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Log"/> operand to calculate the logarithm of other bases.</para>
-        <para>To create the Log10 operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Log10(Field1)”).</para>
+        <para>Returns the base 10 logarithm of the specified numeric operand.</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
+        <para>The Log10 function reverses the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Power"/> function. Use the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Log"/> operand to calculate the logarithm of other bases.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Lower">
       <summary>
-        <para>Converts all characters in a string operand to lowercase.</para>
-        <para>The operand should be an object of the <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> type.</para>
-        <para>To create the Lower operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Lower(Field1)”);</para>
+        <para>Converts all characters in a string operand to lowercase in an invariant culture.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Max">
       <summary>
         <para>Returns the larger of two numeric values.</para>
-        <para />
-        <para>The operands should be defined as follows:</para>
-        <para />
-        <para>1 - a numeric value A;</para>
-        <para />
-        <para>2 - a numeric value B;</para>
-        <para />
-        <para>To create the Max operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Max(ValueA, ValueB)”).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Min">
       <summary>
         <para>Returns the smaller of two numeric values.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 - a numeric value A;</para>
-        <para>2 - a numeric value B;</para>
-        <para>To create the Min operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Min(ValueA, ValueB)”).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.None">
@@ -3888,215 +3819,179 @@
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Now">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the system’s current date and time.</para>
-        <para>To create the Now operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Now()”).</para>
+        <para>Returns the <see cref="T:System.DateTime"/> value that is the current date and time.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.PadLeft">
       <summary>
-        <para>Pads a string with spaces or a specified Unicode character on the left for a specified total length.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 - a string to be padded;</para>
-        <para>2 - the total number of characters in the resulting string, including padding characters;</para>
+        <para>Returns a new string that pads the character in the specified string on the left with a specified Unicode character, for a specified total length.</para>
+        <para>The operands are:</para>
+        <para>1 - a string to be padded.</para>
+        <para>2 - the total number of characters in the resulting string, including padding characters.</para>
         <para>3 - (optional) a Unicode padding character. If not specified, the space character is used for padding. If a string is passed as this operand, its first character is used for padding.</para>
-        <para>To create the PadLeft operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“PadLeft(Field1, Field2)”) or CriteriaOperator.Parse(“PadLeft(Field1, Field2, Field3)”).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.PadRight">
       <summary>
-        <para>Pads a string with spaces or a specified Unicode character on the right for a specified total length.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 - a string to be padded;</para>
-        <para>2 - the total number of characters in the resulting string, including padding characters;</para>
+        <para>Returns a new string of a specified length in which the end of a specified string is padded with spaces or with a specified Unicode character.</para>
+        <para>The operands are:</para>
+        <para>1 - a string to be padded.</para>
+        <para>2 - the total number of characters in the resulting string, including padding characters.</para>
         <para>3 - (optional) a Unicode padding character. If not specified, the space character is used for padding. If a string is passed as this operand, its first character is used for padding.</para>
-        <para>To create the PadRight operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“PadRight(Field1, Field2)”) or CriteriaOperator.Parse(“PadRight(Field1, Field2, Field3)”).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Power">
       <summary>
-        <para>Returns a specified numeric operand raised to a specific power.</para>
-        <para>The Power operator requires two operands:</para>
-        <para>1 - a number to be raised to a power;</para>
-        <para>2 - a power.</para>
-        <para>If specified operands cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>Power reverses <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Log"/> or <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Log10"/>. Use the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Exp"/> operand to calculate powers of the number e.</para>
-        <para>To create the Power operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Power(Field1, Field2)”).</para>
+        <para>Returns a specified numeric operand raised to a specified power.</para>
+        <para>The operands are:</para>
+        <para>1 - the base number.</para>
+        <para>2 - the exponent to which the base number is raised.</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
+        <para>The Power function reverses the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Log"/> or <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Log10"/> function. Use the <see cref="F:DevExpress.Data.Filtering.FunctionOperatorType.Exp"/> operand to calculate powers of the number e.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Remove">
       <summary>
-        <para>Removes all, or a certain number of characters from a specified string, starting at a specified position.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 - a string to be shrunk;</para>
-        <para>2 - an integer that specifies the zero-based index at which character removal starts;</para>
+        <para>Returns a new string with the specified number of characters in the specified string removed, starting at the specified position.</para>
+        <para>The operands are:</para>
+        <para>1 - the string that needs to be shortened.</para>
+        <para>2 - the zero-based index at which character removal starts.</para>
         <para>3 - (optional) an integer that specifies the number of characters to remove, starting at the specified position. If this operand is not specified, all characters between the starting position and the end of the string are removed.</para>
-        <para>To create the Remove operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Remove(Field1, Field2)”) or CriteriaOperator.Parse(“Remove(Field1, Field2, Field3)”).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Replace">
       <summary>
-        <para>Replaces all occurrences of a certain string in a specified string, with another.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 - a string in which replacements are to be performed;</para>
-        <para>2 - a string to be replaced;</para>
-        <para>3 - a string to replace all occurrences found.</para>
-        <para>To create the Replace operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Replace(Field1, Field2, Field3)”).</para>
+        <para>Returns a new string in which all occurrences of one specified string (string1) in another string (string2) are replaced with the specified string (string3).</para>
+        <para>The operands are:</para>
+        <para>1 - the string in which replacements are made.</para>
+        <para>2 - the string to be replaced.</para>
+        <para>3 - the string to replace all occurrences of the specified string.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Reverse">
       <summary>
-        <para>Reverses the order of characters within a specified string.</para>
-        <para>To create the Reverse operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Reverse(Field1)”).</para>
+        <para>Returns a string in which the character order of a specified string is reversed.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Rnd">
       <summary>
         <para>Returns a random number greater than or equal to 0.0, and less than 1.0.</para>
-        <para>To create the Rnd operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Rnd()”).</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Round">
       <summary>
-        <para>Rounds a specified numeric operand to the nearest integer or to a specified number of decimal places. The rounding provided by this operator is called rounding to nearest or banker’s rounding.</para>
-        <para>The operands should be defined as follows:</para>
-        <para>1 - a value to round;</para>
-        <para>2 &#0045; (optional) a value specifying the number of decimal places to round to. 0 indicates that the first operand is rounded to the nearest integer.</para>
-        <para>To create the Round operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Round(Field1)”) or CriteriaOperator.Parse(“Round(Field1, Field2)”).</para>
+        <para>Rounds a specified numeric operand to the nearest integer or to a specified number of fractional digits.</para>
+        <para>The operands are:</para>
+        <para>1 - a value to round.</para>
+        <para>2 - (optional) the number of decimal places to which to round. 0 indicates that the first operand is rounded to the nearest integer.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Sign">
       <summary>
-        <para>Returns a value indicating the sign of a number represented by a specified operand. The function returns one of the following values:</para>
-        <para>1, for positive numbers;</para>
-        <para>&#0045;1, for negative numbers;</para>
-        <para>0, if the number is equal to zero.</para>
-        <para>If a specified operand is not numeric, System.NotSupportedException is thrown.</para>
-        <para>To create the Sign operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Sign(Field1)”).</para>
+        <para>Returns an integer that indicates the sign of a number. The function returns 1 for positive numbers, -1 for negative numbers, and 0 (zero) if a number is equal to zero.</para>
+        <para>If a specified operand is not numeric, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Sin">
       <summary>
-        <para>Returns the sine of a specified numeric operand representing an angle, measured in radians.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Sin operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Sin(Field1)”).</para>
+        <para>Returns the sine of the numeric operand, in radians.</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Sinh">
       <summary>
-        <para>Returns the hyperbolic sine of a specified numeric operand representing an angle, measured in radians.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Sinh operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Sinh(Field1)”).</para>
+        <para>Returns the hyperbolic sine of the numeric operand, in radians.</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Sqr">
       <summary>
         <para>Returns the square root of a specified numeric operand.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Sqr operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Sqr(Field1)”).</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.StartsWith">
       <summary>
-        <para>Returns True if the beginning of one string matches another string; otherwise, False is returned.</para>
-        <para>This function requires two string operands:</para>
-        <para>1 - a string to be searched;</para>
-        <para>2 - a substring to search at the beginning of the first string.</para>
-        <para>To create the StartsWith operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“StartsWith(String, SubString)”);</para>
+        <para>Returns True if the beginning of one string matches another string; otherwise, False.</para>
+        <para>The operands are:</para>
+        <para>1 - a string to test.</para>
+        <para>2 - a string to match the beginning of another string.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Substring">
       <summary>
-        <para>Returns a substring extracted from the specified string. This function requires two or three operands of the <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> class.</para>
-        <para>If two operands are passed the substring will be extracted from the beginning of the original string. The operands should be defined as follows:</para>
-        <para>1 &#0045; an original string;</para>
-        <para>2 &#0045; an integer that specifies the zero&#0045;based index at which the substring to return begins.</para>
-        <para>If three operands are passed a substring can be subtracted starting from any position in the original string. The operands should be defined as follows:</para>
-        <para>1 &#0045; an original string;</para>
-        <para>2 &#0045; an integer that specifies the zero&#0045;based index at which the substring to return begins;</para>
-        <para>3 &#0045; an integer that specifies the length of the substring.</para>
-        <para>To create a Substring operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Substring(Field1, 1, 3)”);</para>
+        <para>Returns a substring from the specified string. This function requires two or three operands.</para>
+        <para>If two operands are passed, the substring starts from the beginning of the specified string.</para>
+        <para>The operands are:</para>
+        <para>1 - the source string.</para>
+        <para>2 - an integer that specifies the zero-based position at which the substring starts.</para>
+        <para>If three operands are passed, a substring starts from the specified position in the source string. The operands are:</para>
+        <para>1 - the source string.</para>
+        <para>2 - an integer that specifies the zero-based position at which the substring starts.</para>
+        <para>3 - an integer that specifies the length of the substring.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Tan">
       <summary>
-        <para>Returns the tangent of a specified numeric operand representing an angle, measured in radians.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Tan operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Tan(Field1)”).</para>
+        <para>Returns the tangent of the specified numeric operand that is an angle in radians.</para>
+        <para>If the operand cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Tanh">
       <summary>
-        <para>Returns the hyperbolic tangent of a specified numeric operand representing an angle, measured in radians.</para>
-        <para>If a specified operand cannot be converted to <see cref="T:System.Double"/>, the System.NotSupportedException is thrown.</para>
-        <para>To create the Tanh operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Tanh(Field1)”).</para>
+        <para>Returns the hyperbolic tangent of a specified numeric operand that is an angle in radians.</para>
+        <para>If the specified operands cannot be converted to <see cref="T:System.Double"/>, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Today">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the system’s current date. The object’s time part is set to 00:00:00.</para>
-        <para>To create the Today operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Today()”).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> value that is the current date. The time part is set to 00:00:00.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.ToDecimal">
       <summary>
-        <para>Converts a numeric operand to a fixed-point (exact-value) representation.</para>
-        <para>To create the ToDecimal operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“ToDecimal(Field2)”).</para>
-        <para>Note that the resulting value may vary, based on the database system used as the backend.</para>
+        <para>Converts a numeric operand to a decimal value.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.ToDouble">
       <summary>
-        <para>Converts a numeric operand to a double-precision floating-point (approximate-value) representation.</para>
-        <para>To create the ToDouble operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“ToDouble(Field2)”).</para>
-        <para>Note that the resulting value may vary, based on the database system used as the backend.</para>
+        <para>Converts a numeric operand to a double value.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.ToFloat">
       <summary>
-        <para>Converts a numeric operand to a floating-point (approximate-value) representation.</para>
-        <para>To create the ToFloat operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“ToFloat(Field2)”).</para>
-        <para>Note that the resulting value may vary, based on the database system used as the backend.</para>
+        <para>Converts a numeric operand to a floating-point value.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.ToInt">
       <summary>
-        <para>Converts a numeric operand to an integer representation.</para>
-        <para>To create the ToInt operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“ToInt(Field2)”).</para>
-        <para>Note that the resulting value may vary, based on the database system used as the backend.</para>
+        <para>Converts a numeric operand to an integer value.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.ToLong">
       <summary>
-        <para>Converts a numeric operand to a long integer representation.</para>
-        <para>To create the ToLong operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“ToLong(Field2)”).</para>
-        <para>Note that the resulting value may vary, based on the database system used as the backend.</para>
+        <para>Converts a numeric operand to a long integer value.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.ToStr">
       <summary>
-        <para>Returns a string representation of a specified numeric operand.</para>
-        <para>If a specified operand is not numeric, the System.NotSupportedException is thrown.</para>
-        <para>To create the ToStr operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“ToStr(Field1)”).</para>
-        <para>Note that the resulting string may vary, based on the format settings of the database system used as the backend.</para>
+        <para>Returns a string representation of the specified value or property.</para>
+        <para>If the operand cannot be converted to a string, the <see cref="T:System.NotSupportedException"/> is thrown.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Trim">
       <summary>
-        <para>Returns a string containing a copy of a specified string with no leading nor trailing spaces. This function requires a single operand of the <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> class that refers to the original string.</para>
-        <para>To create the Trim operator using the CriteriaOperator.Parse method use the following syntax: CriteriaOperator.Parse(“Trim(Field2)”);</para>
+        <para>Returns a string that is a copy of the specified string with all white-space characters removed from the start and end of the specified string.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.Upper">
       <summary>
-        <para>Converts all characters in a string operand to uppercase.</para>
-        <para>The operand should be an object of the <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> type.</para>
-        <para>To create the Upper operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“Upper(Field1)”);</para>
+        <para>Converts all characters in a string operand to uppercase in an invariant culture.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Data.Filtering.FunctionOperatorType.UtcNow">
       <summary>
-        <para>Returns a <see cref="T:System.DateTime"/> object representing the current Coordinated Universal Time (UTC) date and time.</para>
-        <para>To create the UtcNow operator using the CriteriaOperator.Parse method, use the following syntax: CriteriaOperator.Parse(“UtcNow()”).</para>
+        <para>Returns a <see cref="T:System.DateTime"/> object that is the current date and time in Universal Coordinated Time (UTC).</para>
       </summary>
     </member>
     <member name="T:DevExpress.Data.Filtering.GroupOperator">
@@ -9485,17 +9380,17 @@
     </member>
     <member name="F:DevExpress.Utils.DefaultBoolean.Default">
       <summary>
-        <para>The default behavior determined by the control’s logic.</para>
+        <para>The value is specified by a global option or a higher-level object.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Utils.DefaultBoolean.False">
       <summary>
-        <para>false. DefaultBoolean.False has a constant value of 1, while the standard false value corresponds to a value of 0. In Visual Basic, do not use implicit conversion of Boolean values to DefaultBoolean, and vice versa, as the conversion may produce incorrect results.</para>
+        <para>The value is false.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Utils.DefaultBoolean.True">
       <summary>
-        <para>true. DefaultBoolean.True has a constant value of 0, while the standard true value corresponds to a value of 1. In Visual Basic, do not use implicit conversion of Boolean values to DefaultBoolean, and vice versa, as the conversion may produce incorrect results.</para>
+        <para>The value is true.</para>
       </summary>
     </member>
     <member name="T:DevExpress.Utils.DXCollection`1">
@@ -13970,7 +13865,7 @@
     </member>
     <member name="F:DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default">
       <summary>
-        <para>The default error icon specified by the <see cref="P:DevExpress.XtraEditors.BaseEdit.ErrorIcon"/> property:</para>
+        <para>The default error icon:</para>
         <para>The <see cref="E:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorIcon"/> event is not raised when an error of the Default type is assigned to an editor.</para>
       </summary>
     </member>
@@ -14563,17 +14458,13 @@
     </member>
     <member name="F:DevExpress.XtraGrid.ColumnSortMode.Custom">
       <summary>
-        <para>Enables custom sorting of a column’s data. To implement custom sorting, handle the <see cref="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomColumnSort"/> event in the GridControl, and the <see cref="E:DevExpress.XtraTreeList.TreeList.CompareNodeValues"/> event in the TreeList.</para>
-        <para>In the GridControl, the Custom mode also enables custom grouping of rows when grouping is applied against the current column. To implement custom grouping, handle the <see cref="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomColumnGroup"/> event.</para>
+        <para>Applies sort options specified in the CustomColumnSort event handler.</para>
+        <para>In data grids, this mode also applies group options from the CustomColumnGroup event handler.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraGrid.ColumnSortMode.Default">
       <summary>
-        <para>Sorts the column’s data according to the type of the editor assigned to the column.</para>
-        <para />
-        <para>The Default option is equivalent to DisplayText for columns that use <see cref="T:DevExpress.XtraEditors.LookUpEdit"/>, <see cref="T:DevExpress.XtraEditors.ImageComboBoxEdit"/> and HypertextLabel (<see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel"/>) in&#0045;place editors.</para>
-        <para />
-        <para>The Default option is equivalent to Value for other columns. Note that for certain editors (<see cref="T:DevExpress.XtraEditors.TextEdit"/>, <see cref="T:DevExpress.XtraEditors.ComboBoxEdit"/>, etc) the edit values match the display values.</para>
+        <para>The actual sort mode is determined by a control. See the property description for more details.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraGrid.ColumnSortMode.DisplayText">
@@ -19426,10 +19317,44 @@
         <para>When the brick dimensions do not fit into the right page margin, the brick content is moved to a new page in its entirety.</para>
       </summary>
     </member>
+    <member name="N:DevExpress.XtraReports.Configuration">
+      <summary>
+        <para>Settings to configure the Reporting UI components.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraReports.Configuration.DataSourceSettings">
+      <summary>
+        <para>Contains settings that configure the user interface related to the data sources in the Report Designer.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraReports.Configuration.DataSourceSettings.#ctor">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Configuration.DataSourceSettings"/> class.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraReports.Configuration.DataSourceSettings.AllowAddDataSource">
+      <summary>
+        <para>Hides the UI element that allows a user to remove the data source from the Web End-User Report Designer in the Field List.</para>
+      </summary>
+      <value>true to show the UI element that allows a user to remove the data source from the Web End-User Report Designer in the Field List; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraReports.Configuration.DataSourceSettings.AllowEditDataSource">
+      <summary>
+        <para>Hides UI elements that allow the user to edit the data source and queries in the Field List.</para>
+      </summary>
+      <value>true to show UI elements that allow the user to edit the data source and queries in the Field List; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraReports.Configuration.DataSourceSettings.AllowRemoveDataSource">
+      <summary>
+        <para>Hides the UI element that allows a user to remove the data source from the Web End-User Report Designer in the Field List.</para>
+      </summary>
+      <value>true to show the UI element that allows a user to remove the data source from the Web End-User Report Designer in the Field List; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.XtraReports.Configuration.DataSourceSettings.Assign(DevExpress.XtraReports.Configuration.DataSourceSettings)">
+      <summary>
+        <para>Copies all the settings from the <see cref="T:DevExpress.XtraReports.Configuration.DataSourceSettings"/> object passed as the parameter.</para>
+      </summary>
+      <param name="source">A <see cref="T:DevExpress.XtraReports.Configuration.DataSourceSettings"/> object whose settings are assigned to the current object.</param>
     </member>
     <member name="N:DevExpress.XtraReports.Design">
       <summary>
@@ -19579,9 +19504,46 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportDesignerRequestOptions"/> class.</para>
       </summary>
     </member>
+    <member name="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings">
+      <summary>
+        <para>Contains settings that apply to the Report Designer Preview.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings.#ctor">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings.Assign(DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings)">
+      <summary>
+        <para>Copies the settings from the specified <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings"/> object to the current object.</para>
+      </summary>
+      <param name="source">A <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings"/> object whose settings are assigned to the current object.</param>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings.ExportSettings">
+      <summary>
+        <para>Allows you to specify settings that apply to print and export operations.</para>
+      </summary>
+      <value>A class that contains settings that apply to print and export operations.</value>
+    </member>
+    <member name="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility">
+      <summary>
+        <para>Lists settings that specify the visibility of the search box on the  Report Wizard’s Select Report Type page.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility.Always">
+      <summary>
+        <para>The search box is always displayed.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility.Auto">
+      <summary>
+        <para>The search box is displayed automatically depending on the number of report items shown.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility.Never">
+      <summary>
+        <para>The search box is always hidden.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings">
@@ -19614,15 +19576,21 @@
     </member>
     <member name="P:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings.EnableObjectDataSource">
       <summary>
-        <para>Allows you to hide the Object data source option and related pages in the Data Source Wizard.</para>
+        <para>Allows you to hide the Object Data Source option and related pages in the Data Source Wizard.</para>
       </summary>
-      <value>true to enable the Object data source option; otherwise, false.</value>
+      <value>true to enable the Object Data Source option; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings.EnableSqlDataSource">
+      <summary>
+        <para>Allows you to hide the Database option and related pages in the Data Source Wizard.</para>
+      </summary>
+      <value>true to enable the Database option; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings.ReportWizardTemplatesSearchBoxVisibility">
       <summary>
         <para>Specifies whether to display the search box on the Select Report Type page.</para>
       </summary>
-      <value>The <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility"/> enumeration member that specifies whether to display the report template seaerch box.</value>
+      <value>The <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility"/> enumeration member that specifies whether to display the report template search box.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings.UseFullscreenWizard">
       <summary>
@@ -19636,6 +19604,11 @@
       </summary>
       <value>true, to use the master-detail Report Wizard version; false, to use the legacy Report Wizard version.</value>
     </member>
+    <member name="T:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase">
+      <summary>
+        <para>Contains settings for the Web Report Designer model.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase.#ctor">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase"/> class.</para>
@@ -19647,11 +19620,29 @@
       </summary>
       <value>True to allow the user to close all reports; false if a single report remains.</value>
     </member>
+    <member name="M:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase.Assign(DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase)">
+      <summary>
+        <para>Copies the settings from the specified <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase"/> object to the current object.</para>
+      </summary>
+      <param name="settings">A <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase"/> object whose settings are assigned to the current object.</param>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase.DataSourceSettings">
+      <summary>
+        <para>Specifies settings that configure the user interface related to the data sources in the Report Designer.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraReports.Configuration.DataSourceSettings"/> object that contains settings for UI configuration related to the data sources in the Report Designer.</value>
+    </member>
     <member name="P:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase.RightToLeft">
       <summary>
         <para>Enables or disables a right-to-left layout in the Web Report Designer user interface.</para>
       </summary>
       <value>true to enable the right-to-left layout in the Report Designer UI; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase.WizardSettings">
+      <summary>
+        <para>Provides access to the Report Wizard settings.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings"/> object that contains the Report Wizard settings.</value>
     </member>
     <member name="N:DevExpress.XtraReports.Web.WebDocumentViewer">
       <summary>
@@ -19672,6 +19663,12 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings"/> class.</para>
       </summary>
+    </member>
+    <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings.Assign(DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings)">
+      <summary>
+        <para>Copies the settings from the specified <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings"/> object to the current object.</para>
+      </summary>
+      <param name="settings">A <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings"/> object whose settings are assigned to the current object.</param>
     </member>
     <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings.ShowPrintNotificationDialog">
       <summary>
@@ -19818,6 +19815,23 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerControlSettings"/> class.</para>
       </summary>
+    </member>
+    <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerSettingsBase">
+      <summary>
+        <para>Base class for the Web Document Viewer control settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerSettingsBase.AccessibilityCompliant">
+      <summary>
+        <para>Enables accessibility mode.</para>
+      </summary>
+      <value>True to enable accessibility mode; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerSettingsBase.ExportSettings">
+      <summary>
+        <para>Allows you to specify settings that apply to print and export operations.</para>
+      </summary>
+      <value>A class that contains settings that apply to print and export operations.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerSettingsBase.RightToLeft">
       <summary>
