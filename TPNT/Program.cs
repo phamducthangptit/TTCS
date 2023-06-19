@@ -35,7 +35,7 @@ namespace TPNT
         public static int mChiNhanh = 0;
 
         public static BindingSource bds_dspm = new BindingSource(); // ds phan manh
-        public static frmMain frmChinh;
+
         public static int KetNoi()
         {
             if (Program.conn != null && Program.conn.State == ConnectionState.Open) Program.conn.Close();
@@ -109,8 +109,7 @@ namespace TPNT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmChinh = new frmMain();
-            Application.Run(frmChinh);
+            Application.Run(new frmMainMenu());
         }
     }
 }
