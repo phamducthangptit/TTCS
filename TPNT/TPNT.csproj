@@ -41,6 +41,9 @@
     <Reference Include="DevExpress.XtraEditors.v22.2" />
     <Reference Include="DevExpress.Printing.v22.2.Core" />
     <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHoiHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHoiHoa.Designer.cs">
+      <DependentUpon>frmHoiHoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +81,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTPNT.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmHoiHoa.resx">
+      <DependentUpon>frmHoiHoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +99,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
@@ -112,6 +125,35 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\ImageTacGia\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconhoihoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\add-group%281%29.png" />
+    <Content Include="Resources\add-group.png" />
+    <Content Include="Resources\delete%281%29.png" />
+    <Content Include="Resources\delete%282%29.png" />
+    <None Include="Resources\logout%282%29.png" />
+    <None Include="Resources\refresh%281%29.png" />
+    <None Include="Resources\turn-left.png" />
+    <None Include="Resources\delete%283%29.png" />
+    <Content Include="Resources\delete.png" />
+    <None Include="Resources\floppy-disk.png" />
+    <None Include="Resources\diskette%281%29.png" />
+    <Content Include="Resources\diskette.png" />
+    <Content Include="Resources\edit%281%29.png" />
+    <Content Include="Resources\edit%282%29.png" />
+    <None Include="Resources\edit%282%291.png" />
+    <Content Include="Resources\edit.png" />
+    <Content Include="Resources\gallery.png" />
+    <Content Include="Resources\logout%281%29.png" />
+    <Content Include="Resources\logout.png" />
+    <Content Include="Resources\makeup-artist.png" />
+    <Content Include="Resources\refresh.png" />
+    <Content Include="Resources\replay.png" />
+    <Content Include="Resources\theloaikhac.png" />
+    <Content Include="Resources\theloaikhac1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

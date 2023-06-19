@@ -32,3 +32,16 @@ E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.CopyComplete
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.exe
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.pdb
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraGrid.v22.2.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraLayout.v22.2.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraPrinting.v22.2.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraTreeList.v22.2.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Office.v22.2.Core.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraGrid.v22.2.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraLayout.v22.2.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraPrinting.v22.2.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraTreeList.v22.2.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Office.v22.2.Core.xml
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmHoiHoa.resources
