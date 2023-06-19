@@ -32,3 +32,38 @@ E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.CopyComplete
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.exe
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.pdb
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.frmMainMenu.resources
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.frmTacGia.resources
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.Properties.Resources.resources
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.exe.licenses
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\TPNT.exe.config
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\TPNT.exe
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\TPNT.pdb
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.BonusSkins.v22.2.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Data.Desktop.v22.2.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Data.v22.2.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Drawing.v22.2.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Printing.v22.2.Core.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Sparkline.v22.2.Core.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Utils.v22.2.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraBars.v22.2.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraEditors.v22.2.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v22.2.Core.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v22.2.Drawing.dll
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Data.Desktop.v22.2.xml
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Data.v22.2.xml
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Utils.v22.2.xml
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Sparkline.v22.2.Core.xml
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraBars.v22.2.xml
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraEditors.v22.2.xml
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Printing.v22.2.Core.xml
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v22.2.Core.xml
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.CopyComplete
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.exe
+C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.pdb
