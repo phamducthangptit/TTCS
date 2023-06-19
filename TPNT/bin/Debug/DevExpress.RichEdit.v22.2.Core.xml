@@ -3263,8 +3263,8 @@
         <para>Creates a bookmark with the specified name for the range that starts at the specified position and has the specified length and adds it to the collection.</para>
       </summary>
       <param name="start">A <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentPosition"/> specifying the starting position for the bookmark.</param>
-      <param name="length">An integer specifying the length of the range contained in the bookmark.</param>
-      <param name="name">A string specifying the bookmark name.</param>
+      <param name="length">An integer that specifies the length of the range in the bookmark.</param>
+      <param name="name">A string that specifies the bookmark’s name.</param>
       <returns>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Bookmark"/> object specifying the created bookmark.</returns>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.BookmarkCollection.Create(DevExpress.XtraRichEdit.API.Native.DocumentRange,System.String)">
@@ -6365,7 +6365,7 @@
       <summary>
         <para>Specifies an application used to modify the document.</para>
       </summary>
-      <value>The application name. The default is “DevExpress Office File API/22.2.3.0”.</value>
+      <value>The application name. The default is “DevExpress Office File API/22.2.6.0”.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentProperties.AppVersion">
       <summary>
@@ -8194,7 +8194,7 @@
       <summary>
         <para>Gets or sets the image scaling percentage.</para>
       </summary>
-      <value>A double value (from 0 to 65.5) that is the scaling percentage.</value>
+      <value>A double value (from 0 (0%) to 65.5 (6550%)) that is the scaling percentage. The 1 value is equal to 100%.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ImageWatermarkOptions.Washout">
       <summary>
@@ -8720,7 +8720,7 @@
       <summary>
         <para>Gets or sets the record index from which the merge starts.</para>
       </summary>
-      <value>The starting record index.</value>
+      <value>The starting record index (starting with 0).</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.MailMergeOptions.HeaderFooterLinkToPrevious">
       <summary>
@@ -11395,7 +11395,7 @@
       <summary>
         <para>Gets the name of the application used to modify the document.</para>
       </summary>
-      <value>The application’s name. The default is “DevExpress Office File API/22.2.3.0”.</value>
+      <value>The application’s name. The default is “DevExpress Office File API/22.2.6.0”.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyDocumentBuiltInProperties.AppVersion">
       <summary>
@@ -33929,9 +33929,9 @@
     </member>
     <member name="P:DevExpress.XtraRichEdit.DocumentCapabilitiesOptions.FloatingObjects">
       <summary>
-        <para>Gets or sets the document’s capability to handle floating objects.</para>
+        <para>Gets or sets the document’s capability to handle floating objects (shapes with any wrapping type but InLineWithText).</para>
       </summary>
-      <value>A <see cref="T:DevExpress.XtraRichEdit.DocumentCapability"/> enumeration specifying the document’s capability to handle floating objects.</value>
+      <value>An enumeration value that specifies the document’s capability to handle floating objects.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.DocumentCapabilitiesOptions.FloatingObjectsAllowed">
       <summary>
@@ -38801,11 +38801,11 @@
       <summary>
         <para>Gets or sets whether to restore the previous document layout calculation.</para>
       </summary>
-      <value>true to enable the legacy layout engine; otherwise, false.The default value is false.</value>
+      <value>true to enable the legacy layout engine; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.RichEditControlCompatibility.EnableLegacyPdfExport">
       <summary>
-        <para>Allows you to use obsolete PDF export implemented in earlier versions.</para>
+        <para>Allows you to use obsolete PDF export implemented in earlier versions. Not supported in .NET Standard 2.0+ / .NET Core 2.1+.</para>
       </summary>
       <value>true to use PDF export based on the Printing System functionality; otherwise, false.</value>
     </member>

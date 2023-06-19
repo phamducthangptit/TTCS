@@ -697,17 +697,17 @@
       </summary>
       <value>A String value that is the swatch name.</value>
     </member>
-    <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.Assign(DevExpress.LookAndFeel.UserLookAndFeel)">
-      <summary>
-        <para>Copies properties of the specified <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object to the current object.</para>
-      </summary>
-      <param name="source">The source <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object.</param>
-    </member>
     <member name="P:DevExpress.LookAndFeel.UserLookAndFeel.CompactUIMode">
       <summary>
         <para>This method supports internal infrastructure and is not intended for use in code.</para>
       </summary>
       <value />
+    </member>
+    <member name="P:DevExpress.LookAndFeel.UserLookAndFeel.CompactUIModeForced">
+      <summary>
+        <para>Returns whether the application is currently in Compact UI Mode. The return value depends on both the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.CompactUIMode"/> property and the currently applied skin (for instance, the WXI Compact skin forces the Compact UI Mode).</para>
+      </summary>
+      <value>true if the application is currently in Compact UI Mode; false if the Regular mode is currently active.</value>
     </member>
     <member name="P:DevExpress.LookAndFeel.UserLookAndFeel.Default">
       <summary>
@@ -724,6 +724,13 @@
       <summary>
         <para>Releases all resources used by the current object.</para>
       </summary>
+    </member>
+    <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.ForceCompactUIMode(System.Boolean,System.Boolean)">
+      <summary>
+        <para>This method is not intended to be used in code. Use the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.CompactUIMode"/> property instead to switch between regular and compact UI modes.</para>
+      </summary>
+      <param name="compact">Specifies whether the Compact UI Mode is enabled.</param>
+      <param name="raiseStyleChanged">true if switching between regular and compact UI modes should raise the style changed event; false to silently switch between UI modes.</param>
     </member>
     <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.GetCompactScaleFactor">
       <summary>
@@ -765,13 +772,6 @@
       </summary>
       <value>true if the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.SkinMaskColor"/> or <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.SkinMaskColor2"/> setting is specified; otherwise, false.</value>
     </member>
-    <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.IsEquals(DevExpress.LookAndFeel.UserLookAndFeel)">
-      <summary>
-        <para>Tests whether two objects have the same property values.</para>
-      </summary>
-      <param name="source">The <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object to which the current object is compared.</param>
-      <returns>true if the current object has the same property values as the specified object; otherwise, false.</returns>
-    </member>
     <member name="P:DevExpress.LookAndFeel.UserLookAndFeel.IsLookAndFeelHierarchyRoot">
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
@@ -805,11 +805,6 @@
         <para>Sets the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.ParentLookAndFeel"/> property to its default value.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.ResetSkinMaskColors">
-      <summary>
-        <para>Sets the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.SkinMaskColor"/> and <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.SkinMaskColor2"/> properties to an empty color (System.Drawing.Color.Empty).</para>
-      </summary>
-    </member>
     <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.SetDefaultStyle">
       <summary>
         <para>Applies the default look and feel settings to a control.</para>
@@ -824,13 +819,6 @@
       <summary>
         <para>Applies the Office2003 style to a control.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.SetSkinMaskColors(System.Drawing.Color,System.Drawing.Color)">
-      <summary>
-        <para>Sets the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.SkinMaskColor"/> and <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.SkinMaskColor2"/> properties to the specified values.</para>
-      </summary>
-      <param name="skinMaskColor">A new value for the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.SkinMaskColor"/> property.</param>
-      <param name="skinMaskColor2">A new value for the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.SkinMaskColor2"/> property.</param>
     </member>
     <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.SetSkinStyle(DevExpress.LookAndFeel.SkinStyle)">
       <summary>
@@ -7431,7 +7419,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.Utils.HideException">
       <summary>
-        <para>Prevents default actions when handling specific events.</para>
+        <para>Prevents default actions when handling specific events. This class supports internal infrastructure and is not intended for use in code.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Utils.HideException.#ctor">
@@ -7642,6 +7630,12 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
       </summary>
       <param name="template">The HTML markup to assign to the <see cref="P:DevExpress.Utils.Html.HtmlTemplate.Template"/> property.</param>
       <param name="styles">The CSS code to assign to the <see cref="P:DevExpress.Utils.Html.HtmlTemplate.Styles"/> property.</param>
+    </member>
+    <member name="M:DevExpress.Utils.Html.HtmlTemplate.ShouldSerialize">
+      <summary>
+        <para>This member supports the internal infrastructure, and is not intended to be used directly in your code.</para>
+      </summary>
+      <returns />
     </member>
     <member name="P:DevExpress.Utils.Html.HtmlTemplate.Styles">
       <summary>
@@ -14583,7 +14577,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="N:DevExpress.XtraEditors">
       <summary>
-        <para>Contains editor classes. They provide the functionality for corresponding controls.</para>
+        <para>Contains editor classes that implement the functionality for corresponding controls.</para>
       </summary>
     </member>
     <member name="N:DevExpress.XtraEditors.ButtonPanel">
@@ -14740,7 +14734,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.ColumnFilterPopupMode">
       <summary>
-        <para>Provides values that specify whether Data Grid and Tree List columns should display Excel-style or classic filter menus.</para>
+        <para>Contains values that specify whether Data Grid and Tree List columns should display Excel-style or classic filter menus.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.ColumnFilterPopupMode.Classic">
@@ -14810,13 +14804,13 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.BorderStyles.Flat">
       <summary>
-        <para>Borders are flat.</para>
+        <para>Deprecated. Borders are flat.</para>
         <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.BorderStyles.HotFlat">
       <summary>
-        <para>Flat border. The border and the client area are highlighted when the cursor hovers the editor.</para>
+        <para>Deprecated. Flat border. The border and the client area are highlighted when the cursor hovers the editor.</para>
         <para />
         <para />
       </summary>
@@ -14829,7 +14823,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.BorderStyles.Office2003">
       <summary>
-        <para>Office 2003-style border.</para>
+        <para>Deprecated. Office 2003-style border.</para>
         <para />
       </summary>
     </member>
@@ -14841,13 +14835,13 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.BorderStyles.Style3D">
       <summary>
-        <para>Three-dimensional border.</para>
+        <para>Deprecated. Three-dimensional border.</para>
         <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat">
       <summary>
-        <para>Flat border in the Office XP style. Border and the client area are highlighted when the mouse pointer hovers the editor; otherwise, no border.</para>
+        <para>Deprecated. Flat border in the Office XP style. Border and the client area are highlighted when the mouse pointer hovers the editor; otherwise, no border.</para>
         <para />
         <para />
       </summary>
@@ -15167,6 +15161,12 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
       </summary>
       <value>The client area container of this form.</value>
     </member>
+    <member name="P:DevExpress.XtraEditors.DirectXFormBase.ForceDirectX">
+      <summary>
+        <para>Gets or sets whether the DirectX Hardware Acceleration should be enabled for this form and its child controls.</para>
+      </summary>
+      <value>Specifies whether this form should utilize the DirectX Hardware Accelleration. The DefaultBoolean.Default value is equivalent to DefaultBoolean.True.</value>
+    </member>
     <member name="E:DevExpress.XtraEditors.DirectXFormBase.HtmlElementMouseClick">
       <summary>
         <para>Occurs when a user clicks any element within an HTML template.</para>
@@ -15216,7 +15216,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.ExpressionEditorMode">
       <summary>
-        <para>Lists modes which specify the Expression Editor version.</para>
+        <para>Lists modes that specify the Expression Editor version.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.ExpressionEditorMode.AutoComplete">
@@ -15236,7 +15236,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.FilterCriteriaDisplayStyle">
       <summary>
-        <para>Enumerates display styles of filter criteria in a control’s Filter Panel, MRU Filter List and Filter Editor.</para>
+        <para>Enumerates display styles of filter criteria in a control’s Filter Panel, MRU Filter List, and Filter Editor.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.FilterCriteriaDisplayStyle.Default">
@@ -15276,7 +15276,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="F:DevExpress.XtraEditors.FindPanelBehavior.Search">
       <summary>
-        <para>Highlight search results in cells and on the scrollbar.</para>
+        <para>Highlight search results in cells and on the scrollbar. A search behavior is not supported in server mode.</para>
         <para />
       </summary>
     </member>
@@ -15309,7 +15309,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.GroupCaptionCustomDrawEventArgs">
       <summary>
-        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.GroupControl.CustomDrawCaption"/> event.</para>
+        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.GroupControl.CustomDrawCaption"/> event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.GroupCaptionCustomDrawEventArgs.#ctor(DevExpress.Utils.Drawing.GraphicsCache,DevExpress.Utils.Drawing.ObjectPainter,DevExpress.Utils.Drawing.ObjectInfoArgs)">
@@ -15360,9 +15360,9 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.GroupCaptionCustomDrawEventHandler">
       <summary>
-        <para>Represents a method that will handle the <see cref="E:DevExpress.XtraEditors.GroupControl.CustomDrawCaption"/> event.</para>
+        <para>A method that handles the <see cref="E:DevExpress.XtraEditors.GroupControl.CustomDrawCaption"/> event.</para>
       </summary>
-      <param name="sender">The event source. This parameter identifies the group control which raised the event.</param>
+      <param name="sender">The event source. This parameter identifies the group control that raised the event.</param>
       <param name="e">A <see cref="T:DevExpress.XtraEditors.GroupCaptionCustomDrawEventArgs"/> object that contains event data.</param>
     </member>
     <member name="T:DevExpress.XtraEditors.GroupControl">
@@ -15569,7 +15569,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.HScrollBarBase">
       <summary>
-        <para>Serves as the base for <see cref="T:DevExpress.XtraEditors.HScrollBar"/> class.</para>
+        <para>Serves as the base for the <see cref="T:DevExpress.XtraEditors.HScrollBar"/> class.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.HScrollBarBase.ScrollBarType">
@@ -15580,7 +15580,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.ObjectCustomDrawEventArgs">
       <summary>
-        <para>Provides data for events that allow you to draw visual elements manually.</para>
+        <para>Supplies data for events that allow you to draw visual elements manually.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ObjectCustomDrawEventArgs.#ctor(DevExpress.Utils.Drawing.GraphicsCache,DevExpress.Utils.Drawing.ObjectPainter,DevExpress.Utils.Drawing.ObjectInfoArgs)">
@@ -15809,7 +15809,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.ScrollBarBase">
       <summary>
-        <para>Serves as the base for <see cref="T:DevExpress.XtraEditors.HScrollBarBase"/>, <see cref="T:DevExpress.XtraEditors.HScrollBar"/>, <see cref="T:DevExpress.XtraEditors.VScrollBarBase"/> and <see cref="T:DevExpress.XtraEditors.VScrollBar"/> classes.</para>
+        <para>Serves as the base for <see cref="T:DevExpress.XtraEditors.HScrollBarBase"/>, <see cref="T:DevExpress.XtraEditors.HScrollBar"/>, <see cref="T:DevExpress.XtraEditors.VScrollBarBase"/>, and <see cref="T:DevExpress.XtraEditors.VScrollBar"/> classes.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ScrollBarBase.#ctor">
@@ -15843,18 +15843,6 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
       </summary>
       <value>true if auto size is applied; otherwise false.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.ScrollBarBase.BackColor">
-      <summary>
-        <para>Overrides the base class BackColor property.</para>
-      </summary>
-      <value>A <see cref="T:System.Drawing.Color"/> object representing the control’s background color.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.ScrollBarBase.BackgroundImage">
-      <summary>
-        <para>Overrides the base class BackgroundImage property.</para>
-      </summary>
-      <value>A <see cref="T:System.Drawing.Image"/> object representing the image to display in the control’s background.</value>
-    </member>
     <member name="M:DevExpress.XtraEditors.ScrollBarBase.BeginUpdate">
       <summary>
         <para>Prevents the control from being updated until the <see cref="M:DevExpress.XtraEditors.ScrollBarBase.EndUpdate"/> or <see cref="M:DevExpress.XtraEditors.ScrollBarBase.CancelUpdate"/> method is called.</para>
@@ -15879,18 +15867,6 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
       <summary>
         <para>Unlocks the control after a <see cref="M:DevExpress.XtraEditors.ScrollBarBase.BeginUpdate"/> method call and causes its immediate repainting.</para>
       </summary>
-    </member>
-    <member name="P:DevExpress.XtraEditors.ScrollBarBase.Font">
-      <summary>
-        <para>Overrides the base class Font property.</para>
-      </summary>
-      <value>A <see cref="T:System.Drawing.Font"/> object to apply to the text displayed by the control.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.ScrollBarBase.ForeColor">
-      <summary>
-        <para>Overrides the base class ForeColor property.</para>
-      </summary>
-      <value>A <see cref="T:System.Drawing.Color"/> object representing the control’s foreground color.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.ScrollBarBase.GetAccessible">
       <summary>
@@ -15970,12 +15946,6 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
       </summary>
       <returns>The value of the Width property.</returns>
     </member>
-    <member name="P:DevExpress.XtraEditors.ScrollBarBase.ImeMode">
-      <summary>
-        <para>Gets or sets the Input Method Editor(IME) mode supported by this control.</para>
-      </summary>
-      <value>A ImeMode enumeration member specifying the Input Method Editor (IME) status of an object when the object is selected.</value>
-    </member>
     <member name="P:DevExpress.XtraEditors.ScrollBarBase.IsOverlapScrollBar">
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
@@ -16016,6 +15986,11 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
         <para>Gets or sets the opacity level of the control.</para>
       </summary>
       <value>A <see cref="T:System.Single"/> value that specifies the opacity level of the control. The default is 1.</value>
+    </member>
+    <member name="T:DevExpress.XtraEditors.ScrollBarBase.PositionRestoreHelper">
+      <summary>
+        <para>This class supports internal infrastructure and is not intended for use in code.</para>
+      </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.ScrollBarBase.ProcessMouseDown(System.Windows.Forms.MouseEventArgs)">
       <summary>
@@ -16100,12 +16075,6 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
       </summary>
       <value>true if a user can  focus the scroll bar using the TAB key; otherwise, false.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.ScrollBarBase.Text">
-      <summary>
-        <para>Overrides the base class Text property.</para>
-      </summary>
-      <value>A string value representing the text associated with this control.</value>
-    </member>
     <member name="P:DevExpress.XtraEditors.ScrollBarBase.UIMode">
       <summary>
         <para>Gets or sets whether scroll bars are optimized for desktop or touch applications. This is a static (Shared in VB.NET) property.</para>
@@ -16157,7 +16126,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="F:DevExpress.XtraEditors.ScrollUIMode.Fluent">
       <summary>
-        <para>Scroll bars optimized for Fluent Design Forms. They are expanded when a user flicks scrollable content (or the mouse cursor moves over the control) and collapsed to a thin stripe if the control is not scrolled (or the mouse cursor does not move) for some time.</para>
+        <para>Scroll bars optimized for Fluent Design Forms. They are expanded when a user flicks scrollable content (or the mouse cursor moves over the control) and collapsed to a thin stripe if the control is not scrolled (or the mouse cursor does not move) for some time. The arrow buttons are never displayed.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.ScrollUIMode.Touch">
@@ -16375,7 +16344,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.SimpleControl">
       <summary>
-        <para>Represents the base class for controls which support the DevExpress look and feel mechanism.</para>
+        <para>The base class for controls that support the DevExpress look and feel mechanism.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SimpleControl.#ctor">
@@ -16397,7 +16366,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.SplitContainerControl">
       <summary>
-        <para>The control that consists of two panels separated by a splitter, which can be dragged by an end-user to resize the panels.</para>
+        <para>A control that consists of two panels separated by a splitter, which can be dragged by an end user to resize the panels.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SplitContainerControl.#ctor">
@@ -16752,7 +16721,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="T:DevExpress.XtraEditors.SplitterControl">
       <summary>
-        <para>Allows end-users to resize controls that are docked to the splitter’s edges.</para>
+        <para>Allows end users to resize controls that are docked to the splitter’s edges.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SplitterControl.#ctor">
@@ -16943,7 +16912,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageBox.ItemClick">
       <summary>
-        <para>Fires when an item is clicked.</para>
+        <para>Occurs when a user clicks an <see cref="T:DevExpress.XtraEditors.SvgImageItem"/> in the <see cref="T:DevExpress.XtraEditors.SvgImageBox"/>.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageBox.ItemEnter">
@@ -16964,7 +16933,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="E:DevExpress.XtraEditors.SvgImageBox.ItemPress">
       <summary>
-        <para>Fires when a user presses a mouse button on the current item.</para>
+        <para>Occurs when a user presses the left mouse button on an <see cref="T:DevExpress.XtraEditors.SvgImageItem"/>.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.SvgImageBox.LookAndFeel">
@@ -17551,7 +17520,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageItemEventArgs">
       <summary>
-        <para>Provides data for image item related events.</para>
+        <para>Supplies data for image item-related events.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageItemEventArgs.#ctor(DevExpress.XtraEditors.SvgImageItem)">
@@ -17566,9 +17535,44 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>The currently processed item.</value>
     </member>
+    <member name="T:DevExpress.XtraEditors.SvgImageItemMouseEventArgs">
+      <summary>
+        <para>Contains data for the <see cref="E:DevExpress.XtraEditors.SvgImageBox.ItemClick"/> event.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraEditors.SvgImageItemMouseEventArgs.Button">
+      <summary>
+        <para>Gets the pressed mouse button.</para>
+      </summary>
+      <value>The pressed mouse button.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.SvgImageItemMouseEventArgs.Handled">
+      <summary>
+        <para>Gets or sets whether to manually process item clicks.</para>
+      </summary>
+      <value>true to manually process item clicks; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.SvgImageItemMouseEventArgs.Location">
+      <summary>
+        <para>Gets the mouse location relative to the control’s top left corner.</para>
+      </summary>
+      <value>The mouse location.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.SvgImageItemMouseEventArgs.X">
+      <summary>
+        <para>Gets the mouse x-coordinate relative to the control’s top left corner.</para>
+      </summary>
+      <value>The mouse x-coordinate.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.SvgImageItemMouseEventArgs.Y">
+      <summary>
+        <para>Gets the mouse y-coordinate relative to the control’s top left corner.</para>
+      </summary>
+      <value>The mouse y-coordinate.</value>
+    </member>
     <member name="T:DevExpress.XtraEditors.SvgImagePopupMenuShowingEventArgs">
       <summary>
-        <para>Provides data for the PopupMenuShowing event.</para>
+        <para>Supplies data for the PopupMenuShowing event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImagePopupMenuShowingEventArgs.#ctor(DevExpress.Utils.Menu.DXPopupMenu,DevExpress.XtraEditors.SvgImageItem,System.Drawing.Point,System.Boolean)">
@@ -17630,7 +17634,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.SvgImageSelectionChangingEventArgs">
       <summary>
-        <para>Provides data for the <see cref="E:DevExpress.XtraEditors.SvgImageBox.SelectionChanging"/> event.</para>
+        <para>Supplies data for the <see cref="E:DevExpress.XtraEditors.SvgImageBox.SelectionChanging"/> event.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.SvgImageSelectionChangingEventArgs.#ctor(DevExpress.XtraEditors.SvgImageItem,DevExpress.XtraEditors.SvgImageSelectionChangeAction)">
@@ -17727,7 +17731,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.VScrollBarBase">
       <summary>
-        <para>Serves as the base for <see cref="T:DevExpress.XtraEditors.VScrollBar"/> class.</para>
+        <para>Serves as the base for the <see cref="T:DevExpress.XtraEditors.VScrollBar"/> class.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.VScrollBarBase.ScrollBarType">
@@ -17738,7 +17742,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.WindowsFormsSettings">
       <summary>
-        <para>Provides appearance and behavior settings common to all DevExpress controls.</para>
+        <para>Exposes appearance and behavior settings common to all DevExpress controls.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.AllowArrowDragIndicators">
@@ -17936,9 +17940,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.DragScrollThumbBeyondControlThreshold">
       <summary>
-        <para>Gets or sets the threshold, in pixels, beyond which the previous scroll bar thumb position is restored. This property is in effect in the RestoreThumbPosition mode. This is a static property.</para>
+        <para>Gets or sets the threshold, in pixels, beyond which the previous vertical scroll bar thumb position is restored. This property is in effect in the RestoreThumbPosition mode. This is a static property.</para>
       </summary>
-      <value>An integer value that specifies the threshold, in pixels, beyond which the previous scroll bar thumb position is restored. The default value is 50 pixels.</value>
+      <value>An integer value that specifies the threshold, in pixels, beyond which the previous vertical scroll bar thumb position is restored. The default value is 50 pixels.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.EnableFormSkins">
       <summary>
@@ -18177,7 +18181,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.ScrollUIMode">
       <summary>
-        <para>Gets or sets whether scroll bars are optimized for desktop or touch applications. This is a static (Shared in VB.NET) property.</para>
+        <para>Gets or sets whether scroll bars are optimized for desktop or touch applications. This is a static (Shared in VB.NET) property. Set this property at application startup.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraEditors.ScrollUIMode"/> enumeration value that specifies how scroll bars are displayed.</value>
     </member>
@@ -18264,7 +18268,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.XtraForm">
       <summary>
-        <para>A form that supports title bar and border skinning. Provides centralized control over the look and feel settings of the DevExpress controls placed on it.</para>
+        <para>A form that supports title bar and border skinning. The appearance settings of the XtraForm affect the look and feel settings of the DevExpress UI controls placed within it.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraForm.#ctor">
@@ -18359,6 +18363,11 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     <member name="P:DevExpress.XtraEditors.XtraForm.DeactivatedForm">
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraEditors.XtraForm.DefaultFormShowMode">
+      <summary>
+        <para>This property supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.XtraForm.DisableFormShowHelper">
@@ -18562,7 +18571,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.XtraPanel">
       <summary>
-        <para>Represents the base class for panels.</para>
+        <para>The base class for panels.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraPanel.#ctor">
@@ -18800,7 +18809,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.XtraUserControl">
       <summary>
-        <para>The user control that supports look and feel and skinning technology. Provides centralized control over the look and feel settings of the DevExpress controls placed on it.</para>
+        <para>A user control that supports look and feel and skinning technology. The appearance settings of this control affect the look and feel settings of the DevExpress UI controls placed within it.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.XtraUserControl.#ctor">

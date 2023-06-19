@@ -125,6 +125,12 @@
       </summary>
       <value>A Boolean value that specifies whether HTML formatting is supported for an alert window’s caption and text.</value>
     </member>
+    <member name="P:DevExpress.XtraBars.Alerter.AlertControl.AlwaysShowOnMainDisplay">
+      <summary>
+        <para>Gets or sets whether alerts managed by this AlertControl should always be displayed on the main system display, no matter which display currently shows the application.</para>
+      </summary>
+      <value>true to always show alerts on the main display; false to show alerts on the same display that currently shows the parent application.</value>
+    </member>
     <member name="P:DevExpress.XtraBars.Alerter.AlertControl.AppearanceCaption">
       <summary>
         <para>Provides appearance settings that are used to paint the captions of alert windows.</para>
@@ -225,6 +231,12 @@
       <summary>
         <para>Allows you to set an alert window’s width.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraBars.Alerter.AlertControl.HideAnimationType">
+      <summary>
+        <para>Gets or sets the animation effect played when alerts managed by this Alert Control are dismissed. This property has a higher priority than the <see cref="P:DevExpress.XtraBars.Alerter.AlertControl.FormShowingEffect"/> setting, which specifies the unified animation effect applied when alerts are both shown and hidden.</para>
+      </summary>
+      <value>The animation effect for alert windows.</value>
     </member>
     <member name="E:DevExpress.XtraBars.Alerter.AlertControl.HtmlElementMouseClick">
       <summary>
@@ -480,6 +492,12 @@
         <para>Displays an empty alert form.</para>
       </summary>
       <param name="owner">An owner of the window. In a multi-monitor system, if the owner is set to null, the window will be displayed on the main monitor. Otherwise, the window will be displayed on the same monitor as the owner.</param>
+    </member>
+    <member name="P:DevExpress.XtraBars.Alerter.AlertControl.ShowAnimationType">
+      <summary>
+        <para>Gets or sets the animation effect played when alerts managed by this Alert Control appear on-screen. This property has a higher priority than the FormShowingEffect setting, which specifies the unified animation effect applied when alerts are both shown and hidden.</para>
+      </summary>
+      <value>The animation effect played when alerts are shown on-screen.</value>
     </member>
     <member name="P:DevExpress.XtraBars.Alerter.AlertControl.ShowCloseButton">
       <summary>
@@ -1521,7 +1539,7 @@
     </member>
     <member name="T:DevExpress.XtraBars.BarButtonItem">
       <summary>
-        <para>Represents a toolbar button or menu item.</para>
+        <para>A button command in the Ribbon UI, toolbar, or popup menu.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraBars.BarButtonItem.#ctor">
@@ -1622,6 +1640,17 @@
       </summary>
       <value>true if clicking the current <see cref="T:DevExpress.XtraBars.BarButtonItem"/>‘s link within a <see cref="T:DevExpress.XtraBars.Ribbon.RadialMenu"/> should close this menu; otherwise, false.</value>
     </member>
+    <member name="P:DevExpress.XtraBars.BarButtonItem.DefaultDropDownLink">
+      <summary>
+        <para>Assigns all core settings of a target link (caption, image, click event handler, and others) to this Bar Button Item.</para>
+      </summary>
+      <value>The link whose settings are to be copied.</value>
+    </member>
+    <member name="E:DevExpress.XtraBars.BarButtonItem.DefaultDropDownLinkChanged">
+      <summary>
+        <para>Raises when the value of the DefaultDropDownLink property changes.</para>
+      </summary>
+    </member>
     <member name="P:DevExpress.XtraBars.BarButtonItem.Description">
       <summary>
         <para>Gets or sets the <see cref="T:DevExpress.XtraBars.BarButtonItem"/>‘s description.</para>
@@ -1679,7 +1708,7 @@
     </member>
     <member name="P:DevExpress.XtraBars.BarButtonItem.LargeGlyph">
       <summary>
-        <para>Gets or sets the <see cref="T:DevExpress.XtraBars.BarButtonItem"/>‘s large icon.</para>
+        <para>Gets or sets the <see cref="T:DevExpress.XtraBars.BarButtonItem"/>‘s large icon. Use the <see cref="P:DevExpress.XtraBars.BarItemImageOptions.LargeImage"/> property instead.</para>
       </summary>
       <value>An Image that is the <see cref="T:DevExpress.XtraBars.BarButtonItem"/>‘s large icon.</value>
     </member>
@@ -1709,7 +1738,7 @@
     </member>
     <member name="T:DevExpress.XtraBars.BarButtonItemLink">
       <summary>
-        <para>Represents a link to the <see cref="T:DevExpress.XtraBars.BarButtonItem"/>.</para>
+        <para>A bar item link to <see cref="T:DevExpress.XtraBars.BarButtonItem"/>.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraBars.BarButtonItemLink.AssignKeyTip(DevExpress.XtraBars.BarItemLink)">
@@ -1909,9 +1938,15 @@
     </member>
     <member name="P:DevExpress.XtraBars.BarCheckItem.CheckBoxVisibility">
       <summary>
-        <para>Gets or sets the visibility of the item’s check box.</para>
+        <para>Gets or sets the visibility and position of the item’s check box.</para>
       </summary>
-      <value>A CheckBoxVisibility enumerator value that specifies the visibility of the current <see cref="T:DevExpress.XtraBars.BarCheckItem"/>‘s check box.</value>
+      <value>A CheckBoxVisibility enumeration value that specifies the visibility and position of the check box.</value>
+    </member>
+    <member name="P:DevExpress.XtraBars.BarCheckItem.CheckBoxVisibilityInMenu">
+      <summary>
+        <para>Gets or sets the visibility and position of a check mark (🗸) when the item is displayed in a submenu.</para>
+      </summary>
+      <value>A value that specifies the visibility and position of a check mark (🗸).</value>
     </member>
     <member name="P:DevExpress.XtraBars.BarCheckItem.Checked">
       <summary>
@@ -1972,7 +2007,7 @@
     </member>
     <member name="E:DevExpress.XtraBars.BarCustomContainerItem.GetItemData">
       <summary>
-        <para>Allows you to provide child items for the current <see cref="T:DevExpress.XtraBars.BarCustomContainerItem"/> object, or to customize the existing child items.</para>
+        <para>Allows you to supply child items for the <see cref="T:DevExpress.XtraBars.BarCustomContainerItem"/> object, or to customize existing child items.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraBars.BarCustomContainerItem.ItemLinks">
@@ -3340,7 +3375,7 @@
     </member>
     <member name="P:DevExpress.XtraBars.BarItem.Size">
       <summary>
-        <para>Gets or sets the <see cref="T:DevExpress.XtraBars.BarItem"/>‘s size.</para>
+        <para>Gets or sets the <see cref="T:DevExpress.XtraBars.BarItem"/>‘s size. Not supported in Ribbon UI.</para>
       </summary>
       <value>A Size structure that is the <see cref="T:DevExpress.XtraBars.BarItem"/>‘s size.</value>
     </member>
@@ -4272,6 +4307,11 @@
         <para>Disables all link options defined by a user.</para>
       </summary>
     </member>
+    <member name="M:DevExpress.XtraBars.BarItemLink.ResetUserCaption">
+      <summary>
+        <para>Resets the caption of this Bar Item Link to the caption of its parent Bar Item.</para>
+      </summary>
+    </member>
     <member name="P:DevExpress.XtraBars.BarItemLink.ScreenBounds">
       <summary>
         <para>Gets the bounds of the current link, its position is in screen coordinates.</para>
@@ -4736,7 +4776,7 @@
     </member>
     <member name="T:DevExpress.XtraBars.BarLargeButtonItem">
       <summary>
-        <para>Represents a bar item whose links can display different images when located on toolbars and menus.</para>
+        <para>A bar item that displays a large image in a toolbar.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraBars.BarLargeButtonItem.#ctor">
@@ -7012,9 +7052,9 @@
     </member>
     <member name="P:DevExpress.XtraBars.BarStaticItem.ShowImageInToolbar">
       <summary>
-        <para>Gets or sets whether the item’s image is displayed when the item is positioned within a <see cref="T:DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbar"/>.</para>
+        <para>Gets or sets whether to display the item’s image when the item is positioned in a <see cref="T:DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbar"/> or page header.</para>
       </summary>
-      <value>true if the item’s image is displayed when the item is positioned within a <see cref="T:DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbar"/>; otherwise, false.</value>
+      <value>true to always display the item’s image; false to hide the image when the item is positioned in a <see cref="T:DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbar"/> or page header.</value>
     </member>
     <member name="P:DevExpress.XtraBars.BarStaticItem.SmallWithoutTextWidth">
       <summary>
@@ -18135,7 +18175,7 @@
       <summary>
         <para>Gets or sets a collection of background images for all <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButton"/>s within the current <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel"/>.</para>
       </summary>
-      <value>An Object that stores a collection of background images for all <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButton"/>s within the current <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel"/>.</value>
+      <value>An Object that stores a collection of background images for all <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButton"/>s within the <see cref="T:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel"/>. The default, the buttons display the circles with transparent area inside (42x42 pixels).</value>
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel.ButtonChecked">
       <summary>
@@ -18790,6 +18830,11 @@
         <para>Return value: (Unassigned Items)</para>
       </summary>
     </member>
+    <member name="F:DevExpress.XtraBars.Localization.BarString.BarUnusedItems">
+      <summary>
+        <para>Returns “(Unused Items)”.</para>
+      </summary>
+    </member>
     <member name="F:DevExpress.XtraBars.Localization.BarString.CancelButton">
       <summary>
         <para>The caption of a Cancel button.</para>
@@ -18861,6 +18906,11 @@
         <para>Return value: Show the Ribbon so that it is always expanded even after you click a command</para>
       </summary>
     </member>
+    <member name="F:DevExpress.XtraBars.Localization.BarString.FormToolbar">
+      <summary>
+        <para>Returns “Form Toolbar”.</para>
+      </summary>
+    </member>
     <member name="F:DevExpress.XtraBars.Localization.BarString.FullScreenButton">
       <summary>
         <para>The default value for the tooltip text, which is shown for the Full-Screen Mode button (see <see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.ShowFullScreenButton"/>) of a Ribbon form.</para>
@@ -18877,6 +18927,11 @@
       <summary>
         <para>The default value for the tooltip text, which is shown for the Maximize button of a Ribbon form.</para>
         <para>Return value: Maximize</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraBars.Localization.BarString.MenuAnimationDefault">
+      <summary>
+        <para>Returns “Default”.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraBars.Localization.BarString.MenuAnimationFade">
@@ -19369,6 +19424,16 @@
         <para>Return value: Visible</para>
       </summary>
     </member>
+    <member name="F:DevExpress.XtraBars.Localization.BarString.WorkspaceMenuItemReplaceCaption">
+      <summary>
+        <para>Returns “Confirm Save As”.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraBars.Localization.BarString.WorkspaceMenuItemReplaceMessage">
+      <summary>
+        <para>Returns “{0} already exists. Do you want to replace it?”.</para>
+      </summary>
+    </member>
     <member name="T:DevExpress.XtraBars.MenuAppearance">
       <summary>
         <para>Contains style settings used to customize items within popup menus and container items.</para>
@@ -19680,7 +19745,7 @@
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.Appearance">
       <summary>
-        <para>Provides access to multiple appearance groups that store appearance settings for all accordion elements in every visual state. To set up appearance states for all visual states at once, use the Appearance.Item\Group\ItemWithContainer.Default group.</para>
+        <para>Provides access to the appearance groups that store appearance settings for all accordion UI elements (in every visual state).</para>
       </summary>
       <value>An DevExpress.XtraBars.Navigation.AccordionControlAppearances object that contains multiple appearance groups that store appearance settings for all accordion elements in every visual state.</value>
     </member>
@@ -22499,7 +22564,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraBars.Navigation.OptionsMinimizing.AllowFooterResizing">
       <summary>
-        <para>Gets or sets whether it is allowed to resize the control footer when the accordion control is minimized.</para>
+        <para>Gets or sets whether users can resize the control’s footer when the Accordion control is minimized.</para>
       </summary>
       <value>True if it is allowed to resize the control footer when the accordion control is minimized; otherwise, False.</value>
     </member>
@@ -23554,6 +23619,12 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Occurs when the <see cref="P:DevExpress.XtraBars.Navigation.TileNavPane.SelectedElement"/> is about to be changed.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraBars.Navigation.TileNavPane.SeparatorImageOptions">
+      <summary>
+        <para>Grants access to properties that allow you to specify a raster or a vector image for separators, and modify settings of this image.</para>
+      </summary>
+      <value>Stores image settings for separator items.</value>
     </member>
     <member name="M:DevExpress.XtraBars.Navigation.TileNavPane.ShowDropDown(DevExpress.XtraBars.Navigation.NavElement)">
       <summary>
@@ -24974,9 +25045,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.Style">
       <summary>
-        <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/>‘s style.</para>
+        <para>Gets or sets the BackstageViewControl’s style.</para>
       </summary>
-      <value>A BackstageViewStyle enumerator value that specifies the current <see cref="T:DevExpress.XtraBars.Ribbon.BackstageViewControl"/>‘s style.</value>
+      <value>A BackstageViewStyle enumeration value that specifies the BackstageViewControl’s style.</value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.ToolTipController">
       <summary>
@@ -25471,6 +25542,11 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Copies contents and settings from the specified gallery to the current gallery.</para>
       </summary>
       <param name="gallery">The gallery whose contents and settings are copied to the current gallery.</param>
+    </member>
+    <member name="E:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.CustomDrawEmptyBackground">
+      <summary>
+        <para>Allows you to manually paint the background of this Gallery when it has no items.</para>
+      </summary>
     </member>
     <member name="E:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.CustomDrawItemImage">
       <summary>
@@ -26608,6 +26684,21 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Activates the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryControl"/>‘s About dialog box.</para>
       </summary>
     </member>
+    <member name="F:DevExpress.XtraBars.Ribbon.GalleryControl.AccessibleGalleryFilterId">
+      <summary>
+        <para>This member supports internal infrastructure and is not intended for use in code.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraBars.Ribbon.GalleryControl.AccessibleGalleryObjectId">
+      <summary>
+        <para>This member supports internal infrastructure and is not intended for use in code.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraBars.Ribbon.GalleryControl.AccessibleGroupBeginId">
+      <summary>
+        <para>This member supports internal infrastructure and is not intended for use in code.</para>
+      </summary>
+    </member>
     <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.Appearance">
       <summary>
         <para>This property is not supported by the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryControl"/> class.</para>
@@ -26632,6 +26723,20 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Starts the runtime initialization of the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryControl"/> component.</para>
       </summary>
+    </member>
+    <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.CalcGallerySize">
+      <summary>
+        <para>Calculates the optimal GalleryControl size.</para>
+      </summary>
+      <returns>The optimal GalleryControl size.</returns>
+    </member>
+    <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.CalcGallerySize(System.Int32,System.Int32)">
+      <summary>
+        <para>Calculates the optimal size of a GalleryControl that has the given number of columns and rows.</para>
+      </summary>
+      <param name="row">The number of GalleryControl rows.</param>
+      <param name="column">The number of GalleryControl columns.</param>
+      <returns>The optimal GalleryControl size.</returns>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.CalcHitInfo(System.Drawing.Point)">
       <summary>
@@ -28344,6 +28449,11 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>A Padding structure that is the padding common to all <see cref="T:DevExpress.XtraBars.Ribbon.RecentTabItem"/> objects within this <see cref="T:DevExpress.XtraBars.Ribbon.RecentItemControl"/>.</value>
     </member>
+    <member name="P:DevExpress.XtraBars.Ribbon.RecentItemControl.RecentControlAccessible">
+      <summary>
+        <para>This member supports internal infrastructure and is not intended for use in code.</para>
+      </summary>
+    </member>
     <member name="E:DevExpress.XtraBars.Ribbon.RecentItemControl.SelectedItemChanging">
       <summary>
         <para>Occurs when a selection moves to another item.</para>
@@ -29772,6 +29882,12 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets whether the customize item is displayed within the Quick Access Toolbar.</para>
       </summary>
       <value>true to display the customize item within the Quick Access Toolbar; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.SingleTapToShowKeyboard">
+      <summary>
+        <para>Gets or sets whether users should tap editors once or twice to display the on-screen keyboard (when the application runs on touch-screen devices).</para>
+      </summary>
+      <value>true to display the on-screen keyboard after the first tap; false to focus the editor on the first tap and display the keyboard on the second tap.</value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.StatusBar">
       <summary>
@@ -34430,6 +34546,11 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>true to automatically expand menus on hover; otherwise, false.</value>
     </member>
+    <member name="E:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.BeforeLoadLayout">
+      <summary>
+        <para>Occurs before a layout is restored from storage (stream, XML file, or system registry).</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.BeginInit">
       <summary>
         <para>Starts the control’s runtime initialization.</para>
@@ -34447,6 +34568,17 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <param name="screenPoint">The coordinates to check.</param>
       <param name="includeSeparator">true, to return a bar separator item if it is located under the test point; false to return nothing.</param>
       <returns>A BarItemLink located under the test point.</returns>
+    </member>
+    <member name="E:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.LayoutUpgrade">
+      <summary>
+        <para>Occurs when a layout is restored from a data store (stream, XML file, or system registry), and its version differs from the version of the current layout.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.LayoutVersion">
+      <summary>
+        <para>Gets or sets the version of the control’s layout.</para>
+      </summary>
+      <value>The layout version.</value>
     </member>
     <member name="P:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.Manager">
       <summary>
@@ -34470,6 +34602,12 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets a child MDI form’s title bar merged with this title bar.</para>
       </summary>
       <value>An object that specifies a child MDI form’s title bar.</value>
+    </member>
+    <member name="M:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.MergeToolbar(DevExpress.XtraBars.ToolbarForm.ToolbarFormControl)">
+      <summary>
+        <para>Merges the child ToolbarFormControl into the current ToolbarFormControl.</para>
+      </summary>
+      <param name="toolbarFormControl">A child ToolbarFormControl whose items should be merged into this ToolbarFormControl.</param>
     </member>
     <member name="M:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.RestoreLayoutFromRegistry(System.String)">
       <summary>
@@ -34536,6 +34674,11 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Fires after title bars are unmerged.</para>
       </summary>
     </member>
+    <member name="M:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.UnMergeToolbar">
+      <summary>
+        <para>Restores the original item layout of this ToolbarFormControl after another ToolbarFormControl was merged with it.</para>
+      </summary>
+    </member>
     <member name="T:DevExpress.XtraBars.ToolbarForm.ToolbarFormManager">
       <summary>
         <para>A <see cref="T:DevExpress.XtraBars.BarManager"/> that owns bar items displayed inside a <see cref="T:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"/>.</para>
@@ -34557,6 +34700,12 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Initializes a new instance of the ToolbarFormManager class and places it inside the given container.</para>
       </summary>
       <param name="container">An IContainer that will host the newly created Manager.</param>
+    </member>
+    <member name="P:DevExpress.XtraBars.ToolbarForm.ToolbarFormManager.Owner">
+      <summary>
+        <para>Returns the <see cref="T:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl"/> that is the owner of this Toolbar Form Manager.</para>
+      </summary>
+      <value>The Toolbar Form Manager’s owner.</value>
     </member>
     <member name="T:DevExpress.XtraBars.ToolbarForm.ToolbarFormMdiMergeStyle">
       <summary>
@@ -35313,7 +35462,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="N:DevExpress.XtraEditors">
       <summary>
-        <para>Contains editor classes. They provide the functionality for corresponding controls.</para>
+        <para>Contains editor classes that implement the functionality for corresponding controls.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.DirectXForm">
@@ -35325,6 +35474,24 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.DirectXForm"/> class.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraEditors.DirectXForm.Items">
+      <summary>
+        <para>Returns a collection of <see cref="T:DevExpress.XtraBars.BarItem"/> objects owned by this DirectXForm.</para>
+      </summary>
+      <value>The collection of BarItems owned by this form.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.DirectXForm.Links">
+      <summary>
+        <para>Returns the collection of <see cref="T:DevExpress.XtraBars.BarItemLink"/> objects owned by this DirectXForm.</para>
+      </summary>
+      <value>The collection of item links owned by this form.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.DirectXForm.Manager">
+      <summary>
+        <para>Returns the internal BarManager component associated with this DirectXForm.</para>
+      </summary>
+      <value>The internal BarManager component associated with this DirectXForm.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.PopupGalleryEdit">
       <summary>
@@ -35368,7 +35535,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraEditors.PopupGalleryEditGallery">
       <summary>
-        <para>Represents a gallery within a <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/>.</para>
+        <para>A gallery within a <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/>.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.PopupGalleryEditGallery.#ctor">
@@ -36361,6 +36528,12 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets the caption displayed at the top of the control. This property is in effect if the ToolboxControl.OptionsView.ShowToolboxCaption option is enabled.</para>
       </summary>
       <value>A string value that specifies the toolbox caption.</value>
+    </member>
+    <member name="P:DevExpress.XtraToolbox.ToolboxControl.ContextMenuStrip">
+      <summary>
+        <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
+      </summary>
+      <value>A ContextMenuStrip object.</value>
     </member>
     <member name="E:DevExpress.XtraToolbox.ToolboxControl.CustomDrawElement">
       <summary>

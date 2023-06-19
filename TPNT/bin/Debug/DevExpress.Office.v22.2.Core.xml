@@ -49,6 +49,293 @@
       </summary>
       <value>A stream with document data.</value>
     </member>
+    <member name="T:DevExpress.Office.Characters">
+      <summary>
+        <para>Contains fields that return character symbols.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Office.Characters.Bullet">
+      <summary>
+        <para>Returns a bullet symbol.</para>
+      </summary>
+      <value>A bullet symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.CanadianSyllabicsChiSign">
+      <summary>
+        <para>Returns canadian syllabics Chi sign symbol.</para>
+      </summary>
+      <value>A Canadian syllabics Chi sign symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.CircumflexAccent">
+      <summary>
+        <para>Returns a circumflex accent symbols.</para>
+      </summary>
+      <value>A circumflex accent symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.ClosingDoubleQuotationMark">
+      <summary>
+        <para>Returns a closing double quotation mark symbol.</para>
+      </summary>
+      <value>A closing double quotation mark symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.ClosingSingleQuotationMark">
+      <summary>
+        <para>Returns a closing single quotation mark symbol.</para>
+      </summary>
+      <value>A closing single quotation mark symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.Colon">
+      <summary>
+        <para>Returns a colon symbol.</para>
+      </summary>
+      <value>A colon symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.ColumnBreak">
+      <summary>
+        <para>Returns a column break symbol.</para>
+      </summary>
+      <value>A column break symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.CopyrightSymbol">
+      <summary>
+        <para>Returns a copyright symbol.</para>
+      </summary>
+      <value>A copyright symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.CurrencySign">
+      <summary>
+        <para>Returns a currency symbol.</para>
+      </summary>
+      <value>A currency symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.Dash">
+      <summary>
+        <para>Returns a dash symbol.</para>
+      </summary>
+      <value>A dash symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.Dot">
+      <summary>
+        <para>Returns a dot symbol.</para>
+      </summary>
+      <value>A dot symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.Ellipsis">
+      <summary>
+        <para>Returns an ellipsis symbol.</para>
+      </summary>
+      <value>An ellipsis symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.EmDash">
+      <summary>
+        <para>Returns an em dash symbol.</para>
+      </summary>
+      <value>An em dash symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.EmSpace">
+      <summary>
+        <para>Returns an em space symbol.</para>
+      </summary>
+      <value>An em space symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.EnDash">
+      <summary>
+        <para>Returns an en dash symbol.</para>
+      </summary>
+      <value>An en dash symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.EnSpace">
+      <summary>
+        <para>Returns an en space symbol.</para>
+      </summary>
+      <value>An en dash symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.EOT">
+      <summary>
+        <para>Returns an End of Transmission (EOT) symbol.</para>
+      </summary>
+      <value>An EOT symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.EqualSign">
+      <summary>
+        <para>Returns an equal symbol.</para>
+      </summary>
+      <value>A equal symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.ETX">
+      <summary>
+        <para>Returns an End of Text (ETX) symbol.</para>
+      </summary>
+      <value>An ETX symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.FloatingObjectMark">
+      <summary>
+        <para>Returns a floating object mark symbol.</para>
+      </summary>
+      <value>A floating object mark symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.Hyphen">
+      <summary>
+        <para>Returns a hyphen symbol.</para>
+      </summary>
+      <value>A hyphen symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.LeftDoubleQuote">
+      <summary>
+        <para>Returns a left double quote symbol.</para>
+      </summary>
+      <value>A left double quote symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.LeftSingleQuote">
+      <summary>
+        <para>Returns a left single quote symbol.</para>
+      </summary>
+      <value>A left single quote symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.LineBreak">
+      <summary>
+        <para>Returns a line break symbol.</para>
+      </summary>
+      <value>A line break symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.MiddleDot">
+      <summary>
+        <para>Returns a middle dot symbol.</para>
+      </summary>
+      <value>A middle dot symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.NonBreakingHyphen">
+      <summary>
+        <para>Returns a non-breaking hyphen symbol.</para>
+      </summary>
+      <value>A non-breaking hyphen symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.NonBreakingSpace">
+      <summary>
+        <para>Returns a non-breaking space symbol.</para>
+      </summary>
+      <value>A non-breaking space symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.NotSign">
+      <summary>
+        <para>Returns a not symbol.</para>
+      </summary>
+      <value>A not symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.NumberSign">
+      <summary>
+        <para>Returns a number symbol.</para>
+      </summary>
+      <value>A number symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.ObjectMark">
+      <summary>
+        <para>Returns an object symbol.</para>
+      </summary>
+      <value>An object symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.OpeningDoubleQuotationMark">
+      <summary>
+        <para>Returns an opening double quotation mark.</para>
+      </summary>
+      <value>An opening double quotation mark.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.OpeningSingleQuotationMark">
+      <summary>
+        <para>Returns an opening double quotation mark.</para>
+      </summary>
+      <value>An opening single quotation mark.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.OptionalHyphen">
+      <summary>
+        <para>Returns an optional hyphen symbol.</para>
+      </summary>
+      <value>An optional hyphen symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.PageBreak">
+      <summary>
+        <para>Returns a page break.</para>
+      </summary>
+      <value>A page break.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.ParagraphMark">
+      <summary>
+        <para>Returns a paragraph mark.</para>
+      </summary>
+      <value>A paragraph mark.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.PilcrowSign">
+      <summary>
+        <para>Returns a pilcrow symbol.</para>
+      </summary>
+      <value>A pilcrow symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.QmSpace">
+      <summary>
+        <para>Returns an em quad space.</para>
+      </summary>
+      <value>An em quad space.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.RegisteredTrademarkSymbol">
+      <summary>
+        <para>Returns a registered trademark symbol.</para>
+      </summary>
+      <value>A registered trademark symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.RightDoubleQuote">
+      <summary>
+        <para>Returns a right double quote symbol.</para>
+      </summary>
+      <value>A right single quote symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.RightSingleQuote">
+      <summary>
+        <para>Returns a right single quote symbol.</para>
+      </summary>
+      <value>A right single quote symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.SectionMark">
+      <summary>
+        <para>Returns a section mark symbol.</para>
+      </summary>
+      <value>A section mark symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.SeparatorMark">
+      <summary>
+        <para>Returns a separator mark symbol.</para>
+      </summary>
+      <value>A separator mark symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.Space">
+      <summary>
+        <para>Returns a space symbol.</para>
+      </summary>
+      <value>A space symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.TabMark">
+      <summary>
+        <para>Returns a tab mark symbol.</para>
+      </summary>
+      <value>A tab mark symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.TrademarkSymbol">
+      <summary>
+        <para>Returns a trademark symbol.</para>
+      </summary>
+      <value>A trademark symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.Underscore">
+      <summary>
+        <para>Returns an underscore symbol.</para>
+      </summary>
+      <value>An underscore symbol.</value>
+    </member>
+    <member name="F:DevExpress.Office.Characters.ZeroWidthSpace">
+      <summary>
+        <para>Returns a zero width space symbol.</para>
+      </summary>
+      <value>A zero width space symbol.</value>
+    </member>
     <member name="T:DevExpress.Office.DocumentLayoutUnit">
       <summary>
         <para>Lists measurement units used for the document layout.</para>

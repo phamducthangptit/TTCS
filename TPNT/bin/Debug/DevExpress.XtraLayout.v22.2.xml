@@ -553,24 +553,24 @@
         <para>Moves the item to the specified visual position within the LayoutControl.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant that represents the layout item within the LayoutControl.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified baseItem.</param>
-      <param name="moveType">A <see cref="T:DevExpress.XtraLayout.Utils.MoveType"/> enumeration value that specifies how a layout item is inserted to another position.</param>
-      <returns>true if the item has been successfully moved to a new position; otherwise, false.</returns>
+      <param name="insertType">The item’s new position relative to the baseItem.</param>
+      <param name="moveType">A <see cref="T:DevExpress.XtraLayout.Utils.MoveType"/> enumeration value that specifies how a layout item is inserted in another position.</param>
+      <returns>true if the item was successfully moved to a new position; otherwise, false.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.BaseLayoutItem.Move(DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
       <summary>
         <para>Moves the item to the specified visual position within the LayoutControl.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant that represents the layout item within the LayoutControl.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified baseItem.</param>
-      <returns>true if the item has been successfully moved to a new position; otherwise, false.</returns>
+      <param name="insertType">The item’s new position relative to the baseItem.</param>
+      <returns>true if the item was successfully moved to a new position; otherwise, false.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.BaseLayoutItem.Move(DevExpress.XtraLayout.Customization.LayoutItemDragController)">
       <summary>
         <para>Moves the item to the specified position within the LayoutControl.</para>
       </summary>
       <param name="controller">A <see cref="T:DevExpress.XtraLayout.Customization.LayoutItemDragController"/> object whose settings determine the position to which the layout item should be moved.</param>
-      <returns>true if the item has been successfully moved to a new position; otherwise, false.</returns>
+      <returns>true if the item was successfully moved to a new position; otherwise, false.</returns>
     </member>
     <member name="P:DevExpress.XtraLayout.BaseLayoutItem.Name">
       <summary>
@@ -648,7 +648,7 @@
         <para>Restores the current layout item from the Customization Form and adds it to the parent group of the specified item at the specified visual position.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant which represents the layout item within the LayoutControl.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the restored item relative to the baseItem.</param>
+      <param name="insertType">The position of the restored item relative to the baseItem.</param>
     </member>
     <member name="M:DevExpress.XtraLayout.BaseLayoutItem.RestoreFromCustomization(DevExpress.XtraLayout.Customization.LayoutItemDragController)">
       <summary>
@@ -1598,7 +1598,7 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>Creates a new layout group at a position relative to an item within the root group.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the root group) next to which a new group is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified item.</param>
+      <param name="insertType">The position of the new group relative to the baseItem.</param>
       <returns>The newly created group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.AddGroup(DevExpress.XtraLayout.LayoutGroup,DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -1607,7 +1607,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="newGroup">The group to add to the root group.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the root group) next to which the ‘newGroup’ is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified item.</param>
+      <param name="insertType">The position of the new group relative to the baseItem.</param>
       <returns>The added group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.AddGroup(DevExpress.XtraLayout.LayoutGroup)">
@@ -1623,7 +1623,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="text">A <see cref="T:System.String"/> value that specifies the group’s caption. This value is assigned to the <see cref="P:DevExpress.XtraLayout.BaseLayoutItem.Text"/> property.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the root group) next to which a new group is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified item.</param>
+      <param name="insertType">The position of the new group relative to the baseItem.</param>
       <returns>The newly created group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.AddGroup(System.String)">
@@ -1645,7 +1645,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="newItem">The item to add to the root group.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the root group) next to which the ‘newItem’ is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new item relative to the specified item.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The added item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.AddItem(DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -1653,7 +1653,7 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>Creates a new layout item at a position relative to another item within the root group.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the root group) next to which a new item is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new item relative to the specified baseItem.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The newly created layout item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.AddItem(DevExpress.XtraLayout.BaseLayoutItem)">
@@ -1671,7 +1671,7 @@ is dependent on the type of control embedded in this layout item.</value>
       <param name="control">This parameter is ignored.</param>
       <param name="newItem">The item to add to the root group.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the root group) next to which the ‘newItem’ is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new item relative to the specified item.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The newly created layout item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.AddItem(System.String,System.Windows.Forms.Control,DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -1681,7 +1681,7 @@ is dependent on the type of control embedded in this layout item.</value>
       <param name="text">A <see cref="T:System.String"/> value that specifies the layout item’s text.</param>
       <param name="control">The control to display in the new layout item. This value is used to initialize the <see cref="P:DevExpress.XtraLayout.LayoutControlItem.Control"/> property.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the root group) next to which a new item is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new item relative to the specified baseItem.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The newly created layout item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.AddItem(System.String,System.Windows.Forms.Control)">
@@ -1710,7 +1710,7 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>Creates a new tabbed group and adds it at a position relative to an item within the root group.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the root group) next to which a new group is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new tabbed group relative to the baseItem.</param>
+      <param name="insertType">The position of the new tabbed group relative to the baseItem.</param>
       <returns>The newly created group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.AddTabbedGroup(DevExpress.XtraLayout.TabbedGroup,DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -1719,7 +1719,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="newTabbedGroup">The group to add to the root group.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the root group) next to which the ‘newTabbedGroup’ is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new tabbed group relative to the specified item.</param>
+      <param name="insertType">The position of the new tabbed group relative to the baseItem.</param>
       <returns>The added group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControl.AddTabbedGroup(DevExpress.XtraLayout.TabbedGroup)">
@@ -2788,7 +2788,7 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>Creates a new layout group at a position relative to an item within the current group.</para>
       </summary>
       <param name="baseItem">The item (owned by the current group) next to which the new group is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified item.</param>
+      <param name="insertType">The position of the new group relative to the baseItem.</param>
       <returns>The new layout group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControlGroup.AddGroup(DevExpress.XtraLayout.LayoutGroup,DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -2797,7 +2797,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="newGroup">The layout group to add to the current group.</param>
       <param name="baseItem">The item (owned by the current group) next to which the ‘newGroup’ is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified item.</param>
+      <param name="insertType">The position of the new group relative to the baseItem.</param>
       <returns>The added layout group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControlGroup.AddGroup(DevExpress.XtraLayout.LayoutGroup)">
@@ -2813,7 +2813,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="text">A <see cref="T:System.String"/> value that specifies the group’s caption. This value is assigned to the <see cref="P:DevExpress.XtraLayout.BaseLayoutItem.Text"/> property.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which a new group is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified item.</param>
+      <param name="insertType">The position of the new group relative to the baseItem.</param>
       <returns>The newly created layout group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControlGroup.AddGroup(System.String)">
@@ -2835,7 +2835,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="newItem">The item to be moved to a new position.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which the ‘newItem’ is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the ‘newItem’ relative to the specified item.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The added layout item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControlGroup.AddItem(DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -2843,7 +2843,7 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>Creates a new layout item at a position relative to an item within the current group.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which a new item is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new item relative to the specified item.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The newly created layout item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControlGroup.AddItem(DevExpress.XtraLayout.BaseLayoutItem)">
@@ -2860,7 +2860,7 @@ is dependent on the type of control embedded in this layout item.</value>
       <param name="text">A <see cref="T:System.String"/> value that specifies the new layout item’s text.</param>
       <param name="control">The control to display in the new layout item. This value is used to initialize the <see cref="P:DevExpress.XtraLayout.LayoutControlItem.Control"/> property.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which a new item is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new item relative to the specified item.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The newly created layout item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControlGroup.AddItem(System.String,System.Windows.Forms.Control)">
@@ -2895,7 +2895,7 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>Creates a new tabbed group at a position relative to an item within the current group.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which a new group is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new tabbed group relative to the specified item.</param>
+      <param name="insertType">The position of the new tabbed group relative to the baseItem.</param>
       <returns>The newly created group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControlGroup.AddTabbedGroup(DevExpress.XtraLayout.TabbedGroup,DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -2904,7 +2904,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="newTabbedGroup">The group that is to be moved to a new position.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which the ‘newTabbedGroup’ is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new tabbed group relative to the specified item.</param>
+      <param name="insertType">The position of the new tabbed group relative to the baseItem.</param>
       <returns>The added tabbed group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutControlGroup.AddTabbedGroup(DevExpress.XtraLayout.TabbedGroup)">
@@ -3230,7 +3230,7 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>Creates a new group at a position relative to an item within the current group.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which a new group is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified item.</param>
+      <param name="insertType">The position of the new group relative to the baseItem.</param>
       <returns>The newly created layout group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutGroup.AddGroup(DevExpress.XtraLayout.LayoutGroup,DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -3239,7 +3239,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="newGroup">The group to be moved to a new position.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which the ‘newGroup’ is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified item.</param>
+      <param name="insertType">The position of the new group relative to the baseItem.</param>
       <returns>The added group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutGroup.AddGroup(DevExpress.XtraLayout.LayoutGroup)">
@@ -3255,7 +3255,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="text">A <see cref="T:System.String"/> value that specifies the group’s caption. This value is assigned to the <see cref="P:DevExpress.XtraLayout.BaseLayoutItem.Text"/> property.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which a new group is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new group relative to the specified item.</param>
+      <param name="insertType">The position of the new group relative to the baseItem.</param>
       <returns>The newly created layout group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutGroup.AddGroup(System.String)">
@@ -3277,7 +3277,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="newItem">The item to be moved to a new position.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which a new item is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new item relative to the baseItem.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The added layout item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutGroup.AddItem(DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -3285,7 +3285,7 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>Creates a new layout item at a position relative to an item within the current group.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which a new item is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new item relative to the baseItem.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The newly created layout item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutGroup.AddItem(DevExpress.XtraLayout.BaseLayoutItem)">
@@ -3302,7 +3302,7 @@ is dependent on the type of control embedded in this layout item.</value>
       <param name="text">A <see cref="T:System.String"/> value that specifies the new text to be assigned to the added item. The parameter is ignored if the value represents an empty string.</param>
       <param name="newItem">The item to be moved to a new position.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which the ‘newItem’ is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new item relative to the baseItem.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The added layout item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutGroup.AddItem(System.String,DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -3311,7 +3311,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="text">A <see cref="T:System.String"/> value that specifies the new layout item’s text.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which a new item is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new item relative to the specified item.</param>
+      <param name="insertType">The position of the new item relative to the baseItem.</param>
       <returns>The newly created layout item.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutGroup.AddItem(System.String)">
@@ -3332,7 +3332,7 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>Creates a new tabbed group at a position relative to an item within the current group.</para>
       </summary>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which a new group is inserted.</param>
-      <param name="insertType">The position of the new tabbed group relative to the specified item.</param>
+      <param name="insertType">The position of the new tabbed group relative to the baseItem.</param>
       <returns>The newly added tabbed group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutGroup.AddTabbedGroup(DevExpress.XtraLayout.TabbedGroup,DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType)">
@@ -3341,7 +3341,7 @@ is dependent on the type of control embedded in this layout item.</value>
       </summary>
       <param name="newTabbedGroup">The tabbed group to add to the collection.</param>
       <param name="baseItem">A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant (owned by the current group) next to which the ‘newTabbedGroup’ is inserted.</param>
-      <param name="insertType">A DevExpress.XtraLayout.Utils.InsertType enumeration value that specifies the position of the new tabbed group relative to the specified item.</param>
+      <param name="insertType">The position of the new tabbed group relative to the baseItem.</param>
       <returns>The added tabbed group.</returns>
     </member>
     <member name="M:DevExpress.XtraLayout.LayoutGroup.AddTabbedGroup(DevExpress.XtraLayout.TabbedGroup)">
@@ -5908,6 +5908,31 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>To insert an item before the specified one.</para>
       </summary>
     </member>
+    <member name="T:DevExpress.XtraLayout.Utils.InsertType">
+      <summary>
+        <para>Lists values that specify the inserted layout item’s position relative to another item.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraLayout.Utils.InsertType.Bottom">
+      <summary>
+        <para>Inserts an item below another item.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraLayout.Utils.InsertType.Left">
+      <summary>
+        <para>Inserts an item to the left of another item.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraLayout.Utils.InsertType.Right">
+      <summary>
+        <para>Inserts an item to the right of another item.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraLayout.Utils.InsertType.Top">
+      <summary>
+        <para>Inserts an item above another item.</para>
+      </summary>
+    </member>
     <member name="T:DevExpress.XtraLayout.Utils.LayoutGroupCancelEventArgs">
       <summary>
         <para>Provides data for the <see cref="E:DevExpress.XtraLayout.LayoutControl.GroupExpandChanging"/> event.</para>
@@ -5958,6 +5983,11 @@ is dependent on the type of control embedded in this layout item.</value>
     <member name="M:DevExpress.XtraLayout.Utils.LayoutGroupItemCollection.#ctor">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraLayout.Utils.LayoutGroupItemCollection"/> class with the default settings.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraLayout.Utils.LayoutGroupItemCollection.#ctor(DevExpress.XtraLayout.LayoutGroup)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraLayout.Utils.LayoutGroupItemCollection"/> class with specified settings.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraLayout.Utils.LayoutGroupItemCollection.AddGroup">
