@@ -35,14 +35,12 @@ namespace TPNT
         public static int mChiNhanh = 0;
 
         public static BindingSource bds_dspm = new BindingSource(); // ds phan manh
-        public static frmMain frmChinh;
         public static int KetNoi()
         {
             if (Program.conn != null && Program.conn.State == ConnectionState.Open) Program.conn.Close();
             try
             {
-                Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" +
-                    Program.database + ";User ID=" + Program.mlogin + ";password=" + Program.password;
+                Program.connstr = connstr_publisher;
                 Program.conn.ConnectionString = Program.connstr;
                 Program.conn.Open();
                 return 1;
@@ -107,10 +105,11 @@ namespace TPNT
         [STAThread]
         static void Main()
         {
+            if (KetNoi() == 0) return;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmChinh = new frmMain();
-            Application.Run(frmChinh);
+
+            Application.Run(new frmMainMenu());
         }
     }
 }
