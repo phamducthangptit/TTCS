@@ -354,6 +354,7 @@
             // 
             this.gcTacGia.DataSource = this.bdsTacGia;
             this.gcTacGia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gcTacGia.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gcTacGia.Location = new System.Drawing.Point(0, 61);
             this.gcTacGia.MainView = this.gridView1;
             this.gcTacGia.MenuManager = this.barManager1;

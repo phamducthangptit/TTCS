@@ -1,6 +1,5 @@
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.AssemblyReference.cache
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.SuggestedBindingRedirects.cache
-E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmMain.resources
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmTacGia.resources
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.Properties.Resources.resources
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.GenerateResource.cache
@@ -32,7 +31,6 @@ E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Pdf.v22.2.Drawing.xml
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.CopyComplete
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.exe
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.pdb
-<<<<<<< HEAD
 E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraGrid.v22.2.dll
 E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraLayout.v22.2.dll
 E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraPrinting.v22.2.dll
@@ -46,7 +44,6 @@ E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
 E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraTreeList.v22.2.xml
 E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Office.v22.2.Core.xml
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmHoiHoa.resources
-=======
 C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.AssemblyReference.cache
 C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.SuggestedBindingRedirects.cache
 C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.frmMainMenu.resources
@@ -82,4 +79,5 @@ C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v22.2.
 C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.CopyComplete
 C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.exe
 C:\Users\Admin\Desktop\TTCS\New folder\TTCS\TPNT\obj\Debug\TPNT.pdb
->>>>>>> 5077d31997238f730c51908d4dfec18dd0431059
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmMainMenu.resources
+E:\Dev\C#\TPNT\TPNT\bin\Debug\FontAwesome.Sharp.dll

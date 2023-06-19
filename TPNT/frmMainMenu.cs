@@ -136,6 +136,7 @@ namespace TPNT
         private void btnLoaiHinhSoHuu_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
+            
         }
 
         private void Reset()
@@ -159,6 +160,12 @@ namespace TPNT
         private void btnLoaiHinhSoHuu_Click_1(object sender, EventArgs e)
         {
             showSubMenu(panelLoaiHinhSoHuu);
+        }
+
+        private void btnHoiHoa_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(new frmHoiHoa());
         }
     }
 }
