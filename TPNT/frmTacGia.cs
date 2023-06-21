@@ -20,6 +20,7 @@ namespace TPNT
         private PictureBox pictureBox = new PictureBox();
         private string selectedImagePath = "";
         private string suKien = "";
+        private string suKienCT = "";
         private int vitri = 0;
         private int chonAnh = 0;
         public frmTacGia()
@@ -29,35 +30,15 @@ namespace TPNT
         private void frmTacGia_Load(object sender, EventArgs e)
         {
             tPNTDataSet.EnforceConstraints = false;
-            this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
+            this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);  
 
-            string pathImage = ((DataRowView)bdsTacGia[bdsTacGia.Position])["HinhAnh"].ToString();
+            gcTacGia.Dock = DockStyle.Fill;
+            groupBox1.Visible = false;
 
-            Image image = Image.FromFile(pathImage);
+            this.btnThem.Enabled =   this.btnReload.Enabled = this.btnThoat.Enabled = true;
+            this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
 
-            pictureBox.Image = image;
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox.Dock = DockStyle.Fill;
-            this.pnlAnh.AddControl(pictureBox);
-
-            groupBox1.Enabled = false;
-
-            this.btnThem.Enabled =  this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
-            this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
-
-            string strLenh = "SELECT dbo.FN_SLTP('" + this.txtMaTacGia.Text + "')";
-            SqlDataReader dataReaderSLTP = Program.ExecSqlDataReader(strLenh);
-            dataReaderSLTP.Read();
-            int sLTP = dataReaderSLTP.GetInt32(0);
-            dataReaderSLTP.Close();
-            this.txtSLTP.Text = sLTP.ToString();
-            if (sLTP > 0)
-            {
-                this.btnXoa.Enabled = false;
-            }
-            else this.btnXoa.Enabled = true;
-
-            strLenh = "SELECT * FROM V_SLTG";
+            string strLenh = "SELECT * FROM V_SLTG";
             SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
             dataReaderSLTG.Read();
             int slTG = dataReaderSLTG.GetInt32(0);
@@ -71,14 +52,24 @@ namespace TPNT
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             suKien = "THEM";
+            suKienCT = "THEM";
             vitri = bdsTacGia.Position;
-            groupBox1.Enabled = true;
-            gcTacGia.Enabled = false;
-            this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
+            this.txtMaTacGia.ReadOnly = false;
+            gcTacGia.Visible = false;
+            groupBox1.Visible = true;
+            groupBox1.Dock = DockStyle.Fill;
+
+            this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
+                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = true;
+            this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
+                = this.btnReload.Enabled = this.btnThoat.Enabled = false;
+            
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
             this.pnlAnh.Visible = false;
+            this.lblSLTP.Visible = this.txtSLTP.Visible = false;
             bdsTacGia.AddNew();
             this.btnChonAnh.Visible = true;
+
         }
 
         private void btnHieuChinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -92,6 +83,8 @@ namespace TPNT
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
             this.btnChonAnh.Visible = true;
             this.pnlAnh.Visible = true;
+            this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
+                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = true;
 
             string maTG = ((DataRowView)bdsTacGia[bdsTacGia.Position])["MaTacGia"].ToString();
             string strLenh = "SELECT dbo.FN_SLTP('" + maTG + "')";
@@ -138,7 +131,7 @@ namespace TPNT
                     bdsTacGia.RemoveCurrent();
                     strLenh = "EXEC SP_DELETETG '" + maTG + "'";
                     int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
-                    File.Delete(((DataRowView)bdsTacGia[bdsTacGia.Position])["HinhAnh"].ToString());
+                    //File.Delete(((DataRowView)bdsTacGia[bdsTacGia.Position])["HinhAnh"].ToString());
 
                 }
                 catch (Exception ex)
@@ -156,14 +149,26 @@ namespace TPNT
         {
             bdsTacGia.CancelEdit();
             bdsTacGia.Position = vitri;
+            if (suKienCT.Equals("THEM"))
+            {
+                gcTacGia.Visible = true;
+                gcTacGia.Dock = DockStyle.Fill;
+                groupBox1.Visible = false;
+                this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
+                
+            }
+            else
+            {
+                this.btnXoa.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
+                this.btnChonAnh.Visible = this.btnThem.Enabled = false;
+                this.pnlAnh.Visible = true;
+                this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
+                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
+            }
 
-            groupBox1.Enabled = false;
-            gcTacGia.Enabled = true;
-
-            this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
-            this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
-            this.btnChonAnh.Visible = false;
-            this.pnlAnh.Visible = true;
+            
         }
 
         private void btnReload_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -303,6 +308,11 @@ namespace TPNT
                             + this.txtQuocTich.Text + "', '" + this.txtDienGiai.Text + "', '" + this.txtPhongCach.Text + "', '" + p + "'";
                         int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
                         chonAnh = 0;
+                        gcTacGia.Visible = true;
+                        gcTacGia.Dock = DockStyle.Fill;
+                        groupBox1.Visible = false;
+                        this.btnChiTiet.Enabled = true;
+                        this.btnHieuChinh.Enabled = false;
                     } catch(Exception ex)
                     {
                         MessageBox.Show("Lỗi ghi tác giả.\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
@@ -314,6 +324,7 @@ namespace TPNT
                     MessageBox.Show("Mã tác giả đã có trong hệ thống", "Thông báo", MessageBoxButtons.OK);
                     return;
                 }
+                suKien = "";
             } else if (suKien.Equals("HC"))
             {
                 try
@@ -339,23 +350,25 @@ namespace TPNT
                     string strLenh = "EXEC SP_UPDATETG '" + maTG + "', '" + this.txtMaTacGia.Text + "', '" + this.txtHoTen.Text + "', '" + ngaySinh + "', '" + ngayMat + "', '"
                            + this.txtQuocTich.Text + "', '" + this.txtDienGiai.Text + "', '" + this.txtPhongCach.Text + "', '" + p + "'";
                     int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
-                    // luu duoc vao db thi xoa
-                    /*if (anhCu.Length != 0)
-                    {
-                        File.Delete(anhCu);
-                    }*/
+                    MessageBox.Show("Cập nhật thông tin thành công", "Thông báo", MessageBoxButtons.OK);
+                   
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi ghi tác giả.\n" + ex.Message, "", MessageBoxButtons.OK);
                     return;
                 }
+                suKien = "";
             }
 
-            groupBox1.Enabled = false;
             gcTacGia.Enabled = true;
+            if (suKienCT.Equals("CT"))
+            {
+                this.btnThem.Enabled = false;
+            }
+            else this.btnThem.Enabled = true;
 
-            this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+            this.btnXoa.Enabled =  this.btnReload.Enabled = this.btnThoat.Enabled = true;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
             this.btnChonAnh.Visible = false;
         }
@@ -372,23 +385,25 @@ namespace TPNT
             int sLTP = dataReaderSLTP.GetInt32(0);
             dataReaderSLTP.Close();
             this.txtSLTP.Text = sLTP.ToString();
-            if (sLTP > 0)
-            {
-                this.btnXoa.Enabled = false;
-            }
-            else this.btnXoa.Enabled = true;
 
             strLenh = "SELECT * FROM V_SLTG";
             SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
             dataReaderSLTG.Read();
             int slTG = dataReaderSLTG.GetInt32(0);
             dataReaderSLTG.Close();
-            if (slTG == 0)
+
+            if (sLTP > 0 || slTG == 0)
             {
                 this.btnXoa.Enabled = false;
             }
             else this.btnXoa.Enabled = true;
 
+            if (this.txtMaTacGia.Text.Length == 0 && suKien.Equals("THEM"))
+            {
+                this.btnXoa.Enabled = false;
+                this.txtMaTacGia.Enabled = true;
+            }
+            
             if (pathImage.Trim().Length != 0)
             {
                 Image image = Image.FromFile(pathImage);
@@ -403,7 +418,32 @@ namespace TPNT
 
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            this.Close();
+            if (suKienCT.Equals("CT"))
+            {
+                gcTacGia.Visible = true;
+                gcTacGia.Enabled = true;
+                gcTacGia.Dock = DockStyle.Fill;
+                groupBox1.Visible = false;
+                this.btnChiTiet.Enabled = true;
+                this.btnHieuChinh.Enabled = false;
+                this.btnThem.Enabled = true;
+            } else this.Close();
+            suKienCT = "";
+        }
+
+        private void btnChiTiet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            suKienCT = "CT";
+
+            this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
+                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
+            this.btnThem.Enabled = this.btnChiTiet.Enabled = false;
+            gcTacGia.Visible = false;
+            groupBox1.Visible = true;
+            groupBox1.Dock = DockStyle.Fill;
+            this.btnHieuChinh.Enabled = true;
+            this.lblSLTP.Visible = this.txtSLTP.Visible = true;
+            
         }
     }
 }
