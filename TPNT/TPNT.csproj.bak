@@ -37,10 +37,20 @@
     <Reference Include="DevExpress.Data.v22.2" />
     <Reference Include="DevExpress.Utils.v22.2" />
     <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+<<<<<<< HEAD
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2" />
     <Reference Include="DevExpress.Printing.v22.2.Core" />
     <Reference Include="DevExpress.Drawing.v22.2" />
+=======
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.2" />
+    <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+>>>>>>> 9eee88703b205e5cb3a7f9ccfa5a46e5bd127ae9
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -63,6 +73,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Compile Include="frmCuocTrienLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuocTrienLam.Designer.cs">
+      <DependentUpon>frmCuocTrienLam.cs</DependentUpon>
+    </Compile>
+>>>>>>> 9eee88703b205e5cb3a7f9ccfa5a46e5bd127ae9
     <Compile Include="frmHoiHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +107,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTPNT.xsd</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="TPNTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPNTDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCuocTrienLam.resx">
+      <DependentUpon>frmCuocTrienLam.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 9eee88703b205e5cb3a7f9ccfa5a46e5bd127ae9
     <EmbeddedResource Include="frmHoiHoa.resx">
       <DependentUpon>frmHoiHoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +126,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTacGia.resx">
       <DependentUpon>frmTacGia.cs</DependentUpon>
+<<<<<<< HEAD
+=======
+      <SubType>Designer</SubType>
+>>>>>>> 9eee88703b205e5cb3a7f9ccfa5a46e5bd127ae9
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -130,6 +164,20 @@
     <None Include="dsTPNT.xss">
       <DependentUpon>dsTPNT.xsd</DependentUpon>
     </None>
+<<<<<<< HEAD
+=======
+    <None Include="TPNTDataSet1.xsc">
+      <DependentUpon>TPNTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TPNTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TPNTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TPNTDataSet1.xss">
+      <DependentUpon>TPNTDataSet1.xsd</DependentUpon>
+    </None>
+>>>>>>> 9eee88703b205e5cb3a7f9ccfa5a46e5bd127ae9
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\ImageTacGia\" />
@@ -160,7 +208,10 @@
     <Content Include="Resources\makeup-artist.png" />
     <Content Include="Resources\refresh.png" />
     <Content Include="Resources\replay.png" />
+<<<<<<< HEAD
     <None Include="Resources\search.png" />
+=======
+>>>>>>> 9eee88703b205e5cb3a7f9ccfa5a46e5bd127ae9
     <Content Include="Resources\theloaikhac.png" />
     <Content Include="Resources\theloaikhac1.png" />
   </ItemGroup>

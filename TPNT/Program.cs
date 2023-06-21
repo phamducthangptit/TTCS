@@ -17,7 +17,7 @@ namespace TPNT
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publisher = "Data Source=MSI;Initial Catalog=TPNT;Integrated Security=True";
+        public static String connstr_publisher = "Data Source=ADMIN-PC;Initial Catalog=TPNT;Integrated Security=True";
 
         public static SqlDataReader myReader;
         public static String servername = "";
@@ -25,7 +25,7 @@ namespace TPNT
         public static String mlogin = "";
         public static String password = "";
 
-        public static String database = "TN_CSDLPT";
+        public static String database = "TPNT";
         public static String remotelogin = "HTKN";
         public static String remotepassword = "123456";
         public static String mloginDN = "";
