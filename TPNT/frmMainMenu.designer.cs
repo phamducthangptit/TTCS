@@ -74,9 +74,9 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(333, 922);
+            this.panelMenu.Size = new System.Drawing.Size(333, 887);
             this.panelMenu.TabIndex = 0;
             // 
             // btnThoat
@@ -90,8 +90,8 @@
             this.btnThoat.IconColor = System.Drawing.Color.Gainsboro;
             this.btnThoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(0, 848);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Location = new System.Drawing.Point(0, 813);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
             this.btnThoat.Size = new System.Drawing.Size(333, 74);
@@ -108,7 +108,7 @@
             this.panelLoaiHinhSoHuu.Controls.Add(this.btnTaiSanCuaBaoTang);
             this.panelLoaiHinhSoHuu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLoaiHinhSoHuu.Location = new System.Drawing.Point(0, 727);
-            this.panelLoaiHinhSoHuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLoaiHinhSoHuu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelLoaiHinhSoHuu.Name = "panelLoaiHinhSoHuu";
             this.panelLoaiHinhSoHuu.Size = new System.Drawing.Size(333, 123);
             this.panelLoaiHinhSoHuu.TabIndex = 8;
@@ -126,9 +126,9 @@
             this.btnDiMuon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDiMuon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDiMuon.Location = new System.Drawing.Point(0, 62);
-            this.btnDiMuon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDiMuon.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnDiMuon.Name = "btnDiMuon";
-            this.btnDiMuon.Padding = new System.Windows.Forms.Padding(20, 0, 27, 0);
+            this.btnDiMuon.Padding = new System.Windows.Forms.Padding(21, 0, 27, 0);
             this.btnDiMuon.Size = new System.Drawing.Size(333, 62);
             this.btnDiMuon.TabIndex = 2;
             this.btnDiMuon.Text = "Đi mượn";
@@ -148,9 +148,9 @@
             this.btnTaiSanCuaBaoTang.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTaiSanCuaBaoTang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaiSanCuaBaoTang.Location = new System.Drawing.Point(0, 0);
-            this.btnTaiSanCuaBaoTang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTaiSanCuaBaoTang.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnTaiSanCuaBaoTang.Name = "btnTaiSanCuaBaoTang";
-            this.btnTaiSanCuaBaoTang.Padding = new System.Windows.Forms.Padding(20, 0, 27, 0);
+            this.btnTaiSanCuaBaoTang.Padding = new System.Windows.Forms.Padding(21, 0, 27, 0);
             this.btnTaiSanCuaBaoTang.Size = new System.Drawing.Size(333, 62);
             this.btnTaiSanCuaBaoTang.TabIndex = 1;
             this.btnTaiSanCuaBaoTang.Text = "Tài sản của bảo tàng";
@@ -170,7 +170,7 @@
             this.btnLoaiHinhSoHuu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLoaiHinhSoHuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoaiHinhSoHuu.Location = new System.Drawing.Point(0, 653);
-            this.btnLoaiHinhSoHuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoaiHinhSoHuu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnLoaiHinhSoHuu.Name = "btnLoaiHinhSoHuu";
             this.btnLoaiHinhSoHuu.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
             this.btnLoaiHinhSoHuu.Size = new System.Drawing.Size(333, 74);
@@ -189,7 +189,7 @@
             this.panelLoaiHinhSangTac.Controls.Add(this.btnDieuKhacTacTuong);
             this.panelLoaiHinhSangTac.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLoaiHinhSangTac.Location = new System.Drawing.Point(0, 468);
-            this.panelLoaiHinhSangTac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLoaiHinhSangTac.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelLoaiHinhSangTac.Name = "panelLoaiHinhSangTac";
             this.panelLoaiHinhSangTac.Size = new System.Drawing.Size(333, 185);
             this.panelLoaiHinhSangTac.TabIndex = 6;
@@ -207,9 +207,9 @@
             this.btnKhac.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnKhac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhac.Location = new System.Drawing.Point(0, 124);
-            this.btnKhac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKhac.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnKhac.Name = "btnKhac";
-            this.btnKhac.Padding = new System.Windows.Forms.Padding(20, 0, 27, 0);
+            this.btnKhac.Padding = new System.Windows.Forms.Padding(21, 0, 27, 0);
             this.btnKhac.Size = new System.Drawing.Size(333, 62);
             this.btnKhac.TabIndex = 2;
             this.btnKhac.Text = "Khác";
@@ -229,9 +229,9 @@
             this.btnHoiHoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHoiHoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHoiHoa.Location = new System.Drawing.Point(0, 62);
-            this.btnHoiHoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHoiHoa.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnHoiHoa.Name = "btnHoiHoa";
-            this.btnHoiHoa.Padding = new System.Windows.Forms.Padding(20, 0, 27, 0);
+            this.btnHoiHoa.Padding = new System.Windows.Forms.Padding(21, 0, 27, 0);
             this.btnHoiHoa.Size = new System.Drawing.Size(333, 62);
             this.btnHoiHoa.TabIndex = 1;
             this.btnHoiHoa.Text = "Hội hoạ";
@@ -252,9 +252,9 @@
             this.btnDieuKhacTacTuong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDieuKhacTacTuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDieuKhacTacTuong.Location = new System.Drawing.Point(0, 0);
-            this.btnDieuKhacTacTuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDieuKhacTacTuong.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnDieuKhacTacTuong.Name = "btnDieuKhacTacTuong";
-            this.btnDieuKhacTacTuong.Padding = new System.Windows.Forms.Padding(20, 0, 27, 0);
+            this.btnDieuKhacTacTuong.Padding = new System.Windows.Forms.Padding(21, 0, 27, 0);
             this.btnDieuKhacTacTuong.Size = new System.Drawing.Size(333, 62);
             this.btnDieuKhacTacTuong.TabIndex = 0;
             this.btnDieuKhacTacTuong.Text = "Điêu khắc và tạc tượng";
@@ -274,7 +274,7 @@
             this.btnLoaiHinhSangTac.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLoaiHinhSangTac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoaiHinhSangTac.Location = new System.Drawing.Point(0, 394);
-            this.btnLoaiHinhSangTac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoaiHinhSangTac.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnLoaiHinhSangTac.Name = "btnLoaiHinhSangTac";
             this.btnLoaiHinhSangTac.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
             this.btnLoaiHinhSangTac.Size = new System.Drawing.Size(333, 74);
@@ -297,7 +297,7 @@
             this.btnBoSuuTap.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBoSuuTap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBoSuuTap.Location = new System.Drawing.Point(0, 320);
-            this.btnBoSuuTap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBoSuuTap.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnBoSuuTap.Name = "btnBoSuuTap";
             this.btnBoSuuTap.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
             this.btnBoSuuTap.Size = new System.Drawing.Size(333, 74);
@@ -320,7 +320,7 @@
             this.btnCuocTrienLam.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCuocTrienLam.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCuocTrienLam.Location = new System.Drawing.Point(0, 246);
-            this.btnCuocTrienLam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCuocTrienLam.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnCuocTrienLam.Name = "btnCuocTrienLam";
             this.btnCuocTrienLam.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
             this.btnCuocTrienLam.Size = new System.Drawing.Size(333, 74);
@@ -343,7 +343,7 @@
             this.btnTacGia.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTacGia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTacGia.Location = new System.Drawing.Point(0, 172);
-            this.btnTacGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTacGia.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnTacGia.Name = "btnTacGia";
             this.btnTacGia.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
             this.btnTacGia.Size = new System.Drawing.Size(333, 74);
@@ -366,7 +366,7 @@
             this.btnTacPham.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTacPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTacPham.Location = new System.Drawing.Point(0, 98);
-            this.btnTacPham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTacPham.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnTacPham.Name = "btnTacPham";
             this.btnTacPham.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
             this.btnTacPham.Size = new System.Drawing.Size(333, 74);
@@ -383,7 +383,7 @@
             this.panelLogo.Controls.Add(this.btnHome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(333, 98);
             this.panelLogo.TabIndex = 0;
@@ -397,7 +397,7 @@
             this.btnHome.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(333, 98);
             this.btnHome.TabIndex = 0;
@@ -413,9 +413,9 @@
             this.panelTitleBar.Controls.Add(this.iconFormChild);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(333, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(734, 92);
+            this.panelTitleBar.Size = new System.Drawing.Size(814, 92);
             this.panelTitleBar.TabIndex = 1;
             // 
             // lblTitleFormChild
@@ -424,7 +424,7 @@
             this.lblTitleFormChild.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleFormChild.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblTitleFormChild.Location = new System.Drawing.Point(75, 36);
-            this.lblTitleFormChild.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitleFormChild.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTitleFormChild.Name = "lblTitleFormChild";
             this.lblTitleFormChild.Size = new System.Drawing.Size(108, 27);
             this.lblTitleFormChild.TabIndex = 1;
@@ -439,7 +439,7 @@
             this.iconFormChild.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconFormChild.IconSize = 39;
             this.iconFormChild.Location = new System.Drawing.Point(24, 26);
-            this.iconFormChild.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconFormChild.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.iconFormChild.Name = "iconFormChild";
             this.iconFormChild.Size = new System.Drawing.Size(43, 39);
             this.iconFormChild.TabIndex = 0;
@@ -450,32 +450,32 @@
             this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(333, 92);
-            this.panelShadow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelShadow.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(734, 6);
+            this.panelShadow.Size = new System.Drawing.Size(814, 6);
             this.panelShadow.TabIndex = 2;
             // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.White;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.panelDesktop.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panelDesktop.Location = new System.Drawing.Point(333, 98);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(734, 824);
+            this.panelDesktop.Size = new System.Drawing.Size(814, 789);
             this.panelDesktop.TabIndex = 3;
             // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 922);
+            this.ClientSize = new System.Drawing.Size(1147, 887);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmMainMenu";
             this.Text = "frmMainMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

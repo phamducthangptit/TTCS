@@ -186,6 +186,7 @@
     <Content Include="Resources\makeup-artist.png" />
     <Content Include="Resources\refresh.png" />
     <Content Include="Resources\replay.png" />
+    <None Include="Resources\search.png" />
     <Content Include="Resources\theloaikhac.png" />
     <Content Include="Resources\theloaikhac1.png" />
   </ItemGroup>
