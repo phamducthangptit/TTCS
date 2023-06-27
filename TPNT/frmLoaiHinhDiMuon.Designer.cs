@@ -41,7 +41,7 @@
             System.Windows.Forms.Label ngày_trảLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoaiHinhDiMuon));
             this.bdsBoSuuTap = new System.Windows.Forms.BindingSource(this.components);
-            this.tPNTDataSet = new TPNT.TPNTDataSet();
+            this.tPNTDataSet = new TPNT.TPNTDataSet2();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -86,11 +86,11 @@
             this.colTên = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHìnhthức = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colĐịachỉ = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.tableAdapterManager = new TPNT.TPNTDataSetTableAdapters.TableAdapterManager();
-            this.v_BO_SUU_TAPTableAdapter = new TPNT.TPNTDataSetTableAdapters.V_BO_SUU_TAPTableAdapter();
-            this.sP_BOSUUTAP_TPNTTableAdapter = new TPNT.TPNTDataSetTableAdapters.SP_BOSUUTAP_TPNTTableAdapter();
+            this.tableAdapterManager = new TPNT.TPNTDataSet2TableAdapters.TableAdapterManager();
+            this.v_BO_SUU_TAPTableAdapter = new TPNT.TPNTDataSet2TableAdapters.V_BO_SUU_TAPTableAdapter();
+            this.sP_BOSUUTAP_TPNTTableAdapter = new TPNT.TPNTDataSet2TableAdapters.SP_BOSUUTAP_TPNTTableAdapter();
             this.bdsTG = new System.Windows.Forms.BindingSource(this.components);
-            this.v_TAC_GIATableAdapter = new TPNT.TPNTDataSetTableAdapters.V_TAC_GIATableAdapter();
+            this.v_TAC_GIATableAdapter = new TPNT.TPNTDataSet2TableAdapters.V_TAC_GIATableAdapter();
             loiDienGiaiLabel = new System.Windows.Forms.Label();
             thoiDaiLabel = new System.Windows.Forms.Label();
             quốc_giaLabel = new System.Windows.Forms.Label();
@@ -665,18 +665,8 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BoSuuTapTableAdapter = null;
             this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.CT_CuocTrienLamTableAdapter = null;
-            this.tableAdapterManager.CuocTrienLamTableAdapter = null;
-            this.tableAdapterManager.DieuKhacVaTacTuongTableAdapter = null;
-            this.tableAdapterManager.HoiHoaTableAdapter = null;
-            this.tableAdapterManager.LoaiDiMuonTableAdapter = null;
-            this.tableAdapterManager.LoaiHinhKhacTableAdapter = null;
-            this.tableAdapterManager.LoaiSoHuuTableAdapter = null;
-            this.tableAdapterManager.TacGiaTableAdapter = null;
-            this.tableAdapterManager.TPNTTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = TPNT.TPNTDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = TPNT.TPNTDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // v_BO_SUU_TAPTableAdapter
             // 
@@ -755,10 +745,10 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private System.Windows.Forms.Panel panelThongTin;
-        private TPNTDataSet tPNTDataSet;
+        private TPNTDataSet2 tPNTDataSet;
         private System.Windows.Forms.Panel panelDSBoSuuTap;
         private System.Windows.Forms.Panel panelDSTPNT;
-        private TPNTDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private TPNTDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource bdsBoSuuTap;
         private DevExpress.XtraGrid.GridControl v_BO_SUU_TAPGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
@@ -772,9 +762,9 @@
         private System.Windows.Forms.TextBox txtTacGia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureTPNT;
-        private TPNTDataSetTableAdapters.V_BO_SUU_TAPTableAdapter v_BO_SUU_TAPTableAdapter;
+        private TPNTDataSet2TableAdapters.V_BO_SUU_TAPTableAdapter v_BO_SUU_TAPTableAdapter;
         private System.Windows.Forms.BindingSource bdsLoaiDiMuon;
-        private TPNTDataSetTableAdapters.SP_BOSUUTAP_TPNTTableAdapter sP_BOSUUTAP_TPNTTableAdapter;
+        private TPNTDataSet2TableAdapters.SP_BOSUUTAP_TPNTTableAdapter sP_BOSUUTAP_TPNTTableAdapter;
         private DevExpress.XtraGrid.GridControl sP_BOSUUTAP_TPNTGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMãtácphẩm;
@@ -791,6 +781,6 @@
         private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.BindingSource bdsTG;
-        private TPNTDataSetTableAdapters.V_TAC_GIATableAdapter v_TAC_GIATableAdapter;
+        private TPNTDataSet2TableAdapters.V_TAC_GIATableAdapter v_TAC_GIATableAdapter;
     }
 }

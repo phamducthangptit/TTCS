@@ -37,31 +37,31 @@
             System.Windows.Forms.Label mã_tác_phẩmLabel;
             System.Windows.Forms.Label tên_tác_phẩmLabel;
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.loiDienGiaiTextBox = new System.Windows.Forms.TextBox();
             this.bdsTPNT = new System.Windows.Forms.BindingSource(this.components);
-            this.tPNTDataSet = new TPNT.TPNTDataSet();
-            this.sP_CHON_TPNTTableAdapter = new TPNT.TPNTDataSetTableAdapters.SP_CHON_TPNTTableAdapter();
-            this.tableAdapterManager = new TPNT.TPNTDataSetTableAdapters.TableAdapterManager();
+            this.tPNTDataSet2 = new TPNT.TPNTDataSet2();
+            this.thoiDaiTextBox = new System.Windows.Forms.TextBox();
+            this.quốc_giaTextBox = new System.Windows.Forms.TextBox();
+            this.chuDeTextBox = new System.Windows.Forms.TextBox();
+            this.năm_sáng_tácTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.mã_tác_phẩmTextBox = new System.Windows.Forms.TextBox();
+            this.tên_tác_phẩmTextBox = new System.Windows.Forms.TextBox();
             this.txtTacGia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureTPNT = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnOK = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.sP_CHON_TPNTGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.tên_tác_phẩmTextBox = new System.Windows.Forms.TextBox();
-            this.mã_tác_phẩmTextBox = new System.Windows.Forms.TextBox();
-            this.năm_sáng_tácTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.chuDeTextBox = new System.Windows.Forms.TextBox();
-            this.quốc_giaTextBox = new System.Windows.Forms.TextBox();
-            this.thoiDaiTextBox = new System.Windows.Forms.TextBox();
-            this.loiDienGiaiTextBox = new System.Windows.Forms.TextBox();
-            this.bdsTG = new System.Windows.Forms.BindingSource(this.components);
-            this.v_TAC_GIATableAdapter = new TPNT.TPNTDataSetTableAdapters.V_TAC_GIATableAdapter();
             this.colMãtácphẩm = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTêntácphẩm = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNămsángtác = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQuốcgia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.sP_CHON_TPNTTableAdapter = new TPNT.TPNTDataSet2TableAdapters.SP_CHON_TPNTTableAdapter();
+            this.tableAdapterManager = new TPNT.TPNTDataSet2TableAdapters.TableAdapterManager();
+            this.bdsTG = new System.Windows.Forms.BindingSource(this.components);
+            this.v_TAC_GIATableAdapter = new TPNT.TPNTDataSet2TableAdapters.V_TAC_GIATableAdapter();
             loiDienGiaiLabel = new System.Windows.Forms.Label();
             thoiDaiLabel = new System.Windows.Forms.Label();
             quốc_giaLabel = new System.Windows.Forms.Label();
@@ -70,99 +70,16 @@
             mã_tác_phẩmLabel = new System.Windows.Forms.Label();
             tên_tác_phẩmLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTPNT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPNTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.năm_sáng_tácTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTPNT)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sP_CHON_TPNTGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.năm_sáng_tácTextEdit.Properties)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTG)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.loiDienGiaiTextBox);
-            this.panel1.Controls.Add(this.thoiDaiTextBox);
-            this.panel1.Controls.Add(this.quốc_giaTextBox);
-            this.panel1.Controls.Add(this.chuDeTextBox);
-            this.panel1.Controls.Add(this.năm_sáng_tácTextEdit);
-            this.panel1.Controls.Add(this.mã_tác_phẩmTextBox);
-            this.panel1.Controls.Add(this.tên_tác_phẩmTextBox);
-            this.panel1.Controls.Add(this.txtTacGia);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(loiDienGiaiLabel);
-            this.panel1.Controls.Add(thoiDaiLabel);
-            this.panel1.Controls.Add(quốc_giaLabel);
-            this.panel1.Controls.Add(chuDeLabel);
-            this.panel1.Controls.Add(năm_sáng_tácLabel);
-            this.panel1.Controls.Add(mã_tác_phẩmLabel);
-            this.panel1.Controls.Add(tên_tác_phẩmLabel);
-            this.panel1.Controls.Add(this.pictureTPNT);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Enabled = false;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(416, 542);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.sP_CHON_TPNTGridControl);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(416, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(648, 542);
-            this.panel2.TabIndex = 1;
-            // 
-            // bdsTPNT
-            // 
-            this.bdsTPNT.DataMember = "SP_CHON_TPNT";
-            this.bdsTPNT.DataSource = this.tPNTDataSet;
-            // 
-            // tPNTDataSet
-            // 
-            this.tPNTDataSet.DataSetName = "TPNTDataSet";
-            this.tPNTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sP_CHON_TPNTTableAdapter
-            // 
-            this.sP_CHON_TPNTTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BoSuuTapTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.CT_CuocTrienLamTableAdapter = null;
-            this.tableAdapterManager.CuocTrienLamTableAdapter = null;
-            this.tableAdapterManager.DieuKhacVaTacTuongTableAdapter = null;
-            this.tableAdapterManager.HoiHoaTableAdapter = null;
-            this.tableAdapterManager.LoaiDiMuonTableAdapter = null;
-            this.tableAdapterManager.LoaiHinhKhacTableAdapter = null;
-            this.tableAdapterManager.LoaiSoHuuTableAdapter = null;
-            this.tableAdapterManager.TacGiaTableAdapter = null;
-            this.tableAdapterManager.TPNTTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = TPNT.TPNTDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // txtTacGia
-            // 
-            this.txtTacGia.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTacGia.Location = new System.Drawing.Point(252, 182);
-            this.txtTacGia.Name = "txtTacGia";
-            this.txtTacGia.Size = new System.Drawing.Size(144, 21);
-            this.txtTacGia.TabIndex = 43;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(169, 185);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Tác giả:";
             // 
             // loiDienGiaiLabel
             // 
@@ -227,6 +144,115 @@
             tên_tác_phẩmLabel.TabIndex = 33;
             tên_tác_phẩmLabel.Text = "Tên tác phẩm:";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.loiDienGiaiTextBox);
+            this.panel1.Controls.Add(this.thoiDaiTextBox);
+            this.panel1.Controls.Add(this.quốc_giaTextBox);
+            this.panel1.Controls.Add(this.chuDeTextBox);
+            this.panel1.Controls.Add(this.năm_sáng_tácTextEdit);
+            this.panel1.Controls.Add(this.mã_tác_phẩmTextBox);
+            this.panel1.Controls.Add(this.tên_tác_phẩmTextBox);
+            this.panel1.Controls.Add(this.txtTacGia);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(loiDienGiaiLabel);
+            this.panel1.Controls.Add(thoiDaiLabel);
+            this.panel1.Controls.Add(quốc_giaLabel);
+            this.panel1.Controls.Add(chuDeLabel);
+            this.panel1.Controls.Add(năm_sáng_tácLabel);
+            this.panel1.Controls.Add(mã_tác_phẩmLabel);
+            this.panel1.Controls.Add(tên_tác_phẩmLabel);
+            this.panel1.Controls.Add(this.pictureTPNT);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Enabled = false;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(416, 542);
+            this.panel1.TabIndex = 0;
+            // 
+            // loiDienGiaiTextBox
+            // 
+            this.loiDienGiaiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "LoiDienGiai", true));
+            this.loiDienGiaiTextBox.Location = new System.Drawing.Point(77, 276);
+            this.loiDienGiaiTextBox.Name = "loiDienGiaiTextBox";
+            this.loiDienGiaiTextBox.Size = new System.Drawing.Size(100, 20);
+            this.loiDienGiaiTextBox.TabIndex = 57;
+            // 
+            // bdsTPNT
+            // 
+            this.bdsTPNT.DataMember = "SP_CHON_TPNT";
+            this.bdsTPNT.DataSource = this.tPNTDataSet2;
+            // 
+            // tPNTDataSet2
+            // 
+            this.tPNTDataSet2.DataSetName = "TPNTDataSet2";
+            this.tPNTDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // thoiDaiTextBox
+            // 
+            this.thoiDaiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "ThoiDai", true));
+            this.thoiDaiTextBox.Location = new System.Drawing.Point(252, 239);
+            this.thoiDaiTextBox.Name = "thoiDaiTextBox";
+            this.thoiDaiTextBox.Size = new System.Drawing.Size(100, 20);
+            this.thoiDaiTextBox.TabIndex = 56;
+            // 
+            // quốc_giaTextBox
+            // 
+            this.quốc_giaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "Quốc gia", true));
+            this.quốc_giaTextBox.Location = new System.Drawing.Point(77, 239);
+            this.quốc_giaTextBox.Name = "quốc_giaTextBox";
+            this.quốc_giaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.quốc_giaTextBox.TabIndex = 55;
+            // 
+            // chuDeTextBox
+            // 
+            this.chuDeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "ChuDe", true));
+            this.chuDeTextBox.Location = new System.Drawing.Point(252, 142);
+            this.chuDeTextBox.Name = "chuDeTextBox";
+            this.chuDeTextBox.Size = new System.Drawing.Size(144, 20);
+            this.chuDeTextBox.TabIndex = 54;
+            // 
+            // năm_sáng_tácTextEdit
+            // 
+            this.năm_sáng_tácTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsTPNT, "Năm sáng tác", true));
+            this.năm_sáng_tácTextEdit.Location = new System.Drawing.Point(252, 108);
+            this.năm_sáng_tácTextEdit.Name = "năm_sáng_tácTextEdit";
+            this.năm_sáng_tácTextEdit.Size = new System.Drawing.Size(144, 20);
+            this.năm_sáng_tácTextEdit.TabIndex = 53;
+            // 
+            // mã_tác_phẩmTextBox
+            // 
+            this.mã_tác_phẩmTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "Mã tác phẩm", true));
+            this.mã_tác_phẩmTextBox.Location = new System.Drawing.Point(252, 72);
+            this.mã_tác_phẩmTextBox.Name = "mã_tác_phẩmTextBox";
+            this.mã_tác_phẩmTextBox.Size = new System.Drawing.Size(144, 20);
+            this.mã_tác_phẩmTextBox.TabIndex = 52;
+            // 
+            // tên_tác_phẩmTextBox
+            // 
+            this.tên_tác_phẩmTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "Tên tác phẩm", true));
+            this.tên_tác_phẩmTextBox.Location = new System.Drawing.Point(173, 41);
+            this.tên_tác_phẩmTextBox.Name = "tên_tác_phẩmTextBox";
+            this.tên_tác_phẩmTextBox.Size = new System.Drawing.Size(223, 20);
+            this.tên_tác_phẩmTextBox.TabIndex = 51;
+            // 
+            // txtTacGia
+            // 
+            this.txtTacGia.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTacGia.Location = new System.Drawing.Point(252, 182);
+            this.txtTacGia.Name = "txtTacGia";
+            this.txtTacGia.Size = new System.Drawing.Size(144, 21);
+            this.txtTacGia.TabIndex = 43;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(169, 185);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Tác giả:";
+            // 
             // pictureTPNT
             // 
             this.pictureTPNT.Location = new System.Drawing.Point(14, 15);
@@ -236,24 +262,15 @@
             this.pictureTPNT.TabIndex = 32;
             this.pictureTPNT.TabStop = false;
             // 
-            // panel3
+            // panel2
             // 
-            this.panel3.Controls.Add(this.btnOK);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 488);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(648, 54);
-            this.panel3.TabIndex = 0;
-            // 
-            // btnOK
-            // 
-            this.btnOK.Location = new System.Drawing.Point(552, 16);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 1;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.panel2.Controls.Add(this.sP_CHON_TPNTGridControl);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(416, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(648, 542);
+            this.panel2.TabIndex = 1;
             // 
             // sP_CHON_TPNTGridControl
             // 
@@ -278,71 +295,6 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            // 
-            // tên_tác_phẩmTextBox
-            // 
-            this.tên_tác_phẩmTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "Tên tác phẩm", true));
-            this.tên_tác_phẩmTextBox.Location = new System.Drawing.Point(173, 41);
-            this.tên_tác_phẩmTextBox.Name = "tên_tác_phẩmTextBox";
-            this.tên_tác_phẩmTextBox.Size = new System.Drawing.Size(223, 20);
-            this.tên_tác_phẩmTextBox.TabIndex = 51;
-            // 
-            // mã_tác_phẩmTextBox
-            // 
-            this.mã_tác_phẩmTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "Mã tác phẩm", true));
-            this.mã_tác_phẩmTextBox.Location = new System.Drawing.Point(252, 72);
-            this.mã_tác_phẩmTextBox.Name = "mã_tác_phẩmTextBox";
-            this.mã_tác_phẩmTextBox.Size = new System.Drawing.Size(144, 20);
-            this.mã_tác_phẩmTextBox.TabIndex = 52;
-            // 
-            // năm_sáng_tácTextEdit
-            // 
-            this.năm_sáng_tácTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsTPNT, "Năm sáng tác", true));
-            this.năm_sáng_tácTextEdit.Location = new System.Drawing.Point(252, 108);
-            this.năm_sáng_tácTextEdit.Name = "năm_sáng_tácTextEdit";
-            this.năm_sáng_tácTextEdit.Size = new System.Drawing.Size(144, 20);
-            this.năm_sáng_tácTextEdit.TabIndex = 53;
-            // 
-            // chuDeTextBox
-            // 
-            this.chuDeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "ChuDe", true));
-            this.chuDeTextBox.Location = new System.Drawing.Point(252, 142);
-            this.chuDeTextBox.Name = "chuDeTextBox";
-            this.chuDeTextBox.Size = new System.Drawing.Size(144, 20);
-            this.chuDeTextBox.TabIndex = 54;
-            // 
-            // quốc_giaTextBox
-            // 
-            this.quốc_giaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "Quốc gia", true));
-            this.quốc_giaTextBox.Location = new System.Drawing.Point(77, 239);
-            this.quốc_giaTextBox.Name = "quốc_giaTextBox";
-            this.quốc_giaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.quốc_giaTextBox.TabIndex = 55;
-            // 
-            // thoiDaiTextBox
-            // 
-            this.thoiDaiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "ThoiDai", true));
-            this.thoiDaiTextBox.Location = new System.Drawing.Point(252, 239);
-            this.thoiDaiTextBox.Name = "thoiDaiTextBox";
-            this.thoiDaiTextBox.Size = new System.Drawing.Size(100, 20);
-            this.thoiDaiTextBox.TabIndex = 56;
-            // 
-            // loiDienGiaiTextBox
-            // 
-            this.loiDienGiaiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "LoiDienGiai", true));
-            this.loiDienGiaiTextBox.Location = new System.Drawing.Point(77, 276);
-            this.loiDienGiaiTextBox.Name = "loiDienGiaiTextBox";
-            this.loiDienGiaiTextBox.Size = new System.Drawing.Size(100, 20);
-            this.loiDienGiaiTextBox.TabIndex = 57;
-            // 
-            // bdsTG
-            // 
-            this.bdsTG.DataMember = "V_TAC_GIA";
-            this.bdsTG.DataSource = this.tPNTDataSet;
-            // 
-            // v_TAC_GIATableAdapter
-            // 
-            this.v_TAC_GIATableAdapter.ClearBeforeFill = true;
             // 
             // colMãtácphẩm
             // 
@@ -372,6 +324,45 @@
             this.colQuốcgia.Visible = true;
             this.colQuốcgia.VisibleIndex = 3;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnOK);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 488);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(648, 54);
+            this.panel3.TabIndex = 0;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(552, 16);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 1;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // sP_CHON_TPNTTableAdapter
+            // 
+            this.sP_CHON_TPNTTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+
+            this.tableAdapterManager.UpdateOrder = TPNT.TPNTDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // bdsTG
+            // 
+            this.bdsTG.DataMember = "V_TAC_GIA";
+            this.bdsTG.DataSource = this.tPNTDataSet2;
+            // 
+            // v_TAC_GIATableAdapter
+            // 
+            this.v_TAC_GIATableAdapter.ClearBeforeFill = true;
+            // 
             // frmChonTPNT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,14 +375,14 @@
             this.Load += new System.EventHandler(this.frmChonTPNT_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bdsTPNT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPNTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.năm_sáng_tácTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTPNT)).EndInit();
-            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sP_CHON_TPNTGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.năm_sáng_tácTextEdit.Properties)).EndInit();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bdsTG)).EndInit();
             this.ResumeLayout(false);
 
@@ -401,10 +392,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private TPNTDataSet tPNTDataSet;
+        private TPNTDataSet2 tPNTDataSet2;
         private System.Windows.Forms.BindingSource bdsTPNT;
-        private TPNTDataSetTableAdapters.SP_CHON_TPNTTableAdapter sP_CHON_TPNTTableAdapter;
-        private TPNTDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private TPNTDataSet2TableAdapters.SP_CHON_TPNTTableAdapter sP_CHON_TPNTTableAdapter;
+        private TPNTDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox txtTacGia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureTPNT;
@@ -420,7 +411,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.BindingSource bdsTG;
-        private TPNTDataSetTableAdapters.V_TAC_GIATableAdapter v_TAC_GIATableAdapter;
+        private TPNTDataSet2TableAdapters.V_TAC_GIATableAdapter v_TAC_GIATableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colMãtácphẩm;
         private DevExpress.XtraGrid.Columns.GridColumn colTêntácphẩm;
         private DevExpress.XtraGrid.Columns.GridColumn colNămsángtác;

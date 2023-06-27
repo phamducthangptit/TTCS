@@ -21,9 +21,9 @@ namespace TPNT
 
         private void frmChonTPNT_Load(object sender, EventArgs e)
         {
-            tPNTDataSet.EnforceConstraints = false;
-            this.v_TAC_GIATableAdapter.Fill(this.tPNTDataSet.V_TAC_GIA);
-            this.sP_CHON_TPNTTableAdapter.Fill(this.tPNTDataSet.SP_CHON_TPNT);
+            tPNTDataSet2.EnforceConstraints = false;
+            this.v_TAC_GIATableAdapter.Fill(this.tPNTDataSet2.V_TAC_GIA);
+            this.sP_CHON_TPNTTableAdapter.Fill(this.tPNTDataSet2.SP_CHON_TPNT);
 
         }
 

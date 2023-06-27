@@ -51,7 +51,7 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.bdsTPNT = new System.Windows.Forms.BindingSource(this.components);
-            this.tPNTDataSet = new TPNT.TPNTDataSet();
+            this.tPNTDataSet = new TPNT.TPNTDataSet2();
             this.bar4 = new DevExpress.XtraBars.Bar();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
@@ -70,8 +70,8 @@
             this.colTêntácphẩm = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNămsángtác = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQuốcgia = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.v_TPNTTableAdapter = new TPNT.TPNTDataSetTableAdapters.V_TPNTTableAdapter();
-            this.tableAdapterManager = new TPNT.TPNTDataSetTableAdapters.TableAdapterManager();
+            this.v_TPNTTableAdapter = new TPNT.TPNTDataSet2TableAdapters.V_TPNTTableAdapter();
+            this.tableAdapterManager = new TPNT.TPNTDataSet2TableAdapters.TableAdapterManager();
             this.pictureTPNT = new System.Windows.Forms.PictureBox();
             this.btnThemAnh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@
             this.txtLoiDienGiai = new System.Windows.Forms.TextBox();
             this.panelThongTin = new System.Windows.Forms.Panel();
             this.btnChonTG = new System.Windows.Forms.Button();
-            this.v_TAC_GIATableAdapter = new TPNT.TPNTDataSetTableAdapters.V_TAC_GIATableAdapter();
+            this.v_TAC_GIATableAdapter = new TPNT.TPNTDataSet2TableAdapters.V_TAC_GIATableAdapter();
             this.bdsTG = new System.Windows.Forms.BindingSource(this.components);
             tên_tác_phẩmLabel = new System.Windows.Forms.Label();
             mã_tác_phẩmLabel = new System.Windows.Forms.Label();
@@ -484,18 +484,8 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BoSuuTapTableAdapter = null;
             this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.CT_CuocTrienLamTableAdapter = null;
-            this.tableAdapterManager.CuocTrienLamTableAdapter = null;
-            this.tableAdapterManager.DieuKhacVaTacTuongTableAdapter = null;
-            this.tableAdapterManager.HoiHoaTableAdapter = null;
-            this.tableAdapterManager.LoaiDiMuonTableAdapter = null;
-            this.tableAdapterManager.LoaiHinhKhacTableAdapter = null;
-            this.tableAdapterManager.LoaiSoHuuTableAdapter = null;
-            this.tableAdapterManager.TacGiaTableAdapter = null;
-            this.tableAdapterManager.TPNTTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = TPNT.TPNTDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = TPNT.TPNTDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // pictureTPNT
             // 
@@ -698,7 +688,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private TPNTDataSet tPNTDataSet;
+        private TPNTDataSet2 tPNTDataSet;
         private DevExpress.XtraBars.Bar bar4;
         private DevExpress.XtraBars.BarDockControl barDockControl1;
         private DevExpress.XtraBars.BarDockControl barDockControl2;
@@ -715,7 +705,7 @@
         private DevExpress.XtraBars.BarButtonItem btnGhi;
         private System.Windows.Forms.Panel panelDSTPNT;
         private System.Windows.Forms.BindingSource bdsTPNT;
-        private TPNTDataSetTableAdapters.V_TPNTTableAdapter v_TPNTTableAdapter;
+        private TPNTDataSet2TableAdapters.V_TPNTTableAdapter v_TPNTTableAdapter;
         private DevExpress.XtraGrid.GridControl v_TPNTGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMãtácphẩm;
@@ -734,8 +724,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThemAnh;
         private System.Windows.Forms.PictureBox pictureTPNT;
-        private TPNTDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private TPNTDataSetTableAdapters.V_TAC_GIATableAdapter v_TAC_GIATableAdapter;
+        private TPNTDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
+        private TPNTDataSet2TableAdapters.V_TAC_GIATableAdapter v_TAC_GIATableAdapter;
         private System.Windows.Forms.BindingSource bdsTG;
         private System.Windows.Forms.Button btnChonTG;
         private System.Windows.Forms.Panel panel;

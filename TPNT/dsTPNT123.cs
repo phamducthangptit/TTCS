@@ -2,7 +2,7 @@
 {
 
 
-    partial class TPNTDataSet
+    partial class TPNTDataSet2
     {
         partial class V_TPNTDataTable
         {
