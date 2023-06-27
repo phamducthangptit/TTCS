@@ -34,28 +34,28 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="TPNTDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="TPNTDataSet1" msprop:Generator_DataSetName="TPNTDataSet1">
+  <xs:element name="TPNTDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TPNTDataSet1" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TPNTDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SP_CHITIETCUOCTRIENLAM" msprop:Generator_RowEvHandlerName="SP_CHITIETCUOCTRIENLAMRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_CHITIETCUOCTRIENLAMRowDeleted" msprop:Generator_RowDeletingName="SP_CHITIETCUOCTRIENLAMRowDeleting" msprop:Generator_RowEvArgName="SP_CHITIETCUOCTRIENLAMRowChangeEvent" msprop:Generator_TablePropName="SP_CHITIETCUOCTRIENLAM" msprop:Generator_RowChangedName="SP_CHITIETCUOCTRIENLAMRowChanged" msprop:Generator_RowChangingName="SP_CHITIETCUOCTRIENLAMRowChanging" msprop:Generator_TableClassName="SP_CHITIETCUOCTRIENLAMDataTable" msprop:Generator_RowClassName="SP_CHITIETCUOCTRIENLAMRow" msprop:Generator_TableVarName="tableSP_CHITIETCUOCTRIENLAM" msprop:Generator_UserTableName="SP_CHITIETCUOCTRIENLAM">
+        <xs:element name="SP_CHITIETCUOCTRIENLAM" msprop:Generator_RowClassName="SP_CHITIETCUOCTRIENLAMRow" msprop:Generator_RowEvHandlerName="SP_CHITIETCUOCTRIENLAMRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_CHITIETCUOCTRIENLAMRowDeleted" msprop:Generator_RowDeletingName="SP_CHITIETCUOCTRIENLAMRowDeleting" msprop:Generator_RowEvArgName="SP_CHITIETCUOCTRIENLAMRowChangeEvent" msprop:Generator_TablePropName="SP_CHITIETCUOCTRIENLAM" msprop:Generator_RowChangedName="SP_CHITIETCUOCTRIENLAMRowChanged" msprop:Generator_UserTableName="SP_CHITIETCUOCTRIENLAM" msprop:Generator_RowChangingName="SP_CHITIETCUOCTRIENLAMRowChanging" msprop:Generator_TableClassName="SP_CHITIETCUOCTRIENLAMDataTable" msprop:Generator_TableVarName="tableSP_CHITIETCUOCTRIENLAM">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MaSoTP" msprop:Generator_ColumnPropNameInRow="MaSoTP" msprop:Generator_ColumnPropNameInTable="MaSoTPColumn" msprop:Generator_ColumnVarNameInTable="columnMaSoTP" msprop:Generator_UserColumnName="MaSoTP">
+              <xs:element name="MaSoTP" msprop:Generator_UserColumnName="MaSoTP" msprop:Generator_ColumnPropNameInTable="MaSoTPColumn" msprop:Generator_ColumnPropNameInRow="MaSoTP" msprop:Generator_ColumnVarNameInTable="columnMaSoTP">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NamSangTac" msprop:Generator_ColumnPropNameInRow="NamSangTac" msprop:Generator_ColumnPropNameInTable="NamSangTacColumn" msprop:Generator_ColumnVarNameInTable="columnNamSangTac" msprop:Generator_UserColumnName="NamSangTac" type="xs:int" minOccurs="0" />
-              <xs:element name="ChuDe" msprop:Generator_ColumnPropNameInRow="ChuDe" msprop:Generator_ColumnPropNameInTable="ChuDeColumn" msprop:Generator_ColumnVarNameInTable="columnChuDe" msprop:Generator_UserColumnName="ChuDe" minOccurs="0">
+              <xs:element name="NamSangTac" msprop:Generator_UserColumnName="NamSangTac" msprop:Generator_ColumnPropNameInTable="NamSangTacColumn" msprop:Generator_ColumnPropNameInRow="NamSangTac" msprop:Generator_ColumnVarNameInTable="columnNamSangTac" type="xs:int" minOccurs="0" />
+              <xs:element name="ChuDe" msprop:Generator_UserColumnName="ChuDe" msprop:Generator_ColumnPropNameInTable="ChuDeColumn" msprop:Generator_ColumnPropNameInRow="ChuDe" msprop:Generator_ColumnVarNameInTable="columnChuDe" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TacGia" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="TacGia" msprop:Generator_ColumnPropNameInTable="TacGiaColumn" msprop:Generator_ColumnVarNameInTable="columnTacGia" msprop:Generator_UserColumnName="TacGia" minOccurs="0">
+              <xs:element name="TacGia" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TacGia" msprop:Generator_ColumnPropNameInTable="TacGiaColumn" msprop:Generator_ColumnPropNameInRow="TacGia" msprop:Generator_ColumnVarNameInTable="columnTacGia" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

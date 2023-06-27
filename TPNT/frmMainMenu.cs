@@ -26,20 +26,30 @@ namespace TPNT
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
+            lbNhom.Text = "Nhóm: " + Program.mGroup;
+
+            lbUser.Text = "Tên: " + Program.username;
+
         }
 
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(172, 126, 241);
-            public static Color color2 = Color.FromArgb(249, 118, 176);
-            public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(95, 77, 221);
-            public static Color color5 = Color.FromArgb(249, 88, 155);
-            public static Color color6 = Color.FromArgb(24, 161, 251);
+            public static Color color1 = Color.FromArgb(255, 220, 20, 60);
+            public static Color color2 = Color.FromArgb(255, 255, 140, 0);
+            public static Color color3 = Color.FromArgb(255, 255, 215, 0);
+            public static Color color4 = Color.FromArgb(255, 0, 128, 0);
+            public static Color color5 = Color.FromArgb(255, 0, 191, 255);
+            public static Color color6 = Color.FromArgb(255, 255, 182, 193);
+            public static Color color7 = Color.FromArgb(255, 255, 182, 193);
+            public static Color color8 = Color.FromArgb(255, 255, 182, 193);
+            public static Color color9 = Color.FromArgb(255, 255, 182, 193);
+            public static Color color10 = Color.FromArgb(255, 255, 182, 193);
+            public static Color color11 = Color.FromArgb(255, 255, 182, 193);
         }
 
         private void ActivateButton(object senderBtn, Color color)
         {
+            leftBorderBtn.Size = new Size(7, 60);
             if (senderBtn != null)
             {
                 DisableButton();
@@ -54,6 +64,29 @@ namespace TPNT
                 //Left border button
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+                leftBorderBtn.Visible = true;
+                leftBorderBtn.BringToFront();
+                iconFormChild.IconChar = currentBtn.IconChar;
+                iconFormChild.IconColor = color;
+            }
+        }
+
+        private void ActivateButton1(object senderBtn, Color color)
+        {   leftBorderBtn.Size = new Size(7, 50);
+            if (senderBtn != null)
+            {
+                DisableButton();
+                //Button
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
+                currentBtn.ForeColor = color;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.IconColor = color;
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                //Left border button
+                leftBorderBtn.BackColor = color;
+                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y + currentBtn.Parent.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
                 iconFormChild.IconChar = currentBtn.IconChar;
@@ -109,13 +142,13 @@ namespace TPNT
         private void btnTacPham_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            //OpenChildForm(new frmTacPham());
+            OpenChildForm(new frmTPNT());
         }
 
         private void btnTacGia_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new frmTacGia());
+            //OpenChildForm(new frmTacGia());
         }
 
         private void btnCuocTrienLam_Click(object sender, EventArgs e)
@@ -126,18 +159,21 @@ namespace TPNT
         private void btnBoSuuTap_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+            OpenChildForm(new frmBoSuuTap());
         }
 
         private void btnLoaiHinhSangTac_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.color5);
+            lblTitleFormChild.Text = "Loại hình sáng tác";
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
             showSubMenu(panelLoaiHinhSangTac);
         }
 
-        private void btnLoaiHinhSoHuu_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color6);
-            
-        }
+
 
         private void Reset()
         {
@@ -159,13 +195,60 @@ namespace TPNT
 
         private void btnLoaiHinhSoHuu_Click_1(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.color9);
+            lblTitleFormChild.Text = "LoaiHinhDiMuon";
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
             showSubMenu(panelLoaiHinhSoHuu);
         }
 
         private void btnHoiHoa_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new frmHoiHoa());
+            ActivateButton1(sender, RGBColors.color7);
+           // OpenChildForm(new frmHoiHoa());
+        }
+
+        private void btnDiMuon_Click(object sender, EventArgs e)
+        {
+            ActivateButton1(sender, RGBColors.color11);
+            OpenChildForm(new frmLoaiHinhDiMuon());
+            //Form f = new frmLoaiHinhDiMuon();
+            //f.Show();
+        }
+
+        public static Form CheckExist(Type ftype)
+        {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (ftype == f.GetType())
+                {
+                    return f;
+                }
+            }
+            return null;
+        }
+
+        private void btnDieuKhacTacTuong_Click(object sender, EventArgs e)
+        {
+            ActivateButton1(sender, RGBColors.color6);
+        }
+
+        private void btnKhac_Click(object sender, EventArgs e)
+        {
+            ActivateButton1(sender, RGBColors.color8);
+        }
+
+        private void btnTaiSanCuaBaoTang_Click(object sender, EventArgs e)
+        {
+            ActivateButton1(sender, RGBColors.color10);
+        }
+
+        private void btnBackupAndRestore_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmBackup_Restore();
+            frm.Show();
         }
     }
 }

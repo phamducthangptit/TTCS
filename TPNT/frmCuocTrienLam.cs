@@ -70,7 +70,7 @@ namespace TPNT
             try
             {
                 
-                using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                using (SqlConnection connection = new SqlConnection(Program.connstr))
                 {
                     using (SqlCommand command = new SqlCommand("SP_CHITIETCUOCTRIENLAM", connection))
                     {
