@@ -45,6 +45,8 @@
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBackup = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar3 = new DevExpress.XtraBars.Bar();
@@ -53,8 +55,6 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnChiTiet1 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnBackup = new DevExpress.XtraBars.BarButtonItem();
-            this.btnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.tPNTDataSet = new TPNT.TPNTDataSet();
             this.bdsTacGia = new System.Windows.Forms.BindingSource(this.components);
             this.TacGiaTableAdapter = new TPNT.TPNTDataSetTableAdapters.TacGiaTableAdapter();
@@ -193,7 +193,7 @@
             this.btnBackup,
             this.btnRestore});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 14;
+            this.barManager1.MaxItemId = 12;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar1
@@ -345,16 +345,6 @@
             // 
             this.btnChiTiet1.Id = 7;
             this.btnChiTiet1.Name = "btnChiTiet1";
-            // 
-            // btnBackup
-            // 
-            this.btnBackup.Id = 12;
-            this.btnBackup.Name = "btnBackup";
-            // 
-            // btnRestore
-            // 
-            this.btnRestore.Id = 13;
-            this.btnRestore.Name = "btnRestore";
             // 
             // tPNTDataSet
             // 
