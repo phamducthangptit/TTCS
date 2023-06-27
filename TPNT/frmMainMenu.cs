@@ -148,12 +148,13 @@ namespace TPNT
         private void btnTacGia_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            //OpenChildForm(new frmTacGia());
+            OpenChildForm(new frmTacGia());
         }
 
         private void btnCuocTrienLam_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
+           // OpenChildForm(new frmTacGia());
         }
 
         private void btnBoSuuTap_Click(object sender, EventArgs e)
@@ -207,7 +208,7 @@ namespace TPNT
         private void btnHoiHoa_Click(object sender, EventArgs e)
         {
             ActivateButton1(sender, RGBColors.color7);
-           // OpenChildForm(new frmHoiHoa());
+            OpenChildForm(new frmHoiHoa());
         }
 
         private void btnDiMuon_Click(object sender, EventArgs e)
@@ -249,6 +250,19 @@ namespace TPNT
         {
             Form frm = new frmBackup_Restore();
             frm.Show();
+        }
+
+        
+
+        private void btnKhac_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton1(sender, RGBColors.color8);
+            OpenChildForm(new frmLoaiHinhKhac());
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
