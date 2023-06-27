@@ -17,7 +17,7 @@ namespace TPNT
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publisher = "Data Source=ADMIN-PC;Initial Catalog=TPNT;Integrated Security=True";
+        public static String connstr_publisher = "Data Source=DESKTOP-863A14G\\SERVER;Initial Catalog=TPNT;Integrated Security=True";
 
         public static SqlDataReader myReader;
         public static String servername = "";
@@ -33,6 +33,9 @@ namespace TPNT
         public static String mGroup = "";
         public static String mHoTen = "";
         public static int mChiNhanh = 0;
+
+        public static String maSoTPNT = "";
+        public static String TenTPNT = "";
 
         public static BindingSource bds_dspm = new BindingSource(); // ds phan manh
         public static int KetNoi()

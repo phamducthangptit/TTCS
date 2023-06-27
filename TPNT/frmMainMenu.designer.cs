@@ -50,7 +50,7 @@
             this.lblTitleFormChild = new System.Windows.Forms.Label();
             this.iconFormChild = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
-            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.FlowLayoutPanel();
             this.panelMenu.SuspendLayout();
             this.panelLoaiHinhSoHuu.SuspendLayout();
             this.panelLoaiHinhSangTac.SuspendLayout();
@@ -157,6 +157,7 @@
             this.btnTaiSanCuaBaoTang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaiSanCuaBaoTang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaiSanCuaBaoTang.UseVisualStyleBackColor = true;
+            this.btnTaiSanCuaBaoTang.Click += new System.EventHandler(this.btnTaiSanCuaBaoTang_Click);
             // 
             // btnLoaiHinhSoHuu
             // 
@@ -261,6 +262,7 @@
             this.btnDieuKhacTacTuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDieuKhacTacTuong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDieuKhacTacTuong.UseVisualStyleBackColor = true;
+            this.btnDieuKhacTacTuong.Click += new System.EventHandler(this.btnDieuKhacTacTuong_Click);
             // 
             // btnLoaiHinhSangTac
             // 
@@ -457,11 +459,9 @@
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.White;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.panelDesktop.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelDesktop.Location = new System.Drawing.Point(333, 98);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(814, 789);
             this.panelDesktop.TabIndex = 3;
@@ -504,7 +504,6 @@
         private FontAwesome.Sharp.IconPictureBox iconFormChild;
         private System.Windows.Forms.Label lblTitleFormChild;
         private System.Windows.Forms.Panel panelShadow;
-        private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Panel panelLoaiHinhSangTac;
         private FontAwesome.Sharp.IconButton btnDieuKhacTacTuong;
         private FontAwesome.Sharp.IconButton btnKhac;
@@ -514,5 +513,6 @@
         private FontAwesome.Sharp.IconButton btnDiMuon;
         private FontAwesome.Sharp.IconButton btnTaiSanCuaBaoTang;
         private FontAwesome.Sharp.IconButton btnThoat;
+        private System.Windows.Forms.FlowLayoutPanel panelDesktop;
     }
 }

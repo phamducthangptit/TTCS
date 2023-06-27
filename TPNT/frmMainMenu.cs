@@ -121,6 +121,7 @@ namespace TPNT
         private void btnCuocTrienLam_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new frmCuocTrienLam());
         }
 
         private void btnBoSuuTap_Click(object sender, EventArgs e)
@@ -166,6 +167,18 @@ namespace TPNT
         {
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new frmHoiHoa());
+        }
+
+        private void btnDieuKhacTacTuong_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(new frmDieuKhacVaTacTuong());
+        }
+
+        private void btnTaiSanCuaBaoTang_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(new frmTaiSanBaoTang());
         }
     }
 }
