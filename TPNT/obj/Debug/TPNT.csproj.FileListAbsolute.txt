@@ -138,10 +138,7 @@ E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraTreeList.v23.1.xml
 E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Office.v23.1.Core.xml
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.AssemblyReference.cache
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.SuggestedBindingRedirects.cache
-E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmCuocTrienLam.resources
-E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmHoiHoa.resources
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmMainMenu.resources
-E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmTacGia.resources
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.Properties.Resources.resources
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.GenerateResource.cache
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.exe.licenses
@@ -149,6 +146,8 @@ E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.CoreCompileInputs.cache
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.CopyComplete
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.exe
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.pdb
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmChonTacPham.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmLoaiHinhKhac.resources
 C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\TPNT.exe.config
 C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\TPNT.exe
 C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\TPNT.pdb
@@ -383,3 +382,39 @@ C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.csproj.Co
 C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.csproj.CopyComplete
 C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.exe
 C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.pdb
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmBackup_Restore.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmBoSuuTap.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmChonTPNT.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmLoaiHinhDiMuon.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmLogin.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmTPNT.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmChonTacGia.resources
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.DataVisualization.v23.1.Core.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Images.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Xpo.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.CodeParser.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Xpo.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmTacGia.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmHoiHoa.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmChonTacPham.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmHoiHoa.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmLoaiHinhKhac.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmTacGia.resources

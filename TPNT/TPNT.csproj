@@ -73,6 +73,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsTPNT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTPNT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmChonTacPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChonTacPham.Designer.cs">
+      <DependentUpon>frmChonTacPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="dsTPNT123.cs">
       <DependentUpon>dsTPNT123.xsd</DependentUpon>
     </Compile>
@@ -100,6 +111,12 @@
     <Compile Include="frmChonTPNT.Designer.cs">
       <DependentUpon>frmChonTPNT.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHoiHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHoiHoa.Designer.cs">
+      <DependentUpon>frmHoiHoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLoaiHinhDiMuon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +129,23 @@
     <Compile Include="frmLogin.designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoaiHinhKhac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiHinhKhac.Designer.cs">
+      <DependentUpon>frmLoaiHinhKhac.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMainMenu.designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTacGia.Designer.cs">
+      <DependentUpon>frmTacGia.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTPNT.cs">
       <SubType>Form</SubType>
@@ -136,6 +165,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TPNTDataSet1.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmChonTacPham.resx">
+      <DependentUpon>frmChonTacPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBackup_Restore.resx">
       <DependentUpon>frmBackup_Restore.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,14 +180,23 @@
     <EmbeddedResource Include="frmChonTPNT.resx">
       <DependentUpon>frmChonTPNT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHoiHoa.resx">
+      <DependentUpon>frmHoiHoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoaiHinhDiMuon.resx">
       <DependentUpon>frmLoaiHinhDiMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiHinhKhac.resx">
+      <DependentUpon>frmLoaiHinhKhac.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTacGia.resx">
+      <DependentUpon>frmTacGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTPNT.resx">
       <DependentUpon>frmTPNT.cs</DependentUpon>
@@ -172,6 +213,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
+    <None Include="dsTPNT.xsc">
+      <DependentUpon>dsTPNT.xsd</DependentUpon>
+    </None>
+    <None Include="dsTPNT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTPNT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsTPNT.xss">
+      <DependentUpon>dsTPNT.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -206,15 +258,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\ImageTacGia\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\iconhoihoa.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
     <Content Include="Resources\add-group%281%29.png" />
     <Content Include="Resources\add-group.png" />
+    <None Include="Resources\backup.png" />
+    <None Include="Resources\data-recovery.png" />
     <Content Include="Resources\delete%281%29.png" />
     <Content Include="Resources\delete%282%29.png" />
     <None Include="Resources\logout%282%29.png" />

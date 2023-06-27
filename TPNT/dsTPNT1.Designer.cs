@@ -49,6 +49,11 @@ namespace TPNT {
         private V_SELECTHOIHOADataTable tableV_SELECTHOIHOA;
         
         private V_SELECTLOAIHINHKHACDataTable tableV_SELECTLOAIHINHKHAC;
+<<<<<<< HEAD:TPNT/dsTPNT.Designer.cs
+        
+        private global::System.Data.DataRelation relationFK_CT_CuocTrienLam_CuocTrienLam;
+=======
+>>>>>>> e6538b91dafebc79a63554e23be2adc33a2a6791:TPNT/dsTPNT1.Designer.cs
         
         private global::System.Data.DataRelation relationFK_CT_CuocTrienLam_TPNT;
         
@@ -500,6 +505,10 @@ namespace TPNT {
                     this.tableV_SELECTLOAIHINHKHAC.InitVars();
                 }
             }
+<<<<<<< HEAD:TPNT/dsTPNT.Designer.cs
+            this.relationFK_CT_CuocTrienLam_CuocTrienLam = this.Relations["FK_CT_CuocTrienLam_CuocTrienLam"];
+=======
+>>>>>>> e6538b91dafebc79a63554e23be2adc33a2a6791:TPNT/dsTPNT1.Designer.cs
             this.relationFK_CT_CuocTrienLam_TPNT = this.Relations["FK_CT_CuocTrienLam_TPNT"];
             this.relationFK_CT_CuocTrienLam_CuocTrienLam = this.Relations["FK_CT_CuocTrienLam_CuocTrienLam"];
             this.relationFK_DieuKhacVaTacTuong_TPNT = this.Relations["FK_DieuKhacVaTacTuong_TPNT"];

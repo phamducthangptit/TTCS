@@ -73,6 +73,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panelMenu.Controls.Add(this.btnThoat);
             this.panelMenu.Controls.Add(this.panelLoaiHinhSoHuu);
@@ -88,7 +89,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(250, 709);
+            this.panelMenu.Size = new System.Drawing.Size(250, 609);
             this.panelMenu.TabIndex = 0;
             // 
             // btnThoat
@@ -102,7 +103,7 @@
             this.btnThoat.IconColor = System.Drawing.Color.Gainsboro;
             this.btnThoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(0, 649);
+            this.btnThoat.Location = new System.Drawing.Point(0, 549);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
@@ -112,6 +113,7 @@
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // panelLoaiHinhSoHuu
             // 
@@ -230,7 +232,7 @@
             this.btnKhac.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhac.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKhac.UseVisualStyleBackColor = true;
-            this.btnKhac.Click += new System.EventHandler(this.btnKhac_Click);
+            this.btnKhac.Click += new System.EventHandler(this.btnKhac_Click_1);
             // 
             // btnHoiHoa
             // 
@@ -395,6 +397,7 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.panelLogo.Controls.Add(this.btnHome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -434,11 +437,13 @@
             this.panelTitleBar.Location = new System.Drawing.Point(250, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1080, 75);
+            this.panelTitleBar.Size = new System.Drawing.Size(778, 75);
             this.panelTitleBar.TabIndex = 1;
             // 
             // btnBackupRestore
             // 
+            this.btnBackupRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBackupRestore.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnBackupRestore.FlatAppearance.BorderSize = 0;
             this.btnBackupRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackupRestore.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -447,7 +452,7 @@
             this.btnBackupRestore.IconColor = System.Drawing.Color.Gainsboro;
             this.btnBackupRestore.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBackupRestore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBackupRestore.Location = new System.Drawing.Point(592, 6);
+            this.btnBackupRestore.Location = new System.Drawing.Point(290, 6);
             this.btnBackupRestore.Name = "btnBackupRestore";
             this.btnBackupRestore.Size = new System.Drawing.Size(169, 57);
             this.btnBackupRestore.TabIndex = 4;
@@ -455,13 +460,15 @@
             this.btnBackupRestore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBackupRestore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBackupRestore.UseVisualStyleBackColor = true;
+            this.btnBackupRestore.Visible = false;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.Controls.Add(this.lbUser);
             this.panel1.Controls.Add(this.lbNhom);
-            this.panel1.Location = new System.Drawing.Point(782, 23);
+            this.panel1.Location = new System.Drawing.Point(480, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 29);
             this.panel1.TabIndex = 2;
@@ -523,7 +530,7 @@
             this.panelShadow.Location = new System.Drawing.Point(250, 75);
             this.panelShadow.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(1080, 5);
+            this.panelShadow.Size = new System.Drawing.Size(778, 5);
             this.panelShadow.TabIndex = 2;
             // 
             // panelDesktop
@@ -533,7 +540,7 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(250, 80);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1080, 629);
+            this.panelDesktop.Size = new System.Drawing.Size(778, 529);
             this.panelDesktop.TabIndex = 3;
             // 
             // panelHome
@@ -543,9 +550,9 @@
             this.panelHome.Controls.Add(this.label1);
             this.panelHome.Controls.Add(this.pictureBox1);
             this.panelHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelHome.Location = new System.Drawing.Point(340, 114);
+            this.panelHome.Location = new System.Drawing.Point(189, 63);
             this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(400, 400);
+            this.panelHome.Size = new System.Drawing.Size(300, 325);
             this.panelHome.TabIndex = 0;
             // 
             // label2
@@ -553,7 +560,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(61, 287);
+            this.label2.Location = new System.Drawing.Point(13, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(279, 37);
             this.label2.TabIndex = 5;
@@ -564,7 +571,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(119, 235);
+            this.label1.Location = new System.Drawing.Point(74, 171);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 46);
             this.label1.TabIndex = 4;
@@ -573,7 +580,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(125, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(94, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.TabIndex = 3;
@@ -583,7 +590,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1330, 709);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
