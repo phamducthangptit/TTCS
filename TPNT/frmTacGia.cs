@@ -62,10 +62,10 @@ namespace TPNT
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = true;
             this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
-                = this.btnReload.Enabled = this.btnThoat.Enabled = false;
+                = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
-            this.pnlAnh.Visible = false;
+            //this.pnlAnh.Visible = false;
             this.lblSLTP.Visible = this.txtSLTP.Visible = false;
             bdsTacGia.AddNew();
             this.btnChonAnh.Visible = true;
@@ -79,7 +79,8 @@ namespace TPNT
             gcTacGia.Enabled = false;
             groupBox1.Enabled = true;
 
-            this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
+            this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
+                = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
             this.btnChonAnh.Visible = true;
             this.pnlAnh.Visible = true;
@@ -98,16 +99,17 @@ namespace TPNT
             }
             else this.txtMaTacGia.ReadOnly = false ;
 
-            string pathImage = ((DataRowView)bdsTacGia[bdsTacGia.Position])["HinhAnh"].ToString();
-            Image image = Image.FromFile(pathImage);
-            selectedImagePath = pathImage;
+            string pathImage = ((DataRowView)bdsTacGia[vitri])["HinhAnh"].ToString();
+            if(pathImage.Trim().Length != 0)
+            {
+                Image image = Image.FromFile(Application.StartupPath + "\\Resources\\" + pathImage);
+                selectedImagePath = pathImage;
 
-            pictureBox.Image = image;
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox.Dock = DockStyle.Fill;
-            this.pnlAnh.AddControl(pictureBox);
-
-
+                pictureBox.Image = image;
+                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                pictureBox.Dock = DockStyle.Fill;
+                this.pnlAnh.AddControl(pictureBox);
+            }
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -120,7 +122,7 @@ namespace TPNT
             if(slTG == 0)
             {
                 this.btnXoa.Enabled = false;
-            } else this.btnXoa.Enabled= true;
+            } else this.btnXoa.Enabled = true;
             string maTG = "";
             if (MessageBox.Show("Bạn có thật sự muốn xóa tác giả này?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
@@ -148,27 +150,29 @@ namespace TPNT
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bdsTacGia.CancelEdit();
-            bdsTacGia.Position = vitri;
+            
             if (suKienCT.Equals("THEM"))
             {
                 gcTacGia.Visible = true;
                 gcTacGia.Dock = DockStyle.Fill;
                 groupBox1.Visible = false;
-                this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = 
+                    this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = true;
                 this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
                 
             }
             else
             {
                 this.btnXoa.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
-                this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
+                this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
                 this.btnChonAnh.Visible = this.btnThem.Enabled = false;
                 this.pnlAnh.Visible = true;
                 this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
             }
 
-            
+            this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
+            bdsTacGia.Position = vitri;
         }
 
         private void btnReload_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -259,11 +263,6 @@ namespace TPNT
                 return;
             }
 
-            if(selectedImagePath.Trim().Length == 0)
-            {
-                MessageBox.Show("Ảnh của tác giả không được trống", "Thông báo", MessageBoxButtons.OK);
-                return;
-            }
             string maTG = ((DataRowView)bdsTacGia[bdsTacGia.Position])["MaTacGia"].ToString();
 
             string[] ngay = this.ngaySinh.Text.Split('/');
@@ -276,7 +275,6 @@ namespace TPNT
 
             }
 
-            //truong hop them moi hoac chinh sua ma co chinh sua ma
             if (suKien.Equals("THEM"))
             {
                 string strLenh = "EXEC SP_CHECKEXISTSTG '" + this.txtMaTacGia.Text + "'";
@@ -287,35 +285,38 @@ namespace TPNT
                 Program.conn.Close();
                 if(check == 0)
                 {
-                    try
+                    string p = "";
+                    string uniqueFileName = "";
+                    if (chonAnh == 1)
                     {
-                        string p = "";
-                        if (chonAnh == 1)
-                        {
-                            string saveFolderPath = @"E:\Dev\C#\TPNT\TPNT\Images\ImageTacgia\";
-                            string uniqueFileName = DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(selectedImagePath);
-                            string saveFilePath = Path.Combine(saveFolderPath, uniqueFileName);
+                        string saveFolderPath = @"" + Application.StartupPath + "\\Resources\\";
+                        uniqueFileName = DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(selectedImagePath);
+                        string saveFilePath = Path.Combine(saveFolderPath, uniqueFileName);
 
-                            p = saveFolderPath + uniqueFileName;
-                            File.Copy(selectedImagePath, saveFilePath);
+                        p = saveFolderPath + uniqueFileName;
+                        File.Copy(selectedImagePath, saveFilePath);
 
-                            
-                        }
-                        
-                        bdsTacGia.EndEdit();
-                        bdsTacGia.ResetCurrentItem();
-                        strLenh = "EXEC SP_INSERTTG '" + this.txtMaTacGia.Text + "', '" + this.txtHoTen.Text + "', '" + ngaySinh + "', '" + ngayMat + "', '"
-                            + this.txtQuocTich.Text + "', '" + this.txtDienGiai.Text + "', '" + this.txtPhongCach.Text + "', '" + p + "'";
-                        int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
+
+                    }
+                    else uniqueFileName = "nophoto.png";
+                    bdsTacGia.EndEdit();
+                    bdsTacGia.ResetCurrentItem();
+                    strLenh = "EXEC SP_INSERTTG '" + this.txtMaTacGia.Text + "', N'" + this.txtHoTen.Text + "', '" + ngaySinh + "', '" + ngayMat + "', '"
+                        + this.txtQuocTich.Text + "', N'" + this.txtDienGiai.Text + "', N'" + this.txtPhongCach.Text + "', '" + uniqueFileName + "'";
+                    int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
+                    if (ex == 0) //lưu thành công
+                    {
                         chonAnh = 0;
                         gcTacGia.Visible = true;
                         gcTacGia.Dock = DockStyle.Fill;
                         groupBox1.Visible = false;
                         this.btnChiTiet.Enabled = true;
-                        this.btnHieuChinh.Enabled = false;
-                    } catch(Exception ex)
+                        MessageBox.Show("Thêm tác giả thành công", "Thông báo", MessageBoxButtons.OK);
+                    } else // lưu thất bại
                     {
-                        MessageBox.Show("Lỗi ghi tác giả.\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                        this.btnThem.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
+                        this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
+                        this.btnChonAnh.Visible = true;
                         return;
                     }
                 }
@@ -327,50 +328,49 @@ namespace TPNT
                 suKien = "";
             } else if (suKien.Equals("HC"))
             {
-                try
+                string anhCu = "", uniqueFileName = "";
+                anhCu = ((DataRowView)bdsTacGia[bdsTacGia.Position])["HinhAnh"].ToString();
+                if (chonAnh == 1)
                 {
-                    string anhCu = "", p = "";
-                    anhCu = ((DataRowView)bdsTacGia[bdsTacGia.Position])["HinhAnh"].ToString();
-                    if (chonAnh == 1)
-                    {
-                        string saveFolderPath = @"E:\Dev\C#\TPNT\TPNT\Images\ImageTacgia\";
-                        string uniqueFileName = DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(selectedImagePath);
-                        string saveFilePath = Path.Combine(saveFolderPath, uniqueFileName);
+                    string saveFolderPath = @"" + Application.StartupPath + "\\Resources\\";
+                    uniqueFileName = DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(selectedImagePath);
+                    string saveFilePath = Path.Combine(saveFolderPath, uniqueFileName);
 
-                        p = saveFolderPath + uniqueFileName;
-                        
-                        File.Copy(selectedImagePath, saveFilePath);
-                    }
-                    if (p.Length == 0) p = anhCu;
-                    chonAnh = 0;
-                    bdsTacGia.EndEdit();
-                    bdsTacGia.ResetCurrentItem();
 
-                    
-                    string strLenh = "EXEC SP_UPDATETG '" + maTG + "', '" + this.txtMaTacGia.Text + "', '" + this.txtHoTen.Text + "', '" + ngaySinh + "', '" + ngayMat + "', '"
-                           + this.txtQuocTich.Text + "', '" + this.txtDienGiai.Text + "', '" + this.txtPhongCach.Text + "', '" + p + "'";
-                    int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
-                    MessageBox.Show("Cập nhật thông tin thành công", "Thông báo", MessageBoxButtons.OK);
-                   
+                    File.Copy(selectedImagePath, saveFilePath);
                 }
-                catch (Exception ex)
+                else uniqueFileName = anhCu;
+                chonAnh = 0;
+                bdsTacGia.EndEdit();
+                bdsTacGia.ResetCurrentItem();
+                string strLenh = "EXEC SP_UPDATETG '" + maTG + "', '" + this.txtMaTacGia.Text + "', N'" + this.txtHoTen.Text + "', '" + ngaySinh + "', '" + ngayMat + "', N'"
+                       + this.txtQuocTich.Text + "', N'" + this.txtDienGiai.Text + "', N'" + this.txtPhongCach.Text + "', '" + uniqueFileName + "'";
+                int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
+                if(ex == 0) // thay đổi thành công
                 {
-                    MessageBox.Show("Lỗi ghi tác giả.\n" + ex.Message, "", MessageBoxButtons.OK);
+                    suKien = "";
+                    chonAnh = 0;
+                    gcTacGia.Visible = true;
+                    gcTacGia.Dock = DockStyle.Fill;
+                    groupBox1.Visible = false;
+                    this.btnChiTiet.Enabled = this.btnThem.Enabled = true;
+                    MessageBox.Show("Cập nhật thông tin thành công", "Thông báo", MessageBoxButtons.OK);
+                } else // thay đổi thất bại
+                {
+                    this.btnThem.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
+                    this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
+                    this.btnChonAnh.Visible = true;
                     return;
                 }
-                suKien = "";
+                
             }
-
             gcTacGia.Enabled = true;
-            if (suKienCT.Equals("CT"))
-            {
-                this.btnThem.Enabled = false;
-            }
-            else this.btnThem.Enabled = true;
 
-            this.btnXoa.Enabled =  this.btnReload.Enabled = this.btnThoat.Enabled = true;
+            this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled 
+                = this.btnBackup.Enabled = this.btnRestore.Enabled = true;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
             this.btnChonAnh.Visible = false;
+
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -403,10 +403,17 @@ namespace TPNT
                 this.btnXoa.Enabled = false;
                 this.txtMaTacGia.Enabled = true;
             }
-            
             if (pathImage.Trim().Length != 0)
             {
-                Image image = Image.FromFile(pathImage);
+                Image image = Image.FromFile(@"" + Application.StartupPath + "\\Resources\\" + pathImage);
+                //MessageBox.Show(pathImage);
+                pictureBox.Image = image;
+                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                pictureBox.Dock = DockStyle.Fill;
+                this.pnlAnh.AddControl(pictureBox);
+            } else
+            {
+                Image image = Image.FromFile(@"" + Application.StartupPath + "\\Resources\\nophoto.png");
 
                 pictureBox.Image = image;
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
@@ -424,7 +431,7 @@ namespace TPNT
                 gcTacGia.Enabled = true;
                 gcTacGia.Dock = DockStyle.Fill;
                 groupBox1.Visible = false;
-                this.btnChiTiet.Enabled = true;
+                this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = true;
                 this.btnHieuChinh.Enabled = false;
                 this.btnThem.Enabled = true;
             } else this.Close();
@@ -434,10 +441,9 @@ namespace TPNT
         private void btnChiTiet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             suKienCT = "CT";
-
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
-            this.btnThem.Enabled = this.btnChiTiet.Enabled = false;
+            this.btnThem.Enabled = this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             gcTacGia.Visible = false;
             groupBox1.Visible = true;
             groupBox1.Dock = DockStyle.Fill;

@@ -149,3 +149,5 @@ E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.CoreCompileInputs.cache
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.CopyComplete
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.exe
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.pdb
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmChonTacPham.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmLoaiHinhKhac.resources

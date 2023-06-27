@@ -17,13 +17,13 @@ namespace TPNT
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publisher = "Data Source=ADMIN-PC;Initial Catalog=TPNT;Integrated Security=True";
+        public static String connstr_publisher = "Data Source=MSI;Initial Catalog=TPNT;Integrated Security=True";
 
         public static SqlDataReader myReader;
-        public static String servername = "";
+        public static String servername = "MSI";
         public static String username = "";
-        public static String mlogin = "";
-        public static String password = "";
+        public static String mlogin = "sa";
+        public static String password = "123456";
 
         public static String database = "TPNT";
         public static String remotelogin = "HTKN";
@@ -40,7 +40,8 @@ namespace TPNT
             if (Program.conn != null && Program.conn.State == ConnectionState.Open) Program.conn.Close();
             try
             {
-                Program.connstr = connstr_publisher;
+                Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" +
+                    Program.database + ";User ID=" + Program.mlogin + ";password=" + Program.password;
                 Program.conn.ConnectionString = Program.connstr;
                 Program.conn.Open();
                 return 1;
@@ -84,7 +85,7 @@ namespace TPNT
             }
             catch (SqlException e)
             {
-                MessageBox.Show("Lỗi ghi  " + e.Message);
+                MessageBox.Show("Lỗi " + e.Message);
                 conn.Close();
                 return e.State;
             }

@@ -167,5 +167,11 @@ namespace TPNT
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new frmHoiHoa());
         }
+
+        private void btnKhac_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(new frmLoaiHinhKhac());
+        }
     }
 }

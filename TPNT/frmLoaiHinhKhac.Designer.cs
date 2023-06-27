@@ -1,6 +1,6 @@
 ﻿namespace TPNT
 {
-    partial class frmHoiHoa
+    partial class frmLoaiHinhKhac
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label maLabel;
             System.Windows.Forms.Label tenLabel;
-            System.Windows.Forms.Label truongPhaiLabel;
-            System.Windows.Forms.Label chatLieuLabel;
-            System.Windows.Forms.Label vatLieuLabel;
-            System.Windows.Forms.Label maSoTPLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoiHoa));
+            System.Windows.Forms.Label theLoaiLabel;
+            System.Windows.Forms.Label phongCachLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoaiHinhKhac));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -52,85 +51,72 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnChiTiet = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.dsTPNT = new TPNT.TPNTDataSet();
-            this.v_SELECTHOIHOATableAdapter1 = new TPNT.TPNTDataSetTableAdapters.V_SELECTHOIHOATableAdapter();
+            this.tPNTDataSet = new TPNT.TPNTDataSet();
+            this.bdsLoaiHinhKhac = new System.Windows.Forms.BindingSource(this.components);
+            this.v_SELECTLOAIHINHKHACTableAdapter = new TPNT.TPNTDataSetTableAdapters.V_SELECTLOAIHINHKHACTableAdapter();
             this.tableAdapterManager = new TPNT.TPNTDataSetTableAdapters.TableAdapterManager();
-            this.bdsHoiHoa = new System.Windows.Forms.BindingSource(this.components);
-            this.gcHoiHoa = new DevExpress.XtraGrid.GridControl();
+            this.gcLoaiHinhKhac = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTen = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVatLieu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colChatLieu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTruongPhai = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTheLoai = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhongCach = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtTruongPhai = new System.Windows.Forms.TextBox();
-            this.txtChatLieu = new System.Windows.Forms.TextBox();
-            this.txtVatLieu = new System.Windows.Forms.TextBox();
+            this.txtPhongCach = new System.Windows.Forms.TextBox();
+            this.txtTheLoai = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
-            this.txtMaTP = new System.Windows.Forms.TextBox();
+            this.txtMa = new System.Windows.Forms.TextBox();
+            maLabel = new System.Windows.Forms.Label();
             tenLabel = new System.Windows.Forms.Label();
-            truongPhaiLabel = new System.Windows.Forms.Label();
-            chatLieuLabel = new System.Windows.Forms.Label();
-            vatLieuLabel = new System.Windows.Forms.Label();
-            maSoTPLabel = new System.Windows.Forms.Label();
+            theLoaiLabel = new System.Windows.Forms.Label();
+            phongCachLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsTPNT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsHoiHoa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcHoiHoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLoaiHinhKhac)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcLoaiHinhKhac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // maLabel
+            // 
+            maLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            maLabel.AutoSize = true;
+            maLabel.Location = new System.Drawing.Point(118, 57);
+            maLabel.Name = "maLabel";
+            maLabel.Size = new System.Drawing.Size(108, 20);
+            maLabel.TabIndex = 0;
+            maLabel.Text = "Mã tác phẩm:";
             // 
             // tenLabel
             // 
             tenLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             tenLabel.AutoSize = true;
-            tenLabel.Location = new System.Drawing.Point(194, 144);
+            tenLabel.Location = new System.Drawing.Point(118, 135);
             tenLabel.Name = "tenLabel";
-            tenLabel.Size = new System.Drawing.Size(42, 20);
-            tenLabel.TabIndex = 9;
-            tenLabel.Text = "Tên:";
+            tenLabel.Size = new System.Drawing.Size(113, 20);
+            tenLabel.TabIndex = 2;
+            tenLabel.Text = "Tên tác phẩm:";
             // 
-            // truongPhaiLabel
+            // theLoaiLabel
             // 
-            truongPhaiLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            truongPhaiLabel.AutoSize = true;
-            truongPhaiLabel.Location = new System.Drawing.Point(782, 216);
-            truongPhaiLabel.Name = "truongPhaiLabel";
-            truongPhaiLabel.Size = new System.Drawing.Size(102, 20);
-            truongPhaiLabel.TabIndex = 6;
-            truongPhaiLabel.Text = "Trường phái:";
+            theLoaiLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            theLoaiLabel.AutoSize = true;
+            theLoaiLabel.Location = new System.Drawing.Point(658, 60);
+            theLoaiLabel.Name = "theLoaiLabel";
+            theLoaiLabel.Size = new System.Drawing.Size(72, 20);
+            theLoaiLabel.TabIndex = 4;
+            theLoaiLabel.Text = "Thể loại:";
             // 
-            // chatLieuLabel
+            // phongCachLabel
             // 
-            chatLieuLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chatLieuLabel.AutoSize = true;
-            chatLieuLabel.Location = new System.Drawing.Point(194, 212);
-            chatLieuLabel.Name = "chatLieuLabel";
-            chatLieuLabel.Size = new System.Drawing.Size(77, 20);
-            chatLieuLabel.TabIndex = 4;
-            chatLieuLabel.Text = "Chất liệu:";
-            // 
-            // vatLieuLabel
-            // 
-            vatLieuLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            vatLieuLabel.AutoSize = true;
-            vatLieuLabel.Location = new System.Drawing.Point(782, 124);
-            vatLieuLabel.Name = "vatLieuLabel";
-            vatLieuLabel.Size = new System.Drawing.Size(68, 20);
-            vatLieuLabel.TabIndex = 2;
-            vatLieuLabel.Text = "Vật liệu:";
-            // 
-            // maSoTPLabel
-            // 
-            maSoTPLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            maSoTPLabel.AutoSize = true;
-            maSoTPLabel.Location = new System.Drawing.Point(194, 85);
-            maSoTPLabel.Name = "maSoTPLabel";
-            maSoTPLabel.Size = new System.Drawing.Size(129, 20);
-            maSoTPLabel.TabIndex = 0;
-            maSoTPLabel.Text = "Mã số tác phẩm:";
+            phongCachLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            phongCachLabel.AutoSize = true;
+            phongCachLabel.Location = new System.Drawing.Point(659, 140);
+            phongCachLabel.Name = "phongCachLabel";
+            phongCachLabel.Size = new System.Drawing.Size(97, 20);
+            phongCachLabel.TabIndex = 6;
+            phongCachLabel.Text = "Phong cách:";
             // 
             // barManager1
             // 
@@ -266,16 +252,16 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1313, 61);
+            this.barDockControlTop.Size = new System.Drawing.Size(1208, 61);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 724);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 812);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1313, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1208, 20);
             // 
             // barDockControlLeft
             // 
@@ -284,16 +270,16 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 61);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 663);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 751);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1313, 61);
+            this.barDockControlRight.Location = new System.Drawing.Point(1208, 61);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 663);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 751);
             // 
             // btnChiTiet
             // 
@@ -306,14 +292,19 @@
             this.barButtonItem1.Id = 9;
             this.barButtonItem1.Name = "barButtonItem1";
             // 
-            // dsTPNT
+            // tPNTDataSet
             // 
-            this.dsTPNT.DataSetName = "TPNTDataSet";
-            this.dsTPNT.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tPNTDataSet.DataSetName = "dsTPNT";
+            this.tPNTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // v_SELECTHOIHOATableAdapter1
+            // bdsLoaiHinhKhac
             // 
-            this.v_SELECTHOIHOATableAdapter1.ClearBeforeFill = true;
+            this.bdsLoaiHinhKhac.DataMember = "V_SELECTLOAIHINHKHAC";
+            this.bdsLoaiHinhKhac.DataSource = this.tPNTDataSet;
+            // 
+            // v_SELECTLOAIHINHKHACTableAdapter
+            // 
+            this.v_SELECTLOAIHINHKHACTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -331,22 +322,17 @@
             this.tableAdapterManager.TPNTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = TPNT.TPNTDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // bdsHoiHoa
+            // gcLoaiHinhKhac
             // 
-            this.bdsHoiHoa.DataMember = "V_SELECTHOIHOA";
-            this.bdsHoiHoa.DataSource = this.dsTPNT;
-            // 
-            // gcHoiHoa
-            // 
-            this.gcHoiHoa.DataSource = this.bdsHoiHoa;
-            this.gcHoiHoa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcHoiHoa.Location = new System.Drawing.Point(0, 61);
-            this.gcHoiHoa.MainView = this.gridView1;
-            this.gcHoiHoa.MenuManager = this.barManager1;
-            this.gcHoiHoa.Name = "gcHoiHoa";
-            this.gcHoiHoa.Size = new System.Drawing.Size(1313, 377);
-            this.gcHoiHoa.TabIndex = 33;
-            this.gcHoiHoa.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gcLoaiHinhKhac.DataSource = this.bdsLoaiHinhKhac;
+            this.gcLoaiHinhKhac.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gcLoaiHinhKhac.Location = new System.Drawing.Point(0, 61);
+            this.gcLoaiHinhKhac.MainView = this.gridView1;
+            this.gcLoaiHinhKhac.MenuManager = this.barManager1;
+            this.gcLoaiHinhKhac.Name = "gcLoaiHinhKhac";
+            this.gcLoaiHinhKhac.Size = new System.Drawing.Size(1208, 548);
+            this.gcLoaiHinhKhac.TabIndex = 5;
+            this.gcLoaiHinhKhac.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -363,10 +349,9 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMa,
             this.colTen,
-            this.colVatLieu,
-            this.colChatLieu,
-            this.colTruongPhai});
-            this.gridView1.GridControl = this.gcHoiHoa;
+            this.colTheLoai,
+            this.colPhongCach});
+            this.gridView1.GridControl = this.gcLoaiHinhKhac;
             this.gridView1.Name = "gridView1";
             this.gridView1.RowHeight = 40;
             // 
@@ -390,124 +375,102 @@
             this.colTen.VisibleIndex = 1;
             this.colTen.Width = 94;
             // 
-            // colVatLieu
+            // colTheLoai
             // 
-            this.colVatLieu.Caption = "Vật liệu";
-            this.colVatLieu.FieldName = "VatLieu";
-            this.colVatLieu.MinWidth = 25;
-            this.colVatLieu.Name = "colVatLieu";
-            this.colVatLieu.Visible = true;
-            this.colVatLieu.VisibleIndex = 2;
-            this.colVatLieu.Width = 94;
+            this.colTheLoai.Caption = "Thể loại";
+            this.colTheLoai.FieldName = "TheLoai";
+            this.colTheLoai.MinWidth = 25;
+            this.colTheLoai.Name = "colTheLoai";
+            this.colTheLoai.Visible = true;
+            this.colTheLoai.VisibleIndex = 2;
+            this.colTheLoai.Width = 94;
             // 
-            // colChatLieu
+            // colPhongCach
             // 
-            this.colChatLieu.Caption = "Chất liệu";
-            this.colChatLieu.FieldName = "ChatLieu";
-            this.colChatLieu.MinWidth = 25;
-            this.colChatLieu.Name = "colChatLieu";
-            this.colChatLieu.Visible = true;
-            this.colChatLieu.VisibleIndex = 3;
-            this.colChatLieu.Width = 94;
-            // 
-            // colTruongPhai
-            // 
-            this.colTruongPhai.Caption = "Trường phái";
-            this.colTruongPhai.FieldName = "TruongPhai";
-            this.colTruongPhai.MinWidth = 25;
-            this.colTruongPhai.Name = "colTruongPhai";
-            this.colTruongPhai.Visible = true;
-            this.colTruongPhai.VisibleIndex = 4;
-            this.colTruongPhai.Width = 94;
+            this.colPhongCach.Caption = "Phong cách";
+            this.colPhongCach.FieldName = "PhongCach";
+            this.colPhongCach.MinWidth = 25;
+            this.colPhongCach.Name = "colPhongCach";
+            this.colPhongCach.Visible = true;
+            this.colPhongCach.VisibleIndex = 3;
+            this.colPhongCach.Width = 94;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtTruongPhai);
-            this.groupBox1.Controls.Add(this.txtChatLieu);
-            this.groupBox1.Controls.Add(this.txtVatLieu);
-            this.groupBox1.Controls.Add(this.txtTen);
-            this.groupBox1.Controls.Add(this.txtMaTP);
+            this.groupBox1.Controls.Add(phongCachLabel);
+            this.groupBox1.Controls.Add(this.txtPhongCach);
+            this.groupBox1.Controls.Add(theLoaiLabel);
+            this.groupBox1.Controls.Add(this.txtTheLoai);
             this.groupBox1.Controls.Add(tenLabel);
-            this.groupBox1.Controls.Add(truongPhaiLabel);
-            this.groupBox1.Controls.Add(chatLieuLabel);
-            this.groupBox1.Controls.Add(vatLieuLabel);
-            this.groupBox1.Controls.Add(maSoTPLabel);
+            this.groupBox1.Controls.Add(this.txtTen);
+            this.groupBox1.Controls.Add(maLabel);
+            this.groupBox1.Controls.Add(this.txtMa);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 438);
+            this.groupBox1.Location = new System.Drawing.Point(0, 609);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1313, 286);
-            this.groupBox1.TabIndex = 34;
+            this.groupBox1.Size = new System.Drawing.Size(1208, 203);
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
             // 
-            // txtTruongPhai
+            // txtPhongCach
             // 
-            this.txtTruongPhai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTruongPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHoiHoa, "TruongPhai", true));
-            this.txtTruongPhai.Location = new System.Drawing.Point(952, 216);
-            this.txtTruongPhai.Name = "txtTruongPhai";
-            this.txtTruongPhai.Size = new System.Drawing.Size(243, 28);
-            this.txtTruongPhai.TabIndex = 17;
+            this.txtPhongCach.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPhongCach.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "PhongCach", true));
+            this.txtPhongCach.Location = new System.Drawing.Point(766, 137);
+            this.txtPhongCach.Name = "txtPhongCach";
+            this.txtPhongCach.Size = new System.Drawing.Size(256, 28);
+            this.txtPhongCach.TabIndex = 7;
             // 
-            // txtChatLieu
+            // txtTheLoai
             // 
-            this.txtChatLieu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtChatLieu.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHoiHoa, "ChatLieu", true));
-            this.txtChatLieu.Location = new System.Drawing.Point(362, 209);
-            this.txtChatLieu.Name = "txtChatLieu";
-            this.txtChatLieu.Size = new System.Drawing.Size(246, 28);
-            this.txtChatLieu.TabIndex = 16;
-            // 
-            // txtVatLieu
-            // 
-            this.txtVatLieu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtVatLieu.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHoiHoa, "VatLieu", true));
-            this.txtVatLieu.Location = new System.Drawing.Point(952, 66);
-            this.txtVatLieu.Multiline = true;
-            this.txtVatLieu.Name = "txtVatLieu";
-            this.txtVatLieu.Size = new System.Drawing.Size(243, 131);
-            this.txtVatLieu.TabIndex = 15;
+            this.txtTheLoai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTheLoai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "TheLoai", true));
+            this.txtTheLoai.Location = new System.Drawing.Point(766, 57);
+            this.txtTheLoai.Name = "txtTheLoai";
+            this.txtTheLoai.Size = new System.Drawing.Size(256, 28);
+            this.txtTheLoai.TabIndex = 5;
             // 
             // txtTen
             // 
             this.txtTen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHoiHoa, "Ten", true));
-            this.txtTen.Location = new System.Drawing.Point(362, 144);
+            this.txtTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "Ten", true));
+            this.txtTen.Location = new System.Drawing.Point(254, 132);
             this.txtTen.Name = "txtTen";
             this.txtTen.ReadOnly = true;
-            this.txtTen.Size = new System.Drawing.Size(246, 28);
-            this.txtTen.TabIndex = 14;
+            this.txtTen.Size = new System.Drawing.Size(225, 28);
+            this.txtTen.TabIndex = 3;
             // 
-            // txtMaTP
+            // txtMa
             // 
-            this.txtMaTP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMaTP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHoiHoa, "Ma", true));
-            this.txtMaTP.Location = new System.Drawing.Point(362, 85);
-            this.txtMaTP.Name = "txtMaTP";
-            this.txtMaTP.ReadOnly = true;
-            this.txtMaTP.Size = new System.Drawing.Size(246, 28);
-            this.txtMaTP.TabIndex = 13;
+            this.txtMa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "Ma", true));
+            this.txtMa.Location = new System.Drawing.Point(254, 54);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.ReadOnly = true;
+            this.txtMa.Size = new System.Drawing.Size(225, 28);
+            this.txtMa.TabIndex = 1;
             // 
-            // frmHoiHoa
+            // frmLoaiHinhKhac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 744);
+            this.ClientSize = new System.Drawing.Size(1208, 832);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.gcHoiHoa);
+            this.Controls.Add(this.gcLoaiHinhKhac);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmHoiHoa";
-            this.Text = "Hội họa";
-            this.Load += new System.EventHandler(this.frmHoiHoa_Load);
+            this.Name = "frmLoaiHinhKhac";
+            this.Text = "Loại hình khác";
+            this.Load += new System.EventHandler(this.frmLoaiHinhKhac_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsTPNT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsHoiHoa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcHoiHoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLoaiHinhKhac)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcLoaiHinhKhac)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -520,13 +483,14 @@
 
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar1;
-        private DevExpress.XtraBars.Bar bar2;
+        private DevExpress.XtraBars.BarButtonItem btnThem;
         private DevExpress.XtraBars.BarButtonItem btnHieuChinh;
         private DevExpress.XtraBars.BarButtonItem btnLuu;
         private DevExpress.XtraBars.BarButtonItem btnXoa;
         private DevExpress.XtraBars.BarButtonItem btnPhucHoi;
         private DevExpress.XtraBars.BarButtonItem btnReload;
         private DevExpress.XtraBars.BarButtonItem btnThoat;
+        private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
@@ -534,23 +498,20 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnChiTiet;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem btnThem;
-        private TPNTDataSet dsTPNT;
-        private TPNTDataSetTableAdapters.V_SELECTHOIHOATableAdapter v_SELECTHOIHOATableAdapter1;
+        private System.Windows.Forms.BindingSource bdsLoaiHinhKhac;
+        private TPNTDataSet tPNTDataSet;
+        private TPNTDataSetTableAdapters.V_SELECTLOAIHINHKHACTableAdapter v_SELECTLOAIHINHKHACTableAdapter;
         private TPNTDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtTruongPhai;
-        private System.Windows.Forms.BindingSource bdsHoiHoa;
-        private System.Windows.Forms.TextBox txtChatLieu;
-        private System.Windows.Forms.TextBox txtVatLieu;
-        private System.Windows.Forms.TextBox txtTen;
-        private System.Windows.Forms.TextBox txtMaTP;
-        private DevExpress.XtraGrid.GridControl gcHoiHoa;
+        private DevExpress.XtraGrid.GridControl gcLoaiHinhKhac;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMa;
         private DevExpress.XtraGrid.Columns.GridColumn colTen;
-        private DevExpress.XtraGrid.Columns.GridColumn colVatLieu;
-        private DevExpress.XtraGrid.Columns.GridColumn colChatLieu;
-        private DevExpress.XtraGrid.Columns.GridColumn colTruongPhai;
+        private DevExpress.XtraGrid.Columns.GridColumn colTheLoai;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhongCach;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtPhongCach;
+        private System.Windows.Forms.TextBox txtTheLoai;
+        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.TextBox txtMa;
     }
 }

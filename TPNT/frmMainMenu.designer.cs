@@ -216,6 +216,7 @@
             this.btnKhac.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhac.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKhac.UseVisualStyleBackColor = true;
+            this.btnKhac.Click += new System.EventHandler(this.btnKhac_Click);
             // 
             // btnHoiHoa
             // 

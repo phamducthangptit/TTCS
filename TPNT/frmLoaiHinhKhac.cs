@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.Skins;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,25 +12,25 @@ using System.Windows.Forms;
 
 namespace TPNT
 {
-    public partial class frmHoiHoa : Form
+    public partial class frmLoaiHinhKhac : Form
     {
         private string sukien = "";
         private int vitri = 0;
-        
-        public frmHoiHoa()
+        public frmLoaiHinhKhac()
         {
             InitializeComponent();
         }
 
-        private void frmHoiHoa_Load(object sender, EventArgs e)
+        private void frmLoaiHinhKhac_Load(object sender, EventArgs e)
         {
-            this.v_SELECTHOIHOATableAdapter1.Fill(this.dsTPNT.V_SELECTHOIHOA);
+            this.v_SELECTLOAIHINHKHACTableAdapter.Fill(this.tPNTDataSet.V_SELECTLOAIHINHKHAC);
+
             groupBox1.Visible = false;
-            gcHoiHoa.Dock = DockStyle.Fill;
+            gcLoaiHinhKhac.Dock = DockStyle.Fill;
             this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
 
-            string strLenh = "SELECT * FROM V_SLHOIHOA";
+            string strLenh = "SELECT * FROM V_SLLHK";
             SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
             dataReaderSLTG.Read();
             int slTG = dataReaderSLTG.GetInt32(0);
@@ -40,7 +41,6 @@ namespace TPNT
             }
             else this.btnXoa.Enabled = this.btnHieuChinh.Enabled = true;
         }
-
         private Form CheckExist(Type ftype)
         {
             foreach (Form f in Application.OpenForms)
@@ -56,8 +56,8 @@ namespace TPNT
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             sukien = "THEM";
-            bdsHoiHoa.AddNew();
-            
+            bdsLoaiHinhKhac.AddNew();
+
 
             if (CheckExist(typeof(frmChonTacPham)) == null)
             {
@@ -69,13 +69,13 @@ namespace TPNT
                 {
                     // Lấy dữ liệu từ form mới (frmChonTacPham)
                     this.txtTen.Text = f.TenTP;
-                    this.txtMaTP.Text = f.MaTP;
+                    this.txtMa.Text = f.MaTP;
                 };
             }
             this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
-            gcHoiHoa.Dock = DockStyle.Top;
-            gcHoiHoa.Enabled = false;
+            gcLoaiHinhKhac.Dock = DockStyle.Top;
+            gcLoaiHinhKhac.Enabled = false;
             groupBox1.Visible = true;
             groupBox1.Dock = DockStyle.Fill;
         }
@@ -83,100 +83,88 @@ namespace TPNT
         private void btnHieuChinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             sukien = "HC";
-            gcHoiHoa.Dock = DockStyle.Top;
-            gcHoiHoa.Enabled = false;
+            gcLoaiHinhKhac.Dock = DockStyle.Top;
+            gcLoaiHinhKhac.Enabled = false;
             groupBox1.Visible = true;
             groupBox1.Dock = DockStyle.Fill;
 
             this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
-            vitri = bdsHoiHoa.Position;
+            vitri = bdsLoaiHinhKhac.Position;
         }
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (this.txtMaTP.Text.Trim().Length == 0)
+            if(this.txtMa.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Mã tác phẩm không được trống!", "Thông báo", MessageBoxButtons.OK);
-                this.txtMaTP.Focus();
+                this.txtMa.Focus();
+                return;
+            }
+            if (this.txtTheLoai.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Thể loại không được trống!", "Thông báo", MessageBoxButtons.OK);
+                this.txtTheLoai.Focus();
                 return;
             }
 
-            if (this.txtVatLieu.Text.Trim().Length == 0)
+            if (this.txtPhongCach.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Vật liệu không được trống!", "Thông báo", MessageBoxButtons.OK);
-                this.txtVatLieu.Focus();
+                MessageBox.Show("Phong cách không được trống!", "Thông báo", MessageBoxButtons.OK);
+                this.txtPhongCach.Focus();
                 return;
             }
 
-            if (this.txtChatLieu.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Chất liệu không được trống!", "Thông báo", MessageBoxButtons.OK);
-                this.txtChatLieu.Focus();
-                return;
-            }
-
-            if (this.txtTruongPhai.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Trường phái không được trống!", "Thông báo", MessageBoxButtons.OK);
-                this.txtTruongPhai.Focus();
-                return;
-            }
-            
             if (sukien.Equals("THEM"))
             {
-                string strLenh = "EXEC SP_INSERTHOIHOA '" + this.txtMaTP.Text + "', N'" + this.txtVatLieu.Text + "', N'" + this.txtChatLieu.Text + "', N'" + this.txtTruongPhai.Text + "'";
+                string strLenh = "EXEC SP_INSERTLHK '" + this.txtMa.Text + "', N'" + this.txtTheLoai.Text + "', N'" + this.txtPhongCach.Text + "'";
                 int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
-                if(ex == 0) // thêm thành công
+                if(ex == 0) // luu thanh cong
                 {
-                    bdsHoiHoa.CancelEdit();
-                    bdsHoiHoa.ResetCurrentItem();
+                    bdsLoaiHinhKhac.CancelEdit();
+                    bdsLoaiHinhKhac.ResetCurrentItem();
                     groupBox1.Visible = false;
-                    gcHoiHoa.Enabled = true;
-                    gcHoiHoa.Dock = DockStyle.Fill;
+                    gcLoaiHinhKhac.Enabled = true;
+                    gcLoaiHinhKhac.Dock = DockStyle.Fill;
                     this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
                     this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
-                    this.v_SELECTHOIHOATableAdapter1.Fill(this.dsTPNT.V_SELECTHOIHOA);
+                    this.v_SELECTLOAIHINHKHACTableAdapter.Fill(this.tPNTDataSet.V_SELECTLOAIHINHKHAC);
                     MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
-                } else if(ex == 16)
+                } else
                 {
                     this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
                     this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
-                    gcHoiHoa.Dock = DockStyle.Top;
-                    gcHoiHoa.Enabled = false;
+                    gcLoaiHinhKhac.Dock = DockStyle.Top;
+                    gcLoaiHinhKhac.Enabled = false;
                     groupBox1.Visible = true;
                     groupBox1.Dock = DockStyle.Fill;
                     return;
                 }
-                
-                
-               
-            } else if (sukien.Equals("HC"))
+            }
+            else if (sukien.Equals("HC"))
             {
-                string strLenh = "EXEC SP_UPDATEHOIHOA '" + this.txtMaTP.Text + "', N'" + this.txtVatLieu.Text + "', N'" + this.txtChatLieu.Text + "', N'" + this.txtTruongPhai.Text + "'";
+                string strLenh = "EXEC SP_UPDATELHK '" + this.txtMa.Text + "', N'" + this.txtTheLoai.Text + "', N'" + this.txtPhongCach.Text + "'";
                 int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
                 if(ex == 0)
                 {
-                    bdsHoiHoa.EndEdit();
-                    bdsHoiHoa.ResetCurrentItem();
+                    bdsLoaiHinhKhac.EndEdit();
+                    bdsLoaiHinhKhac.ResetCurrentItem();
                     groupBox1.Visible = false;
-                    gcHoiHoa.Enabled = true;
-                    gcHoiHoa.Dock = DockStyle.Fill;
+                    gcLoaiHinhKhac.Enabled = true;
+                    gcLoaiHinhKhac.Dock = DockStyle.Fill;
                     this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
                     this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
-                    MessageBox.Show("Thay đổi thành công", "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Cập nhật thông tin thành công", "Thông báo", MessageBoxButtons.OK);
                 } else
                 {
-                    gcHoiHoa.Dock = DockStyle.Top;
-                    gcHoiHoa.Enabled = false;
+                    gcLoaiHinhKhac.Dock = DockStyle.Top;
+                    gcLoaiHinhKhac.Enabled = false;
                     groupBox1.Visible = true;
                     groupBox1.Dock = DockStyle.Fill;
 
                     this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
                     this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
-                    return;
                 }
-               
             }
         }
 
@@ -188,10 +176,10 @@ namespace TPNT
             {
                 try
                 {
-                    maTP = ((DataRowView)bdsHoiHoa[bdsHoiHoa.Position])["Ma"].ToString();
+                    maTP = ((DataRowView)bdsLoaiHinhKhac[bdsLoaiHinhKhac.Position])["Ma"].ToString();
 
-                    bdsHoiHoa.RemoveCurrent();
-                    strLenh = "EXEC SP_DELETEHOIHOA '" + maTP + "'";
+                    bdsLoaiHinhKhac.RemoveCurrent();
+                    strLenh = "EXEC SP_DELETELHK '" + maTP + "'";
                     int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
 
                 }
@@ -199,12 +187,12 @@ namespace TPNT
                 {
                     MessageBox.Show("Lỗi xóa. Bạn hãy xóa lại\n" + ex.Message, "",
                         MessageBoxButtons.OK);
-                    this.v_SELECTHOIHOATableAdapter1.Fill(this.dsTPNT.V_SELECTHOIHOA);
-                    bdsHoiHoa.Position = bdsHoiHoa.Find("Ma", maTP);
+                    this.v_SELECTLOAIHINHKHACTableAdapter.Fill(this.tPNTDataSet.V_SELECTLOAIHINHKHAC);
+                    bdsLoaiHinhKhac.Position = bdsLoaiHinhKhac.Find("Ma", maTP);
                     return;
                 }
             }
-            strLenh = "SELECT * FROM V_SLHOIHOA";
+            strLenh = "SELECT * FROM V_SLLHK";
             SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
             dataReaderSLTG.Read();
             int slTG = dataReaderSLTG.GetInt32(0);
@@ -218,13 +206,12 @@ namespace TPNT
 
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bdsHoiHoa.CancelEdit();
-            bdsHoiHoa.Position = vitri;
-            gcHoiHoa.Enabled = true;
-            gcHoiHoa.Dock = DockStyle.Fill;
+            bdsLoaiHinhKhac.CancelEdit();
+            bdsLoaiHinhKhac.Position = vitri;
+            gcLoaiHinhKhac.Enabled = true;
+            gcLoaiHinhKhac.Dock = DockStyle.Fill;
             groupBox1.Visible = false;
-
-            string strLenh = "SELECT * FROM V_SLHOIHOA";
+            string strLenh = "SELECT * FROM V_SLLHK";
             SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
             dataReaderSLTG.Read();
             int slTG = dataReaderSLTG.GetInt32(0);
@@ -241,12 +228,12 @@ namespace TPNT
 
         private void btnReload_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            vitri = bdsHoiHoa.Position;
+            vitri = bdsLoaiHinhKhac.Position;
 
             try
             {
-                this.v_SELECTHOIHOATableAdapter1.Fill(this.dsTPNT.V_SELECTHOIHOA);
-                bdsHoiHoa.Position = vitri;
+                this.v_SELECTLOAIHINHKHACTableAdapter.Fill(this.tPNTDataSet.V_SELECTLOAIHINHKHAC);
+                bdsLoaiHinhKhac.Position = vitri;
             }
             catch (Exception ex)
             {
@@ -259,6 +246,5 @@ namespace TPNT
         {
             this.Close();
         }
-
     }
 }

@@ -45,6 +45,8 @@
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBackup = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar3 = new DevExpress.XtraBars.Bar();
@@ -187,9 +189,11 @@
             this.btnChiTiet1,
             this.btnLuu,
             this.btnThoat,
-            this.btnChiTiet});
+            this.btnChiTiet,
+            this.btnBackup,
+            this.btnRestore});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 10;
+            this.barManager1.MaxItemId = 12;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar1
@@ -751,5 +755,7 @@
         private System.Windows.Forms.Label lblSLTP;
         private DevExpress.XtraBars.BarButtonItem btnThoat;
         private DevExpress.XtraBars.BarButtonItem btnChiTiet;
+        private DevExpress.XtraBars.BarButtonItem btnBackup;
+        private DevExpress.XtraBars.BarButtonItem btnRestore;
     }
 }
