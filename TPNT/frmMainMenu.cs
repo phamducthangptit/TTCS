@@ -148,7 +148,7 @@ namespace TPNT
         private void btnTacGia_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            //OpenChildForm(new frmTacGia());
+            OpenChildForm(new frmTacGia());
         }
 
         private void btnCuocTrienLam_Click(object sender, EventArgs e)
