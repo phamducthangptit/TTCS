@@ -138,10 +138,7 @@ E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraTreeList.v23.1.xml
 E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Office.v23.1.Core.xml
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.AssemblyReference.cache
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.SuggestedBindingRedirects.cache
-E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmCuocTrienLam.resources
-E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmHoiHoa.resources
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmMainMenu.resources
-E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmTacGia.resources
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.Properties.Resources.resources
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.csproj.GenerateResource.cache
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.exe.licenses
@@ -256,3 +253,307 @@ D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmChonTPNTNullSangTac.resources
 D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmTaiSanBaoTang.resources
 D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmChonTPNTSoHuu.resources
 D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmChiTietCuocTienLam.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmChonTacPham.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmLoaiHinhKhac.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\TPNT.exe.config
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\TPNT.exe
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\TPNT.pdb
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.BonusSkins.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Data.Desktop.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Data.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Drawing.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Printing.v23.1.Core.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Sparkline.v23.1.Core.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Utils.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraBars.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraEditors.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraGrid.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraLayout.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraPrinting.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Core.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Drawing.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.RichEdit.v23.1.Core.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraTreeList.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Office.v23.1.Core.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Data.Desktop.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Data.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Utils.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Sparkline.v23.1.Core.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraBars.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraEditors.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Printing.v23.1.Core.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Drawing.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraGrid.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraLayout.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraPrinting.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Core.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Drawing.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.RichEdit.v23.1.Core.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraTreeList.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Office.v23.1.Core.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmCuocTrienLam.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmHoiHoa.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmMainMenu.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmTacGia.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.Properties.Resources.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.exe.licenses
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.csproj.CopyComplete
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.exe
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.pdb
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmTPNT.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmChonTacGia.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmBoSuuTap.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmLoaiHinhDIMuon.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmChonTPNT.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmLogin.resources
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.DataVisualization.v23.1.Core.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Images.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Xpo.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.CodeParser.v23.1.dll
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\bin\Debug\DevExpress.Xpo.v23.1.xml
+C:\Users\Admin\Desktop\TTCS\source\TTCS\TPNT\obj\Debug\TPNT.frmBackup_Restore.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\TPNT.exe.config
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\TPNT.exe
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\TPNT.pdb
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.BonusSkins.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Data.Desktop.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Data.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Drawing.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Printing.v23.1.Core.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Sparkline.v23.1.Core.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Utils.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraBars.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraEditors.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraGrid.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraLayout.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraPrinting.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraTreeList.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.RichEdit.v23.1.Core.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.DataVisualization.v23.1.Core.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Core.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Drawing.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Office.v23.1.Core.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Images.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Xpo.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.CodeParser.v23.1.dll
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Data.Desktop.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Data.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Utils.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Sparkline.v23.1.Core.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraBars.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraEditors.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Printing.v23.1.Core.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Drawing.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraGrid.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraLayout.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraPrinting.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraTreeList.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.RichEdit.v23.1.Core.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Core.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Drawing.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Office.v23.1.Core.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\bin\Debug\DevExpress.Xpo.v23.1.xml
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmBackup_Restore.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmBoSuuTap.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmChonTacGia.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmChonTPNT.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmLoaiHinhDiMuon.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmLogin.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmMainMenu.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmTPNT.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.Properties.Resources.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.exe.licenses
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.csproj.CopyComplete
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.exe
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.pdb
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\TPNT.exe.config
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\TPNT.exe
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\TPNT.pdb
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.BonusSkins.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Data.Desktop.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Data.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Drawing.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Printing.v23.1.Core.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Sparkline.v23.1.Core.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Utils.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraBars.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraEditors.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraGrid.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraLayout.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraPrinting.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraTreeList.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.RichEdit.v23.1.Core.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.DataVisualization.v23.1.Core.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Core.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Drawing.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Office.v23.1.Core.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Images.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Xpo.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.CodeParser.v23.1.dll
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Data.Desktop.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Data.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Utils.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Sparkline.v23.1.Core.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraBars.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraEditors.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Printing.v23.1.Core.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Drawing.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraGrid.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraLayout.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraPrinting.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraTreeList.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.RichEdit.v23.1.Core.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Core.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Pdf.v23.1.Drawing.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Office.v23.1.Core.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\bin\Debug\DevExpress.Xpo.v23.1.xml
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.csproj.AssemblyReference.cache
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.frmBackup_Restore.resources
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.frmBoSuuTap.resources
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.frmChonTacGia.resources
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.frmChonTPNT.resources
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.frmLoaiHinhDiMuon.resources
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.frmLogin.resources
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.frmMainMenu.resources
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.frmTPNT.resources
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.Properties.Resources.resources
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.csproj.GenerateResource.cache
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.exe.licenses
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.csproj.CoreCompileInputs.cache
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.csproj.CopyComplete
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.exe
+C:\Users\PC\OneDrive\Máy tính\New folder\testbds\TPNT\obj\Debug\TPNT.pdb
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmBackup_Restore.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmBoSuuTap.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmChonTPNT.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmLoaiHinhDiMuon.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmLogin.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmTPNT.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmChonTacGia.resources
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.DataVisualization.v23.1.Core.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Images.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Xpo.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.CodeParser.v23.1.dll
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\bin\Debug\DevExpress.Xpo.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmTacGia.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmHoiHoa.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmChonTacPham.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmHoiHoa.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmLoaiHinhKhac.resources
+C:\Users\Admin\Desktop\New folder\TTCS\TPNT\obj\Debug\TPNT.frmTacGia.resources
+D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmChonTacPham.resources
+D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmBackup_Restore.resources
+D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmBoSuuTap.resources
+D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmChonTacGia.resources
+D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmChonTPNT.resources
+D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmLoaiHinhDiMuon.resources
+D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmLogin.resources
+D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmLoaiHinhKhac.resources
+D:\DEAN\TTCS\TPNT\obj\Debug\TPNT.frmTPNT.resources
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.DataVisualization.v23.1.Core.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.Images.v23.1.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.Xpo.v23.1.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.CodeParser.v23.1.dll
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.Charts.v23.1.Core.xml
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.Utils.v23.1.UI.xml
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.xml
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.UI.xml
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraCharts.v23.1.Wizard.xml
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraRichEdit.v23.1.xml
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.xml
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.xml
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.xml
+D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.Xpo.v23.1.xml
