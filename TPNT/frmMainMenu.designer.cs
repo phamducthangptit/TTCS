@@ -47,20 +47,33 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnBackupRestore = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbUser = new System.Windows.Forms.Label();
+            this.lbNhom = new System.Windows.Forms.Label();
             this.lblTitleFormChild = new System.Windows.Forms.Label();
             this.iconFormChild = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLoaiHinhSoHuu.SuspendLayout();
             this.panelLoaiHinhSangTac.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconFormChild)).BeginInit();
+            this.panelDesktop.SuspendLayout();
+            this.panelHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
+            this.panelMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panelMenu.Controls.Add(this.btnThoat);
             this.panelMenu.Controls.Add(this.panelLoaiHinhSoHuu);
@@ -76,7 +89,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(333, 887);
+            this.panelMenu.Size = new System.Drawing.Size(333, 909);
             this.panelMenu.TabIndex = 0;
             // 
             // btnThoat
@@ -90,7 +103,7 @@
             this.btnThoat.IconColor = System.Drawing.Color.Gainsboro;
             this.btnThoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(0, 813);
+            this.btnThoat.Location = new System.Drawing.Point(0, 835);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
@@ -100,6 +113,7 @@
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // panelLoaiHinhSoHuu
             // 
@@ -135,6 +149,7 @@
             this.btnDiMuon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDiMuon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDiMuon.UseVisualStyleBackColor = true;
+            this.btnDiMuon.Click += new System.EventHandler(this.btnDiMuon_Click);
             // 
             // btnTaiSanCuaBaoTang
             // 
@@ -157,6 +172,7 @@
             this.btnTaiSanCuaBaoTang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaiSanCuaBaoTang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaiSanCuaBaoTang.UseVisualStyleBackColor = true;
+            this.btnTaiSanCuaBaoTang.Click += new System.EventHandler(this.btnTaiSanCuaBaoTang_Click);
             // 
             // btnLoaiHinhSoHuu
             // 
@@ -216,7 +232,7 @@
             this.btnKhac.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhac.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKhac.UseVisualStyleBackColor = true;
-            this.btnKhac.Click += new System.EventHandler(this.btnKhac_Click);
+            this.btnKhac.Click += new System.EventHandler(this.btnKhac_Click_1);
             // 
             // btnHoiHoa
             // 
@@ -262,6 +278,7 @@
             this.btnDieuKhacTacTuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDieuKhacTacTuong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDieuKhacTacTuong.UseVisualStyleBackColor = true;
+            this.btnDieuKhacTacTuong.Click += new System.EventHandler(this.btnDieuKhacTacTuong_Click);
             // 
             // btnLoaiHinhSangTac
             // 
@@ -380,6 +397,7 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.panelLogo.Controls.Add(this.btnHome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -409,15 +427,79 @@
             // 
             // panelTitleBar
             // 
+            this.panelTitleBar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelTitleBar.Controls.Add(this.btnBackupRestore);
+            this.panelTitleBar.Controls.Add(this.panel1);
             this.panelTitleBar.Controls.Add(this.lblTitleFormChild);
             this.panelTitleBar.Controls.Add(this.iconFormChild);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(333, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(814, 92);
+            this.panelTitleBar.Size = new System.Drawing.Size(1440, 92);
             this.panelTitleBar.TabIndex = 1;
+            // 
+            // btnBackupRestore
+            // 
+            this.btnBackupRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBackupRestore.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBackupRestore.FlatAppearance.BorderSize = 0;
+            this.btnBackupRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackupRestore.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackupRestore.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBackupRestore.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.btnBackupRestore.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnBackupRestore.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBackupRestore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackupRestore.Location = new System.Drawing.Point(789, 7);
+            this.btnBackupRestore.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBackupRestore.Name = "btnBackupRestore";
+            this.btnBackupRestore.Size = new System.Drawing.Size(225, 70);
+            this.btnBackupRestore.TabIndex = 4;
+            this.btnBackupRestore.Text = "Backup/Restore";
+            this.btnBackupRestore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackupRestore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBackupRestore.UseVisualStyleBackColor = true;
+            this.btnBackupRestore.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.lbUser);
+            this.panel1.Controls.Add(this.lbNhom);
+            this.panel1.Location = new System.Drawing.Point(1043, 28);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(331, 36);
+            this.panel1.TabIndex = 2;
+            // 
+            // lbUser
+            // 
+            this.lbUser.AutoSize = true;
+            this.lbUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbUser.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbUser.Location = new System.Drawing.Point(274, 0);
+            this.lbUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(57, 29);
+            this.lbUser.TabIndex = 3;
+            this.lbUser.Text = "Tên:";
+            // 
+            // lbNhom
+            // 
+            this.lbNhom.AutoSize = true;
+            this.lbNhom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbNhom.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNhom.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbNhom.Location = new System.Drawing.Point(0, 0);
+            this.lbNhom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNhom.Name = "lbNhom";
+            this.lbNhom.Size = new System.Drawing.Size(83, 29);
+            this.lbNhom.TabIndex = 2;
+            this.lbNhom.Text = "Nhóm:";
             // 
             // lblTitleFormChild
             // 
@@ -453,25 +535,73 @@
             this.panelShadow.Location = new System.Drawing.Point(333, 92);
             this.panelShadow.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(814, 6);
+            this.panelShadow.Size = new System.Drawing.Size(1440, 6);
             this.panelShadow.TabIndex = 2;
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.White;
+            this.panelDesktop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelDesktop.Controls.Add(this.panelHome);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panelDesktop.Location = new System.Drawing.Point(333, 98);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(814, 789);
+            this.panelDesktop.Size = new System.Drawing.Size(1440, 811);
             this.panelDesktop.TabIndex = 3;
+            // 
+            // panelHome
+            // 
+            this.panelHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelHome.Controls.Add(this.label2);
+            this.panelHome.Controls.Add(this.label1);
+            this.panelHome.Controls.Add(this.pictureBox1);
+            this.panelHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelHome.Location = new System.Drawing.Point(453, 158);
+            this.panelHome.Margin = new System.Windows.Forms.Padding(4);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(400, 400);
+            this.panelHome.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(17, 292);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(366, 48);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "tác phẩm nghệ thuật";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(98, 210);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 57);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Bảo tàng";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(125, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 887);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1773, 909);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
@@ -486,7 +616,13 @@
             this.panelLogo.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconFormChild)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
+            this.panelHome.ResumeLayout(false);
+            this.panelHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -505,7 +641,6 @@
         private FontAwesome.Sharp.IconPictureBox iconFormChild;
         private System.Windows.Forms.Label lblTitleFormChild;
         private System.Windows.Forms.Panel panelShadow;
-        private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Panel panelLoaiHinhSangTac;
         private FontAwesome.Sharp.IconButton btnDieuKhacTacTuong;
         private FontAwesome.Sharp.IconButton btnKhac;
@@ -515,5 +650,14 @@
         private FontAwesome.Sharp.IconButton btnDiMuon;
         private FontAwesome.Sharp.IconButton btnTaiSanCuaBaoTang;
         private FontAwesome.Sharp.IconButton btnThoat;
+        private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Panel panelHome;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbNhom;
+        private System.Windows.Forms.Label lbUser;
+        private FontAwesome.Sharp.IconButton btnBackupRestore;
     }
 }

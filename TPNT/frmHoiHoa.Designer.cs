@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label tenLabel;
-            System.Windows.Forms.Label truongPhaiLabel;
-            System.Windows.Forms.Label chatLieuLabel;
-            System.Windows.Forms.Label vatLieuLabel;
-            System.Windows.Forms.Label maSoTPLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoiHoa));
+            this.tenLabel = new System.Windows.Forms.Label();
+            this.truongPhaiLabel = new System.Windows.Forms.Label();
+            this.chatLieuLabel = new System.Windows.Forms.Label();
+            this.vatLieuLabel = new System.Windows.Forms.Label();
+            this.maSoTPLabel = new System.Windows.Forms.Label();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -69,11 +69,6 @@
             this.txtVatLieu = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.txtMaTP = new System.Windows.Forms.TextBox();
-            tenLabel = new System.Windows.Forms.Label();
-            truongPhaiLabel = new System.Windows.Forms.Label();
-            chatLieuLabel = new System.Windows.Forms.Label();
-            vatLieuLabel = new System.Windows.Forms.Label();
-            maSoTPLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsTPNT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsHoiHoa)).BeginInit();
@@ -84,53 +79,53 @@
             // 
             // tenLabel
             // 
-            tenLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            tenLabel.AutoSize = true;
-            tenLabel.Location = new System.Drawing.Point(194, 144);
-            tenLabel.Name = "tenLabel";
-            tenLabel.Size = new System.Drawing.Size(42, 20);
-            tenLabel.TabIndex = 9;
-            tenLabel.Text = "Tên:";
+            this.tenLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tenLabel.AutoSize = true;
+            this.tenLabel.Location = new System.Drawing.Point(194, 144);
+            this.tenLabel.Name = "tenLabel";
+            this.tenLabel.Size = new System.Drawing.Size(42, 20);
+            this.tenLabel.TabIndex = 9;
+            this.tenLabel.Text = "Tên:";
             // 
             // truongPhaiLabel
             // 
-            truongPhaiLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            truongPhaiLabel.AutoSize = true;
-            truongPhaiLabel.Location = new System.Drawing.Point(782, 216);
-            truongPhaiLabel.Name = "truongPhaiLabel";
-            truongPhaiLabel.Size = new System.Drawing.Size(102, 20);
-            truongPhaiLabel.TabIndex = 6;
-            truongPhaiLabel.Text = "Trường phái:";
+            this.truongPhaiLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.truongPhaiLabel.AutoSize = true;
+            this.truongPhaiLabel.Location = new System.Drawing.Point(782, 216);
+            this.truongPhaiLabel.Name = "truongPhaiLabel";
+            this.truongPhaiLabel.Size = new System.Drawing.Size(102, 20);
+            this.truongPhaiLabel.TabIndex = 6;
+            this.truongPhaiLabel.Text = "Trường phái:";
             // 
             // chatLieuLabel
             // 
-            chatLieuLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chatLieuLabel.AutoSize = true;
-            chatLieuLabel.Location = new System.Drawing.Point(194, 212);
-            chatLieuLabel.Name = "chatLieuLabel";
-            chatLieuLabel.Size = new System.Drawing.Size(77, 20);
-            chatLieuLabel.TabIndex = 4;
-            chatLieuLabel.Text = "Chất liệu:";
+            this.chatLieuLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chatLieuLabel.AutoSize = true;
+            this.chatLieuLabel.Location = new System.Drawing.Point(194, 212);
+            this.chatLieuLabel.Name = "chatLieuLabel";
+            this.chatLieuLabel.Size = new System.Drawing.Size(77, 20);
+            this.chatLieuLabel.TabIndex = 4;
+            this.chatLieuLabel.Text = "Chất liệu:";
             // 
             // vatLieuLabel
             // 
-            vatLieuLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            vatLieuLabel.AutoSize = true;
-            vatLieuLabel.Location = new System.Drawing.Point(782, 124);
-            vatLieuLabel.Name = "vatLieuLabel";
-            vatLieuLabel.Size = new System.Drawing.Size(68, 20);
-            vatLieuLabel.TabIndex = 2;
-            vatLieuLabel.Text = "Vật liệu:";
+            this.vatLieuLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vatLieuLabel.AutoSize = true;
+            this.vatLieuLabel.Location = new System.Drawing.Point(782, 124);
+            this.vatLieuLabel.Name = "vatLieuLabel";
+            this.vatLieuLabel.Size = new System.Drawing.Size(68, 20);
+            this.vatLieuLabel.TabIndex = 2;
+            this.vatLieuLabel.Text = "Vật liệu:";
             // 
             // maSoTPLabel
             // 
-            maSoTPLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            maSoTPLabel.AutoSize = true;
-            maSoTPLabel.Location = new System.Drawing.Point(194, 85);
-            maSoTPLabel.Name = "maSoTPLabel";
-            maSoTPLabel.Size = new System.Drawing.Size(129, 20);
-            maSoTPLabel.TabIndex = 0;
-            maSoTPLabel.Text = "Mã số tác phẩm:";
+            this.maSoTPLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.maSoTPLabel.AutoSize = true;
+            this.maSoTPLabel.Location = new System.Drawing.Point(194, 85);
+            this.maSoTPLabel.Name = "maSoTPLabel";
+            this.maSoTPLabel.Size = new System.Drawing.Size(129, 20);
+            this.maSoTPLabel.TabIndex = 0;
+            this.maSoTPLabel.Text = "Mã số tác phẩm:";
             // 
             // barManager1
             // 
@@ -427,11 +422,11 @@
             this.groupBox1.Controls.Add(this.txtVatLieu);
             this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.txtMaTP);
-            this.groupBox1.Controls.Add(tenLabel);
-            this.groupBox1.Controls.Add(truongPhaiLabel);
-            this.groupBox1.Controls.Add(chatLieuLabel);
-            this.groupBox1.Controls.Add(vatLieuLabel);
-            this.groupBox1.Controls.Add(maSoTPLabel);
+            this.groupBox1.Controls.Add(this.tenLabel);
+            this.groupBox1.Controls.Add(this.truongPhaiLabel);
+            this.groupBox1.Controls.Add(this.chatLieuLabel);
+            this.groupBox1.Controls.Add(this.vatLieuLabel);
+            this.groupBox1.Controls.Add(this.maSoTPLabel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 438);
             this.groupBox1.Name = "groupBox1";
@@ -552,5 +547,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colVatLieu;
         private DevExpress.XtraGrid.Columns.GridColumn colChatLieu;
         private DevExpress.XtraGrid.Columns.GridColumn colTruongPhai;
+        private System.Windows.Forms.Label tenLabel;
+        private System.Windows.Forms.Label truongPhaiLabel;
+        private System.Windows.Forms.Label chatLieuLabel;
+        private System.Windows.Forms.Label vatLieuLabel;
+        private System.Windows.Forms.Label maSoTPLabel;
     }
 }

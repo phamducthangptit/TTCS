@@ -50,17 +50,17 @@ namespace TPNT {
         
         private V_SELECTLOAIHINHKHACDataTable tableV_SELECTLOAIHINHKHAC;
         
-        private global::System.Data.DataRelation relationFK_CT_CuocTrienLam_CuocTrienLam;
-        
         private global::System.Data.DataRelation relationFK_CT_CuocTrienLam_TPNT;
+        
+        private global::System.Data.DataRelation relationFK_CT_CuocTrienLam_CuocTrienLam;
         
         private global::System.Data.DataRelation relationFK_DieuKhacVaTacTuong_TPNT;
         
         private global::System.Data.DataRelation relationFK_HoiHoa_TPNT;
         
-        private global::System.Data.DataRelation relationFK_LoaiDiMuon_TPNT;
-        
         private global::System.Data.DataRelation relationFK_LoaiDiMuon_BoSuuTap;
+        
+        private global::System.Data.DataRelation relationFK_LoaiDiMuon_TPNT;
         
         private global::System.Data.DataRelation relationFK_LoaiHinhKhac_TPNT;
         
@@ -500,12 +500,12 @@ namespace TPNT {
                     this.tableV_SELECTLOAIHINHKHAC.InitVars();
                 }
             }
-            this.relationFK_CT_CuocTrienLam_CuocTrienLam = this.Relations["FK_CT_CuocTrienLam_CuocTrienLam"];
             this.relationFK_CT_CuocTrienLam_TPNT = this.Relations["FK_CT_CuocTrienLam_TPNT"];
+            this.relationFK_CT_CuocTrienLam_CuocTrienLam = this.Relations["FK_CT_CuocTrienLam_CuocTrienLam"];
             this.relationFK_DieuKhacVaTacTuong_TPNT = this.Relations["FK_DieuKhacVaTacTuong_TPNT"];
             this.relationFK_HoiHoa_TPNT = this.Relations["FK_HoiHoa_TPNT"];
-            this.relationFK_LoaiDiMuon_TPNT = this.Relations["FK_LoaiDiMuon_TPNT"];
             this.relationFK_LoaiDiMuon_BoSuuTap = this.Relations["FK_LoaiDiMuon_BoSuuTap"];
+            this.relationFK_LoaiDiMuon_TPNT = this.Relations["FK_LoaiDiMuon_TPNT"];
             this.relationFK_LoaiHinhKhac_TPNT = this.Relations["FK_LoaiHinhKhac_TPNT"];
             this.relationFK_LoaiSoHuu_TPNT = this.Relations["FK_LoaiSoHuu_TPNT"];
             this.relationFK_TPNT_TacGia = this.Relations["FK_TPNT_TacGia"];
@@ -546,16 +546,16 @@ namespace TPNT {
             this.tableV_SELECTLOAIHINHKHAC = new V_SELECTLOAIHINHKHACDataTable();
             base.Tables.Add(this.tableV_SELECTLOAIHINHKHAC);
             global::System.Data.ForeignKeyConstraint fkc;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_CT_CuocTrienLam_CuocTrienLam", new global::System.Data.DataColumn[] {
-                        this.tableCuocTrienLam.MaSoCTLColumn}, new global::System.Data.DataColumn[] {
-                        this.tableCT_CuocTrienLam.MaSoCTLColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_CT_CuocTrienLam_TPNT", new global::System.Data.DataColumn[] {
+                        this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCT_CuocTrienLam.MaSoTPColumn});
             this.tableCT_CuocTrienLam.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_CT_CuocTrienLam_TPNT", new global::System.Data.DataColumn[] {
-                        this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
-                        this.tableCT_CuocTrienLam.MaSoTPColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_CT_CuocTrienLam_CuocTrienLam", new global::System.Data.DataColumn[] {
+                        this.tableCuocTrienLam.MaSoCTLColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCT_CuocTrienLam.MaSoCTLColumn});
             this.tableCT_CuocTrienLam.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -574,16 +574,16 @@ namespace TPNT {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_LoaiDiMuon_TPNT", new global::System.Data.DataColumn[] {
-                        this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
-                        this.tableLoaiDiMuon.MaSoTPColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_LoaiDiMuon_BoSuuTap", new global::System.Data.DataColumn[] {
+                        this.tableBoSuuTap.MaBSTColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLoaiDiMuon.MaBSTColumn});
             this.tableLoaiDiMuon.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_LoaiDiMuon_BoSuuTap", new global::System.Data.DataColumn[] {
-                        this.tableBoSuuTap.MaBSTColumn}, new global::System.Data.DataColumn[] {
-                        this.tableLoaiDiMuon.MaBSTColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_LoaiDiMuon_TPNT", new global::System.Data.DataColumn[] {
+                        this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLoaiDiMuon.MaSoTPColumn});
             this.tableLoaiDiMuon.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -609,14 +609,14 @@ namespace TPNT {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            this.relationFK_CT_CuocTrienLam_CuocTrienLam = new global::System.Data.DataRelation("FK_CT_CuocTrienLam_CuocTrienLam", new global::System.Data.DataColumn[] {
-                        this.tableCuocTrienLam.MaSoCTLColumn}, new global::System.Data.DataColumn[] {
-                        this.tableCT_CuocTrienLam.MaSoCTLColumn}, false);
-            this.Relations.Add(this.relationFK_CT_CuocTrienLam_CuocTrienLam);
             this.relationFK_CT_CuocTrienLam_TPNT = new global::System.Data.DataRelation("FK_CT_CuocTrienLam_TPNT", new global::System.Data.DataColumn[] {
                         this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
                         this.tableCT_CuocTrienLam.MaSoTPColumn}, false);
             this.Relations.Add(this.relationFK_CT_CuocTrienLam_TPNT);
+            this.relationFK_CT_CuocTrienLam_CuocTrienLam = new global::System.Data.DataRelation("FK_CT_CuocTrienLam_CuocTrienLam", new global::System.Data.DataColumn[] {
+                        this.tableCuocTrienLam.MaSoCTLColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCT_CuocTrienLam.MaSoCTLColumn}, false);
+            this.Relations.Add(this.relationFK_CT_CuocTrienLam_CuocTrienLam);
             this.relationFK_DieuKhacVaTacTuong_TPNT = new global::System.Data.DataRelation("FK_DieuKhacVaTacTuong_TPNT", new global::System.Data.DataColumn[] {
                         this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
                         this.tableDieuKhacVaTacTuong.MaSoTPColumn}, false);
@@ -625,14 +625,14 @@ namespace TPNT {
                         this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
                         this.tableHoiHoa.MaSoTPColumn}, false);
             this.Relations.Add(this.relationFK_HoiHoa_TPNT);
-            this.relationFK_LoaiDiMuon_TPNT = new global::System.Data.DataRelation("FK_LoaiDiMuon_TPNT", new global::System.Data.DataColumn[] {
-                        this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
-                        this.tableLoaiDiMuon.MaSoTPColumn}, false);
-            this.Relations.Add(this.relationFK_LoaiDiMuon_TPNT);
             this.relationFK_LoaiDiMuon_BoSuuTap = new global::System.Data.DataRelation("FK_LoaiDiMuon_BoSuuTap", new global::System.Data.DataColumn[] {
                         this.tableBoSuuTap.MaBSTColumn}, new global::System.Data.DataColumn[] {
                         this.tableLoaiDiMuon.MaBSTColumn}, false);
             this.Relations.Add(this.relationFK_LoaiDiMuon_BoSuuTap);
+            this.relationFK_LoaiDiMuon_TPNT = new global::System.Data.DataRelation("FK_LoaiDiMuon_TPNT", new global::System.Data.DataColumn[] {
+                        this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLoaiDiMuon.MaSoTPColumn}, false);
+            this.Relations.Add(this.relationFK_LoaiDiMuon_TPNT);
             this.relationFK_LoaiHinhKhac_TPNT = new global::System.Data.DataRelation("FK_LoaiHinhKhac_TPNT", new global::System.Data.DataColumn[] {
                         this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
                         this.tableLoaiHinhKhac.MaSoTPColumn}, false);
@@ -5266,23 +5266,23 @@ namespace TPNT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CuocTrienLamRow CuocTrienLamRow {
-                get {
-                    return ((CuocTrienLamRow)(this.GetParentRow(this.Table.ParentRelations["FK_CT_CuocTrienLam_CuocTrienLam"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_CT_CuocTrienLam_CuocTrienLam"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TPNTRow TPNTRow {
                 get {
                     return ((TPNTRow)(this.GetParentRow(this.Table.ParentRelations["FK_CT_CuocTrienLam_TPNT"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_CT_CuocTrienLam_TPNT"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CuocTrienLamRow CuocTrienLamRow {
+                get {
+                    return ((CuocTrienLamRow)(this.GetParentRow(this.Table.ParentRelations["FK_CT_CuocTrienLam_CuocTrienLam"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_CT_CuocTrienLam_CuocTrienLam"]);
                 }
             }
         }
@@ -5702,23 +5702,23 @@ namespace TPNT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TPNTRow TPNTRow {
-                get {
-                    return ((TPNTRow)(this.GetParentRow(this.Table.ParentRelations["FK_LoaiDiMuon_TPNT"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_LoaiDiMuon_TPNT"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public BoSuuTapRow BoSuuTapRow {
                 get {
                     return ((BoSuuTapRow)(this.GetParentRow(this.Table.ParentRelations["FK_LoaiDiMuon_BoSuuTap"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_LoaiDiMuon_BoSuuTap"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public TPNTRow TPNTRow {
+                get {
+                    return ((TPNTRow)(this.GetParentRow(this.Table.ParentRelations["FK_LoaiDiMuon_TPNT"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_LoaiDiMuon_TPNT"]);
                 }
             }
             
