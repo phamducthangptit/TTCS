@@ -453,7 +453,7 @@
             this.btnBackupRestore.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBackupRestore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBackupRestore.Location = new System.Drawing.Point(388, 7);
-            this.btnBackupRestore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBackupRestore.Margin = new System.Windows.Forms.Padding(4);
             this.btnBackupRestore.Name = "btnBackupRestore";
             this.btnBackupRestore.Size = new System.Drawing.Size(225, 70);
             this.btnBackupRestore.TabIndex = 4;
@@ -470,7 +470,7 @@
             this.panel1.Controls.Add(this.lbUser);
             this.panel1.Controls.Add(this.lbNhom);
             this.panel1.Location = new System.Drawing.Point(641, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(331, 36);
             this.panel1.TabIndex = 2;
@@ -544,20 +544,19 @@
             this.panelDesktop.Controls.Add(this.panelHome);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(333, 98);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1038, 652);
             this.panelDesktop.TabIndex = 3;
             // 
             // panelHome
             // 
-            this.panelHome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelHome.Controls.Add(this.label2);
             this.panelHome.Controls.Add(this.label1);
             this.panelHome.Controls.Add(this.pictureBox1);
             this.panelHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelHome.Location = new System.Drawing.Point(253, 79);
-            this.panelHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHome.Margin = new System.Windows.Forms.Padding(4);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(400, 400);
             this.panelHome.TabIndex = 0;
@@ -590,7 +589,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(125, 34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 185);
             this.pictureBox1.TabIndex = 3;

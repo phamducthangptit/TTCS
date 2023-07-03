@@ -31,6 +31,7 @@ namespace TPNT
         string tenCTLPH = "";
         DateTime timeFromPH;
         DateTime timeToPH;
+        List<string> tpntList = new List<string>();
         public frmCuocTrienLam()
         {
             InitializeComponent();
@@ -67,6 +68,14 @@ namespace TPNT
 
             // TODO: This line of code loads data into the 'tPNTDataSet.CuocTrienLam' table. You can move, or remove it, as needed.
             this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
+            if (!Program.mGroup.ToUpper().Equals("QUANLI"))
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+                btnHieuChinh.Enabled = false;
+                btnHoanTac.Enabled = false;
+                btnSaveData.Enabled = false;
+            }
             if (bdsCuocTrienLam.Count <= 0)
             {
                 btnChiTiet.Enabled = false;
@@ -83,15 +92,20 @@ namespace TPNT
                 return;
             }
             btnThem.Enabled = true;
-            btnLuu.Visible = true;
             btnHieuChinh.Enabled = true;
             btnXoa.Enabled = true;
-    
+            
             btnReload.Enabled = true;
             grbThemCTL.Visible = false;
             DataRowView rowView = (DataRowView)bdsCuocTrienLam[bdsCuocTrienLam.Position];
             MaCTL = rowView["MaSoCTL"].ToString();
-            Form frm = new frmChiTietCuocTienLam(MaCTL);
+            DateTime timeFrom = (DateTime)rowView["NgayBD"];
+            bool check = true;
+            if (soSanhNgay(DateTime.Today.ToString("dd/MM/yyyy"), timeFromPH.ToString("dd/MM/yyyy")) <= 0)
+            {
+               check = false;
+            }
+            Form frm = new frmChiTietCuocTienLam(MaCTL,check);
             frm.Show();
         }
         private void LoadCtCuocTrienLam(string MaCTL)
@@ -100,7 +114,7 @@ namespace TPNT
             try
             {
 
-                using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                using (SqlConnection connection = new SqlConnection(Program.connstr))
                 {
                     using (SqlCommand command = new SqlCommand("SP_CHITIETCUOCTRIENLAM", connection))
                     {
@@ -135,7 +149,7 @@ namespace TPNT
 
             
             grbNhap.Enabled = true;
-            grbDSTPNT.Visible = false;
+           // grbDSTPNT.Visible = false;
             btnThem.Enabled = false;
             btnChiTiet.Enabled = false;
             btnXoa.Enabled = false;
@@ -152,19 +166,7 @@ namespace TPNT
 
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            if (kiemTra())
-            {
-                txtMaCTL.ReadOnly = true;
-                txtTenCTL.ReadOnly = true;
-                dtpFrom.ReadOnly = true;
-                dtpTo.ReadOnly = true;
-                grbDSTPNT.Visible = true;
-
-            }    
-          
-        }
+        
         public static string chuyenDangNgay(string s)
         {
             string[] tmp = s.Split('/');
@@ -204,7 +206,7 @@ namespace TPNT
 
             int check = 0; // Biến để lưu số lần xuất hiện
 
-            using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+            using (SqlConnection connection = new SqlConnection(Program.connstr))
             {
                 connection.Open();
 
@@ -255,7 +257,7 @@ namespace TPNT
         {
         
             int check = 0;
-            using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+            using (SqlConnection connection = new SqlConnection(Program.connstr))
             {
                 connection.Open();
 
@@ -272,124 +274,115 @@ namespace TPNT
                 }
 
             }
-            Console.Write("TEST :" + check);
             if (check == 1) return true;
             return false;
         }
         private void btnSaveData_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Console.WriteLine("TEST\n");
-            foreach (DataGridViewRow row in dataGridViewDanhSach.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-
-                    Console.WriteLine(cell.Value);
-                }
-            }
-
+        {          
             if (hoatdong == "") return;
             if (hoatdong.Equals("THEM"))
             {
-
-                int check = 0;
-                maCTLPH = txtMaCTL.Text;
-                foreach (DataGridViewRow row in dataGridViewDanhSach.Rows)
+                if (kiemTra())
                 {
-                    DataGridViewCell cell = row.Cells[0];
-                    if (cell.Value != null)
-                    {
-                        if (cell.Value.ToString().Equals("true"))
-                        {
+                    int check = 0;
 
-                            check++;
+                    foreach (DataGridViewRow row in dataGridViewDanhSach.Rows)
+                    {
+                        DataGridViewCell cell = row.Cells[0];
+                        if (cell.Value != null)
+                        {
+                            if (cell.Value.ToString().Equals("true"))
+                            {
+
+                                check++;
+                            }
+
                         }
 
                     }
-
-                }
-                if (check == 0) { MessageBox.Show("Vui Lòng CHọn ít nhất 1 tpnt"); return; }
-                else
-                {
-                    try
+                    if (check == 0) { MessageBox.Show("Vui Lòng Chọn ít nhất 1 TPNT"); return; }
+                    else
                     {
-                        PhucHoi = "THEM";
-                        DateTime TGBD = dtpFrom.DateTime;
-                        DateTime TGKT = dtpTo.DateTime;
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        try
                         {
-                            connection.Open();
 
-                            using (SqlCommand command = new SqlCommand("SP_InsertCuocTrienLam", connection))
+                            maCTLPH = txtMaCTL.Text;
+                            PhucHoi = "THEM";
+                            DateTime TGBD = dtpFrom.DateTime;
+                            DateTime TGKT = dtpTo.DateTime;
+                            using (SqlConnection connection = new SqlConnection(Program.connstr))
                             {
-                                command.CommandType = CommandType.StoredProcedure;
+                                connection.Open();
 
-                                // Thêm các tham số vào Stored Procedure
-                                command.Parameters.AddWithValue("@maCTL", txtMaCTL.Text.Trim());
-                                command.Parameters.AddWithValue("@Ten", txtTenCTL.Text.Trim());
-                                command.Parameters.AddWithValue("@TGBD", TGBD);
-                                command.Parameters.AddWithValue("@TGKT", TGKT);
-
-                                // Thực thi Stored Procedure
-                                command.ExecuteNonQuery();
-                            }
-                            foreach (DataGridViewRow row in dataGridViewDanhSach.Rows)
-                            {
-                                DataGridViewCell daChon = row.Cells[0];
-                                DataGridViewCell maTP = row.Cells[1];
-
-                                if (daChon.Value != null)
+                                using (SqlCommand command = new SqlCommand("SP_InsertCuocTrienLam", connection))
                                 {
-                                    if (daChon.Value.ToString().Equals("true"))
+                                    command.CommandType = CommandType.StoredProcedure;
+
+                                    // Thêm các tham số vào Stored Procedure
+                                    command.Parameters.AddWithValue("@maCTL", txtMaCTL.Text.Trim());
+                                    command.Parameters.AddWithValue("@Ten", txtTenCTL.Text.Trim());
+                                    command.Parameters.AddWithValue("@TGBD", TGBD);
+                                    command.Parameters.AddWithValue("@TGKT", TGKT);
+
+                                    // Thực thi Stored Procedure
+                                    command.ExecuteNonQuery();
+                                }
+                                foreach (DataGridViewRow row in dataGridViewDanhSach.Rows)
+                                {
+                                    DataGridViewCell daChon = row.Cells[0];
+                                    DataGridViewCell maTP = row.Cells[1];
+
+                                    if (daChon.Value != null)
                                     {
-                                        using (SqlCommand command = new SqlCommand("SP_InsertCTCuocTrienLam", connection))
+                                        if (daChon.Value.ToString().Equals("true"))
                                         {
-                                            command.CommandType = CommandType.StoredProcedure;
+                                            using (SqlCommand command = new SqlCommand("SP_InsertCTCuocTrienLam", connection))
+                                            {
+                                                command.CommandType = CommandType.StoredProcedure;
 
-                                            // Thêm các tham số vào Stored Procedure
-                                            command.Parameters.AddWithValue("@maCTL", txtMaCTL.Text.Trim());
-                                            command.Parameters.AddWithValue("@maTPNT", maTP.Value.ToString());
+                                                // Thêm các tham số vào Stored Procedure
+                                                command.Parameters.AddWithValue("@maCTL", txtMaCTL.Text.Trim());
+                                                command.Parameters.AddWithValue("@maTPNT", maTP.Value.ToString());
 
-                                            // Thực thi Stored Procedure
-                                            command.ExecuteNonQuery();
+                                                // Thực thi Stored Procedure
+                                                command.ExecuteNonQuery();
+                                            }
                                         }
+
                                     }
 
                                 }
 
+
+                                grbThemCTL.Visible = false;
+                                cuocTrienLamGridControl.Enabled = true;
+                                btnThem.Enabled = true;
+                                txtMaCTL.ReadOnly = false;
+                                txtMaCTL.Text = string.Empty;
+                                txtTenCTL.ReadOnly = false;
+                                txtTenCTL.Text = string.Empty;
+                                dtpFrom.ReadOnly = false;
+                                dtpTo.ReadOnly = false;
+                                btnThem.Enabled = true;
+                                btnHieuChinh.Enabled = true;
+                                btnXoa.Enabled = true;
+                                btnChiTiet.Enabled = true;
+                                btnHoanTac.Enabled = true;
+                                btnReload.Enabled = true;
+                                MessageBox.Show("Thêm Thành Công.\n" + MessageBoxButtons.OK);
+                                frmCuocTrienLam_Load(sender, e);
+                                return;
                             }
 
-
-                            grbThemCTL.Visible = false;
-                            cuocTrienLamGridControl.Enabled = true;
-                            btnThem.Enabled = true;
-                            txtMaCTL.ReadOnly = false;
-                            txtMaCTL.Text = string.Empty;
-                            txtTenCTL.ReadOnly = false;
-                            txtTenCTL.Text = string.Empty;
-                            dtpFrom.ReadOnly = false;
-                            dtpTo.ReadOnly = false;
-                            btnThem.Enabled = true;
-                            btnLuu.Visible = true;
-                            btnHieuChinh.Enabled = true;
-                            btnXoa.Enabled = true;
-                            btnChiTiet.Enabled = true;
-                            btnHoanTac.Enabled = true;
-                            btnReload.Enabled = true;
-                            MessageBox.Show("thêm Thành Công.\n" + MessageBoxButtons.OK);
-                            frmCuocTrienLam_Load(sender, e);
+                        }
+                        catch (Exception ex)
+                        {
+                            // Xử lý ngoại lệ, ví dụ: in thông báo lỗi hoặc thực hiện các hành động khác
+                            MessageBox.Show("Lỗi lưu Cuộc Triển Lãm.\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                             return;
                         }
-
                     }
-                    catch (Exception ex)
-                    {
-                        // Xử lý ngoại lệ, ví dụ: in thông báo lỗi hoặc thực hiện các hành động khác
-                        MessageBox.Show("Lỗi lưu Cuộc Triển Lãm.\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
-                        return;
-                    }
-                }
-
+                } 
 
             }
             else if (hoatdong.Equals("HIEUCHINH"))
@@ -401,7 +394,7 @@ namespace TPNT
                     {
                         DateTime TGBD = dtpFrom.DateTime;
                         DateTime TGKT = dtpTo.DateTime;
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 
@@ -429,7 +422,7 @@ namespace TPNT
                         dtpFrom.ReadOnly = false;
                         dtpTo.ReadOnly = false;
                         btnThem.Enabled = true;
-                        btnLuu.Visible = true;
+
                         btnHieuChinh.Enabled = true;
                         btnXoa.Enabled = true;
                         btnHoanTac.Enabled = true;
@@ -471,21 +464,44 @@ namespace TPNT
                 btnXoa.Enabled = false;
                 return;
             }
-            //DataRowView rowView1 = (DataRowView)bdsChiTietTacPhamNgheThuat[bdsChiTietTacPhamNgheThuat.Position];
-           // string MaTP = rowView1["MaSoSP"].ToString();
-            //Console.Write(MaTP);
-          
-            if (MessageBox.Show("Bạn có thật sự muốn xóa Cuộc Triển Lãm này? (Sẽ không thể Phục Hồi)", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (soSanhNgay(DateTime.Today.ToString("dd/MM/yyyy"), timeFromPH.ToString("dd/MM/yyyy")) <= 0)
+            {
+                MessageBox.Show("Cuộc Triển Lãm này đã diễn ra không thể xóa.\n", "Thông báo", MessageBoxButtons.OK);
+                return;
+            } 
+            if (MessageBox.Show("Bạn có thật sự muốn XÓA Cuộc Triển Lãm này? (Sẽ XÓA luôn cả chi tiết Cuộc Triển Lãm)", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
                 {
                     PhucHoi = "XOA";
                     DataRowView rowView = (DataRowView)bdsCuocTrienLam[bdsCuocTrienLam.Position];
                     string MaCTL = rowView["MaSoCTL"].ToString();
-                    using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                    tenCTLPH = rowView["Ten"].ToString();
+                    maCTLPH = rowView["MaSoCTL"].ToString();
+                    timeFromPH = (DateTime)rowView["NgayBD"];
+                    timeToPH = (DateTime)rowView["NgayKT"];
+
+                    using (SqlConnection connection = new SqlConnection(Program.connstr))
                     {
                         connection.Open();
+                        using (SqlCommand command = new SqlCommand("SP_CHITIETCUOCTRIENLAM", connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
 
+                            // Thêm đối số mã vào stored procedure
+                            command.Parameters.AddWithValue("@maCTL", MaCTL);
+
+                            // Thực thi stored procedure và đọc kết quả
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    // Lấy giá trị của cột mã và thêm vào danh sách
+                                    string code = reader.GetString(reader.GetOrdinal("MaSoTP"));
+                                    tpntList.Add(code);
+                                }
+                            }
+                        }
                         using (SqlCommand command = new SqlCommand("SP_DeleteCuocTrienLam", connection))
                         {
                             command.CommandType = CommandType.StoredProcedure;
@@ -495,16 +511,15 @@ namespace TPNT
                             // Thực thi Stored Procedure
                             command.ExecuteNonQuery();
                         }
-                    }
+                        
                         /*Step 3*/
-                     
-                   
 
-                    this.cuocTrienLamTableAdapter.Connection.ConnectionString = Program.connstr;
-                    this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
+                        this.cuocTrienLamTableAdapter.Connection.ConnectionString = Program.connstr;
+                        this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
 
-                    MessageBox.Show("Xóa thành công ", "Thông báo", MessageBoxButtons.OK);
-                    this.btnHoanTac.Enabled = false;
+                        MessageBox.Show("Xóa thành công ", "Thông báo", MessageBoxButtons.OK);
+                        this.btnHoanTac.Enabled = true;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -522,10 +537,7 @@ namespace TPNT
 
         
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            //grbThongTin.Visible = false;
-        }
+        
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
@@ -541,7 +553,7 @@ namespace TPNT
                 bdsCuocTrienLam.CancelEdit();
                 cuocTrienLamGridControl.Enabled = true;
                 btnThem.Enabled = true;
-                btnLuu.Visible = true;
+
                 btnHieuChinh.Enabled = true;
                 btnXoa.Enabled = true;
                 btnHoanTac.Enabled = true;
@@ -556,6 +568,11 @@ namespace TPNT
                 txtTenCTL.Text = string.Empty;
                 txtMaCTL.ReadOnly = false;
                 txtTenCTL.ReadOnly = false;
+                if (PhucHoi == "")
+                {
+                    btnHoanTac.Enabled = false;
+
+                }
                 if (bdsCuocTrienLam.Count == 0)
                 {
                     btnXoa.Enabled = false;
@@ -573,6 +590,16 @@ namespace TPNT
                 btnHieuChinh.Enabled = false;
                 return;
             }
+            DataRowView rowView = (DataRowView)bdsCuocTrienLam[bdsCuocTrienLam.Position];
+            DataRowView drv = ((DataRowView)(bdsCuocTrienLam.Current));
+            timeFromPH = (DateTime)drv["NgayBD"];
+            timeToPH = (DateTime)drv["NgayKT"];
+            if (soSanhNgay(DateTime.Today.ToString("dd/MM/yyyy"), timeFromPH.ToString("dd/MM/yyyy")) <= 0)
+            {
+                MessageBox.Show("Cuộc Triển Lãm này đã diễn ra không thể hiệu chỉnh.\n", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
             hoatdong = "HIEUCHINH";
         
             btnSaveData.Enabled = true;
@@ -585,10 +612,8 @@ namespace TPNT
             grbThemCTL.Visible = true;
             grbDSTPNT.Visible = false;
             btnChiTiet.Enabled=false;
-            btnLuu.Visible = false;
+
             grbNhap.Text = "Cập Nhật Thông Tin";
-            DataRowView rowView = (DataRowView)bdsCuocTrienLam[bdsCuocTrienLam.Position];
-            DataRowView drv = ((DataRowView)(bdsCuocTrienLam.Current));
             txtMaCTL.ReadOnly = true;
             txtTenCTL.Text = drv["Ten"].ToString();
             txtMaCTL.Text = drv["MaSoCTL"].ToString();
@@ -596,8 +621,7 @@ namespace TPNT
             DateTime timeTo = (DateTime)drv["NgayKT"];
             tenCTLPH = drv["Ten"].ToString();
             maCTLPH= drv["MaSoCTL"].ToString();
-            timeFromPH = (DateTime)drv["NgayBD"];
-            timeToPH= (DateTime)drv["NgayKT"];
+            
             dtpFrom.EditValue = timeFrom.ToString("dd/MM/yyyy");
             dtpTo.EditValue = timeTo.ToString("dd/MM/yyyy");
             txtTenCTL.Focus();
@@ -610,16 +634,16 @@ namespace TPNT
                 btnHoanTac.Enabled = false;
                 return;
                 
-            }    
+            }
             if (PhucHoi.Equals("THEM"))
             {
                 if (MessageBox.Show("Bạn có thật sự muốn Hoàn Tác?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     try
                     {
-                      
-                       
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+
+
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 
@@ -629,13 +653,13 @@ namespace TPNT
 
                                 // Thêm các tham số vào Stored Procedure
                                 command.Parameters.AddWithValue("@maCTL", maCTLPH);
-                                
+
                                 // Thực thi Stored Procedure
                                 command.ExecuteNonQuery();
                             }
                         }
                         /*Step 3*/
-                        
+
 
                         this.cuocTrienLamTableAdapter.Connection.ConnectionString = Program.connstr;
                         this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
@@ -654,35 +678,36 @@ namespace TPNT
                         return;
                     }
                 }
-            }  
-            
+            }
+
             else if (PhucHoi.Equals("HIEUCHINH"))
-                {
+            {
                 if (MessageBox.Show("Bạn có thật sự muốn Hoàn Tác?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    try {
-                    using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                    try
                     {
-                        connection.Open();
-
-                        using (SqlCommand command = new SqlCommand("SP_UpdateCuocTrienLam", connection))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
-                            command.CommandType = CommandType.StoredProcedure;
+                            connection.Open();
 
-                            // Thêm các tham số vào Stored Procedure
-                            command.Parameters.AddWithValue("@maCTL", maCTLPH);
-                            command.Parameters.AddWithValue("@Ten",tenCTLPH);
-                            command.Parameters.AddWithValue("@NgayBD", timeFromPH);
-                            command.Parameters.AddWithValue("@NgayKT", timeToPH);
+                            using (SqlCommand command = new SqlCommand("SP_UpdateCuocTrienLam", connection))
+                            {
+                                command.CommandType = CommandType.StoredProcedure;
 
-                            // Thực thi Stored Procedure
-                            command.ExecuteNonQuery();
+                                // Thêm các tham số vào Stored Procedure
+                                command.Parameters.AddWithValue("@maCTL", maCTLPH);
+                                command.Parameters.AddWithValue("@Ten", tenCTLPH);
+                                command.Parameters.AddWithValue("@NgayBD", timeFromPH);
+                                command.Parameters.AddWithValue("@NgayKT", timeToPH);
+
+                                // Thực thi Stored Procedure
+                                command.ExecuteNonQuery();
+                            }
                         }
-                    }
-                    btnHoanTac.Enabled = false;
-                    MessageBox.Show("Hoàn Tác Thành Công.\n" + MessageBoxButtons.OK);
-                    frmCuocTrienLam_Load(sender, e);
-                    return;
+                        btnHoanTac.Enabled = false;
+                        MessageBox.Show("Hoàn Tác Thành Công.\n" + MessageBoxButtons.OK);
+                        frmCuocTrienLam_Load(sender, e);
+                        return;
                     }
                     catch (Exception ex)
                     {
@@ -696,7 +721,68 @@ namespace TPNT
                     }
                 }
             }
+            else if (PhucHoi.Equals("XOA"))
+            {
+                  
+                if (MessageBox.Show("Bạn có thật sự muốn Hoàn Tác?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
 
+
+                    try
+                    {
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
+                        {
+                            connection.Open();
+
+                            using (SqlCommand command = new SqlCommand("SP_InsertCuocTrienLam", connection))
+                            {
+                                command.CommandType = CommandType.StoredProcedure;
+
+                                // Thêm các tham số vào Stored Procedure
+                                command.Parameters.AddWithValue("@maCTL", maCTLPH);
+                                command.Parameters.AddWithValue("@Ten", tenCTLPH);
+                                command.Parameters.AddWithValue("@TGBD", timeFromPH);
+                                command.Parameters.AddWithValue("@TGKT", timeToPH);
+
+                                // Thực thi Stored Procedure
+                                command.ExecuteNonQuery();
+                            }
+                            foreach (string maTPNT in tpntList)
+                            {
+                               
+
+                               
+                                        using (SqlCommand command = new SqlCommand("SP_InsertCTCuocTrienLam", connection))
+                                        {
+                                            command.CommandType = CommandType.StoredProcedure;
+
+                                            // Thêm các tham số vào Stored Procedure
+                                            command.Parameters.AddWithValue("@maCTL", maCTLPH);
+                                            command.Parameters.AddWithValue("@maTPNT", maTPNT);
+
+                                            // Thực thi Stored Procedure
+                                            command.ExecuteNonQuery();
+                                        }
+                                    
+
+                            }
+                            btnHoanTac.Enabled = false;
+                            PhucHoi = "";
+                            MessageBox.Show("Hoàn Tác Thành Công.\n" + MessageBoxButtons.OK);
+                            frmCuocTrienLam_Load(sender, e);
+                            return;
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        // Xử lý ngoại lệ, ví dụ: in thông báo lỗi hoặc thực hiện các hành động khác
+                        MessageBox.Show("Lỗi hoàn tác Cuộc Triển Lãm.\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
+
+                }
+            }
         }
 
         private void btnReload_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -39,12 +39,21 @@ namespace TPNT
             this.view_ListLoaiSoHuuTableAdapter.Fill(this.tPNTDataSet1.View_ListLoaiSoHuu);
             // TODO: This line of code loads data into the 'tPNTDataSet1.view_NullSoHuu' table. You can move, or remove it, as needed.
             // this.view_NullSoHuuTableAdapter.Fill(this.tPNTDataSet1.view_NullSoHuu);
+            if (!Program.mGroup.ToUpper().Equals("QUANLI"))
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+                btnHieuChinh.Enabled = false;
+                btnHoanTac.Enabled = false;
+                btnLuu.Enabled = false;
+            }
             if (bdsLoaiSoHuu.Count == 0)
             {
                 btnXoa.Enabled = false;
                 btnHieuChinh.Enabled = false;
               
             }
+          
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -120,7 +129,7 @@ namespace TPNT
                     DateTime timeSoHuu = dtpSoHuu.DateTime;
                     try
                     {
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
                           
@@ -149,7 +158,7 @@ namespace TPNT
                             txtTenTP.Text = string.Empty;
                             txtTrangThai.Text = string.Empty;
                             txtTriGia.Text = string.Empty;
-                            MessageBox.Show("thêm Thành Công.\n" + MessageBoxButtons.OK);
+                            MessageBox.Show("Thêm Thành Công.\n" + MessageBoxButtons.OK);
                             view_ListLoaiSoHuuGridControl.Enabled = true;
                             frmTaiSanBaoTang_Load(sender, e);
                             hoatDong = "";
@@ -176,7 +185,7 @@ namespace TPNT
                     try
                     {
 
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 
@@ -308,7 +317,7 @@ namespace TPNT
                     maSoTPPH = rowView["Mã tác phẩm"].ToString();
                     TriGia = rowView["Trị giá"].ToString();
                     TimeSoHuuPH = (DateTime)rowView["Ngày sở hữu"];
-                    using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                    using (SqlConnection connection = new SqlConnection(Program.connstr))
                     {
                         connection.Open();
 
@@ -370,6 +379,11 @@ namespace TPNT
                 btnHieuChinh.Enabled = false;
                 return;
             }
+            if (PhucHoi == "")
+            {
+                btnHoanTac.Enabled = false;
+
+            }
         }
 
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -381,7 +395,7 @@ namespace TPNT
                     try
                     {
                         
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 
@@ -425,7 +439,7 @@ namespace TPNT
                     try
                     {
 
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 
@@ -473,7 +487,7 @@ namespace TPNT
                 {
                     try
                     {
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 

@@ -32,12 +32,21 @@ namespace TPNT
             tPNTDataSet1.EnforceConstraints = false;
             // TODO: This line of code loads data into the 'tPNTDataSet1.View_ListDieuKhacTacTuong' table. You can move, or remove it, as needed.
             this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
+            if (!Program.mGroup.ToUpper().Equals("QUANLI"))
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+                btnHieuChinh.Enabled = false;
+                btnHoanTac.Enabled = false;
+                btnLuu.Enabled = false; 
+            }
             if (bdsDieuKhacTacTuong.Count == 0)
             {
                 btnXoa.Enabled = false;
                 btnHieuChinh.Enabled = false;
 
             }
+
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -119,7 +128,7 @@ namespace TPNT
                     try
                     {
                         
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 
@@ -152,7 +161,7 @@ namespace TPNT
                             txtChieuCao.Text = string.Empty;
                             txtPhongCach.Text = string.Empty;
                             txtVatLieu.Text = string.Empty;
-                            MessageBox.Show("thêm Thành Công.\n" + MessageBoxButtons.OK);
+                            MessageBox.Show("Thêm Thành Công.\n" + MessageBoxButtons.OK);
                             view_ListDieuKhacTacTuongGridControl.Enabled = true;
                             frmDieuKhacVaTacTuong_Load(sender, e);
                             hoatDong = "";
@@ -180,7 +189,7 @@ namespace TPNT
                     try
                     {
                         
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 
@@ -259,7 +268,7 @@ namespace TPNT
                     ChieuCao = rowView["ChieuCao"].ToString();
                     VatLieu = rowView["VatLieu"].ToString();
                     PhongCach = rowView["PhongCach"].ToString();
-                    using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                    using (SqlConnection connection = new SqlConnection(Program.connstr))
                     {
                         connection.Open();
 
@@ -362,6 +371,11 @@ namespace TPNT
 
                 return;
             }
+            if (PhucHoi == "")
+            {
+                btnHoanTac.Enabled = false;
+
+            }
         }
 
         private void btnReload_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -391,7 +405,7 @@ namespace TPNT
                     try
                     {
 
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 
@@ -435,7 +449,7 @@ namespace TPNT
                     try
                     {
 
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 
@@ -484,7 +498,7 @@ namespace TPNT
                 {
                     try
                     {
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 

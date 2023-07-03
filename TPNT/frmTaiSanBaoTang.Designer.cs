@@ -199,8 +199,8 @@
             this.btnHoanTac.Caption = "Hoàn Tác";
             this.btnHoanTac.Enabled = false;
             this.btnHoanTac.Id = 4;
-            this.btnHoanTac.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhucHoi.ImageOptions.Image")));
-            this.btnHoanTac.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhucHoi.ImageOptions.LargeImage")));
+            this.btnHoanTac.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHoanTac.ImageOptions.Image")));
+            this.btnHoanTac.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHoanTac.ImageOptions.LargeImage")));
             this.btnHoanTac.Name = "btnHoanTac";
             this.btnHoanTac.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnHoanTac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhucHoi_ItemClick);
@@ -303,7 +303,7 @@
             this.dtpSoHuu.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpSoHuu.Size = new System.Drawing.Size(109, 22);
-            this.dtpSoHuu.TabIndex = 10;
+            this.dtpSoHuu.TabIndex = 9;
             // 
             // txtTrangThai
             // 
@@ -311,7 +311,7 @@
             this.txtTrangThai.MenuManager = this.barManager1;
             this.txtTrangThai.Name = "txtTrangThai";
             this.txtTrangThai.Size = new System.Drawing.Size(109, 22);
-            this.txtTrangThai.TabIndex = 9;
+            this.txtTrangThai.TabIndex = 10;
             // 
             // txtTenTP
             // 
@@ -320,7 +320,7 @@
             this.txtTenTP.Name = "txtTenTP";
             this.txtTenTP.Properties.ReadOnly = true;
             this.txtTenTP.Size = new System.Drawing.Size(109, 22);
-            this.txtTenTP.TabIndex = 8;
+            this.txtTenTP.TabIndex = 7;
             // 
             // txtTriGia
             // 
@@ -337,7 +337,7 @@
             this.txtTriGia.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
             this.txtTriGia.Properties.NullText = "1";
             this.txtTriGia.Size = new System.Drawing.Size(109, 22);
-            this.txtTriGia.TabIndex = 7;
+            this.txtTriGia.TabIndex = 11;
             // 
             // txtMaTP
             // 
@@ -354,7 +354,7 @@
             this.btnChonLai.Location = new System.Drawing.Point(662, 68);
             this.btnChonLai.Name = "btnChonLai";
             this.btnChonLai.Size = new System.Drawing.Size(109, 34);
-            this.btnChonLai.TabIndex = 5;
+            this.btnChonLai.TabIndex = 8;
             this.btnChonLai.Text = "Chọn Lại TPNT";
             this.btnChonLai.UseVisualStyleBackColor = false;
             this.btnChonLai.Click += new System.EventHandler(this.btnChonLai_Click);

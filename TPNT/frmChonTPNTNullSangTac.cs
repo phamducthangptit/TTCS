@@ -25,7 +25,7 @@ namespace TPNT
             {
                 Program.maSoTPNT = "";
                 Program.TenTPNT = "";
-                MessageBox.Show("Không Còn tác phẩm nào để thêm ", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Không còn tác phẩm nào để thêm ", "Thông báo", MessageBoxButtons.OK);
                 this.Close();
             }
         }
