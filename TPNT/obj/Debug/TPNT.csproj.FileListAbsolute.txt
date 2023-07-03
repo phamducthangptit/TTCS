@@ -557,3 +557,9 @@ D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraVerticalGrid.v23.1.xml
 D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.DataAccess.v23.1.xml
 D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.XtraNavBar.v23.1.xml
 D:\DEAN\TTCS\TPNT\bin\Debug\DevExpress.Xpo.v23.1.xml
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmChiTietCuocTienLam.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmChonTPNTNullSangTac.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmChonTPNTSoHuu.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmCuocTrienLam.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmDieuKhacVaTacTuong.resources
+E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmTaiSanBaoTang.resources

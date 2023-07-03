@@ -753,6 +753,53 @@ FROM         V_SELECTLOAIHINHKHAC</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_DANHSACHJOBDAILYTableAdapter" GeneratorDataComponentClassName="V_DANHSACHJOBDAILYTableAdapter" Name="V_DANHSACHJOBDAILY" UserDataComponentName="V_DANHSACHJOBDAILYTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPNTConnectionString (Settings)" DbObjectName="TPNT.dbo.V_DANHSACHJOBDAILY" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT    V_DANHSACHJOBDAILY.*
+FROM         V_DANHSACHJOBDAILY</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="job_name" DataSetColumn="job_name" />
+              <Mapping SourceColumn="next_run_day" DataSetColumn="next_run_day" />
+              <Mapping SourceColumn="nextruntime" DataSetColumn="nextruntime" />
+              <Mapping SourceColumn="activetime" DataSetColumn="activetime" />
+              <Mapping SourceColumn="activeendtime" DataSetColumn="activeendtime" />
+              <Mapping SourceColumn="enabled" DataSetColumn="enabled" />
+              <Mapping SourceColumn="date_created" DataSetColumn="date_created" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_DANHSACHJOBWEEKLYTableAdapter" GeneratorDataComponentClassName="V_DANHSACHJOBWEEKLYTableAdapter" Name="V_DANHSACHJOBWEEKLY" UserDataComponentName="V_DANHSACHJOBWEEKLYTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPNTConnectionString (Settings)" DbObjectName="TPNT.dbo.V_DANHSACHJOBWEEKLY" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT    V_DANHSACHJOBWEEKLY.*
+FROM         V_DANHSACHJOBWEEKLY</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="job_name" DataSetColumn="job_name" />
+              <Mapping SourceColumn="next_run_day" DataSetColumn="next_run_day" />
+              <Mapping SourceColumn="nextruntime" DataSetColumn="nextruntime" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="freq_interval" />
+              <Mapping SourceColumn="activetime" DataSetColumn="activetime" />
+              <Mapping SourceColumn="activeendtime" DataSetColumn="activeendtime" />
+              <Mapping SourceColumn="enabled" DataSetColumn="enabled" />
+              <Mapping SourceColumn="date_created" DataSetColumn="date_created" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1214,37 +1261,130 @@ FROM         V_SELECTLOAIHINHKHAC</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="V_SELECTLOAIHINHKHAC" msprop:Generator_RowClassName="V_SELECTLOAIHINHKHACRow" msprop:Generator_RowEvHandlerName="V_SELECTLOAIHINHKHACRowChangeEventHandler" msprop:Generator_RowDeletedName="V_SELECTLOAIHINHKHACRowDeleted" msprop:Generator_RowDeletingName="V_SELECTLOAIHINHKHACRowDeleting" msprop:Generator_RowEvArgName="V_SELECTLOAIHINHKHACRowChangeEvent" msprop:Generator_TablePropName="V_SELECTLOAIHINHKHAC" msprop:Generator_RowChangedName="V_SELECTLOAIHINHKHACRowChanged" msprop:Generator_UserTableName="V_SELECTLOAIHINHKHAC" msprop:Generator_RowChangingName="V_SELECTLOAIHINHKHACRowChanging" msprop:Generator_TableClassName="V_SELECTLOAIHINHKHACDataTable" msprop:Generator_TableVarName="tableV_SELECTLOAIHINHKHAC">
+        <xs:element name="V_SELECTLOAIHINHKHAC" msprop:Generator_RowEvHandlerName="V_SELECTLOAIHINHKHACRowChangeEventHandler" msprop:Generator_RowDeletedName="V_SELECTLOAIHINHKHACRowDeleted" msprop:Generator_RowDeletingName="V_SELECTLOAIHINHKHACRowDeleting" msprop:Generator_RowEvArgName="V_SELECTLOAIHINHKHACRowChangeEvent" msprop:Generator_TablePropName="V_SELECTLOAIHINHKHAC" msprop:Generator_RowChangedName="V_SELECTLOAIHINHKHACRowChanged" msprop:Generator_UserTableName="V_SELECTLOAIHINHKHAC" msprop:Generator_RowChangingName="V_SELECTLOAIHINHKHACRowChanging" msprop:Generator_RowClassName="V_SELECTLOAIHINHKHACRow" msprop:Generator_TableClassName="V_SELECTLOAIHINHKHACDataTable" msprop:Generator_TableVarName="tableV_SELECTLOAIHINHKHAC">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Ma" msprop:Generator_UserColumnName="Ma" msprop:Generator_ColumnPropNameInTable="MaColumn" msprop:Generator_ColumnPropNameInRow="Ma" msprop:Generator_ColumnVarNameInTable="columnMa">
+              <xs:element name="Ma" msprop:Generator_ColumnPropNameInTable="MaColumn" msprop:Generator_ColumnPropNameInRow="Ma" msprop:Generator_UserColumnName="Ma" msprop:Generator_ColumnVarNameInTable="columnMa">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Ten" msprop:Generator_UserColumnName="Ten" msprop:Generator_ColumnPropNameInTable="TenColumn" msprop:Generator_ColumnPropNameInRow="Ten" msprop:Generator_ColumnVarNameInTable="columnTen" minOccurs="0">
+              <xs:element name="Ten" msprop:Generator_ColumnPropNameInTable="TenColumn" msprop:Generator_ColumnPropNameInRow="Ten" msprop:Generator_UserColumnName="Ten" msprop:Generator_ColumnVarNameInTable="columnTen" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TheLoai" msprop:Generator_UserColumnName="TheLoai" msprop:Generator_ColumnPropNameInTable="TheLoaiColumn" msprop:Generator_ColumnPropNameInRow="TheLoai" msprop:Generator_ColumnVarNameInTable="columnTheLoai">
+              <xs:element name="TheLoai" msprop:Generator_ColumnPropNameInTable="TheLoaiColumn" msprop:Generator_ColumnPropNameInRow="TheLoai" msprop:Generator_UserColumnName="TheLoai" msprop:Generator_ColumnVarNameInTable="columnTheLoai">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PhongCach" msprop:Generator_UserColumnName="PhongCach" msprop:Generator_ColumnPropNameInTable="PhongCachColumn" msprop:Generator_ColumnPropNameInRow="PhongCach" msprop:Generator_ColumnVarNameInTable="columnPhongCach">
+              <xs:element name="PhongCach" msprop:Generator_ColumnPropNameInTable="PhongCachColumn" msprop:Generator_ColumnPropNameInRow="PhongCach" msprop:Generator_UserColumnName="PhongCach" msprop:Generator_ColumnVarNameInTable="columnPhongCach">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_DANHSACHJOBDAILY" msprop:Generator_RowClassName="V_DANHSACHJOBDAILYRow" msprop:Generator_RowEvHandlerName="V_DANHSACHJOBDAILYRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DANHSACHJOBDAILYRowDeleted" msprop:Generator_RowDeletingName="V_DANHSACHJOBDAILYRowDeleting" msprop:Generator_RowEvArgName="V_DANHSACHJOBDAILYRowChangeEvent" msprop:Generator_TablePropName="V_DANHSACHJOBDAILY" msprop:Generator_RowChangedName="V_DANHSACHJOBDAILYRowChanged" msprop:Generator_UserTableName="V_DANHSACHJOBDAILY" msprop:Generator_RowChangingName="V_DANHSACHJOBDAILYRowChanging" msprop:Generator_TableClassName="V_DANHSACHJOBDAILYDataTable" msprop:Generator_TableVarName="tableV_DANHSACHJOBDAILY">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="job_name" msprop:Generator_UserColumnName="job_name" msprop:Generator_ColumnPropNameInTable="job_nameColumn" msprop:Generator_ColumnPropNameInRow="job_name" msprop:Generator_ColumnVarNameInTable="columnjob_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="next_run_day" msdata:ReadOnly="true" msprop:Generator_UserColumnName="next_run_day" msprop:Generator_ColumnPropNameInTable="next_run_dayColumn" msprop:Generator_ColumnPropNameInRow="next_run_day" msprop:Generator_ColumnVarNameInTable="columnnext_run_day" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nextruntime" msdata:ReadOnly="true" msprop:Generator_UserColumnName="nextruntime" msprop:Generator_ColumnPropNameInTable="nextruntimeColumn" msprop:Generator_ColumnPropNameInRow="nextruntime" msprop:Generator_ColumnVarNameInTable="columnnextruntime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="activetime" msdata:ReadOnly="true" msprop:Generator_UserColumnName="activetime" msprop:Generator_ColumnPropNameInTable="activetimeColumn" msprop:Generator_ColumnPropNameInRow="activetime" msprop:Generator_ColumnVarNameInTable="columnactivetime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="activeendtime" msdata:ReadOnly="true" msprop:Generator_UserColumnName="activeendtime" msprop:Generator_ColumnPropNameInTable="activeendtimeColumn" msprop:Generator_ColumnPropNameInRow="activeendtime" msprop:Generator_ColumnVarNameInTable="columnactiveendtime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="enabled" msprop:Generator_UserColumnName="enabled" msprop:Generator_ColumnPropNameInTable="enabledColumn" msprop:Generator_ColumnPropNameInRow="enabled" msprop:Generator_ColumnVarNameInTable="columnenabled" type="xs:unsignedByte" />
+              <xs:element name="date_created" msprop:Generator_UserColumnName="date_created" msprop:Generator_ColumnPropNameInTable="date_createdColumn" msprop:Generator_ColumnPropNameInRow="date_created" msprop:Generator_ColumnVarNameInTable="columndate_created" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_DANHSACHJOBWEEKLY" msprop:Generator_RowClassName="V_DANHSACHJOBWEEKLYRow" msprop:Generator_RowEvHandlerName="V_DANHSACHJOBWEEKLYRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DANHSACHJOBWEEKLYRowDeleted" msprop:Generator_RowDeletingName="V_DANHSACHJOBWEEKLYRowDeleting" msprop:Generator_RowEvArgName="V_DANHSACHJOBWEEKLYRowChangeEvent" msprop:Generator_TablePropName="V_DANHSACHJOBWEEKLY" msprop:Generator_RowChangedName="V_DANHSACHJOBWEEKLYRowChanged" msprop:Generator_UserTableName="V_DANHSACHJOBWEEKLY" msprop:Generator_RowChangingName="V_DANHSACHJOBWEEKLYRowChanging" msprop:Generator_TableClassName="V_DANHSACHJOBWEEKLYDataTable" msprop:Generator_TableVarName="tableV_DANHSACHJOBWEEKLY">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="job_name" msprop:Generator_UserColumnName="job_name" msprop:Generator_ColumnPropNameInTable="job_nameColumn" msprop:Generator_ColumnPropNameInRow="job_name" msprop:Generator_ColumnVarNameInTable="columnjob_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="next_run_day" msdata:ReadOnly="true" msprop:Generator_UserColumnName="next_run_day" msprop:Generator_ColumnPropNameInTable="next_run_dayColumn" msprop:Generator_ColumnPropNameInRow="next_run_day" msprop:Generator_ColumnVarNameInTable="columnnext_run_day" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nextruntime" msdata:ReadOnly="true" msprop:Generator_UserColumnName="nextruntime" msprop:Generator_ColumnPropNameInTable="nextruntimeColumn" msprop:Generator_ColumnPropNameInRow="nextruntime" msprop:Generator_ColumnVarNameInTable="columnnextruntime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="freq_interval" msprop:Generator_UserColumnName="freq_interval" msprop:Generator_ColumnPropNameInTable="freq_intervalColumn" msprop:Generator_ColumnPropNameInRow="freq_interval" msprop:Generator_ColumnVarNameInTable="columnfreq_interval" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="activetime" msdata:ReadOnly="true" msprop:Generator_UserColumnName="activetime" msprop:Generator_ColumnPropNameInTable="activetimeColumn" msprop:Generator_ColumnPropNameInRow="activetime" msprop:Generator_ColumnVarNameInTable="columnactivetime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="activeendtime" msdata:ReadOnly="true" msprop:Generator_UserColumnName="activeendtime" msprop:Generator_ColumnPropNameInTable="activeendtimeColumn" msprop:Generator_ColumnPropNameInRow="activeendtime" msprop:Generator_ColumnVarNameInTable="columnactiveendtime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="enabled" msprop:Generator_UserColumnName="enabled" msprop:Generator_ColumnPropNameInTable="enabledColumn" msprop:Generator_ColumnPropNameInRow="enabled" msprop:Generator_ColumnVarNameInTable="columnenabled" type="xs:unsignedByte" />
+              <xs:element name="date_created" msprop:Generator_UserColumnName="date_created" msprop:Generator_ColumnPropNameInTable="date_createdColumn" msprop:Generator_ColumnPropNameInRow="date_created" msprop:Generator_ColumnVarNameInTable="columndate_created" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

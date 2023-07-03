@@ -461,7 +461,7 @@
             this.btnBackupRestore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBackupRestore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBackupRestore.UseVisualStyleBackColor = true;
-            this.btnBackupRestore.Visible = false;
+            this.btnBackupRestore.Click += new System.EventHandler(this.btnBackupRestore_Click);
             // 
             // panel1
             // 
