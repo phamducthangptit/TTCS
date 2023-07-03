@@ -50,6 +50,10 @@ namespace TPNT {
         
         private V_SELECTLOAIHINHKHACDataTable tableV_SELECTLOAIHINHKHAC;
         
+        private V_DANHSACHJOBDAILYDataTable tableV_DANHSACHJOBDAILY;
+        
+        private V_DANHSACHJOBWEEKLYDataTable tableV_DANHSACHJOBWEEKLY;
+        
         private global::System.Data.DataRelation relationFK_CT_CuocTrienLam_TPNT;
         
         private global::System.Data.DataRelation relationFK_CT_CuocTrienLam_CuocTrienLam;
@@ -134,6 +138,12 @@ namespace TPNT {
                 }
                 if ((ds.Tables["V_SELECTLOAIHINHKHAC"] != null)) {
                     base.Tables.Add(new V_SELECTLOAIHINHKHACDataTable(ds.Tables["V_SELECTLOAIHINHKHAC"]));
+                }
+                if ((ds.Tables["V_DANHSACHJOBDAILY"] != null)) {
+                    base.Tables.Add(new V_DANHSACHJOBDAILYDataTable(ds.Tables["V_DANHSACHJOBDAILY"]));
+                }
+                if ((ds.Tables["V_DANHSACHJOBWEEKLY"] != null)) {
+                    base.Tables.Add(new V_DANHSACHJOBWEEKLYDataTable(ds.Tables["V_DANHSACHJOBWEEKLY"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -285,6 +295,26 @@ namespace TPNT {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public V_DANHSACHJOBDAILYDataTable V_DANHSACHJOBDAILY {
+            get {
+                return this.tableV_DANHSACHJOBDAILY;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public V_DANHSACHJOBWEEKLYDataTable V_DANHSACHJOBWEEKLY {
+            get {
+                return this.tableV_DANHSACHJOBWEEKLY;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -388,6 +418,12 @@ namespace TPNT {
                 }
                 if ((ds.Tables["V_SELECTLOAIHINHKHAC"] != null)) {
                     base.Tables.Add(new V_SELECTLOAIHINHKHACDataTable(ds.Tables["V_SELECTLOAIHINHKHAC"]));
+                }
+                if ((ds.Tables["V_DANHSACHJOBDAILY"] != null)) {
+                    base.Tables.Add(new V_DANHSACHJOBDAILYDataTable(ds.Tables["V_DANHSACHJOBDAILY"]));
+                }
+                if ((ds.Tables["V_DANHSACHJOBWEEKLY"] != null)) {
+                    base.Tables.Add(new V_DANHSACHJOBWEEKLYDataTable(ds.Tables["V_DANHSACHJOBWEEKLY"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -500,6 +536,18 @@ namespace TPNT {
                     this.tableV_SELECTLOAIHINHKHAC.InitVars();
                 }
             }
+            this.tableV_DANHSACHJOBDAILY = ((V_DANHSACHJOBDAILYDataTable)(base.Tables["V_DANHSACHJOBDAILY"]));
+            if ((initTable == true)) {
+                if ((this.tableV_DANHSACHJOBDAILY != null)) {
+                    this.tableV_DANHSACHJOBDAILY.InitVars();
+                }
+            }
+            this.tableV_DANHSACHJOBWEEKLY = ((V_DANHSACHJOBWEEKLYDataTable)(base.Tables["V_DANHSACHJOBWEEKLY"]));
+            if ((initTable == true)) {
+                if ((this.tableV_DANHSACHJOBWEEKLY != null)) {
+                    this.tableV_DANHSACHJOBWEEKLY.InitVars();
+                }
+            }
             this.relationFK_CT_CuocTrienLam_TPNT = this.Relations["FK_CT_CuocTrienLam_TPNT"];
             this.relationFK_CT_CuocTrienLam_CuocTrienLam = this.Relations["FK_CT_CuocTrienLam_CuocTrienLam"];
             this.relationFK_DieuKhacVaTacTuong_TPNT = this.Relations["FK_DieuKhacVaTacTuong_TPNT"];
@@ -545,6 +593,10 @@ namespace TPNT {
             base.Tables.Add(this.tableV_SELECTHOIHOA);
             this.tableV_SELECTLOAIHINHKHAC = new V_SELECTLOAIHINHKHACDataTable();
             base.Tables.Add(this.tableV_SELECTLOAIHINHKHAC);
+            this.tableV_DANHSACHJOBDAILY = new V_DANHSACHJOBDAILYDataTable();
+            base.Tables.Add(this.tableV_DANHSACHJOBDAILY);
+            this.tableV_DANHSACHJOBWEEKLY = new V_DANHSACHJOBWEEKLYDataTable();
+            base.Tables.Add(this.tableV_DANHSACHJOBWEEKLY);
             global::System.Data.ForeignKeyConstraint fkc;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_CT_CuocTrienLam_TPNT", new global::System.Data.DataColumn[] {
                         this.tableTPNT.MaSoTPColumn}, new global::System.Data.DataColumn[] {
@@ -727,6 +779,18 @@ namespace TPNT {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeV_DANHSACHJOBDAILY() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeV_DANHSACHJOBWEEKLY() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -818,6 +882,12 @@ namespace TPNT {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void V_SELECTLOAIHINHKHACRowChangeEventHandler(object sender, V_SELECTLOAIHINHKHACRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void V_DANHSACHJOBDAILYRowChangeEventHandler(object sender, V_DANHSACHJOBDAILYRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void V_DANHSACHJOBWEEKLYRowChangeEventHandler(object sender, V_DANHSACHJOBWEEKLYRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5024,6 +5094,707 @@ namespace TPNT {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class V_DANHSACHJOBDAILYDataTable : global::System.Data.TypedTableBase<V_DANHSACHJOBDAILYRow> {
+            
+            private global::System.Data.DataColumn columnjob_name;
+            
+            private global::System.Data.DataColumn columnnext_run_day;
+            
+            private global::System.Data.DataColumn columnnextruntime;
+            
+            private global::System.Data.DataColumn columnactivetime;
+            
+            private global::System.Data.DataColumn columnactiveendtime;
+            
+            private global::System.Data.DataColumn columnenabled;
+            
+            private global::System.Data.DataColumn columndate_created;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBDAILYDataTable() {
+                this.TableName = "V_DANHSACHJOBDAILY";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal V_DANHSACHJOBDAILYDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected V_DANHSACHJOBDAILYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn job_nameColumn {
+                get {
+                    return this.columnjob_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn next_run_dayColumn {
+                get {
+                    return this.columnnext_run_day;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nextruntimeColumn {
+                get {
+                    return this.columnnextruntime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn activetimeColumn {
+                get {
+                    return this.columnactivetime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn activeendtimeColumn {
+                get {
+                    return this.columnactiveendtime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn enabledColumn {
+                get {
+                    return this.columnenabled;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn date_createdColumn {
+                get {
+                    return this.columndate_created;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBDAILYRow this[int index] {
+                get {
+                    return ((V_DANHSACHJOBDAILYRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_DANHSACHJOBDAILYRowChangeEventHandler V_DANHSACHJOBDAILYRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_DANHSACHJOBDAILYRowChangeEventHandler V_DANHSACHJOBDAILYRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_DANHSACHJOBDAILYRowChangeEventHandler V_DANHSACHJOBDAILYRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_DANHSACHJOBDAILYRowChangeEventHandler V_DANHSACHJOBDAILYRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddV_DANHSACHJOBDAILYRow(V_DANHSACHJOBDAILYRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBDAILYRow AddV_DANHSACHJOBDAILYRow(string job_name, string next_run_day, string nextruntime, string activetime, string activeendtime, byte enabled, System.DateTime date_created) {
+                V_DANHSACHJOBDAILYRow rowV_DANHSACHJOBDAILYRow = ((V_DANHSACHJOBDAILYRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        job_name,
+                        next_run_day,
+                        nextruntime,
+                        activetime,
+                        activeendtime,
+                        enabled,
+                        date_created};
+                rowV_DANHSACHJOBDAILYRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowV_DANHSACHJOBDAILYRow);
+                return rowV_DANHSACHJOBDAILYRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                V_DANHSACHJOBDAILYDataTable cln = ((V_DANHSACHJOBDAILYDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new V_DANHSACHJOBDAILYDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnjob_name = base.Columns["job_name"];
+                this.columnnext_run_day = base.Columns["next_run_day"];
+                this.columnnextruntime = base.Columns["nextruntime"];
+                this.columnactivetime = base.Columns["activetime"];
+                this.columnactiveendtime = base.Columns["activeendtime"];
+                this.columnenabled = base.Columns["enabled"];
+                this.columndate_created = base.Columns["date_created"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnjob_name = new global::System.Data.DataColumn("job_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnjob_name);
+                this.columnnext_run_day = new global::System.Data.DataColumn("next_run_day", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnext_run_day);
+                this.columnnextruntime = new global::System.Data.DataColumn("nextruntime", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnextruntime);
+                this.columnactivetime = new global::System.Data.DataColumn("activetime", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnactivetime);
+                this.columnactiveendtime = new global::System.Data.DataColumn("activeendtime", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnactiveendtime);
+                this.columnenabled = new global::System.Data.DataColumn("enabled", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnenabled);
+                this.columndate_created = new global::System.Data.DataColumn("date_created", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_created);
+                this.columnjob_name.AllowDBNull = false;
+                this.columnjob_name.MaxLength = 128;
+                this.columnnext_run_day.ReadOnly = true;
+                this.columnnext_run_day.MaxLength = 10;
+                this.columnnextruntime.ReadOnly = true;
+                this.columnnextruntime.MaxLength = 8;
+                this.columnactivetime.ReadOnly = true;
+                this.columnactivetime.MaxLength = 8;
+                this.columnactiveendtime.ReadOnly = true;
+                this.columnactiveendtime.MaxLength = 10;
+                this.columnenabled.AllowDBNull = false;
+                this.columndate_created.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBDAILYRow NewV_DANHSACHJOBDAILYRow() {
+                return ((V_DANHSACHJOBDAILYRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new V_DANHSACHJOBDAILYRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(V_DANHSACHJOBDAILYRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.V_DANHSACHJOBDAILYRowChanged != null)) {
+                    this.V_DANHSACHJOBDAILYRowChanged(this, new V_DANHSACHJOBDAILYRowChangeEvent(((V_DANHSACHJOBDAILYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.V_DANHSACHJOBDAILYRowChanging != null)) {
+                    this.V_DANHSACHJOBDAILYRowChanging(this, new V_DANHSACHJOBDAILYRowChangeEvent(((V_DANHSACHJOBDAILYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.V_DANHSACHJOBDAILYRowDeleted != null)) {
+                    this.V_DANHSACHJOBDAILYRowDeleted(this, new V_DANHSACHJOBDAILYRowChangeEvent(((V_DANHSACHJOBDAILYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.V_DANHSACHJOBDAILYRowDeleting != null)) {
+                    this.V_DANHSACHJOBDAILYRowDeleting(this, new V_DANHSACHJOBDAILYRowChangeEvent(((V_DANHSACHJOBDAILYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveV_DANHSACHJOBDAILYRow(V_DANHSACHJOBDAILYRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TPNTDataSet ds = new TPNTDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "V_DANHSACHJOBDAILYDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class V_DANHSACHJOBWEEKLYDataTable : global::System.Data.TypedTableBase<V_DANHSACHJOBWEEKLYRow> {
+            
+            private global::System.Data.DataColumn columnjob_name;
+            
+            private global::System.Data.DataColumn columnnext_run_day;
+            
+            private global::System.Data.DataColumn columnnextruntime;
+            
+            private global::System.Data.DataColumn columnfreq_interval;
+            
+            private global::System.Data.DataColumn columnactivetime;
+            
+            private global::System.Data.DataColumn columnactiveendtime;
+            
+            private global::System.Data.DataColumn columnenabled;
+            
+            private global::System.Data.DataColumn columndate_created;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBWEEKLYDataTable() {
+                this.TableName = "V_DANHSACHJOBWEEKLY";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal V_DANHSACHJOBWEEKLYDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected V_DANHSACHJOBWEEKLYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn job_nameColumn {
+                get {
+                    return this.columnjob_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn next_run_dayColumn {
+                get {
+                    return this.columnnext_run_day;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nextruntimeColumn {
+                get {
+                    return this.columnnextruntime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn freq_intervalColumn {
+                get {
+                    return this.columnfreq_interval;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn activetimeColumn {
+                get {
+                    return this.columnactivetime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn activeendtimeColumn {
+                get {
+                    return this.columnactiveendtime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn enabledColumn {
+                get {
+                    return this.columnenabled;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn date_createdColumn {
+                get {
+                    return this.columndate_created;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBWEEKLYRow this[int index] {
+                get {
+                    return ((V_DANHSACHJOBWEEKLYRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_DANHSACHJOBWEEKLYRowChangeEventHandler V_DANHSACHJOBWEEKLYRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_DANHSACHJOBWEEKLYRowChangeEventHandler V_DANHSACHJOBWEEKLYRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_DANHSACHJOBWEEKLYRowChangeEventHandler V_DANHSACHJOBWEEKLYRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_DANHSACHJOBWEEKLYRowChangeEventHandler V_DANHSACHJOBWEEKLYRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddV_DANHSACHJOBWEEKLYRow(V_DANHSACHJOBWEEKLYRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBWEEKLYRow AddV_DANHSACHJOBWEEKLYRow(string job_name, string next_run_day, string nextruntime, string freq_interval, string activetime, string activeendtime, byte enabled, System.DateTime date_created) {
+                V_DANHSACHJOBWEEKLYRow rowV_DANHSACHJOBWEEKLYRow = ((V_DANHSACHJOBWEEKLYRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        job_name,
+                        next_run_day,
+                        nextruntime,
+                        freq_interval,
+                        activetime,
+                        activeendtime,
+                        enabled,
+                        date_created};
+                rowV_DANHSACHJOBWEEKLYRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowV_DANHSACHJOBWEEKLYRow);
+                return rowV_DANHSACHJOBWEEKLYRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                V_DANHSACHJOBWEEKLYDataTable cln = ((V_DANHSACHJOBWEEKLYDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new V_DANHSACHJOBWEEKLYDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnjob_name = base.Columns["job_name"];
+                this.columnnext_run_day = base.Columns["next_run_day"];
+                this.columnnextruntime = base.Columns["nextruntime"];
+                this.columnfreq_interval = base.Columns["freq_interval"];
+                this.columnactivetime = base.Columns["activetime"];
+                this.columnactiveendtime = base.Columns["activeendtime"];
+                this.columnenabled = base.Columns["enabled"];
+                this.columndate_created = base.Columns["date_created"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnjob_name = new global::System.Data.DataColumn("job_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnjob_name);
+                this.columnnext_run_day = new global::System.Data.DataColumn("next_run_day", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnext_run_day);
+                this.columnnextruntime = new global::System.Data.DataColumn("nextruntime", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnextruntime);
+                this.columnfreq_interval = new global::System.Data.DataColumn("freq_interval", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfreq_interval);
+                this.columnactivetime = new global::System.Data.DataColumn("activetime", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnactivetime);
+                this.columnactiveendtime = new global::System.Data.DataColumn("activeendtime", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnactiveendtime);
+                this.columnenabled = new global::System.Data.DataColumn("enabled", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnenabled);
+                this.columndate_created = new global::System.Data.DataColumn("date_created", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_created);
+                this.columnjob_name.AllowDBNull = false;
+                this.columnjob_name.MaxLength = 128;
+                this.columnnext_run_day.ReadOnly = true;
+                this.columnnext_run_day.MaxLength = 10;
+                this.columnnextruntime.ReadOnly = true;
+                this.columnnextruntime.MaxLength = 8;
+                this.columnfreq_interval.MaxLength = 20;
+                this.columnactivetime.ReadOnly = true;
+                this.columnactivetime.MaxLength = 8;
+                this.columnactiveendtime.ReadOnly = true;
+                this.columnactiveendtime.MaxLength = 10;
+                this.columnenabled.AllowDBNull = false;
+                this.columndate_created.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBWEEKLYRow NewV_DANHSACHJOBWEEKLYRow() {
+                return ((V_DANHSACHJOBWEEKLYRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new V_DANHSACHJOBWEEKLYRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(V_DANHSACHJOBWEEKLYRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.V_DANHSACHJOBWEEKLYRowChanged != null)) {
+                    this.V_DANHSACHJOBWEEKLYRowChanged(this, new V_DANHSACHJOBWEEKLYRowChangeEvent(((V_DANHSACHJOBWEEKLYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.V_DANHSACHJOBWEEKLYRowChanging != null)) {
+                    this.V_DANHSACHJOBWEEKLYRowChanging(this, new V_DANHSACHJOBWEEKLYRowChangeEvent(((V_DANHSACHJOBWEEKLYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.V_DANHSACHJOBWEEKLYRowDeleted != null)) {
+                    this.V_DANHSACHJOBWEEKLYRowDeleted(this, new V_DANHSACHJOBWEEKLYRowChangeEvent(((V_DANHSACHJOBWEEKLYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.V_DANHSACHJOBWEEKLYRowDeleting != null)) {
+                    this.V_DANHSACHJOBWEEKLYRowDeleting(this, new V_DANHSACHJOBWEEKLYRowChangeEvent(((V_DANHSACHJOBWEEKLYRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveV_DANHSACHJOBWEEKLYRow(V_DANHSACHJOBWEEKLYRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TPNTDataSet ds = new TPNTDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "V_DANHSACHJOBWEEKLYDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class BoSuuTapRow : global::System.Data.DataRow {
@@ -6919,6 +7690,354 @@ namespace TPNT {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class V_DANHSACHJOBDAILYRow : global::System.Data.DataRow {
+            
+            private V_DANHSACHJOBDAILYDataTable tableV_DANHSACHJOBDAILY;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal V_DANHSACHJOBDAILYRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableV_DANHSACHJOBDAILY = ((V_DANHSACHJOBDAILYDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string job_name {
+                get {
+                    return ((string)(this[this.tableV_DANHSACHJOBDAILY.job_nameColumn]));
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBDAILY.job_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string next_run_day {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_DANHSACHJOBDAILY.next_run_dayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'next_run_day\' in table \'V_DANHSACHJOBDAILY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBDAILY.next_run_dayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string nextruntime {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_DANHSACHJOBDAILY.nextruntimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nextruntime\' in table \'V_DANHSACHJOBDAILY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBDAILY.nextruntimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string activetime {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_DANHSACHJOBDAILY.activetimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'activetime\' in table \'V_DANHSACHJOBDAILY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBDAILY.activetimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string activeendtime {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_DANHSACHJOBDAILY.activeendtimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'activeendtime\' in table \'V_DANHSACHJOBDAILY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBDAILY.activeendtimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public byte enabled {
+                get {
+                    return ((byte)(this[this.tableV_DANHSACHJOBDAILY.enabledColumn]));
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBDAILY.enabledColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime date_created {
+                get {
+                    return ((global::System.DateTime)(this[this.tableV_DANHSACHJOBDAILY.date_createdColumn]));
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBDAILY.date_createdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isnext_run_dayNull() {
+                return this.IsNull(this.tableV_DANHSACHJOBDAILY.next_run_dayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setnext_run_dayNull() {
+                this[this.tableV_DANHSACHJOBDAILY.next_run_dayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsnextruntimeNull() {
+                return this.IsNull(this.tableV_DANHSACHJOBDAILY.nextruntimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetnextruntimeNull() {
+                this[this.tableV_DANHSACHJOBDAILY.nextruntimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsactivetimeNull() {
+                return this.IsNull(this.tableV_DANHSACHJOBDAILY.activetimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetactivetimeNull() {
+                this[this.tableV_DANHSACHJOBDAILY.activetimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsactiveendtimeNull() {
+                return this.IsNull(this.tableV_DANHSACHJOBDAILY.activeendtimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetactiveendtimeNull() {
+                this[this.tableV_DANHSACHJOBDAILY.activeendtimeColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class V_DANHSACHJOBWEEKLYRow : global::System.Data.DataRow {
+            
+            private V_DANHSACHJOBWEEKLYDataTable tableV_DANHSACHJOBWEEKLY;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal V_DANHSACHJOBWEEKLYRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableV_DANHSACHJOBWEEKLY = ((V_DANHSACHJOBWEEKLYDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string job_name {
+                get {
+                    return ((string)(this[this.tableV_DANHSACHJOBWEEKLY.job_nameColumn]));
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBWEEKLY.job_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string next_run_day {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_DANHSACHJOBWEEKLY.next_run_dayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'next_run_day\' in table \'V_DANHSACHJOBWEEKLY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBWEEKLY.next_run_dayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string nextruntime {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_DANHSACHJOBWEEKLY.nextruntimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nextruntime\' in table \'V_DANHSACHJOBWEEKLY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBWEEKLY.nextruntimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string freq_interval {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_DANHSACHJOBWEEKLY.freq_intervalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'freq_interval\' in table \'V_DANHSACHJOBWEEKLY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBWEEKLY.freq_intervalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string activetime {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_DANHSACHJOBWEEKLY.activetimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'activetime\' in table \'V_DANHSACHJOBWEEKLY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBWEEKLY.activetimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string activeendtime {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_DANHSACHJOBWEEKLY.activeendtimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'activeendtime\' in table \'V_DANHSACHJOBWEEKLY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBWEEKLY.activeendtimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public byte enabled {
+                get {
+                    return ((byte)(this[this.tableV_DANHSACHJOBWEEKLY.enabledColumn]));
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBWEEKLY.enabledColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime date_created {
+                get {
+                    return ((global::System.DateTime)(this[this.tableV_DANHSACHJOBWEEKLY.date_createdColumn]));
+                }
+                set {
+                    this[this.tableV_DANHSACHJOBWEEKLY.date_createdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isnext_run_dayNull() {
+                return this.IsNull(this.tableV_DANHSACHJOBWEEKLY.next_run_dayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setnext_run_dayNull() {
+                this[this.tableV_DANHSACHJOBWEEKLY.next_run_dayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsnextruntimeNull() {
+                return this.IsNull(this.tableV_DANHSACHJOBWEEKLY.nextruntimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetnextruntimeNull() {
+                this[this.tableV_DANHSACHJOBWEEKLY.nextruntimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isfreq_intervalNull() {
+                return this.IsNull(this.tableV_DANHSACHJOBWEEKLY.freq_intervalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setfreq_intervalNull() {
+                this[this.tableV_DANHSACHJOBWEEKLY.freq_intervalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsactivetimeNull() {
+                return this.IsNull(this.tableV_DANHSACHJOBWEEKLY.activetimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetactivetimeNull() {
+                this[this.tableV_DANHSACHJOBWEEKLY.activetimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsactiveendtimeNull() {
+                return this.IsNull(this.tableV_DANHSACHJOBWEEKLY.activeendtimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetactiveendtimeNull() {
+                this[this.tableV_DANHSACHJOBWEEKLY.activeendtimeColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -7346,6 +8465,74 @@ namespace TPNT {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public V_SELECTLOAIHINHKHACRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class V_DANHSACHJOBDAILYRowChangeEvent : global::System.EventArgs {
+            
+            private V_DANHSACHJOBDAILYRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBDAILYRowChangeEvent(V_DANHSACHJOBDAILYRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBDAILYRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class V_DANHSACHJOBWEEKLYRowChangeEvent : global::System.EventArgs {
+            
+            private V_DANHSACHJOBWEEKLYRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBWEEKLYRowChangeEvent(V_DANHSACHJOBWEEKLYRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_DANHSACHJOBWEEKLYRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -12252,6 +13439,353 @@ SELECT MaSoTP, NamSangTac, ChuDe, QuocGia, ThoiDai, LoiDienGiai, MaTacGia, HinhA
         public virtual TPNTDataSet.V_SELECTLOAIHINHKHACDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             TPNTDataSet.V_SELECTLOAIHINHKHACDataTable dataTable = new TPNTDataSet.V_SELECTLOAIHINHKHACDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class V_DANHSACHJOBDAILYTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public V_DANHSACHJOBDAILYTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "V_DANHSACHJOBDAILY";
+            tableMapping.ColumnMappings.Add("job_name", "job_name");
+            tableMapping.ColumnMappings.Add("next_run_day", "next_run_day");
+            tableMapping.ColumnMappings.Add("nextruntime", "nextruntime");
+            tableMapping.ColumnMappings.Add("activetime", "activetime");
+            tableMapping.ColumnMappings.Add("activeendtime", "activeendtime");
+            tableMapping.ColumnMappings.Add("enabled", "enabled");
+            tableMapping.ColumnMappings.Add("date_created", "date_created");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TPNT.Properties.Settings.Default.TPNTConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT    V_DANHSACHJOBDAILY.*\r\nFROM         V_DANHSACHJOBDAILY";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(TPNTDataSet.V_DANHSACHJOBDAILYDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual TPNTDataSet.V_DANHSACHJOBDAILYDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            TPNTDataSet.V_DANHSACHJOBDAILYDataTable dataTable = new TPNTDataSet.V_DANHSACHJOBDAILYDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class V_DANHSACHJOBWEEKLYTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public V_DANHSACHJOBWEEKLYTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "V_DANHSACHJOBWEEKLY";
+            tableMapping.ColumnMappings.Add("job_name", "job_name");
+            tableMapping.ColumnMappings.Add("next_run_day", "next_run_day");
+            tableMapping.ColumnMappings.Add("nextruntime", "nextruntime");
+            tableMapping.ColumnMappings.Add("Expr1", "freq_interval");
+            tableMapping.ColumnMappings.Add("activetime", "activetime");
+            tableMapping.ColumnMappings.Add("activeendtime", "activeendtime");
+            tableMapping.ColumnMappings.Add("enabled", "enabled");
+            tableMapping.ColumnMappings.Add("date_created", "date_created");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TPNT.Properties.Settings.Default.TPNTConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT    V_DANHSACHJOBWEEKLY.*\r\nFROM         V_DANHSACHJOBWEEKLY";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(TPNTDataSet.V_DANHSACHJOBWEEKLYDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual TPNTDataSet.V_DANHSACHJOBWEEKLYDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            TPNTDataSet.V_DANHSACHJOBWEEKLYDataTable dataTable = new TPNTDataSet.V_DANHSACHJOBWEEKLYDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
