@@ -266,5 +266,11 @@ namespace TPNT
         {
 
         }
+
+        private void btnBackupRestore_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmBackup_Restore();
+            frm.Show();
+        }
     }
 }

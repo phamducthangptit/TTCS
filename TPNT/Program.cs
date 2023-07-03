@@ -18,7 +18,7 @@ namespace TPNT
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
 
-        public static String connstr_publisher = "Data Source=DESKTOP-863A14G\\SERVER;Initial Catalog=TPNT;Integrated Security=True";
+        public static String connstr_publisher = "Data Source=MSI;Initial Catalog=TPNT;Integrated Security=True";
 
         public static SqlDataReader myReader;
         public static String servername = "";
@@ -96,7 +96,26 @@ namespace TPNT
             }
             return 0;
         }
-
+        public static int ExecSetUpJob(String cmd, String connectionstring)
+        {
+            conn = new SqlConnection(connectionstring);
+            SqlCommand Sqlcmd = new SqlCommand(cmd, conn);
+            Sqlcmd.CommandType = CommandType.Text;
+            Sqlcmd.CommandTimeout = 300; //5phut timeout
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sqlcmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show("Lỗi " + e.Message);
+                conn.Close();
+                return e.State;
+            }
+            return 0;
+        }
         public static DataTable ExecSqlDataTable(String cmd)
         {
             DataTable dt = new DataTable();
