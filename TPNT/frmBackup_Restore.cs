@@ -573,7 +573,12 @@ namespace TPNT
         {
             Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" +
                     Program.database + ";User ID=" + Program.mlogin + ";password=" + Program.password;
-            MessageBox.Show("" + Program.connstr, "", MessageBoxButtons.OK);
+           // MessageBox.Show("" + Program.connstr, "", MessageBoxButtons.OK);
+        }
+
+        private void cmbThu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
