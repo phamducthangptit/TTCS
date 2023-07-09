@@ -12,6 +12,10 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using System.Windows.Media;
 using System.Data.SqlClient;
+using GemBox.Spreadsheet;
+using System.Reflection;
+using DevExpress.XtraCharts.Native;
+
 
 namespace TPNT
 {
@@ -42,7 +46,18 @@ namespace TPNT
             lbCount.Text = soLuong.ToString(); 
             dataReader1.Close();
             Program.conn.Close();
-
+            if (Program.mGroup.Equals("KHACH") ){
+                btnThem.Enabled = btnHieuChinh.Enabled =
+                    btnXoa.Enabled =
+                    btnExport.Enabled =
+                    btnImport.Enabled = false;
+            } else
+            {
+                btnThem.Enabled = btnHieuChinh.Enabled =
+                    btnXoa.Enabled =
+                    btnExport.Enabled =
+                    btnImport.Enabled = true;
+            }
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -256,6 +271,118 @@ namespace TPNT
                 this.v_TPNTTableAdapter.Fill(this.tPNTDataSet.V_TPNT);
                 bdsTPNT.Position = viTri;
         }
+       
+        private void btnExport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Save an Excel File"
+            };
 
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Lấy DataTable từ BindingSource
+                    DataTable dataTable = new DataTable();
+                    for (int i = 0; i < bdsTPNT.List.Count; i++)
+                    {
+                        DataRowView rowView = (DataRowView)bdsTPNT.List[i];
+                        DataRow row = rowView.Row;
+                        if (i == 0)
+                        {
+                            foreach (DataColumn column in row.Table.Columns)
+                            {
+                                dataTable.Columns.Add(column.ColumnName);
+                            }
+                        }
+                        dataTable.ImportRow(row);
+                    }
+                    // Xuất DataTable ra Excel
+                    SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+                    var workbook = new ExcelFile();
+                    var worksheet = workbook.Worksheets.Add("TPNT");
+                    worksheet.InsertDataTable(dataTable,
+                            new InsertDataTableOptions()
+                            {
+                                ColumnHeaders = true,
+                                StartRow = 0
+                            });
+                    workbook.Save(saveFileDialog.FileName);
+
+                    MessageBox.Show("Dữ liệu đã được xuất thành công vào tập tin Excel!", "Xuất Excel thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Đã xảy ra lỗi khi xuất dữ liệu ra Excel: {ex.Message}", "Lỗi xuất Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        
+        private void btnImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Import an Excel File"
+            };
+            
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                DataTable dataTable = Program.docFileExcel(openFileDialog.FileName, 0);
+                try
+                {
+                    using (SqlBulkCopy bulkCopy =
+                       new SqlBulkCopy(Program.connstr))
+                    {
+                        bulkCopy.DestinationTableName =
+                            "dbo.TPNT";
+
+                        // Set up the column mappings by name.
+                        bulkCopy.ColumnMappings.Add("Mã tác phẩm", "MaSoTP");
+
+                        bulkCopy.ColumnMappings.Add("Tên tác phẩm", "TenTP");
+
+                        bulkCopy.ColumnMappings.Add("Năm sáng tác", "NamSangTac");
+
+                        bulkCopy.ColumnMappings.Add("ChuDe", "ChuDe");
+
+                        bulkCopy.ColumnMappings.Add("Quốc gia", "QuocGia");
+
+                        bulkCopy.ColumnMappings.Add("ThoiDai", "ThoiDai");
+
+                        bulkCopy.ColumnMappings.Add("LoiDienGiai", "LoiDienGiai");
+
+                        bulkCopy.ColumnMappings.Add("MaTacGia", "MaTacGia");
+
+                        bulkCopy.ColumnMappings.Add("HinhAnh", "HinhAnh");
+
+                        // Write from the source to the destination.
+
+                        bulkCopy.WriteToServer(dataTable);
+                        MessageBox.Show("Dữ liệu đã được nhập thành công từ tập tin Excel!", "Nhập từ Excel thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Đã xảy ra lỗi khi nhập dữ liệu từ Excel: \n{ex.Message}", "Lỗi nhập từ Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+               
+                this.v_TAC_GIATableAdapter.Connection.ConnectionString = Program.connstr;
+                this.v_TAC_GIATableAdapter.Fill(this.tPNTDataSet.V_TAC_GIA);
+                this.v_TPNTTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.v_TPNTTableAdapter.Fill(this.tPNTDataSet.V_TPNT);
+
+                string strLenh1 = " SELECT dbo.FN_COUNT_TPNT ()";
+                SqlDataReader dataReader1 = Program.ExecSqlDataReader(strLenh1);
+                dataReader1.Read();
+                soLuong = dataReader1.GetInt32(0);
+                lbCount.Text = soLuong.ToString();
+                dataReader1.Close();
+                Program.conn.Close();
+            }
+        }
     }
 }

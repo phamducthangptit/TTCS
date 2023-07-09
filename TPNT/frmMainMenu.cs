@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,7 +30,17 @@ namespace TPNT
             lbNhom.Text = "Nhóm: " + Program.mGroup;
 
             lbUser.Text = "Tên: " + Program.username;
-
+            if (Program.mGroup.Equals("KHACH"))
+            {
+                btnBackupRestore.Visible = false;
+            } else
+            {
+                btnBackupRestore.Visible = true;
+            }
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         private struct RGBColors
@@ -184,6 +195,7 @@ namespace TPNT
             iconFormChild.IconChar = IconChar.Home;
             iconFormChild.IconColor = Color.Gainsboro;
             lblTitleFormChild.Text = "Trang chủ";
+            currentChildForm = null;
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -264,13 +276,38 @@ namespace TPNT
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+                Reset();
+                return;
+            }
+            if (Program.conn != null && Program.conn.State == ConnectionState.Open) Program.conn.Close();
+            Application.Exit();
         }
 
         private void btnBackupRestore_Click(object sender, EventArgs e)
         {
-            Form frm = new frmBackup_Restore();
-            frm.Show();
+            
+            frmLoginBK loginForm = new frmLoginBK();
+            DialogResult loginResult = loginForm.ShowDialog();
+
+            if (loginResult == DialogResult.OK)
+            {
+                Form frm = new frmBackup_Restore();
+                frm.Show();
+            }
+        }
+
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

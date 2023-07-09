@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils.Extensions;
 using DevExpress.Utils.MVVM;
+using GemBox.Spreadsheet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -473,6 +474,107 @@ namespace TPNT
             
             this.lblSLTP.Visible = this.txtSLTP.Visible = true;
             
+        }
+
+        private void btnExport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Save an Excel File"
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Lấy DataTable từ BindingSource
+                    DataTable dataTable = new DataTable();
+                    for (int i = 0; i < bdsTacGia.List.Count; i++)
+                    {
+                        DataRowView rowView = (DataRowView)bdsTacGia.List[i];
+                        DataRow row = rowView.Row;
+                        if (i == 0)
+                        {
+                            foreach (DataColumn column in row.Table.Columns)
+                            {
+                                dataTable.Columns.Add(column.ColumnName);
+                            }
+                        }
+                        dataTable.ImportRow(row);
+                    }
+                    // Xuất DataTable ra Excel
+                    SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+                    var workbook = new ExcelFile();
+                    var worksheet = workbook.Worksheets.Add("Tác giả");
+                    worksheet.InsertDataTable(dataTable,
+                            new InsertDataTableOptions()
+                            {
+                                ColumnHeaders = true,
+                                StartRow = 0
+                            });
+                    workbook.Save(saveFileDialog.FileName);
+
+                    MessageBox.Show("Dữ liệu đã được xuất thành công vào tập tin Excel!", "Xuất Excel thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Đã xảy ra lỗi khi xuất dữ liệu ra Excel: {ex.Message}", "Lỗi xuất Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Import an Excel File"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                DataTable dataTable = Program.docFileExcel(openFileDialog.FileName, 0);
+                try
+                {
+                    using (SqlBulkCopy bulkCopy =
+                       new SqlBulkCopy(Program.connstr))
+                    {
+                        bulkCopy.DestinationTableName =
+                            "dbo.TacGia";
+
+                        // Set up the column mappings by name.
+                        bulkCopy.ColumnMappings.Add("MaTacGia", "MaTacGia");
+
+                        bulkCopy.ColumnMappings.Add("HoTen", "HoTen");
+
+                        bulkCopy.ColumnMappings.Add("NgaySinh", "NgaySinh");
+
+                        bulkCopy.ColumnMappings.Add("NgayMat", "NgayMat");
+
+                        bulkCopy.ColumnMappings.Add("QuocTich", "QuocTich");
+
+                        bulkCopy.ColumnMappings.Add("DienGiai", "DienGiai");
+
+                        bulkCopy.ColumnMappings.Add("PhongCach", "PhongCach");
+
+                        bulkCopy.ColumnMappings.Add("HinhAnh", "HinhAnh");
+
+                        // Write from the source to the destination.
+
+                        bulkCopy.WriteToServer(dataTable);
+
+                    }
+                    MessageBox.Show("Dữ liệu đã được nhập thành công từ tập tin Excel!", "Nhập từ Excel thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Đã xảy ra lỗi khi nhập dữ liệu từ Excel: \n{ex.Message}", "Lỗi nhập từ Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
+            }
         }
     }
 }
