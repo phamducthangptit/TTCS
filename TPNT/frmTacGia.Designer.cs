@@ -37,6 +37,7 @@
             System.Windows.Forms.Label dienGiaiLabel;
             System.Windows.Forms.Label phongCachLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTacGia));
+            System.Windows.Forms.Label thoiDaiLabel;
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnChiTiet = new DevExpress.XtraBars.BarButtonItem();
@@ -46,9 +47,9 @@
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
-            this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.btnExport = new DevExpress.XtraBars.BarButtonItem();
             this.btnImport = new DevExpress.XtraBars.BarButtonItem();
+            this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -70,6 +71,7 @@
             this.colQuocTich = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDienGiai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPhongCach = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colThoiDai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSLTP = new System.Windows.Forms.TextBox();
             this.lblSLTP = new System.Windows.Forms.Label();
@@ -82,6 +84,7 @@
             this.ngaySinh = new DevExpress.XtraEditors.DateEdit();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtMaTacGia = new System.Windows.Forms.TextBox();
+            this.txtThoiDai = new System.Windows.Forms.TextBox();
             maTacGiaLabel = new System.Windows.Forms.Label();
             hoTenLabel = new System.Windows.Forms.Label();
             ngaySinhLabel = new System.Windows.Forms.Label();
@@ -89,6 +92,7 @@
             quocTichLabel = new System.Windows.Forms.Label();
             dienGiaiLabel = new System.Windows.Forms.Label();
             phongCachLabel = new System.Windows.Forms.Label();
+            thoiDaiLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tPNTDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTacGia)).BeginInit();
@@ -105,7 +109,7 @@
             // 
             maTacGiaLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             maTacGiaLabel.AutoSize = true;
-            maTacGiaLabel.Location = new System.Drawing.Point(52, 45);
+            maTacGiaLabel.Location = new System.Drawing.Point(58, 63);
             maTacGiaLabel.Name = "maTacGiaLabel";
             maTacGiaLabel.Size = new System.Drawing.Size(88, 20);
             maTacGiaLabel.TabIndex = 0;
@@ -115,7 +119,7 @@
             // 
             hoTenLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             hoTenLabel.AutoSize = true;
-            hoTenLabel.Location = new System.Drawing.Point(52, 113);
+            hoTenLabel.Location = new System.Drawing.Point(58, 131);
             hoTenLabel.Name = "hoTenLabel";
             hoTenLabel.Size = new System.Drawing.Size(62, 20);
             hoTenLabel.TabIndex = 2;
@@ -125,7 +129,7 @@
             // 
             ngaySinhLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             ngaySinhLabel.AutoSize = true;
-            ngaySinhLabel.Location = new System.Drawing.Point(55, 162);
+            ngaySinhLabel.Location = new System.Drawing.Point(61, 180);
             ngaySinhLabel.Name = "ngaySinhLabel";
             ngaySinhLabel.Size = new System.Drawing.Size(85, 20);
             ngaySinhLabel.TabIndex = 4;
@@ -135,7 +139,7 @@
             // 
             ngayMatLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             ngayMatLabel.AutoSize = true;
-            ngayMatLabel.Location = new System.Drawing.Point(55, 231);
+            ngayMatLabel.Location = new System.Drawing.Point(61, 249);
             ngayMatLabel.Name = "ngayMatLabel";
             ngayMatLabel.Size = new System.Drawing.Size(83, 20);
             ngayMatLabel.TabIndex = 6;
@@ -145,7 +149,7 @@
             // 
             quocTichLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             quocTichLabel.AutoSize = true;
-            quocTichLabel.Location = new System.Drawing.Point(471, 50);
+            quocTichLabel.Location = new System.Drawing.Point(477, 68);
             quocTichLabel.Name = "quocTichLabel";
             quocTichLabel.Size = new System.Drawing.Size(83, 20);
             quocTichLabel.TabIndex = 8;
@@ -155,7 +159,7 @@
             // 
             dienGiaiLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             dienGiaiLabel.AutoSize = true;
-            dienGiaiLabel.Location = new System.Drawing.Point(471, 162);
+            dienGiaiLabel.Location = new System.Drawing.Point(477, 280);
             dienGiaiLabel.Name = "dienGiaiLabel";
             dienGiaiLabel.Size = new System.Drawing.Size(76, 20);
             dienGiaiLabel.TabIndex = 10;
@@ -165,7 +169,7 @@
             // 
             phongCachLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             phongCachLabel.AutoSize = true;
-            phongCachLabel.Location = new System.Drawing.Point(471, 102);
+            phongCachLabel.Location = new System.Drawing.Point(477, 148);
             phongCachLabel.Name = "phongCachLabel";
             phongCachLabel.Size = new System.Drawing.Size(97, 20);
             phongCachLabel.TabIndex = 12;
@@ -281,14 +285,6 @@
             this.btnReload.Name = "btnReload";
             this.btnReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReload_ItemClick);
             // 
-            // btnThoat
-            // 
-            this.btnThoat.Caption = "Thoát";
-            this.btnThoat.Id = 8;
-            this.btnThoat.ImageOptions.Image = global::TPNT.Properties.Resources.logout_2_;
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
-            // 
             // btnExport
             // 
             this.btnExport.Caption = "Export";
@@ -304,6 +300,14 @@
             this.btnImport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnImport.ImageOptions.Image")));
             this.btnImport.Name = "btnImport";
             this.btnImport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnImport_ItemClick);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Caption = "Thoát";
+            this.btnThoat.Id = 8;
+            this.btnThoat.ImageOptions.Image = global::TPNT.Properties.Resources.logout_2_;
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
             // bar3
             // 
@@ -325,7 +329,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1177, 40);
+            this.barDockControlTop.Size = new System.Drawing.Size(1185, 40);
             // 
             // barDockControlBottom
             // 
@@ -333,7 +337,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 669);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1177, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1185, 20);
             // 
             // barDockControlLeft
             // 
@@ -347,7 +351,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1177, 40);
+            this.barDockControlRight.Location = new System.Drawing.Point(1185, 40);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 629);
             // 
@@ -404,49 +408,49 @@
             this.gcTacGia.MainView = this.gridView1;
             this.gcTacGia.MenuManager = this.barManager1;
             this.gcTacGia.Name = "gcTacGia";
-            this.gcTacGia.Size = new System.Drawing.Size(1177, 328);
+            this.gcTacGia.Size = new System.Drawing.Size(1185, 170);
             this.gcTacGia.TabIndex = 5;
             this.gcTacGia.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.EvenRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.Appearance.EvenRow.Options.UseFont = true;
             this.gridView1.Appearance.FixedLine.Options.UseTextOptions = true;
-            this.gridView1.Appearance.FocusedCell.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.FocusedCell.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.FocusedCell.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.Appearance.FocusedCell.Options.UseFont = true;
-            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.FocusedRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.Appearance.FocusedRow.Options.UseFont = true;
-            this.gridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("Times New Roman", 10.2F);
             this.gridView1.Appearance.GroupFooter.Options.UseFont = true;
-            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.gridView1.Appearance.GroupRow.Options.UseFont = true;
             this.gridView1.Appearance.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gridView1.Appearance.HeaderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.HeaderPanel.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.Appearance.HeaderPanel.Options.UseBackColor = true;
             this.gridView1.Appearance.HeaderPanel.Options.UseBorderColor = true;
             this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
             this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView1.Appearance.Preview.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.Preview.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.gridView1.Appearance.Preview.Options.UseFont = true;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.gridView1.Appearance.Row.Options.UseFont = true;
             this.gridView1.Appearance.Row.Options.UseTextOptions = true;
             this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.gridView1.Appearance.SelectedRow.Options.UseFont = true;
-            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
-            this.gridView1.AppearancePrint.GroupFooter.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.AppearancePrint.GroupFooter.Font = new System.Drawing.Font("Times New Roman", 10.2F);
             this.gridView1.AppearancePrint.GroupFooter.Options.UseFont = true;
-            this.gridView1.AppearancePrint.Row.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1.AppearancePrint.Row.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.gridView1.AppearancePrint.Row.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridView1.AppearancePrint.Row.Options.UseFont = true;
             this.gridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
@@ -458,7 +462,8 @@
             this.colNgayMat,
             this.colQuocTich,
             this.colDienGiai,
-            this.colPhongCach});
+            this.colPhongCach,
+            this.colThoiDai});
             this.gridView1.DetailHeight = 400;
             this.gridView1.DetailTabHeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
             this.gridView1.GridControl = this.gcTacGia;
@@ -471,39 +476,33 @@
             // 
             // colMaTacGia
             // 
-            this.colMaTacGia.Caption = "Mã tác giả";
+            this.colMaTacGia.Caption = "Mã TG";
             this.colMaTacGia.FieldName = "MaTacGia";
             this.colMaTacGia.MinWidth = 25;
             this.colMaTacGia.Name = "colMaTacGia";
             this.colMaTacGia.Visible = true;
             this.colMaTacGia.VisibleIndex = 0;
-            this.colMaTacGia.Width = 150;
+            this.colMaTacGia.Width = 62;
             // 
             // colHoTen
             // 
-            this.colHoTen.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.colHoTen.AppearanceCell.Options.UseFont = true;
-            this.colHoTen.Caption = "Họ tên";
+            this.colHoTen.Caption = "Họ Tên";
             this.colHoTen.FieldName = "HoTen";
             this.colHoTen.MinWidth = 25;
             this.colHoTen.Name = "colHoTen";
             this.colHoTen.Visible = true;
             this.colHoTen.VisibleIndex = 1;
-            this.colHoTen.Width = 273;
+            this.colHoTen.Width = 114;
             // 
             // colNgaySinh
             // 
-            this.colNgaySinh.AppearanceCell.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.colNgaySinh.AppearanceCell.Options.UseFont = true;
-            this.colNgaySinh.AppearanceHeader.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.colNgaySinh.AppearanceHeader.Options.UseFont = true;
             this.colNgaySinh.Caption = "Ngày sinh";
             this.colNgaySinh.FieldName = "NgaySinh";
             this.colNgaySinh.MinWidth = 25;
             this.colNgaySinh.Name = "colNgaySinh";
             this.colNgaySinh.Visible = true;
             this.colNgaySinh.VisibleIndex = 2;
-            this.colNgaySinh.Width = 176;
+            this.colNgaySinh.Width = 114;
             // 
             // colNgayMat
             // 
@@ -513,7 +512,7 @@
             this.colNgayMat.Name = "colNgayMat";
             this.colNgayMat.Visible = true;
             this.colNgayMat.VisibleIndex = 3;
-            this.colNgayMat.Width = 176;
+            this.colNgayMat.Width = 114;
             // 
             // colQuocTich
             // 
@@ -522,8 +521,8 @@
             this.colQuocTich.MinWidth = 25;
             this.colQuocTich.Name = "colQuocTich";
             this.colQuocTich.Visible = true;
-            this.colQuocTich.VisibleIndex = 4;
-            this.colQuocTich.Width = 176;
+            this.colQuocTich.VisibleIndex = 5;
+            this.colQuocTich.Width = 93;
             // 
             // colDienGiai
             // 
@@ -532,8 +531,8 @@
             this.colDienGiai.MinWidth = 25;
             this.colDienGiai.Name = "colDienGiai";
             this.colDienGiai.Visible = true;
-            this.colDienGiai.VisibleIndex = 5;
-            this.colDienGiai.Width = 176;
+            this.colDienGiai.VisibleIndex = 6;
+            this.colDienGiai.Width = 146;
             // 
             // colPhongCach
             // 
@@ -542,11 +541,23 @@
             this.colPhongCach.MinWidth = 25;
             this.colPhongCach.Name = "colPhongCach";
             this.colPhongCach.Visible = true;
-            this.colPhongCach.VisibleIndex = 6;
-            this.colPhongCach.Width = 199;
+            this.colPhongCach.VisibleIndex = 7;
+            this.colPhongCach.Width = 153;
+            // 
+            // colThoiDai
+            // 
+            this.colThoiDai.Caption = "Thời đại";
+            this.colThoiDai.FieldName = "ThoiDai";
+            this.colThoiDai.MinWidth = 25;
+            this.colThoiDai.Name = "colThoiDai";
+            this.colThoiDai.Visible = true;
+            this.colThoiDai.VisibleIndex = 4;
+            this.colThoiDai.Width = 78;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(thoiDaiLabel);
+            this.groupBox1.Controls.Add(this.txtThoiDai);
             this.groupBox1.Controls.Add(this.txtSLTP);
             this.groupBox1.Controls.Add(this.lblSLTP);
             this.groupBox1.Controls.Add(this.pnlAnh);
@@ -566,9 +577,9 @@
             this.groupBox1.Controls.Add(maTacGiaLabel);
             this.groupBox1.Controls.Add(this.txtMaTacGia);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 368);
+            this.groupBox1.Location = new System.Drawing.Point(0, 210);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1177, 301);
+            this.groupBox1.Size = new System.Drawing.Size(1185, 459);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
@@ -577,7 +588,7 @@
             // 
             this.txtSLTP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSLTP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtSLTP.Location = new System.Drawing.Point(626, 246);
+            this.txtSLTP.Location = new System.Drawing.Point(213, 320);
             this.txtSLTP.Name = "txtSLTP";
             this.txtSLTP.ReadOnly = true;
             this.txtSLTP.Size = new System.Drawing.Size(100, 30);
@@ -587,7 +598,7 @@
             // 
             this.lblSLTP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSLTP.AutoSize = true;
-            this.lblSLTP.Location = new System.Drawing.Point(471, 249);
+            this.lblSLTP.Location = new System.Drawing.Point(58, 323);
             this.lblSLTP.Name = "lblSLTP";
             this.lblSLTP.Size = new System.Drawing.Size(149, 20);
             this.lblSLTP.TabIndex = 20;
@@ -596,15 +607,15 @@
             // pnlAnh
             // 
             this.pnlAnh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlAnh.Location = new System.Drawing.Point(862, 24);
+            this.pnlAnh.Location = new System.Drawing.Point(913, 45);
             this.pnlAnh.Name = "pnlAnh";
-            this.pnlAnh.Size = new System.Drawing.Size(202, 216);
+            this.pnlAnh.Size = new System.Drawing.Size(256, 256);
             this.pnlAnh.TabIndex = 14;
             // 
             // btnChonAnh
             // 
             this.btnChonAnh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnChonAnh.Location = new System.Drawing.Point(909, 246);
+            this.btnChonAnh.Location = new System.Drawing.Point(987, 318);
             this.btnChonAnh.Name = "btnChonAnh";
             this.btnChonAnh.Size = new System.Drawing.Size(110, 30);
             this.btnChonAnh.TabIndex = 15;
@@ -618,9 +629,10 @@
             this.txtPhongCach.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPhongCach.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTacGia, "PhongCach", true));
             this.txtPhongCach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtPhongCach.Location = new System.Drawing.Point(626, 94);
+            this.txtPhongCach.Location = new System.Drawing.Point(632, 112);
+            this.txtPhongCach.Multiline = true;
             this.txtPhongCach.Name = "txtPhongCach";
-            this.txtPhongCach.Size = new System.Drawing.Size(179, 30);
+            this.txtPhongCach.Size = new System.Drawing.Size(249, 98);
             this.txtPhongCach.TabIndex = 13;
             // 
             // txtDienGiai
@@ -628,10 +640,10 @@
             this.txtDienGiai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDienGiai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTacGia, "DienGiai", true));
             this.txtDienGiai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtDienGiai.Location = new System.Drawing.Point(626, 136);
+            this.txtDienGiai.Location = new System.Drawing.Point(632, 254);
             this.txtDienGiai.Multiline = true;
             this.txtDienGiai.Name = "txtDienGiai";
-            this.txtDienGiai.Size = new System.Drawing.Size(179, 96);
+            this.txtDienGiai.Size = new System.Drawing.Size(249, 140);
             this.txtDienGiai.TabIndex = 11;
             // 
             // txtQuocTich
@@ -639,7 +651,7 @@
             this.txtQuocTich.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtQuocTich.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTacGia, "QuocTich", true));
             this.txtQuocTich.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtQuocTich.Location = new System.Drawing.Point(626, 47);
+            this.txtQuocTich.Location = new System.Drawing.Point(632, 65);
             this.txtQuocTich.Name = "txtQuocTich";
             this.txtQuocTich.Size = new System.Drawing.Size(179, 30);
             this.txtQuocTich.TabIndex = 9;
@@ -649,7 +661,7 @@
             this.ngayMat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ngayMat.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsTacGia, "NgayMat", true));
             this.ngayMat.EditValue = null;
-            this.ngayMat.Location = new System.Drawing.Point(160, 228);
+            this.ngayMat.Location = new System.Drawing.Point(166, 246);
             this.ngayMat.MenuManager = this.barManager1;
             this.ngayMat.Name = "ngayMat";
             this.ngayMat.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -666,7 +678,7 @@
             this.ngaySinh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ngaySinh.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsTacGia, "NgaySinh", true));
             this.ngaySinh.EditValue = null;
-            this.ngaySinh.Location = new System.Drawing.Point(160, 173);
+            this.ngaySinh.Location = new System.Drawing.Point(166, 191);
             this.ngaySinh.MenuManager = this.barManager1;
             this.ngaySinh.Name = "ngaySinh";
             this.ngaySinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -683,7 +695,7 @@
             this.txtHoTen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtHoTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTacGia, "HoTen", true));
             this.txtHoTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtHoTen.Location = new System.Drawing.Point(157, 110);
+            this.txtHoTen.Location = new System.Drawing.Point(163, 128);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(271, 30);
             this.txtHoTen.TabIndex = 3;
@@ -693,16 +705,35 @@
             this.txtMaTacGia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMaTacGia.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTacGia, "MaTacGia", true));
             this.txtMaTacGia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaTacGia.Location = new System.Drawing.Point(157, 42);
+            this.txtMaTacGia.Location = new System.Drawing.Point(163, 60);
             this.txtMaTacGia.Name = "txtMaTacGia";
             this.txtMaTacGia.Size = new System.Drawing.Size(149, 30);
             this.txtMaTacGia.TabIndex = 1;
+            // 
+            // thoiDaiLabel
+            // 
+            thoiDaiLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            thoiDaiLabel.AutoSize = true;
+            thoiDaiLabel.Location = new System.Drawing.Point(61, 374);
+            thoiDaiLabel.Name = "thoiDaiLabel";
+            thoiDaiLabel.Size = new System.Drawing.Size(74, 20);
+            thoiDaiLabel.TabIndex = 21;
+            thoiDaiLabel.Text = "Thời đại:";
+            // 
+            // txtThoiDai
+            // 
+            this.txtThoiDai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtThoiDai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTacGia, "ThoiDai", true));
+            this.txtThoiDai.Location = new System.Drawing.Point(166, 371);
+            this.txtThoiDai.Name = "txtThoiDai";
+            this.txtThoiDai.Size = new System.Drawing.Size(268, 28);
+            this.txtThoiDai.TabIndex = 22;
             // 
             // frmTacGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 689);
+            this.ClientSize = new System.Drawing.Size(1185, 689);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gcTacGia);
             this.Controls.Add(this.barDockControlLeft);
@@ -752,13 +783,6 @@
         private TPNTDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private DevExpress.XtraGrid.GridControl gcTacGia;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMaTacGia;
-        private DevExpress.XtraGrid.Columns.GridColumn colHoTen;
-        private DevExpress.XtraGrid.Columns.GridColumn colNgaySinh;
-        private DevExpress.XtraGrid.Columns.GridColumn colNgayMat;
-        private DevExpress.XtraGrid.Columns.GridColumn colQuocTich;
-        private DevExpress.XtraGrid.Columns.GridColumn colDienGiai;
-        private DevExpress.XtraGrid.Columns.GridColumn colPhongCach;
         private DevExpress.XtraBars.BarButtonItem btnLuu;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtPhongCach;
@@ -778,5 +802,14 @@
         private DevExpress.XtraBars.BarButtonItem btnRestore;
         private DevExpress.XtraBars.BarButtonItem btnExport;
         private DevExpress.XtraBars.BarButtonItem btnImport;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaTacGia;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoTen;
+        private DevExpress.XtraGrid.Columns.GridColumn colNgaySinh;
+        private DevExpress.XtraGrid.Columns.GridColumn colNgayMat;
+        private DevExpress.XtraGrid.Columns.GridColumn colQuocTich;
+        private DevExpress.XtraGrid.Columns.GridColumn colDienGiai;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhongCach;
+        private DevExpress.XtraGrid.Columns.GridColumn colThoiDai;
+        private System.Windows.Forms.TextBox txtThoiDai;
     }
 }
