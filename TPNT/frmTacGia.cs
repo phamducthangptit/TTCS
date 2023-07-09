@@ -70,7 +70,7 @@ namespace TPNT
             groupBox1.Dock = DockStyle.Fill;
 
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
-                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = true;
+                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = this.txtThoiDai.Enabled = true;
 
             this.btnImport.Enabled = this.btnExport.Enabled = this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
                 = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
@@ -91,12 +91,12 @@ namespace TPNT
             groupBox1.Enabled = true;
 
             this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
-                = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
+                = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = this.txtThoiDai.Enabled = false;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
             this.btnChonAnh.Visible = true;
             this.pnlAnh.Visible = true;
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
-                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = true;
+                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = this.txtThoiDai.Enabled = true;
 
             string maTG = ((DataRowView)bdsTacGia[bdsTacGia.Position])["MaTacGia"].ToString();
             string strLenh = "SELECT dbo.FN_SLTP('" + maTG + "')";
@@ -180,7 +180,7 @@ namespace TPNT
                 this.btnChonAnh.Visible = this.btnThem.Enabled = false;
                 this.pnlAnh.Visible = true;
                 this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
-                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
+                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = this.txtThoiDai.Enabled = false;
             }
 
             this.TacGiaTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -308,7 +308,7 @@ namespace TPNT
                     bdsTacGia.EndEdit();
                     bdsTacGia.ResetCurrentItem();
                     strLenh = "EXEC SP_INSERTTG '" + this.txtMaTacGia.Text + "', N'" + this.txtHoTen.Text + "', '" + ngaySinh + "', '" + ngayMat + "', '"
-                        + this.txtQuocTich.Text + "', N'" + this.txtDienGiai.Text + "', N'" + this.txtPhongCach.Text + "', '" + uniqueFileName + "'";
+                        + this.txtQuocTich.Text + "', N'" + this.txtDienGiai.Text + "', N'" + this.txtPhongCach.Text + "', '" + uniqueFileName + "', N'" + this.txtThoiDai.Text + "'";
                     int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
                     if (ex == 0) //lưu thành công
                     {
@@ -350,7 +350,7 @@ namespace TPNT
                 bdsTacGia.EndEdit();
                 bdsTacGia.ResetCurrentItem();
                 string strLenh = "EXEC SP_UPDATETG '" + maTG + "', '" + this.txtMaTacGia.Text + "', N'" + this.txtHoTen.Text + "', '" + ngaySinh + "', '" + ngayMat + "', N'"
-                       + this.txtQuocTich.Text + "', N'" + this.txtDienGiai.Text + "', N'" + this.txtPhongCach.Text + "', '" + uniqueFileName + "'";
+                       + this.txtQuocTich.Text + "', N'" + this.txtDienGiai.Text + "', N'" + this.txtPhongCach.Text + "', '" + uniqueFileName + "', N'" + this.txtThoiDai.Text + "'";
                 int ex = Program.ExecSqlNonQuery(strLenh, Program.connstr);
                 if(ex == 0) // thay đổi thành công
                 {
@@ -373,7 +373,7 @@ namespace TPNT
             gcTacGia.Enabled = true;
 
             this.btnImport.Enabled = this.btnExport.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled 
-                = this.btnBackup.Enabled = this.btnRestore.Enabled = true;
+                = this.btnBackup.Enabled = this.btnRestore.Enabled = this.btnThem.Enabled = true;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
             this.btnChonAnh.Visible = false;
 
@@ -463,7 +463,7 @@ namespace TPNT
                 this.btnHieuChinh.Enabled = false;
             }
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
-                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
+                this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = this.txtThoiDai.Enabled = false;
             this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             gcTacGia.Visible = false;
             groupBox1.Visible = true;
@@ -557,6 +557,8 @@ namespace TPNT
                         bulkCopy.ColumnMappings.Add("PhongCach", "PhongCach");
 
                         bulkCopy.ColumnMappings.Add("HinhAnh", "HinhAnh");
+
+                        bulkCopy.ColumnMappings.Add("ThoiDai", "ThoiDai");
 
                         // Write from the source to the destination.
 
