@@ -332,10 +332,10 @@
             this.txtTriGia.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtTriGia.Properties.EditFormat.FormatString = "n0";
             this.txtTriGia.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtTriGia.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.txtTriGia.Properties.MaskSettings.Set("mask", "\\d+");
-            this.txtTriGia.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
-            this.txtTriGia.Properties.NullText = "1";
+            this.txtTriGia.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtTriGia.Properties.MaskSettings.Set("mask", "d");
+            this.txtTriGia.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtTriGia.Properties.ReadOnly = true;
             this.txtTriGia.Size = new System.Drawing.Size(109, 22);
             this.txtTriGia.TabIndex = 11;
             // 

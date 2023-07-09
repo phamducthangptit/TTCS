@@ -251,7 +251,6 @@ namespace TPNT
             {
                 int vitri = bdsWeeklyJob.Position;
                 this.v_DANHSACHJOBWEEKLYTableAdapter.Connection.ConnectionString = Program.connstr;
-
                 this.v_DANHSACHJOBWEEKLYTableAdapter.Fill(this.tPNTDataSet.V_DANHSACHJOBWEEKLY);
                 bdsWeeklyJob.Position = vitri;
                 girdControlDaily.Visible = false;

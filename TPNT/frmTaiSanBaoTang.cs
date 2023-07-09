@@ -34,9 +34,10 @@ namespace TPNT
         {
             tPNTDataSet1.EnforceConstraints = false;
             // TODO: This line of code loads data into the 'tPNTDataSet1.View_ListLoaiSoHuu' table. You can move, or remove it, as needed.
+            this.view_ListLoaiSoHuuTableAdapter.Connection.ConnectionString = Program.connstr;
             this.view_ListLoaiSoHuuTableAdapter.Fill(this.tPNTDataSet1.View_ListLoaiSoHuu);
             // TODO: This line of code loads data into the 'tPNTDataSet1.View_ListLoaiSoHuu' table. You can move, or remove it, as needed.
-            this.view_ListLoaiSoHuuTableAdapter.Fill(this.tPNTDataSet1.View_ListLoaiSoHuu);
+         
             // TODO: This line of code loads data into the 'tPNTDataSet1.view_NullSoHuu' table. You can move, or remove it, as needed.
             // this.view_NullSoHuuTableAdapter.Fill(this.tPNTDataSet1.view_NullSoHuu);
             if (!Program.mGroup.Equals("QUANLI"))
@@ -112,7 +113,12 @@ namespace TPNT
                 txtTriGia.Focus();
                 return false;
             }
-           
+           if (int.Parse(txtTriGia.Text) <= 0)
+            {
+                MessageBox.Show("Trị Giá phải lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK);
+                txtTriGia.Focus();
+                return false;
+            }    
 
             return true;
         }
