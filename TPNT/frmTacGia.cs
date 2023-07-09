@@ -34,20 +34,28 @@ namespace TPNT
 
             gcTacGia.Dock = DockStyle.Fill;
             groupBox1.Visible = false;
-
-            this.btnThem.Enabled =   this.btnReload.Enabled = this.btnThoat.Enabled = true;
-            this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
-
-            string strLenh = "SELECT * FROM V_SLTG";
-            SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
-            dataReaderSLTG.Read();
-            int slTG = dataReaderSLTG.GetInt32(0);
-            dataReaderSLTG.Close();
-            if (slTG == 0)
+            if (Program.mGroup.Equals("QUANLI"))
             {
-                this.btnXoa.Enabled = false;
+                this.btnThem.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
+
+                string strLenh = "SELECT * FROM V_SLTG";
+                SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
+                dataReaderSLTG.Read();
+                int slTG = dataReaderSLTG.GetInt32(0);
+                dataReaderSLTG.Close();
+                if (slTG == 0)
+                {
+                    this.btnXoa.Enabled = false;
+                }
+                else this.btnXoa.Enabled = true;
+            } else
+            {
+                this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnThem.Enabled = this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
             }
-            else this.btnXoa.Enabled = true;
+
+            
         }
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -391,13 +399,16 @@ namespace TPNT
             dataReaderSLTG.Read();
             int slTG = dataReaderSLTG.GetInt32(0);
             dataReaderSLTG.Close();
-
-            if (sLTP > 0 || slTG == 0)
+            if (Program.mGroup.Equals("QUANLI"))
             {
-                this.btnXoa.Enabled = false;
+                if (sLTP > 0 || slTG == 0)
+                {
+                    this.btnXoa.Enabled = false;
+                }
+                else this.btnXoa.Enabled = true;
             }
-            else this.btnXoa.Enabled = true;
-
+            else this.btnXoa.Enabled = false;
+            
             if (this.txtMaTacGia.Text.Length == 0 && suKien.Equals("THEM"))
             {
                 this.btnXoa.Enabled = false;
@@ -425,6 +436,7 @@ namespace TPNT
 
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
             if (suKienCT.Equals("CT"))
             {
                 gcTacGia.Visible = true;
@@ -433,7 +445,11 @@ namespace TPNT
                 groupBox1.Visible = false;
                 this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = true;
                 this.btnHieuChinh.Enabled = false;
-                this.btnThem.Enabled = true;
+                if (Program.mGroup.Equals("QUANLI"))
+                {
+                    this.btnThem.Enabled = true;
+                }
+                    
             } else this.Close();
             suKienCT = "";
         }
@@ -441,13 +457,20 @@ namespace TPNT
         private void btnChiTiet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             suKienCT = "CT";
+            if (Program.mGroup.Equals("QUANLI"))
+            {
+                this.btnHieuChinh.Enabled = true;
+            } else
+            {
+                this.btnHieuChinh.Enabled = false;
+            }
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
             this.btnThem.Enabled = this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             gcTacGia.Visible = false;
             groupBox1.Visible = true;
             groupBox1.Dock = DockStyle.Fill;
-            this.btnHieuChinh.Enabled = true;
+            
             this.lblSLTP.Visible = this.txtSLTP.Visible = true;
             
         }
