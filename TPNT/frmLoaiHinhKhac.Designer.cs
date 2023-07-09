@@ -150,7 +150,7 @@
             this.bar1.BarAppearance.Pressed.Options.UseFont = true;
             this.bar1.BarName = "Tools";
             this.bar1.DockCol = 0;
-            this.bar1.DockRow = 1;
+            this.bar1.DockRow = 0;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThem, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -321,7 +321,7 @@
             this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
             this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.ColumnPanelRowHeight = 40;
+            this.gridView1.ColumnPanelRowHeight = 20;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMa,
             this.colTen,
@@ -329,7 +329,7 @@
             this.colPhongCach});
             this.gridView1.GridControl = this.gcLoaiHinhKhac;
             this.gridView1.Name = "gridView1";
-            this.gridView1.RowHeight = 40;
+            this.gridView1.RowHeight = 20;
             // 
             // colMa
             // 
