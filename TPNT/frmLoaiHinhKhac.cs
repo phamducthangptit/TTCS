@@ -23,6 +23,7 @@ namespace TPNT
 
         private void frmLoaiHinhKhac_Load(object sender, EventArgs e)
         {
+            this.v_SELECTLOAIHINHKHACTableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_SELECTLOAIHINHKHACTableAdapter.Fill(this.tPNTDataSet.V_SELECTLOAIHINHKHAC);
 
             groupBox1.Visible = false;
@@ -138,6 +139,7 @@ namespace TPNT
                     gcLoaiHinhKhac.Dock = DockStyle.Fill;
                     this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = true;
                     this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
+                    this.v_SELECTLOAIHINHKHACTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.v_SELECTLOAIHINHKHACTableAdapter.Fill(this.tPNTDataSet.V_SELECTLOAIHINHKHAC);
                     MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
                 } else
@@ -197,6 +199,7 @@ namespace TPNT
                 {
                     MessageBox.Show("Lỗi xóa. Bạn hãy xóa lại\n" + ex.Message, "",
                         MessageBoxButtons.OK);
+                    this.v_SELECTLOAIHINHKHACTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.v_SELECTLOAIHINHKHACTableAdapter.Fill(this.tPNTDataSet.V_SELECTLOAIHINHKHAC);
                     bdsLoaiHinhKhac.Position = bdsLoaiHinhKhac.Find("Ma", maTP);
                     return;
@@ -242,6 +245,7 @@ namespace TPNT
 
             try
             {
+                this.v_SELECTLOAIHINHKHACTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.v_SELECTLOAIHINHKHACTableAdapter.Fill(this.tPNTDataSet.V_SELECTLOAIHINHKHAC);
                 bdsLoaiHinhKhac.Position = vitri;
             }

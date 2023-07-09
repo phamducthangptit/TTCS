@@ -31,6 +31,7 @@ namespace TPNT
         private void frmTacGia_Load(object sender, EventArgs e)
         {
             tPNTDataSet.EnforceConstraints = false;
+            this.TacGiaTableAdapter.Connection.ConnectionString = Program.connstr;
             this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);  
 
             gcTacGia.Dock = DockStyle.Fill;
@@ -150,6 +151,7 @@ namespace TPNT
                 {
                     MessageBox.Show("Lỗi xóa tác giả. Bạn hãy xóa lại\n" + ex.Message, "",
                         MessageBoxButtons.OK);
+                    this.TacGiaTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
                     bdsTacGia.Position = bdsTacGia.Find("MaTacGia", maTG);
                     return;
@@ -181,6 +183,7 @@ namespace TPNT
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
             }
 
+            this.TacGiaTableAdapter.Connection.ConnectionString = Program.connstr;
             this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
             bdsTacGia.Position = vitri;
         }
@@ -202,13 +205,6 @@ namespace TPNT
             }
         }
 
-        private void tacGiaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bdsTacGia.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.tPNTDataSet);
-
-        }
 
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
@@ -573,7 +569,7 @@ namespace TPNT
                 {
                     MessageBox.Show($"Đã xảy ra lỗi khi nhập dữ liệu từ Excel: \n{ex.Message}", "Lỗi nhập từ Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                this.TacGiaTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
             }
         }
