@@ -98,7 +98,7 @@ namespace TPNT
             MaCTL = rowView["MaSoCTL"].ToString();
             DateTime timeFrom = (DateTime)rowView["NgayBD"];
             bool check = true;
-            if (soSanhNgay(DateTime.Today.ToString("dd/MM/yyyy"), timeFromPH.ToString("dd/MM/yyyy")) <= 0)
+            if (soSanhNgay(DateTime.Today.ToString("dd/MM/yyyy"), timeFrom.ToString("dd/MM/yyyy")) <= 0)
             {
                check = false;
             }
