@@ -335,6 +335,7 @@
             this.txtTriGia.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtTriGia.Properties.MaskSettings.Set("mask", "d");
             this.txtTriGia.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtTriGia.Properties.ReadOnly = true;
             this.txtTriGia.Size = new System.Drawing.Size(109, 22);
             this.txtTriGia.TabIndex = 11;
             // 

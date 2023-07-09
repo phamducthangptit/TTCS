@@ -194,6 +194,9 @@ namespace TPNT
 
         private void frmBackup_Restore_Load(object sender, EventArgs e)
         {
+            this.v_DANHSACHJOBDAILYTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.v_DANHSACHJOBWEEKLYTableAdapter.Connection.ConnectionString = Program.connstr;
+
             this.v_DANHSACHJOBWEEKLYTableAdapter.Fill(this.tPNTDataSet.V_DANHSACHJOBWEEKLY);
             this.v_DANHSACHJOBDAILYTableAdapter.Fill(this.tPNTDataSet.V_DANHSACHJOBDAILY);
 
@@ -230,6 +233,7 @@ namespace TPNT
             if (cmbDSJob.SelectedIndex == 0)
             {
                 int vitri = bdsDailyJob.Position;
+                this.v_DANHSACHJOBDAILYTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.v_DANHSACHJOBDAILYTableAdapter.Fill(this.tPNTDataSet.V_DANHSACHJOBDAILY);
                 bdsDailyJob.Position = vitri;
                 girdControlWeekly.Visible = false;
@@ -247,6 +251,7 @@ namespace TPNT
             else
             {
                 int vitri = bdsWeeklyJob.Position;
+                this.v_DANHSACHJOBWEEKLYTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.v_DANHSACHJOBWEEKLYTableAdapter.Fill(this.tPNTDataSet.V_DANHSACHJOBWEEKLY);
                 bdsWeeklyJob.Position = vitri;
                 girdControlDaily.Visible = false;

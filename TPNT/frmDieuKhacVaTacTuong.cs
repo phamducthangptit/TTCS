@@ -117,7 +117,18 @@ namespace TPNT
                 txtPhongCach.Focus();
                 return false;
             }
-
+            if (int.Parse(txtKhoiLuong.Text) <= 0)
+            {
+                MessageBox.Show("Khối Lượng phải lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK);
+                txtKhoiLuong.Focus();
+                return false;
+            }
+            if (int.Parse(txtChieuCao.Text) <= 0)
+            {
+                MessageBox.Show("Chiều Cao phải lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK);
+                txtChieuCao.Focus();
+                return false;
+            }
             return true;
         }
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

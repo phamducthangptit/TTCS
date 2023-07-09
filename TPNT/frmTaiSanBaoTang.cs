@@ -113,7 +113,12 @@ namespace TPNT
                 txtTriGia.Focus();
                 return false;
             }
-           
+           if (int.Parse(txtTriGia.Text) <= 0)
+            {
+                MessageBox.Show("Trị Giá phải lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK);
+                txtTriGia.Focus();
+                return false;
+            }    
 
             return true;
         }
