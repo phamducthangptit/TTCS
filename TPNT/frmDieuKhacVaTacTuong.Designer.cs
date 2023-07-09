@@ -39,13 +39,13 @@
             this.btnHoanTac = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
-            this.btnBackup = new DevExpress.XtraBars.BarButtonItem();
-            this.btnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnBackup = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.tPNTDataSet1 = new TPNT.TPNTDataSet1();
             this.bdsDieuKhacTacTuong = new System.Windows.Forms.BindingSource(this.components);
             this.view_ListDieuKhacTacTuongTableAdapter = new TPNT.TPNTDataSet1TableAdapters.View_ListDieuKhacTacTuongTableAdapter();
@@ -199,20 +199,6 @@
             this.btnReload.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReload_ItemClick);
             // 
-            // btnBackup
-            // 
-            this.btnBackup.Caption = "Backup";
-            this.btnBackup.Id = 7;
-            this.btnBackup.Name = "btnBackup";
-           // this.btnBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBackup_ItemClick);
-            // 
-            // btnRestore
-            // 
-            this.btnRestore.Caption = "Restore";
-            this.btnRestore.Id = 8;
-            this.btnRestore.Name = "btnRestore";
-            //this.btnRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRestore_ItemClick);
-            // 
             // bar3
             // 
             this.bar3.BarName = "Status bar";
@@ -256,6 +242,18 @@
             this.barDockControlRight.Location = new System.Drawing.Point(970, 30);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 503);
+            // 
+            // btnBackup
+            // 
+            this.btnBackup.Caption = "Backup";
+            this.btnBackup.Id = 7;
+            this.btnBackup.Name = "btnBackup";
+            // 
+            // btnRestore
+            // 
+            this.btnRestore.Caption = "Restore";
+            this.btnRestore.Id = 8;
+            this.btnRestore.Name = "btnRestore";
             // 
             // tPNTDataSet1
             // 
@@ -455,7 +453,7 @@
             this.txtPhongCach.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhongCach.Properties.Appearance.Options.UseFont = true;
             this.txtPhongCach.Size = new System.Drawing.Size(109, 26);
-            this.txtPhongCach.TabIndex = 11;
+            this.txtPhongCach.TabIndex = 10;
             // 
             // btnChonLai
             // 
@@ -479,7 +477,7 @@
             this.txtVatLieu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVatLieu.Properties.Appearance.Options.UseFont = true;
             this.txtVatLieu.Size = new System.Drawing.Size(109, 26);
-            this.txtVatLieu.TabIndex = 9;
+            this.txtVatLieu.TabIndex = 8;
             // 
             // txtChieuCao
             // 
@@ -494,7 +492,7 @@
             this.txtChieuCao.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtChieuCao.Properties.MaskSettings.Set("mask", "d");
             this.txtChieuCao.Size = new System.Drawing.Size(109, 26);
-            this.txtChieuCao.TabIndex = 8;
+            this.txtChieuCao.TabIndex = 9;
             // 
             // txtKhoiLuong
             // 

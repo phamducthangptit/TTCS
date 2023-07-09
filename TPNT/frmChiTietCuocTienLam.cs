@@ -20,12 +20,14 @@ namespace TPNT
         string ma = "";
         string maTPNT;
         string maTPNTPH;
+        bool kt;
         
-        public frmChiTietCuocTienLam(string MaCTL)
+        public frmChiTietCuocTienLam(string MaCTL , bool check)
         {
            
             InitializeComponent();
             ma = MaCTL; 
+            kt = check;
             btnLuu.Enabled = false;
         }
         
@@ -61,7 +63,7 @@ namespace TPNT
                     DataRowView rowView = (DataRowView)bdsChiTietCTL[bdsChiTietCTL.Position];
                     maTPNT = rowView["MaSoTP"].ToString();
                     maTPNTPH =  rowView["MaSoTP"].ToString();
-                    using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                    using (SqlConnection connection = new SqlConnection(Program.connstr))
                     {
                         connection.Open();
 
@@ -111,7 +113,8 @@ namespace TPNT
             try
             {
                 phuchoi = "THEM";
-                using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                maTPNT = ((DataRowView)bdsThemChiTiet[bdsThemChiTiet.Position])["MaSoTP"].ToString();
+                using (SqlConnection connection = new SqlConnection(Program.connstr))
                 {
                     connection.Open();
                     using (SqlCommand command = new SqlCommand("SP_InsertCTCuocTrienLam", connection))
@@ -150,10 +153,7 @@ namespace TPNT
             }
         }
 
-        private void bdsThemChiTiet_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void frmChiTietCuocTienLam_Load(object sender, EventArgs e)
         {
@@ -163,20 +163,20 @@ namespace TPNT
 
             this.SP_TPNT_ChiTietCTLTableAdapter.Connection.ConnectionString = Program.connstr;
             this.SP_TPNT_ChiTietCTLTableAdapter.Fill(this.tPNTDataSet1.SP_TPNT_ChiTietCTL, ma);
+            if (!Program.mGroup.Equals("QUANLI") || kt == false)
+            {
+                btnThem.Enabled = false;
+                btnXoa.Enabled = false;
+                btnHoanTac.Enabled = false;
+                btnLuu.Enabled = false;
+            }
+               
             if (bdsChiTietCTL.Count <= 0)
             {
                 btnXoa.Enabled = false;
                 return;
             }
         }
-
-        private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            //MessageBox.Show(bdsThemChiTiet.Count + "");
-             maTPNT = ((DataRowView)bdsThemChiTiet[bdsThemChiTiet.Position])["MaSoTP"].ToString();
-            
-        }
-
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (phuchoi.Equals("THEM"))
@@ -186,7 +186,8 @@ namespace TPNT
                     try
                     {
                         phuchoi = "";
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
 
@@ -229,7 +230,7 @@ namespace TPNT
                 {
                     try
                     {
-                        using (SqlConnection connection = new SqlConnection(Program.connstr_publisher))
+                        using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
                             connection.Open();
                             using (SqlCommand command = new SqlCommand("SP_InsertCTCuocTrienLam", connection))
@@ -291,6 +292,11 @@ namespace TPNT
             btnThem.Enabled = true;
             btnXoa.Enabled = true;
             btnHoanTac.Enabled = true;
+            if (phuchoi == "")
+            {
+                btnHoanTac.Enabled = false;
+
+            }
             if (bdsChiTietCTL.Count == 0)
             {
                 btnXoa.Enabled = false;

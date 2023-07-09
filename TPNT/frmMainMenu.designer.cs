@@ -551,7 +551,6 @@
             // 
             // panelHome
             // 
-            this.panelHome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelHome.Controls.Add(this.label2);
             this.panelHome.Controls.Add(this.label1);
             this.panelHome.Controls.Add(this.pictureBox1);

@@ -64,7 +64,6 @@
             this.bdsTacPhamNgheThuat = new System.Windows.Forms.BindingSource(this.components);
             this.tPNTTableAdapter = new TPNT.TPNTDataSetTableAdapters.TPNTTableAdapter();
             this.grbNhap = new System.Windows.Forms.GroupBox();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.dtpTo = new DevExpress.XtraEditors.DateEdit();
             this.dtpFrom = new DevExpress.XtraEditors.DateEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -406,7 +405,6 @@
             // grbNhap
             // 
             this.grbNhap.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grbNhap.Controls.Add(this.btnLuu);
             this.grbNhap.Controls.Add(this.dtpTo);
             this.grbNhap.Controls.Add(this.dtpFrom);
             this.grbNhap.Controls.Add(this.labelControl3);
@@ -425,22 +423,10 @@
             this.grbNhap.TabStop = false;
             this.grbNhap.Text = "Nhập Thông Tin";
             // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.Lime;
-            this.btnLuu.Location = new System.Drawing.Point(621, 161);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(5);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(190, 48);
-            this.btnLuu.TabIndex = 11;
-            this.btnLuu.Text = "Chọn Tác Phẩm";
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
             // dtpTo
             // 
             this.dtpTo.EditValue = null;
-            this.dtpTo.Location = new System.Drawing.Point(152, 170);
+            this.dtpTo.Location = new System.Drawing.Point(150, 171);
             this.dtpTo.Margin = new System.Windows.Forms.Padding(5);
             this.dtpTo.MenuManager = this.barManager1;
             this.dtpTo.Name = "dtpTo";
@@ -454,7 +440,7 @@
             // dtpFrom
             // 
             this.dtpFrom.EditValue = null;
-            this.dtpFrom.Location = new System.Drawing.Point(152, 121);
+            this.dtpFrom.Location = new System.Drawing.Point(150, 122);
             this.dtpFrom.Margin = new System.Windows.Forms.Padding(5);
             this.dtpFrom.MenuManager = this.barManager1;
             this.dtpFrom.Name = "dtpFrom";
@@ -503,7 +489,7 @@
             // 
             // txtMaCTL
             // 
-            this.txtMaCTL.Location = new System.Drawing.Point(152, 65);
+            this.txtMaCTL.Location = new System.Drawing.Point(150, 66);
             this.txtMaCTL.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaCTL.Name = "txtMaCTL";
             this.txtMaCTL.Size = new System.Drawing.Size(154, 23);
@@ -723,7 +709,6 @@
         private DevExpress.XtraEditors.GroupControl grbThemCTL;
         private System.Windows.Forms.GroupBox grbDSTPNT;
         private System.Windows.Forms.GroupBox grbNhap;
-        private System.Windows.Forms.Button btnLuu;
         private DevExpress.XtraEditors.DateEdit dtpTo;
         private DevExpress.XtraEditors.DateEdit dtpFrom;
         private DevExpress.XtraEditors.LabelControl labelControl3;
