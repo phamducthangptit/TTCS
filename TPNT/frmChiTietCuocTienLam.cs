@@ -163,7 +163,7 @@ namespace TPNT
 
             this.SP_TPNT_ChiTietCTLTableAdapter.Connection.ConnectionString = Program.connstr;
             this.SP_TPNT_ChiTietCTLTableAdapter.Fill(this.tPNTDataSet1.SP_TPNT_ChiTietCTL, ma);
-            if (!Program.mGroup.ToUpper().Equals("QUANLI") || kt == false)
+            if (!Program.mGroup.Equals("QUANLI") || kt == false)
             {
                 btnThem.Enabled = false;
                 btnXoa.Enabled = false;
@@ -177,20 +177,6 @@ namespace TPNT
                 return;
             }
         }
-
-       /* private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            //MessageBox.Show(bdsThemChiTiet.Count + "");
-            if (bdsChiTietCTL.Count <=0)
-            {
-                return;
-            }
-            else 
-            { maTPNT = ((DataRowView)bdsThemChiTiet[bdsThemChiTiet.Position])["MaSoTP"].ToString(); }
-             
-            
-        }*/
-
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (phuchoi.Equals("THEM"))

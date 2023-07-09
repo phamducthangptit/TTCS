@@ -32,7 +32,7 @@ namespace TPNT
             tPNTDataSet1.EnforceConstraints = false;
             // TODO: This line of code loads data into the 'tPNTDataSet1.View_ListDieuKhacTacTuong' table. You can move, or remove it, as needed.
             this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
-            if (!Program.mGroup.ToUpper().Equals("QUANLI"))
+            if (!Program.mGroup.Equals("QUANLI"))
             {
                 btnThem.Enabled = false;
                 btnXoa.Enabled = false;
