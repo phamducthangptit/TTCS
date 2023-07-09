@@ -163,7 +163,7 @@ namespace TPNT
 
             this.SP_TPNT_ChiTietCTLTableAdapter.Connection.ConnectionString = Program.connstr;
             this.SP_TPNT_ChiTietCTLTableAdapter.Fill(this.tPNTDataSet1.SP_TPNT_ChiTietCTL, ma);
-            if (!Program.mGroup.ToUpper().Equals("QUANLI") || kt == false)
+            if (!Program.mGroup.Equals("QUANLI") || kt == false)
             {
                 btnThem.Enabled = false;
                 btnXoa.Enabled = false;

@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using GemBox.Spreadsheet;
 
 namespace TPNT
 {
@@ -18,10 +19,10 @@ namespace TPNT
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
 
-        public static String connstr_publisher = "Data Source=MSI;Initial Catalog=TPNT;Integrated Security=True";
+        //public static String connstr_publisher = "Data Source=MSI;Initial Catalog=TPNT;Integrated Security=True";
 
         public static SqlDataReader myReader;
-        public static String servername = "";
+        public static String servername = "ADMIN-PC";
 
         public static String username = "";
         public static String mlogin = "";
@@ -110,7 +111,7 @@ namespace TPNT
             }
             catch (SqlException e)
             {
-                MessageBox.Show("Lỗi " + e.Message);
+                //MessageBox.Show("Lỗi " + e.Message);
                 conn.Close();
                 return e.State;
             }
@@ -126,6 +127,42 @@ namespace TPNT
             return dt;
         }
 
+        public static DataTable docFileExcel(string filePath,int trang)
+        {
+
+            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+            // Đọc file Excel.
+            ExcelFile workbook = ExcelFile.Load(filePath);
+
+            // Lấy sheet đầu tiên trong workbook.
+            ExcelWorksheet worksheet = workbook.Worksheets[trang];
+
+
+            // Lấy số lượng hàng và cột trong sheet.
+            int rowCount = worksheet.Rows.Count;
+            int columnCount = worksheet.CalculateMaxUsedColumns();
+            DataTable dataTable = new DataTable();
+
+            // Lấy danh sách cột từ hàng đầu tiên trong bảng tính và thêm chúng vào DataTable
+            for (int column = 0; column < columnCount; column++)
+            {
+                string columnName = worksheet.Cells[0, column].Value?.ToString();
+                dataTable.Columns.Add(columnName, typeof(object));
+            }
+
+            // Đọc dữ liệu từ các ô trong bảng tính và thêm vào DataTable
+            for (int row = 1; row < rowCount; row++)
+            {
+                DataRow dataRow = dataTable.NewRow();
+                for (int column = 0; column < columnCount; column++)
+                {
+                    dataRow[column] = worksheet.Cells[row, column].Value?.ToString();
+                }
+                dataTable.Rows.Add(dataRow);
+            }
+            return dataTable;
+        }
 
         [STAThread]
         static void Main()
