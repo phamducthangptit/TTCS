@@ -194,9 +194,8 @@ namespace TPNT
 
         private void frmBackup_Restore_Load(object sender, EventArgs e)
         {
-            this.v_DANHSACHJOBDAILYTableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_DANHSACHJOBWEEKLYTableAdapter.Connection.ConnectionString = Program.connstr;
-
+            this.v_DANHSACHJOBDAILYTableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_DANHSACHJOBWEEKLYTableAdapter.Fill(this.tPNTDataSet.V_DANHSACHJOBWEEKLY);
             this.v_DANHSACHJOBDAILYTableAdapter.Fill(this.tPNTDataSet.V_DANHSACHJOBDAILY);
 
@@ -579,6 +578,11 @@ namespace TPNT
             Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" +
                     Program.database + ";User ID=" + Program.mlogin + ";password=" + Program.password;
             MessageBox.Show("" + Program.connstr, "", MessageBoxButtons.OK);
+        }
+
+        private void cmbThu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
