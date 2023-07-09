@@ -127,21 +127,21 @@
     <value>160, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="simpleButton2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALAAAACwARRqq2kAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABFElEQVRIS+2TTUsCURRAB7JWalDpol/g3l8htDCI1oFUv87WrRQUdVW0tEWbRLSVi6JtnTPxhKYZ
-        GKZoNQcOzLtzufd9RiUlf04Fr3GIr/iCE+zhHv6KJj7gR4ZjNKcQzu4eLfSEp1jDKp7hIyYbpumqb7GN
-        37hCEyx+YCDBIc4xWTDLd2zhlin6w5lLF1e4wI4BcCXmzOJROsd4g+b1DQQ2aNBtkTU61mcDcISO3+JR
-        NjYxzxpbQoN6PPqafWiwNAD7WLhB2CK3QU7QJhb3W87RnEJbdIkGvS0eaBJjnoc5efxxyF7TO/Snt8WV
-        WNQtc+Z5i2deU2lgeAtpjrDwQwvsoG9igB685+ALvsBdLCn5d6LoE4S2eGYNW48aAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="simpleButton1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDisable.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIASURBVEhL7VRd
+        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEhL7ZNN
+        SwJRFEAHslZqUOmiX+DeXyG0MIjWgVS/ztatFBR1VbS0RZtEtJWLom2dM/GEphkYpmg1Bw7Mu3O5931G
+        JSV/TgWvcYiv+IIT7OEe/oomPuBHhmM0pxDO7h4t9ISnWMMqnuEjJhum6apvsY3fuEITLH5gIMEhzjFZ
+        MMt3bOGWKfrDmUsXV7jAjgFwJebM4lE6x3iD5vUNBDZo0G2RNTrWZwNwhI7f4lE2NjHPGltCg3o8+pp9
+        aLA0APtYuEHYIrdBTtAmFvdbztGcQlt0iQa9LR5oEmOehzl5/HHIXtM79Ke3xZVY1C1z5nmLZ15TaWB4
+        C2mOsPBDC+ygb2KAHrzn4Au+wF0sKfl3ougThLZ4Zg1bjxoAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnEnable.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        rgAAAK4B+ff3XQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIASURBVEhL7VRd
         SxtBFL0JyUZNtAqazYrB2NJ86gqGYGLb1GIfxPrSNMpuohI/niwUfFEQfG5F/BX6IxR8UPwL/Qdtf0J9
         yMPezplsJDHrR3wr5MCB2Tsz5945c2epgw4ckXo3lxxN6tf9g8Ebj1dhsH9QvRlN6Nfj+Y8Je9nzEE1n
         j72Kz3K73Tz8MsqpbF4SY8S8Pp8VT+eO7OXtAeJELlbDY1z4useVg6MmIhYMR9jlcnFzEmN9mvTMb+ru
@@ -153,9 +153,6 @@
         H2J4RLhEj6JY6BaMhedXbdvSwf8Oon/bMrM7c3OGoQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="tPNTDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="v_DANHSACHJOBDAILYTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>478, 17</value>
   </metadata>

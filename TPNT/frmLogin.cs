@@ -56,6 +56,18 @@ namespace TPNT
         {
             Program.mlogin = txtTaiKhoan.Text;
             Program.password = txtMatKhau.Text;
+            if (Program.mlogin.Equals(""))
+            {
+                MessageBox.Show("Tài khoản không thể để trống!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTaiKhoan.Focus();
+                return;
+            }
+            if (Program.password.Equals(""))
+            {
+                MessageBox.Show("Mật khẩu không thể để trống!", "Thông báo ", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                txtMatKhau.Focus();
+                return;
+            }
             if (Program.KetNoi() == 0) return;
 
             string strLenh = "EXEC SP_DANGNHAP '" + Program.mlogin + "'";

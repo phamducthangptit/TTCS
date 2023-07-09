@@ -3,6 +3,7 @@ using DevExpress.Utils.Extensions;
 using DevExpress.Xpo.DB;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Columns;
+using GemBox.Spreadsheet;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -58,15 +59,9 @@ namespace TPNT
         private void frmCuocTrienLam_Load(object sender, EventArgs e)
         {
             tPNTDataSet.EnforceConstraints = false;
-            // TODO: This line of code loads data into the 'tPNTDataSet.CT_CuocTrienLam' table. You can move, or remove it, as needed.
-            /*          this.cT_CuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CT_CuocTrienLam);*/
-            // TODO: This line of code loads data into the 'tPNTDataSet1.View_ListTPNT' table. You can move, or remove it, as needed.
-            this.view_ListTPNTTableAdapter.Fill(this.tPNTDataSet1.View_ListTPNT);
-            // TODO: This line of code loads data into the 'tPNTDataSet.TPNT' table. You can move, or remove it, as needed.
-            //this.tPNTTableAdapter.Fill(this.tPNTDataSet.TPNT);
-            // TODO: This line of code loads data into the 'tPNTDataSet.CT_CuocTrienLam' table. You can move, or remove it, as needed.
 
-            // TODO: This line of code loads data into the 'tPNTDataSet.CuocTrienLam' table. You can move, or remove it, as needed.
+            this.view_ListTPNTTableAdapter.Fill(this.tPNTDataSet1.View_ListTPNT);
+
             this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
             if (!Program.mGroup.Equals("QUANLI"))
             {
@@ -800,6 +795,221 @@ namespace TPNT
             {
                 MessageBox.Show("Lỗi Reload: " + ex.Message, "", MessageBoxButtons.OK);
                 return;
+            }
+        }
+
+        private void btnExport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Save an Excel File"
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Lấy DataTable từ BindingSource
+                    DataTable dataTable = new DataTable();
+                    for (int i = 0; i < bdsCuocTrienLam.List.Count; i++)
+                    {
+                        DataRowView rowView = (DataRowView)bdsCuocTrienLam.List[i];
+                        DataRow row = rowView.Row;
+                        if (i == 0)
+                        {
+                            foreach (DataColumn column in row.Table.Columns)
+                            {
+                                dataTable.Columns.Add(column.ColumnName);
+                            }
+                        }
+                        dataTable.ImportRow(row);
+                    }
+                    // Xuất DataTable ra Excel
+                    SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+                    var workbook = new ExcelFile();
+                    var worksheet = workbook.Worksheets.Add("Danh sách cuộc tiển lãm");
+                    worksheet.InsertDataTable(dataTable,
+                            new InsertDataTableOptions()
+                            {
+                                ColumnHeaders = true,
+                                StartRow = 0
+                            });
+                    for (int i = 0; i < bdsCuocTrienLam.List.Count; i++)
+                    {
+                        string maCTLex = ((DataRowView)bdsCuocTrienLam.List[i])["MaSoCTL"].ToString();
+                        string sql1 = "EXEC SP_CT_CTL '" + maCTLex + "'";
+                        DataTable dt1 = Program.ExecSqlDataTable(sql1);
+                        var worksheet1 = workbook.Worksheets.Add(maCTLex);
+                        worksheet1.InsertDataTable(dt1,
+                                new InsertDataTableOptions()
+                                {
+                                    ColumnHeaders = true,
+                                    StartRow = 0
+                                });
+                    }
+
+
+                    workbook.Save(saveFileDialog.FileName);
+
+                    MessageBox.Show("Dữ liệu đã được xuất thành công vào tập tin Excel!", "Xuất Excel thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Đã xảy ra lỗi khi xuất dữ liệu ra Excel: {ex.Message}", "Lỗi xuất Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Import an Excel File"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                DataTable dataTable = new DataTable();
+                SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+                // Đọc file Excel.
+                ExcelFile workbook = ExcelFile.Load(openFileDialog.FileName);
+
+                // Lấy sheet đầu tiên trong workbook.
+                ExcelWorksheet worksheet = workbook.Worksheets[0];
+
+                int sheetCount = workbook.Worksheets.Count;
+                // Lấy số lượng hàng và cột trong sheet.
+                int rowCount = worksheet.Rows.Count;
+                int columnCount = worksheet.CalculateMaxUsedColumns();
+
+                // Lấy danh sách cột từ hàng đầu tiên trong bảng tính và thêm chúng vào DataTable
+                for (int column = 0; column < columnCount; column++)
+                {
+                    string columnName = worksheet.Cells[0, column].Value?.ToString();
+                    dataTable.Columns.Add(columnName, typeof(object));
+                }
+
+                // Đọc dữ liệu từ các ô trong bảng tính và thêm vào DataTable
+                for (int row = 1; row < rowCount; row++)
+                {
+                    DataRow dataRow = dataTable.NewRow();
+                    for (int column = 0; column < columnCount; column++)
+                    {
+                        dataRow[column] = worksheet.Cells[row, column].Value?.ToString();
+                    }
+                    dataTable.Rows.Add(dataRow);
+                }
+                DataTable dataTable1 = new DataTable();
+                if (sheetCount > 1)
+                {
+                    ExcelWorksheet worksheet1 = workbook.Worksheets[1];
+
+
+                    // Lấy số lượng hàng và cột trong sheet.
+                    int rowCount1 = worksheet1.Rows.Count;
+                    int columnCount1 = worksheet1.CalculateMaxUsedColumns();
+
+                    // Lấy danh sách cột từ hàng đầu tiên trong bảng tính và thêm chúng vào DataTable
+                    for (int column = 0; column < columnCount1; column++)
+                    {
+                        string columnName = worksheet1.Cells[0, column].Value?.ToString();
+                        dataTable1.Columns.Add(columnName, typeof(object));
+                    }
+
+                    // Đọc dữ liệu từ các ô trong bảng tính và thêm vào DataTable
+                    for (int row = 1; row < rowCount1; row++)
+                    {
+                        DataRow dataRow = dataTable1.NewRow();
+                        for (int column = 0; column < columnCount1; column++)
+                        {
+                            dataRow[column] = worksheet1.Cells[row, column].Value?.ToString();
+                        }
+                        dataTable1.Rows.Add(dataRow);
+                    }
+                    for (int i = 2; i < sheetCount; i++)
+                    {
+                        worksheet1 = workbook.Worksheets[i];
+
+
+                        // Lấy số lượng hàng và cột trong sheet.
+                        rowCount1 = worksheet1.Rows.Count;
+                        columnCount1 = worksheet1.CalculateMaxUsedColumns();
+                        for (int row = 1; row < rowCount1; row++)
+                        {
+                            DataRow dataRow = dataTable1.NewRow();
+                            for (int column = 0; column < columnCount1; column++)
+                            {
+                                dataRow[column] = worksheet1.Cells[row, column].Value?.ToString();
+                            }
+                            dataTable1.Rows.Add(dataRow);
+                        }
+                    }
+                }
+                using (SqlConnection connection = new SqlConnection(Program.connstr))
+                {
+                    if (connection.State == ConnectionState.Closed) connection.Open();
+                    SqlTransaction transaction = connection.BeginTransaction();
+                    try
+                    { 
+                        using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connection, SqlBulkCopyOptions.Default, transaction))
+                        {
+                            bulkCopy.DestinationTableName =
+                                "dbo.CuocTrienLam";
+
+                            // Set up the column mappings by name.
+                            SqlBulkCopyColumnMapping ma =
+                                new SqlBulkCopyColumnMapping("MaSoCTL", "MaSoCTL");
+                            bulkCopy.ColumnMappings.Add(ma);
+
+                            SqlBulkCopyColumnMapping ten =
+                                new SqlBulkCopyColumnMapping("Ten", "Ten");
+                            bulkCopy.ColumnMappings.Add(ten);
+
+                            SqlBulkCopyColumnMapping ngayBD =
+                                new SqlBulkCopyColumnMapping("NgayBD", "NgayBD");
+                            bulkCopy.ColumnMappings.Add(ngayBD);
+
+                            SqlBulkCopyColumnMapping ngayKT =
+                                new SqlBulkCopyColumnMapping("NgayKT", "NgayKT");
+                            bulkCopy.ColumnMappings.Add(ngayKT);
+
+                            // Write from the source to the destination.
+
+                            bulkCopy.WriteToServer(dataTable);
+                            if (sheetCount > 1)
+                            {
+                                bulkCopy.DestinationTableName =
+                                    "dbo.CT_CuocTrienLam";
+                                bulkCopy.ColumnMappings.Clear();
+                                // Set up the column mappings by name.
+
+                                bulkCopy.ColumnMappings.Add("MaSoCTL", "MaSoCTL");
+
+                                bulkCopy.ColumnMappings.Add("MaSoTP", "MaSoTP");
+
+                                bulkCopy.WriteToServer(dataTable1);
+                            }
+                            transaction.Commit();
+
+                        }
+                        MessageBox.Show("Dữ liệu đã được nhập thành công từ tập tin Excel!", "Nhập từ Excel thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        MessageBox.Show($"Đã xảy ra lỗi khi nhập dữ liệu từ Excel: \n{ex.Message}", "Lỗi nhập từ Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                tPNTDataSet.EnforceConstraints = false;
+
+                this.view_ListTPNTTableAdapter.Fill(this.tPNTDataSet1.View_ListTPNT);
+
+                this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
             }
         }
     }
