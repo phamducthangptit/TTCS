@@ -25,8 +25,11 @@ namespace TPNT
         private void frmLoaiHinhDiMuon_Load(object sender, EventArgs e)
         {
             tPNTDataSet.EnforceConstraints = false;
+            this.v_TAC_GIATableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_TAC_GIATableAdapter.Fill(this.tPNTDataSet.V_TAC_GIA);
+            this.v_BO_SUU_TAPTableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_BO_SUU_TAPTableAdapter.Fill(this.tPNTDataSet.V_BO_SUU_TAP);
+            this.sP_BOSUUTAP_TPNTTableAdapter.Connection.ConnectionString = Program.connstr;
             this.sP_BOSUUTAP_TPNTTableAdapter.Fill(this.tPNTDataSet.SP_BOSUUTAP_TPNT);
 
             if (Program.mGroup.Equals("KHACH"))
@@ -39,11 +42,28 @@ namespace TPNT
                 btnThem.Enabled = btnHieuChinh.Enabled =
                     btnXoa.Enabled  = true;
             }
+            if (bdsBoSuuTap.Count == 0)
+            {
+                btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = false;
+            }
+            else
+            {
+                btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = true;
+            }
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (bdsLoaiDiMuon.Count == 0) return;
+            if (bdsLoaiDiMuon.Count == 0)
+            {
+                btnHieuChinh.Enabled = btnXoa.Enabled = false;
+                return;
+            } else
+            {
+                btnHieuChinh.Enabled = btnXoa.Enabled = true;
+            }
+                
+            
             string hinhAnh = ((DataRowView)bdsLoaiDiMuon[bdsLoaiDiMuon.Position])["HinhAnh"].ToString();
             if (hinhAnh.Equals(""))
             {
@@ -63,7 +83,16 @@ namespace TPNT
 
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            if (bdsLoaiDiMuon.Count == 0) return;
+            if (bdsLoaiDiMuon.Count == 0)
+            {
+                btnHieuChinh.Enabled = btnXoa.Enabled = false;
+                return;
+            }
+            else
+            {
+                btnHieuChinh.Enabled = btnXoa.Enabled = true;
+            }
+
             viTriBST = bdsBoSuuTap.Position;
             string hinhAnh = ((DataRowView)bdsLoaiDiMuon[bdsLoaiDiMuon.Position])["HinhAnh"].ToString();
             if (hinhAnh.Equals(""))

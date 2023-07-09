@@ -29,6 +29,7 @@ namespace TPNT
         }
         private void frmChonTacPham_Load(object sender, EventArgs e)
         {
+            this.v_SELECTTACPHAMTableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_SELECTTACPHAMTableAdapter.Fill(this.tPNTDataSet.V_SELECTTACPHAM);
         }
 

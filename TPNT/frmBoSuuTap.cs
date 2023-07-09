@@ -38,6 +38,13 @@ namespace TPNT
                 btnThem.Enabled = btnHieuChinh.Enabled =
                     btnXoa.Enabled  = true;
             }
+            if (bdsBoSuuTap.Count == 0)
+            {
+                btnHieuChinh.Enabled = btnXoa.Enabled = false;
+            } else
+            {
+                btnHieuChinh.Enabled = btnXoa.Enabled = true;
+            }
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -47,7 +54,7 @@ namespace TPNT
             bdsBoSuuTap.AddNew();
             panelDSBoSuuTap.Enabled = false;
             panelThongTin.Enabled = true;
-            btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = false;
+            btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled  = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
         }
 
@@ -57,7 +64,7 @@ namespace TPNT
             suKien = "HIEUCHINH";
             panelDSBoSuuTap.Enabled = false;
             panelThongTin.Enabled = true;
-            btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = false;
+            btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
         }
 
@@ -68,7 +75,7 @@ namespace TPNT
             suKien = "";
             panelDSBoSuuTap.Enabled = true;
             panelThongTin.Enabled = false;
-            btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = true;
+            btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled =btnXoa.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
         }
 
@@ -159,6 +166,44 @@ namespace TPNT
             if (result == 0)
             {
                 MessageBox.Show("Lưu thành công", "", MessageBoxButtons.OK);
+            }
+            suKien = "";
+            panelDSBoSuuTap.Enabled = false;
+            panelThongTin.Enabled = true;
+            btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = btnXoa.Enabled = true;
+            btnGhi.Enabled = btnPhucHoi.Enabled = false;
+        }
+
+        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string tenBST = txtTen.Text.ToString();
+            DialogResult check = MessageBox.Show("Bạn chắc chắn muốn xoá bộ sưu tập " + tenBST + " ?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (check == DialogResult.Yes)
+            {
+                string ma = txtMa.Text.Trim();
+                string strLenh = "DELETE FROM BoSuuTap WHERE MaBST = '"
+                           + ma +
+                           "'"
+                           ;
+                int result = Program.ExecSqlNonQuery(strLenh, Program.connstr);
+                if (result == 0)
+                {
+                    MessageBox.Show("Xoá bộ sưu tập thành công", "", MessageBoxButtons.OK);
+                }
+                this.v_BO_SUU_TAPTableAdapter.Fill(this.tPNTDataSet.V_BO_SUU_TAP);
+            }
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (bdsBoSuuTap.Count == 0)
+            {
+                btnHieuChinh.Enabled = btnXoa.Enabled = false;
+                return;
+            }
+            else
+            {
+                btnHieuChinh.Enabled = btnXoa.Enabled = true;
             }
         }
     }

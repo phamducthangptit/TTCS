@@ -295,6 +295,7 @@ namespace TPNT
             if (loginResult == DialogResult.OK)
             {
                 Form frm = new frmBackup_Restore();
+                currentChildForm = frm;
                 frm.Show();
             }
         }
