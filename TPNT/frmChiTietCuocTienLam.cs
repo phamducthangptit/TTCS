@@ -177,20 +177,6 @@ namespace TPNT
                 return;
             }
         }
-
-       /* private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            //MessageBox.Show(bdsThemChiTiet.Count + "");
-            if (bdsChiTietCTL.Count <=0)
-            {
-                return;
-            }
-            else 
-            { maTPNT = ((DataRowView)bdsThemChiTiet[bdsThemChiTiet.Position])["MaSoTP"].ToString(); }
-             
-            
-        }*/
-
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (phuchoi.Equals("THEM"))

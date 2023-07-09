@@ -43,8 +43,6 @@
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
-            this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
-            this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -131,7 +129,6 @@
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.bar1,
-            this.bar2,
             this.bar3});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
@@ -145,10 +142,8 @@
             this.btnReload,
             this.btnChiTiet,
             this.btnLuu,
-            this.btnThoat,
             this.barButtonItem1,
             this.btnThem});
-            this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 12;
             this.barManager1.StatusBar = this.bar3;
             // 
@@ -164,7 +159,7 @@
             this.bar1.BarAppearance.Pressed.Options.UseFont = true;
             this.bar1.BarName = "Tools";
             this.bar1.DockCol = 0;
-            this.bar1.DockRow = 1;
+            this.bar1.DockRow = 0;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThem, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -172,8 +167,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLuu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPhucHoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReload, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReload, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.Text = "Tools";
             // 
             // btnThem
@@ -223,24 +217,6 @@
             this.btnReload.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.ImageOptions.Image")));
             this.btnReload.Name = "btnReload";
             this.btnReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReload_ItemClick);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Caption = "Thoát";
-            this.btnThoat.Id = 8;
-            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
-            // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockRow = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
             // 
             // bar3
             // 
@@ -515,13 +491,11 @@
 
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar1;
-        private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarButtonItem btnHieuChinh;
         private DevExpress.XtraBars.BarButtonItem btnLuu;
         private DevExpress.XtraBars.BarButtonItem btnXoa;
         private DevExpress.XtraBars.BarButtonItem btnPhucHoi;
         private DevExpress.XtraBars.BarButtonItem btnReload;
-        private DevExpress.XtraBars.BarButtonItem btnThoat;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;

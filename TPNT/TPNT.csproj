@@ -272,6 +272,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHoiHoa.resx">
       <DependentUpon>frmHoiHoa.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoaiHinhDiMuon.resx">
       <DependentUpon>frmLoaiHinhDiMuon.cs</DependentUpon>
@@ -379,8 +380,10 @@
     <None Include="Resources\edit%282%291.png" />
     <Content Include="Resources\edit.png" />
     <None Include="Resources\exporttoxlsx_16x16.png" />
+    <None Include="Resources\exporttoxlsx_16x161.png" />
     <Content Include="Resources\gallery.png" />
     <None Include="Resources\importmap_16x16.png" />
+    <None Include="Resources\importmap_16x161.png" />
     <Content Include="Resources\logout%281%29.png" />
     <Content Include="Resources\logout.png" />
     <Content Include="Resources\makeup-artist.png" />

@@ -39,7 +39,7 @@ namespace TPNT
             this.view_ListLoaiSoHuuTableAdapter.Fill(this.tPNTDataSet1.View_ListLoaiSoHuu);
             // TODO: This line of code loads data into the 'tPNTDataSet1.view_NullSoHuu' table. You can move, or remove it, as needed.
             // this.view_NullSoHuuTableAdapter.Fill(this.tPNTDataSet1.view_NullSoHuu);
-            if (!Program.mGroup.ToUpper().Equals("QUANLI"))
+            if (!Program.mGroup.Equals("QUANLI"))
             {
                 btnThem.Enabled = false;
                 btnXoa.Enabled = false;

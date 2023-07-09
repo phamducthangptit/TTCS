@@ -229,14 +229,20 @@
             // 
             this.btnExport.Caption = "Export";
             this.btnExport.Id = 7;
+            this.btnExport.ImageOptions.Image = global::TPNT.Properties.Resources.exporttoxlsx_16x161;
+            this.btnExport.ImageOptions.LargeImage = global::TPNT.Properties.Resources.exporttoxlsx_16x161;
             this.btnExport.Name = "btnExport";
+            this.btnExport.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExport_ItemClick);
             // 
             // btnImport
             // 
             this.btnImport.Caption = "Import";
             this.btnImport.Id = 8;
+            this.btnImport.ImageOptions.Image = global::TPNT.Properties.Resources.importmap_16x161;
+            this.btnImport.ImageOptions.LargeImage = global::TPNT.Properties.Resources.importmap_16x161;
             this.btnImport.Name = "btnImport";
+            this.btnImport.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnImport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnImport_ItemClick);
             // 
             // bar5

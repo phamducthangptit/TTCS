@@ -97,8 +97,6 @@ namespace TPNT
             Program.password = "123456";
             if (Program.KetNoi() == 0) return;
 
-            if (Program.KetNoi() == 0) return;
-
             string strLenh = "EXEC SP_DANGNHAP '" + Program.mlogin + "'";
 
             Program.myReader = Program.ExecSqlDataReader(strLenh);
