@@ -88,7 +88,7 @@ namespace TPNT
             btnChonTG.Visible = true;
             maTG = "";
             txtTacGia.ResetText();
-            btnThem.Enabled = btnXoa.Enabled = btnReload.Enabled = btnHieuChinh.Enabled = false;
+            btnThem.Enabled = btnXoa.Enabled = btnReload.Enabled = btnHieuChinh.Enabled=btnExport.Enabled = btnImport.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
         }
 
@@ -197,7 +197,7 @@ namespace TPNT
             bdsTPNT.Position = viTri;
             panelDSTPNT.Enabled = true;
             panelThongTin.Enabled = false;
-            btnThem.Enabled = btnXoa.Enabled = btnReload.Enabled = btnHieuChinh.Enabled = true;
+            btnThem.Enabled = btnXoa.Enabled = btnReload.Enabled = btnHieuChinh.Enabled = btnExport.Enabled = btnImport.Enabled = true;
             btnThemAnh.Visible = false;
             btnChonTG.Visible = false;
             suKien = "";
@@ -232,7 +232,7 @@ namespace TPNT
             txtMa.Enabled = false;
             panelDSTPNT.Enabled = false;
             panelThongTin.Enabled = true;
-            btnThem.Enabled = btnXoa.Enabled = btnReload.Enabled = btnHieuChinh.Enabled = false;
+            btnThem.Enabled = btnXoa.Enabled = btnReload.Enabled = btnHieuChinh.Enabled = btnExport.Enabled = btnImport.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
         }
 
@@ -263,7 +263,7 @@ namespace TPNT
         {
                 panelDSTPNT.Enabled = true;
                 panelThongTin.Enabled = false;
-                btnThem.Enabled = btnXoa.Enabled = btnReload.Enabled = btnHieuChinh.Enabled = true;
+                btnThem.Enabled = btnXoa.Enabled = btnReload.Enabled = btnHieuChinh.Enabled = btnExport.Enabled = btnImport.Enabled = true;
                 btnThemAnh.Visible = false;
                 btnChonTG.Visible = false;
                 suKien = "";
