@@ -23,8 +23,8 @@ namespace TPNT
             // TODO: This line of code loads data into the 'tPNTDataSet1.view_NullSoHuu' table. You can move, or remove it, as needed.
             
            
-        
-             this.view_NullSoHuuTableAdapter.Fill(this.tPNTDataSet1.view_NullSoHuu);
+            this.view_NullSoHuuTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.view_NullSoHuuTableAdapter.Fill(this.tPNTDataSet1.view_NullSoHuu);
             if (bdsNullSoHuu.Count <= 0)
             {
                 Program.maSoTPNT = "";

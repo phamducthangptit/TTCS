@@ -59,9 +59,9 @@ namespace TPNT
         private void frmCuocTrienLam_Load(object sender, EventArgs e)
         {
             tPNTDataSet.EnforceConstraints = false;
-
+            this.view_ListTPNTTableAdapter.Connection.ConnectionString = Program.connstr;
             this.view_ListTPNTTableAdapter.Fill(this.tPNTDataSet1.View_ListTPNT);
-
+            this.cuocTrienLamTableAdapter.Connection.ConnectionString = Program.connstr;
             this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
             if (!Program.mGroup.Equals("QUANLI"))
             {
@@ -70,6 +70,8 @@ namespace TPNT
                 btnHieuChinh.Enabled = false;
                 btnHoanTac.Enabled = false;
                 btnSaveData.Enabled = false;
+                btnExport.Enabled = false;
+                btnImport.Enabled = false;
             }
             if (bdsCuocTrienLam.Count <= 0)
             {
@@ -151,9 +153,12 @@ namespace TPNT
             btnHieuChinh.Enabled = false;
             btnHoanTac.Enabled = false;
             btnReload.Enabled = false;
+            btnImport.Enabled = false;
+            btnExport.Enabled = false;
             btnSaveData.Enabled = true;
+         
             dtpFrom.EditValue = "01/01/2023";
-            dtpTo.EditValue = DateTime.Today.ToString("dd/MM/yyyy");
+            dtpTo.EditValue = "01/01/2023";
         }
 
         private void bdsTacPhamNgheThuat_CurrentChanged(object sender, EventArgs e)
@@ -459,7 +464,9 @@ namespace TPNT
                 btnXoa.Enabled = false;
                 return;
             }
-            if (soSanhNgay(DateTime.Today.ToString("dd/MM/yyyy"), timeFromPH.ToString("dd/MM/yyyy")) <= 0)
+            DataRowView rowcheck = (DataRowView)bdsCuocTrienLam[bdsCuocTrienLam.Position];
+            DateTime timeToCHECK = (DateTime)rowcheck["NgayKT"];
+            if (soSanhNgay(DateTime.Today.ToString("dd/MM/yyyy"), timeToCHECK.ToString("dd/MM/yyyy")) <= 0)
             {
                 MessageBox.Show("Cuộc Triển Lãm này đã diễn ra không thể xóa.\n", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -548,7 +555,8 @@ namespace TPNT
                 bdsCuocTrienLam.CancelEdit();
                 cuocTrienLamGridControl.Enabled = true;
                 btnThem.Enabled = true;
-
+                btnExport.Enabled = true;
+                btnImport.Enabled = true;
                 btnHieuChinh.Enabled = true;
                 btnXoa.Enabled = true;
                 btnHoanTac.Enabled = true;
@@ -604,10 +612,12 @@ namespace TPNT
             btnHoanTac.Enabled = false;
             btnReload.Enabled = false;
             grbNhap.Enabled = true;
+            btnExport.Enabled = false;
+            btnImport.Enabled = false;
             grbThemCTL.Visible = true;
             grbDSTPNT.Visible = false;
             btnChiTiet.Enabled=false;
-
+          
             grbNhap.Text = "Cập Nhật Thông Tin";
             txtMaCTL.ReadOnly = true;
             txtTenCTL.Text = drv["Ten"].ToString();
