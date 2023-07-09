@@ -31,13 +31,14 @@ namespace TPNT
         private void frmTacGia_Load(object sender, EventArgs e)
         {
             tPNTDataSet.EnforceConstraints = false;
+            this.TacGiaTableAdapter.Connection.ConnectionString = Program.connstr;
             this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);  
 
             gcTacGia.Dock = DockStyle.Fill;
             groupBox1.Visible = false;
             if (Program.mGroup.Equals("QUANLI"))
             {
-                this.btnThem.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnThem.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnImport.Enabled = this.btnExport.Enabled = true;
                 this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
 
                 string strLenh = "SELECT * FROM V_SLTG";
@@ -53,7 +54,7 @@ namespace TPNT
             } else
             {
                 this.btnReload.Enabled = this.btnThoat.Enabled = true;
-                this.btnThem.Enabled = this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
+                this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
             }
 
             
@@ -70,7 +71,8 @@ namespace TPNT
 
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = true;
-            this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
+
+            this.btnImport.Enabled = this.btnExport.Enabled = this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
                 = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
@@ -88,7 +90,7 @@ namespace TPNT
             gcTacGia.Enabled = false;
             groupBox1.Enabled = true;
 
-            this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
+            this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
                 = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
             this.btnChonAnh.Visible = true;
@@ -149,6 +151,7 @@ namespace TPNT
                 {
                     MessageBox.Show("Lỗi xóa tác giả. Bạn hãy xóa lại\n" + ex.Message, "",
                         MessageBoxButtons.OK);
+                    this.TacGiaTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
                     bdsTacGia.Position = bdsTacGia.Find("MaTacGia", maTG);
                     return;
@@ -165,14 +168,14 @@ namespace TPNT
                 gcTacGia.Visible = true;
                 gcTacGia.Dock = DockStyle.Fill;
                 groupBox1.Visible = false;
-                this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = 
+                this.btnImport.Enabled = this.btnExport.Enabled = this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = 
                     this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = true;
                 this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
                 
             }
             else
             {
-                this.btnXoa.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnImport.Enabled = this.btnExport.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
                 this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
                 this.btnChonAnh.Visible = this.btnThem.Enabled = false;
                 this.pnlAnh.Visible = true;
@@ -180,6 +183,7 @@ namespace TPNT
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
             }
 
+            this.TacGiaTableAdapter.Connection.ConnectionString = Program.connstr;
             this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
             bdsTacGia.Position = vitri;
         }
@@ -201,13 +205,6 @@ namespace TPNT
             }
         }
 
-        private void tacGiaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bdsTacGia.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.tPNTDataSet);
-
-        }
 
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
@@ -375,7 +372,7 @@ namespace TPNT
             }
             gcTacGia.Enabled = true;
 
-            this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled 
+            this.btnImport.Enabled = this.btnExport.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled 
                 = this.btnBackup.Enabled = this.btnRestore.Enabled = true;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
             this.btnChonAnh.Visible = false;
@@ -448,7 +445,7 @@ namespace TPNT
                 this.btnHieuChinh.Enabled = false;
                 if (Program.mGroup.Equals("QUANLI"))
                 {
-                    this.btnThem.Enabled = true;
+                    this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = true;
                 }
                     
             } else this.Close();
@@ -467,7 +464,7 @@ namespace TPNT
             }
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
-            this.btnThem.Enabled = this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
+            this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             gcTacGia.Visible = false;
             groupBox1.Visible = true;
             groupBox1.Dock = DockStyle.Fill;
@@ -572,7 +569,7 @@ namespace TPNT
                 {
                     MessageBox.Show($"Đã xảy ra lỗi khi nhập dữ liệu từ Excel: \n{ex.Message}", "Lỗi nhập từ Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                this.TacGiaTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
             }
         }

@@ -123,9 +123,6 @@
   <metadata name="tPNTDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="tPNTDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="bdsDailyJob.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>160, 17</value>
   </metadata>
@@ -133,7 +130,7 @@
   <data name="btnDisable.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rgAAAK4B+ff3XQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEhL7ZNN
+        rQAAAK0BVE7WMAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEhL7ZNN
         SwJRFEAHslZqUOmiX+DeXyG0MIjWgVS/ztatFBR1VbS0RZtEtJWLom2dM/GEphkYpmg1Bw7Mu3O5931G
         JSV/TgWvcYiv+IIT7OEe/oomPuBHhmM0pxDO7h4t9ISnWMMqnuEjJhum6apvsY3fuEITLH5gIMEhzjFZ
         MMt3bOGWKfrDmUsXV7jAjgFwJebM4lE6x3iD5vUNBDZo0G2RNTrWZwNwhI7f4lE2NjHPGltCg3o8+pp9
@@ -144,7 +141,7 @@
   <data name="btnEnable.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rQAAAK0BVE7WMAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIASURBVEhL7VRd
+        rAAAAKwBhgk01AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIASURBVEhL7VRd
         SxtBFL0JyUZNtAqazYrB2NJ86gqGYGLb1GIfxPrSNMpuohI/niwUfFEQfG5F/BX6IxR8UPwL/Qdtf0J9
         yMPezplsJDHrR3wr5MCB2Tsz5945c2epgw4ckXo3lxxN6tf9g8Ebj1dhsH9QvRlN6Nfj+Y8Je9nzEE1n
         j72Kz3K73Tz8MsqpbF4SY8S8Pp8VT+eO7OXtAeJELlbDY1z4useVg6MmIhYMR9jlcnFzEmN9mvTMb+ru

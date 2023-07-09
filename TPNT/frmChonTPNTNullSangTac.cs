@@ -18,7 +18,9 @@ namespace TPNT
         }
 
         private void frmChonTPNTNullSangTac_Load(object sender, EventArgs e)
+
         {
+            this.view_NullLoaiHinhSangTacTableAdapter.Connection.ConnectionString = Program.connstr;
             // TODO: This line of code loads data into the 'tPNTDataSet1.view_NullLoaiHinhSangTac' table. You can move, or remove it, as needed.
             this.view_NullLoaiHinhSangTacTableAdapter.Fill(this.tPNTDataSet1.view_NullLoaiHinhSangTac);
             if (bdsNullLoaiHinhSangTac.Count <= 0)

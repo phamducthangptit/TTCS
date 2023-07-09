@@ -30,6 +30,7 @@ namespace TPNT
         private void frmDieuKhacVaTacTuong_Load(object sender, EventArgs e)
         {
             tPNTDataSet1.EnforceConstraints = false;
+            this.view_ListDieuKhacTacTuongTableAdapter.Connection.ConnectionString = Program.connstr;
             // TODO: This line of code loads data into the 'tPNTDataSet1.View_ListDieuKhacTacTuong' table. You can move, or remove it, as needed.
             this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
             if (!Program.mGroup.Equals("QUANLI"))
@@ -116,7 +117,18 @@ namespace TPNT
                 txtPhongCach.Focus();
                 return false;
             }
-
+            if (int.Parse(txtKhoiLuong.Text) <= 0)
+            {
+                MessageBox.Show("Khối Lượng phải lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK);
+                txtKhoiLuong.Focus();
+                return false;
+            }
+            if (int.Parse(txtChieuCao.Text) <= 0)
+            {
+                MessageBox.Show("Chiều Cao phải lớn hơn 0 !", "Thông báo", MessageBoxButtons.OK);
+                txtChieuCao.Focus();
+                return false;
+            }
             return true;
         }
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

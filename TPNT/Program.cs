@@ -22,7 +22,9 @@ namespace TPNT
         //public static String connstr_publisher = "Data Source=MSI;Initial Catalog=TPNT;Integrated Security=True";
 
         public static SqlDataReader myReader;
-        public static String servername = "ADMIN-PC";
+
+        public static String servername = "DESKTOP-863A14G\\SERVER";
+
 
         public static String username = "";
         public static String mlogin = "";
