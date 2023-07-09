@@ -45,6 +45,8 @@
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExport = new DevExpress.XtraBars.BarButtonItem();
+            this.btnImport = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -189,8 +191,10 @@
             this.btnXoa,
             this.btnPhucHoi,
             this.btnReload,
-            this.btnGhi});
-            this.barManager1.MaxItemId = 6;
+            this.btnGhi,
+            this.btnExport,
+            this.btnImport});
+            this.barManager1.MaxItemId = 8;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar1
@@ -205,7 +209,9 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHieuChinh),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnXoa),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnPhucHoi),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnReload)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnReload),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnExport),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnImport)});
             this.bar1.Text = "Tools";
             // 
             // btnThem
@@ -220,6 +226,7 @@
             // btnGhi
             // 
             this.btnGhi.Caption = "Ghi";
+            this.btnGhi.Enabled = false;
             this.btnGhi.Id = 5;
             this.btnGhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGhi.ImageOptions.Image")));
             this.btnGhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGhi.ImageOptions.LargeImage")));
@@ -264,6 +271,26 @@
             this.btnReload.Name = "btnReload";
             this.btnReload.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
+            // 
+            // btnExport
+            // 
+            this.btnExport.Caption = "Export";
+            this.btnExport.Id = 6;
+            this.btnExport.ImageOptions.Image = global::TPNT.Properties.Resources.exporttoxlsx_16x16;
+            this.btnExport.ImageOptions.LargeImage = global::TPNT.Properties.Resources.exporttoxlsx_16x16;
+            this.btnExport.Name = "btnExport";
+            this.btnExport.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExport_ItemClick);
+            // 
+            // btnImport
+            // 
+            this.btnImport.Caption = "Import";
+            this.btnImport.Id = 7;
+            this.btnImport.ImageOptions.Image = global::TPNT.Properties.Resources.importmap_16x16;
+            this.btnImport.ImageOptions.LargeImage = global::TPNT.Properties.Resources.importmap_16x16;
+            this.btnImport.Name = "btnImport";
+            this.btnImport.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnImport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnImport_ItemClick);
             // 
             // bar3
             // 
@@ -731,5 +758,7 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label lbCount;
         private System.Windows.Forms.Label label2;
+        private DevExpress.XtraBars.BarButtonItem btnExport;
+        private DevExpress.XtraBars.BarButtonItem btnImport;
     }
 }

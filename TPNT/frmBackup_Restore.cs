@@ -568,5 +568,12 @@ namespace TPNT
         {
             reload();
         }
+
+        private void frmBackup_Restore_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" +
+                    Program.database + ";User ID=" + Program.mlogin + ";password=" + Program.password;
+            MessageBox.Show("" + Program.connstr, "", MessageBoxButtons.OK);
+        }
     }
 }

@@ -42,8 +42,6 @@
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnReload = new DevExpress.XtraBars.BarButtonItem();
-            this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
-            this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -82,7 +80,7 @@
             // 
             maLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             maLabel.AutoSize = true;
-            maLabel.Location = new System.Drawing.Point(118, 57);
+            maLabel.Location = new System.Drawing.Point(118, 67);
             maLabel.Name = "maLabel";
             maLabel.Size = new System.Drawing.Size(108, 20);
             maLabel.TabIndex = 0;
@@ -92,7 +90,7 @@
             // 
             tenLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             tenLabel.AutoSize = true;
-            tenLabel.Location = new System.Drawing.Point(118, 135);
+            tenLabel.Location = new System.Drawing.Point(118, 145);
             tenLabel.Name = "tenLabel";
             tenLabel.Size = new System.Drawing.Size(113, 20);
             tenLabel.TabIndex = 2;
@@ -102,7 +100,7 @@
             // 
             theLoaiLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             theLoaiLabel.AutoSize = true;
-            theLoaiLabel.Location = new System.Drawing.Point(658, 60);
+            theLoaiLabel.Location = new System.Drawing.Point(658, 70);
             theLoaiLabel.Name = "theLoaiLabel";
             theLoaiLabel.Size = new System.Drawing.Size(72, 20);
             theLoaiLabel.TabIndex = 4;
@@ -112,7 +110,7 @@
             // 
             phongCachLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             phongCachLabel.AutoSize = true;
-            phongCachLabel.Location = new System.Drawing.Point(659, 140);
+            phongCachLabel.Location = new System.Drawing.Point(659, 150);
             phongCachLabel.Name = "phongCachLabel";
             phongCachLabel.Size = new System.Drawing.Size(97, 20);
             phongCachLabel.TabIndex = 6;
@@ -122,7 +120,6 @@
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.bar1,
-            this.bar2,
             this.bar3});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
@@ -136,10 +133,8 @@
             this.btnReload,
             this.btnChiTiet,
             this.btnLuu,
-            this.btnThoat,
             this.barButtonItem1,
             this.btnThem});
-            this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 12;
             this.barManager1.StatusBar = this.bar3;
             // 
@@ -163,8 +158,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLuu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPhucHoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReload, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReload, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.Text = "Tools";
             // 
             // btnThem
@@ -215,24 +209,6 @@
             this.btnReload.Name = "btnReload";
             this.btnReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReload_ItemClick);
             // 
-            // btnThoat
-            // 
-            this.btnThoat.Caption = "Thoát";
-            this.btnThoat.Id = 8;
-            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
-            // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockRow = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
-            // 
             // bar3
             // 
             this.bar3.BarName = "Status bar";
@@ -252,7 +228,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1208, 61);
+            this.barDockControlTop.Size = new System.Drawing.Size(1208, 40);
             // 
             // barDockControlBottom
             // 
@@ -267,19 +243,19 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 61);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 751);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 772);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1208, 61);
+            this.barDockControlRight.Location = new System.Drawing.Point(1208, 40);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 751);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 772);
             // 
             // btnChiTiet
             // 
@@ -326,7 +302,7 @@
             // 
             this.gcLoaiHinhKhac.DataSource = this.bdsLoaiHinhKhac;
             this.gcLoaiHinhKhac.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcLoaiHinhKhac.Location = new System.Drawing.Point(0, 61);
+            this.gcLoaiHinhKhac.Location = new System.Drawing.Point(0, 40);
             this.gcLoaiHinhKhac.MainView = this.gridView1;
             this.gcLoaiHinhKhac.MenuManager = this.barManager1;
             this.gcLoaiHinhKhac.Name = "gcLoaiHinhKhac";
@@ -406,9 +382,9 @@
             this.groupBox1.Controls.Add(maLabel);
             this.groupBox1.Controls.Add(this.txtMa);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 609);
+            this.groupBox1.Location = new System.Drawing.Point(0, 588);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1208, 203);
+            this.groupBox1.Size = new System.Drawing.Size(1208, 224);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
@@ -417,7 +393,7 @@
             // 
             this.txtPhongCach.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPhongCach.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "PhongCach", true));
-            this.txtPhongCach.Location = new System.Drawing.Point(766, 137);
+            this.txtPhongCach.Location = new System.Drawing.Point(766, 147);
             this.txtPhongCach.Name = "txtPhongCach";
             this.txtPhongCach.Size = new System.Drawing.Size(256, 28);
             this.txtPhongCach.TabIndex = 7;
@@ -426,7 +402,7 @@
             // 
             this.txtTheLoai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTheLoai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "TheLoai", true));
-            this.txtTheLoai.Location = new System.Drawing.Point(766, 57);
+            this.txtTheLoai.Location = new System.Drawing.Point(766, 67);
             this.txtTheLoai.Name = "txtTheLoai";
             this.txtTheLoai.Size = new System.Drawing.Size(256, 28);
             this.txtTheLoai.TabIndex = 5;
@@ -435,7 +411,7 @@
             // 
             this.txtTen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "Ten", true));
-            this.txtTen.Location = new System.Drawing.Point(254, 132);
+            this.txtTen.Location = new System.Drawing.Point(254, 142);
             this.txtTen.Name = "txtTen";
             this.txtTen.ReadOnly = true;
             this.txtTen.Size = new System.Drawing.Size(225, 28);
@@ -445,7 +421,7 @@
             // 
             this.txtMa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "Ma", true));
-            this.txtMa.Location = new System.Drawing.Point(254, 54);
+            this.txtMa.Location = new System.Drawing.Point(254, 64);
             this.txtMa.Name = "txtMa";
             this.txtMa.ReadOnly = true;
             this.txtMa.Size = new System.Drawing.Size(225, 28);
@@ -489,8 +465,6 @@
         private DevExpress.XtraBars.BarButtonItem btnXoa;
         private DevExpress.XtraBars.BarButtonItem btnPhucHoi;
         private DevExpress.XtraBars.BarButtonItem btnReload;
-        private DevExpress.XtraBars.BarButtonItem btnThoat;
-        private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;

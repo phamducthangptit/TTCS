@@ -28,6 +28,17 @@ namespace TPNT
             this.v_TAC_GIATableAdapter.Fill(this.tPNTDataSet.V_TAC_GIA);
             this.v_BO_SUU_TAPTableAdapter.Fill(this.tPNTDataSet.V_BO_SUU_TAP);
             this.sP_BOSUUTAP_TPNTTableAdapter.Fill(this.tPNTDataSet.SP_BOSUUTAP_TPNT);
+
+            if (Program.mGroup.Equals("KHACH"))
+            {
+                btnThem.Enabled = btnHieuChinh.Enabled =
+                    btnXoa.Enabled  = false;
+            }
+            else
+            {
+                btnThem.Enabled = btnHieuChinh.Enabled =
+                    btnXoa.Enabled  = true;
+            }
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)

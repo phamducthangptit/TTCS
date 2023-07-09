@@ -27,6 +27,17 @@ namespace TPNT
             this.v_BO_SUU_TAPTableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_BO_SUU_TAPTableAdapter.Fill(this.tPNTDataSet.V_BO_SUU_TAP);
             viTri = bdsBoSuuTap.Position;
+
+            if (Program.mGroup.Equals("KHACH"))
+            {
+                btnThem.Enabled = btnHieuChinh.Enabled =
+                    btnXoa.Enabled  = false;
+            }
+            else
+            {
+                btnThem.Enabled = btnHieuChinh.Enabled =
+                    btnXoa.Enabled  = true;
+            }
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

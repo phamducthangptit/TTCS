@@ -26,19 +26,29 @@ namespace TPNT
             this.v_SELECTHOIHOATableAdapter1.Fill(this.dsTPNT.V_SELECTHOIHOA);
             groupBox1.Visible = false;
             gcHoiHoa.Dock = DockStyle.Fill;
-            this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
-            this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
-
-            string strLenh = "SELECT * FROM V_SLHOIHOA";
-            SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
-            dataReaderSLTG.Read();
-            int slTG = dataReaderSLTG.GetInt32(0);
-            dataReaderSLTG.Close();
-            if (slTG == 0)
+            if (Program.mGroup.Equals("QUANLI"))
             {
-                this.btnXoa.Enabled = this.btnHieuChinh.Enabled = false;
+                this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = true;
+                this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
+
+                string strLenh = "SELECT * FROM V_SLHOIHOA";
+                SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
+                dataReaderSLTG.Read();
+                int slTG = dataReaderSLTG.GetInt32(0);
+                dataReaderSLTG.Close();
+                if (slTG == 0)
+                {
+                    this.btnXoa.Enabled = this.btnHieuChinh.Enabled = false;
+                }
+                else this.btnXoa.Enabled = this.btnHieuChinh.Enabled = true;
+            } else
+            {
+                this.btnReload.Enabled = true;
+                this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnXoa.Enabled = false;
             }
-            else this.btnXoa.Enabled = this.btnHieuChinh.Enabled = true;
+           
+
+           
         }
 
         private Form CheckExist(Type ftype)
@@ -72,7 +82,7 @@ namespace TPNT
                     this.txtMaTP.Text = f.MaTP;
                 };
             }
-            this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
+            this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = false;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
             gcHoiHoa.Dock = DockStyle.Top;
             gcHoiHoa.Enabled = false;
@@ -88,7 +98,7 @@ namespace TPNT
             groupBox1.Visible = true;
             groupBox1.Dock = DockStyle.Fill;
 
-            this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
+            this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = false;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
             vitri = bdsHoiHoa.Position;
         }
@@ -134,13 +144,13 @@ namespace TPNT
                     groupBox1.Visible = false;
                     gcHoiHoa.Enabled = true;
                     gcHoiHoa.Dock = DockStyle.Fill;
-                    this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                    this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = true;
                     this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
                     this.v_SELECTHOIHOATableAdapter1.Fill(this.dsTPNT.V_SELECTHOIHOA);
                     MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
                 } else if(ex == 16)
                 {
-                    this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
+                    this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = false;
                     this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
                     gcHoiHoa.Dock = DockStyle.Top;
                     gcHoiHoa.Enabled = false;
@@ -162,7 +172,7 @@ namespace TPNT
                     groupBox1.Visible = false;
                     gcHoiHoa.Enabled = true;
                     gcHoiHoa.Dock = DockStyle.Fill;
-                    this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                    this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = true;
                     this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
                     MessageBox.Show("Thay đổi thành công", "Thông báo", MessageBoxButtons.OK);
                 } else
@@ -172,7 +182,7 @@ namespace TPNT
                     groupBox1.Visible = true;
                     groupBox1.Dock = DockStyle.Fill;
 
-                    this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = false;
+                    this.btnThem.Enabled = this.btnHieuChinh.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = false;
                     this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
                     return;
                 }
@@ -235,7 +245,7 @@ namespace TPNT
             }
             else this.btnXoa.Enabled = this.btnHieuChinh.Enabled = true;
 
-            this.btnThem.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+            this.btnThem.Enabled = this.btnReload.Enabled = true;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
         }
 
@@ -253,11 +263,6 @@ namespace TPNT
                 MessageBox.Show("Lỗi Reload: " + ex.Message, "", MessageBoxButtons.OK);
                 return;
             }
-        }
-
-        private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            this.Close();
         }
 
     }

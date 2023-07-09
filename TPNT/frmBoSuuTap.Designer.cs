@@ -195,6 +195,7 @@
             // btnGhi
             // 
             this.btnGhi.Caption = "Ghi";
+            this.btnGhi.Enabled = false;
             this.btnGhi.Id = 5;
             this.btnGhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGhi.ImageOptions.Image")));
             this.btnGhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGhi.ImageOptions.LargeImage")));
@@ -441,9 +442,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-
             this.tableAdapterManager.Connection = null;
-
             this.tableAdapterManager.UpdateOrder = TPNT.TPNTDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // frmBoSuuTap

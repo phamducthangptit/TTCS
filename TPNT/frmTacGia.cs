@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils.Extensions;
 using DevExpress.Utils.MVVM;
+using GemBox.Spreadsheet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,20 +35,28 @@ namespace TPNT
 
             gcTacGia.Dock = DockStyle.Fill;
             groupBox1.Visible = false;
-
-            this.btnThem.Enabled =   this.btnReload.Enabled = this.btnThoat.Enabled = true;
-            this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
-
-            string strLenh = "SELECT * FROM V_SLTG";
-            SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
-            dataReaderSLTG.Read();
-            int slTG = dataReaderSLTG.GetInt32(0);
-            dataReaderSLTG.Close();
-            if (slTG == 0)
+            if (Program.mGroup.Equals("QUANLI"))
             {
-                this.btnXoa.Enabled = false;
+                this.btnThem.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
+
+                string strLenh = "SELECT * FROM V_SLTG";
+                SqlDataReader dataReaderSLTG = Program.ExecSqlDataReader(strLenh);
+                dataReaderSLTG.Read();
+                int slTG = dataReaderSLTG.GetInt32(0);
+                dataReaderSLTG.Close();
+                if (slTG == 0)
+                {
+                    this.btnXoa.Enabled = false;
+                }
+                else this.btnXoa.Enabled = true;
+            } else
+            {
+                this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnThem.Enabled = this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
             }
-            else this.btnXoa.Enabled = true;
+
+            
         }
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -391,13 +400,16 @@ namespace TPNT
             dataReaderSLTG.Read();
             int slTG = dataReaderSLTG.GetInt32(0);
             dataReaderSLTG.Close();
-
-            if (sLTP > 0 || slTG == 0)
+            if (Program.mGroup.Equals("QUANLI"))
             {
-                this.btnXoa.Enabled = false;
+                if (sLTP > 0 || slTG == 0)
+                {
+                    this.btnXoa.Enabled = false;
+                }
+                else this.btnXoa.Enabled = true;
             }
-            else this.btnXoa.Enabled = true;
-
+            else this.btnXoa.Enabled = false;
+            
             if (this.txtMaTacGia.Text.Length == 0 && suKien.Equals("THEM"))
             {
                 this.btnXoa.Enabled = false;
@@ -425,6 +437,7 @@ namespace TPNT
 
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
             if (suKienCT.Equals("CT"))
             {
                 gcTacGia.Visible = true;
@@ -433,7 +446,11 @@ namespace TPNT
                 groupBox1.Visible = false;
                 this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = true;
                 this.btnHieuChinh.Enabled = false;
-                this.btnThem.Enabled = true;
+                if (Program.mGroup.Equals("QUANLI"))
+                {
+                    this.btnThem.Enabled = true;
+                }
+                    
             } else this.Close();
             suKienCT = "";
         }
@@ -441,15 +458,123 @@ namespace TPNT
         private void btnChiTiet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             suKienCT = "CT";
+            if (Program.mGroup.Equals("QUANLI"))
+            {
+                this.btnHieuChinh.Enabled = true;
+            } else
+            {
+                this.btnHieuChinh.Enabled = false;
+            }
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
             this.btnThem.Enabled = this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             gcTacGia.Visible = false;
             groupBox1.Visible = true;
             groupBox1.Dock = DockStyle.Fill;
-            this.btnHieuChinh.Enabled = true;
+            
             this.lblSLTP.Visible = this.txtSLTP.Visible = true;
             
+        }
+
+        private void btnExport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Save an Excel File"
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Lấy DataTable từ BindingSource
+                    DataTable dataTable = new DataTable();
+                    for (int i = 0; i < bdsTacGia.List.Count; i++)
+                    {
+                        DataRowView rowView = (DataRowView)bdsTacGia.List[i];
+                        DataRow row = rowView.Row;
+                        if (i == 0)
+                        {
+                            foreach (DataColumn column in row.Table.Columns)
+                            {
+                                dataTable.Columns.Add(column.ColumnName);
+                            }
+                        }
+                        dataTable.ImportRow(row);
+                    }
+                    // Xuất DataTable ra Excel
+                    SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+                    var workbook = new ExcelFile();
+                    var worksheet = workbook.Worksheets.Add("Tác giả");
+                    worksheet.InsertDataTable(dataTable,
+                            new InsertDataTableOptions()
+                            {
+                                ColumnHeaders = true,
+                                StartRow = 0
+                            });
+                    workbook.Save(saveFileDialog.FileName);
+
+                    MessageBox.Show("Dữ liệu đã được xuất thành công vào tập tin Excel!", "Xuất Excel thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Đã xảy ra lỗi khi xuất dữ liệu ra Excel: {ex.Message}", "Lỗi xuất Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Import an Excel File"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                DataTable dataTable = Program.docFileExcel(openFileDialog.FileName, 0);
+                try
+                {
+                    using (SqlBulkCopy bulkCopy =
+                       new SqlBulkCopy(Program.connstr))
+                    {
+                        bulkCopy.DestinationTableName =
+                            "dbo.TacGia";
+
+                        // Set up the column mappings by name.
+                        bulkCopy.ColumnMappings.Add("MaTacGia", "MaTacGia");
+
+                        bulkCopy.ColumnMappings.Add("HoTen", "HoTen");
+
+                        bulkCopy.ColumnMappings.Add("NgaySinh", "NgaySinh");
+
+                        bulkCopy.ColumnMappings.Add("NgayMat", "NgayMat");
+
+                        bulkCopy.ColumnMappings.Add("QuocTich", "QuocTich");
+
+                        bulkCopy.ColumnMappings.Add("DienGiai", "DienGiai");
+
+                        bulkCopy.ColumnMappings.Add("PhongCach", "PhongCach");
+
+                        bulkCopy.ColumnMappings.Add("HinhAnh", "HinhAnh");
+
+                        // Write from the source to the destination.
+
+                        bulkCopy.WriteToServer(dataTable);
+
+                    }
+                    MessageBox.Show("Dữ liệu đã được nhập thành công từ tập tin Excel!", "Nhập từ Excel thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Đã xảy ra lỗi khi nhập dữ liệu từ Excel: \n{ex.Message}", "Lỗi nhập từ Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
+            }
         }
     }
 }
