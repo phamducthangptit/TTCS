@@ -101,6 +101,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel2.Controls.Add(this.btnDangNhap);
             this.panel2.Controls.Add(this.panelMK);
             this.panel2.Controls.Add(this.panelTK);

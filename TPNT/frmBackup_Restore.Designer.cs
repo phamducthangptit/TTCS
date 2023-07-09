@@ -120,10 +120,9 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1211, 545);
+            this.tabControl1.Size = new System.Drawing.Size(908, 443);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -134,11 +133,10 @@
             this.tabPage1.Controls.Add(this.btnChonDuongDan);
             this.tabPage1.Controls.Add(this.txtDuongDanBkFull);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1203, 516);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Size = new System.Drawing.Size(900, 417);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Backup";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -146,10 +144,10 @@
             // btnBackup
             // 
             this.btnBackup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBackup.Location = new System.Drawing.Point(593, 452);
-            this.btnBackup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBackup.Location = new System.Drawing.Point(413, 298);
+            this.btnBackup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(100, 28);
+            this.btnBackup.Size = new System.Drawing.Size(75, 23);
             this.btnBackup.TabIndex = 5;
             this.btnBackup.Text = "Backup";
             this.btnBackup.UseVisualStyleBackColor = true;
@@ -159,29 +157,29 @@
             // 
             this.lbTiLe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbTiLe.AutoSize = true;
-            this.lbTiLe.Location = new System.Drawing.Point(371, 207);
-            this.lbTiLe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTiLe.Location = new System.Drawing.Point(440, 206);
+            this.lbTiLe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTiLe.Name = "lbTiLe";
-            this.lbTiLe.Size = new System.Drawing.Size(26, 16);
+            this.lbTiLe.Size = new System.Drawing.Size(21, 13);
             this.lbTiLe.TabIndex = 4;
             this.lbTiLe.Text = "0%";
             // 
             // progressBar
             // 
             this.progressBar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.progressBar.Location = new System.Drawing.Point(124, 164);
-            this.progressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progressBar.Location = new System.Drawing.Point(255, 181);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(520, 28);
+            this.progressBar.Size = new System.Drawing.Size(390, 23);
             this.progressBar.TabIndex = 3;
             // 
             // btnChonDuongDan
             // 
             this.btnChonDuongDan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnChonDuongDan.Location = new System.Drawing.Point(560, 68);
-            this.btnChonDuongDan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChonDuongDan.Location = new System.Drawing.Point(584, 115);
+            this.btnChonDuongDan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChonDuongDan.Name = "btnChonDuongDan";
-            this.btnChonDuongDan.Size = new System.Drawing.Size(160, 28);
+            this.btnChonDuongDan.Size = new System.Drawing.Size(120, 23);
             this.btnChonDuongDan.TabIndex = 2;
             this.btnChonDuongDan.Text = "Chọn dường dẫn";
             this.btnChonDuongDan.UseVisualStyleBackColor = true;
@@ -190,20 +188,20 @@
             // txtDuongDanBkFull
             // 
             this.txtDuongDanBkFull.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDuongDanBkFull.Location = new System.Drawing.Point(148, 68);
-            this.txtDuongDanBkFull.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDuongDanBkFull.Location = new System.Drawing.Point(269, 117);
+            this.txtDuongDanBkFull.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDuongDanBkFull.Name = "txtDuongDanBkFull";
-            this.txtDuongDanBkFull.Size = new System.Drawing.Size(385, 22);
+            this.txtDuongDanBkFull.Size = new System.Drawing.Size(290, 20);
             this.txtDuongDanBkFull.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 71);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(196, 120);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 16);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thư mục lưu:";
             // 
@@ -213,21 +211,20 @@
             this.tabPage2.Controls.Add(this.btnChonDuongDan1);
             this.tabPage2.Controls.Add(this.txtDuongDan1);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1203, 516);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(900, 417);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Restore";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnRestore
             // 
-            this.btnRestore.Location = new System.Drawing.Point(591, 283);
-            this.btnRestore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestore.Location = new System.Drawing.Point(413, 160);
+            this.btnRestore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(100, 28);
+            this.btnRestore.Size = new System.Drawing.Size(75, 23);
             this.btnRestore.TabIndex = 6;
             this.btnRestore.Text = "Restore";
             this.btnRestore.UseVisualStyleBackColor = true;
@@ -235,10 +232,11 @@
             // 
             // btnChonDuongDan1
             // 
-            this.btnChonDuongDan1.Location = new System.Drawing.Point(551, 76);
-            this.btnChonDuongDan1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChonDuongDan1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnChonDuongDan1.Location = new System.Drawing.Point(574, 48);
+            this.btnChonDuongDan1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChonDuongDan1.Name = "btnChonDuongDan1";
-            this.btnChonDuongDan1.Size = new System.Drawing.Size(160, 28);
+            this.btnChonDuongDan1.Size = new System.Drawing.Size(120, 23);
             this.btnChonDuongDan1.TabIndex = 5;
             this.btnChonDuongDan1.Text = "Chọn dường dẫn";
             this.btnChonDuongDan1.UseVisualStyleBackColor = true;
@@ -246,19 +244,21 @@
             // 
             // txtDuongDan1
             // 
-            this.txtDuongDan1.Location = new System.Drawing.Point(139, 76);
-            this.txtDuongDan1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDuongDan1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDuongDan1.Location = new System.Drawing.Point(280, 50);
+            this.txtDuongDan1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDuongDan1.Name = "txtDuongDan1";
-            this.txtDuongDan1.Size = new System.Drawing.Size(385, 22);
+            this.txtDuongDan1.Size = new System.Drawing.Size(290, 20);
             this.txtDuongDan1.TabIndex = 4;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 80);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(207, 53);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Thư mục lưu:";
             // 
@@ -267,11 +267,10 @@
             this.tabPage3.Controls.Add(this.pnlLapLichTheoTuan);
             this.tabPage3.Controls.Add(this.pnlLapLichTheoNgay);
             this.tabPage3.Controls.Add(this.panel2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage3.Size = new System.Drawing.Size(1203, 516);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Size = new System.Drawing.Size(900, 417);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lập lịch";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -287,20 +286,20 @@
             this.pnlLapLichTheoTuan.Controls.Add(this.label4);
             this.pnlLapLichTheoTuan.Controls.Add(this.btnTaoLichThang);
             this.pnlLapLichTheoTuan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlLapLichTheoTuan.Location = new System.Drawing.Point(4, 283);
-            this.pnlLapLichTheoTuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlLapLichTheoTuan.Location = new System.Drawing.Point(2, 229);
+            this.pnlLapLichTheoTuan.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLapLichTheoTuan.Name = "pnlLapLichTheoTuan";
-            this.pnlLapLichTheoTuan.Size = new System.Drawing.Size(1195, 229);
+            this.pnlLapLichTheoTuan.Size = new System.Drawing.Size(896, 186);
             this.pnlLapLichTheoTuan.TabIndex = 4;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(49, 173);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(43, 115);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 16);
+            this.label7.Size = new System.Drawing.Size(101, 13);
             this.label7.TabIndex = 9;
             this.label7.Text = "Thời gian thực hiện:";
             // 
@@ -308,10 +307,10 @@
             // 
             this.timeTheoTuan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.timeTheoTuan.CustomFormat = "\"HH:mm:ss\"";
-            this.timeTheoTuan.Location = new System.Drawing.Point(245, 170);
-            this.timeTheoTuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.timeTheoTuan.Location = new System.Drawing.Point(153, 112);
+            this.timeTheoTuan.Margin = new System.Windows.Forms.Padding(2);
             this.timeTheoTuan.Name = "timeTheoTuan";
-            this.timeTheoTuan.Size = new System.Drawing.Size(220, 22);
+            this.timeTheoTuan.Size = new System.Drawing.Size(166, 20);
             this.timeTheoTuan.TabIndex = 8;
             this.timeTheoTuan.Value = new System.DateTime(2023, 7, 1, 11, 38, 44, 0);
             // 
@@ -319,9 +318,10 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 111);
+            this.label5.Location = new System.Drawing.Point(43, 73);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 16);
+            this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Thứ:";
             // 
@@ -330,20 +330,19 @@
             this.cmbThu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbThu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbThu.FormattingEnabled = true;
-            this.cmbThu.Location = new System.Drawing.Point(245, 103);
-            this.cmbThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbThu.Location = new System.Drawing.Point(153, 68);
+            this.cmbThu.Margin = new System.Windows.Forms.Padding(2);
             this.cmbThu.Name = "cmbThu";
-            this.cmbThu.Size = new System.Drawing.Size(188, 24);
+            this.cmbThu.Size = new System.Drawing.Size(142, 21);
             this.cmbThu.TabIndex = 6;
-            this.cmbThu.SelectedIndexChanged += new System.EventHandler(this.cmbThu_SelectedIndexChanged);
             // 
             // btnCDDTheoTuan
             // 
             this.btnCDDTheoTuan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCDDTheoTuan.Location = new System.Drawing.Point(686, 65);
-            this.btnCDDTheoTuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCDDTheoTuan.Location = new System.Drawing.Point(465, 33);
+            this.btnCDDTheoTuan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCDDTheoTuan.Name = "btnCDDTheoTuan";
-            this.btnCDDTheoTuan.Size = new System.Drawing.Size(160, 28);
+            this.btnCDDTheoTuan.Size = new System.Drawing.Size(120, 23);
             this.btnCDDTheoTuan.TabIndex = 5;
             this.btnCDDTheoTuan.Text = "Chọn dường dẫn";
             this.btnCDDTheoTuan.UseVisualStyleBackColor = true;
@@ -352,30 +351,30 @@
             // txtDuongDanTheoTuan
             // 
             this.txtDuongDanTheoTuan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDuongDanTheoTuan.Location = new System.Drawing.Point(245, 53);
-            this.txtDuongDanTheoTuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDuongDanTheoTuan.Location = new System.Drawing.Point(153, 35);
+            this.txtDuongDanTheoTuan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDuongDanTheoTuan.Name = "txtDuongDanTheoTuan";
-            this.txtDuongDanTheoTuan.Size = new System.Drawing.Size(385, 22);
+            this.txtDuongDanTheoTuan.Size = new System.Drawing.Size(290, 20);
             this.txtDuongDanTheoTuan.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 53);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(43, 35);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 16);
+            this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Thư mục lưu:";
             // 
             // btnTaoLichThang
             // 
             this.btnTaoLichThang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTaoLichThang.Location = new System.Drawing.Point(968, 170);
-            this.btnTaoLichThang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTaoLichThang.Location = new System.Drawing.Point(560, 112);
+            this.btnTaoLichThang.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaoLichThang.Name = "btnTaoLichThang";
-            this.btnTaoLichThang.Size = new System.Drawing.Size(121, 36);
+            this.btnTaoLichThang.Size = new System.Drawing.Size(91, 29);
             this.btnTaoLichThang.TabIndex = 1;
             this.btnTaoLichThang.Text = "Tạo lịch";
             this.btnTaoLichThang.UseVisualStyleBackColor = true;
@@ -390,20 +389,20 @@
             this.pnlLapLichTheoNgay.Controls.Add(this.label3);
             this.pnlLapLichTheoNgay.Controls.Add(this.btnTaoLichNgay);
             this.pnlLapLichTheoNgay.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLapLichTheoNgay.Location = new System.Drawing.Point(4, 74);
-            this.pnlLapLichTheoNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlLapLichTheoNgay.Location = new System.Drawing.Point(2, 59);
+            this.pnlLapLichTheoNgay.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLapLichTheoNgay.Name = "pnlLapLichTheoNgay";
-            this.pnlLapLichTheoNgay.Size = new System.Drawing.Size(1195, 209);
+            this.pnlLapLichTheoNgay.Size = new System.Drawing.Size(896, 170);
             this.pnlLapLichTheoNgay.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 117);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(43, 77);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 16);
+            this.label6.Size = new System.Drawing.Size(101, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "Thời gian thực hiện:";
             // 
@@ -411,20 +410,20 @@
             // 
             this.timeTheoNgay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.timeTheoNgay.CustomFormat = "\"HH:mm:ss\"";
-            this.timeTheoNgay.Location = new System.Drawing.Point(245, 114);
-            this.timeTheoNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.timeTheoNgay.Location = new System.Drawing.Point(153, 76);
+            this.timeTheoNgay.Margin = new System.Windows.Forms.Padding(2);
             this.timeTheoNgay.Name = "timeTheoNgay";
-            this.timeTheoNgay.Size = new System.Drawing.Size(220, 22);
+            this.timeTheoNgay.Size = new System.Drawing.Size(166, 20);
             this.timeTheoNgay.TabIndex = 6;
             this.timeTheoNgay.Value = new System.DateTime(2023, 7, 1, 11, 38, 44, 0);
             // 
             // btnCDDTheoNgay
             // 
             this.btnCDDTheoNgay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCDDTheoNgay.Location = new System.Drawing.Point(686, 46);
-            this.btnCDDTheoNgay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCDDTheoNgay.Location = new System.Drawing.Point(465, 27);
+            this.btnCDDTheoNgay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCDDTheoNgay.Name = "btnCDDTheoNgay";
-            this.btnCDDTheoNgay.Size = new System.Drawing.Size(160, 28);
+            this.btnCDDTheoNgay.Size = new System.Drawing.Size(120, 23);
             this.btnCDDTheoNgay.TabIndex = 5;
             this.btnCDDTheoNgay.Text = "Chọn dường dẫn";
             this.btnCDDTheoNgay.UseVisualStyleBackColor = true;
@@ -433,30 +432,30 @@
             // txtDuongDanTheoNgay
             // 
             this.txtDuongDanTheoNgay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDuongDanTheoNgay.Location = new System.Drawing.Point(245, 46);
-            this.txtDuongDanTheoNgay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDuongDanTheoNgay.Location = new System.Drawing.Point(153, 30);
+            this.txtDuongDanTheoNgay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDuongDanTheoNgay.Name = "txtDuongDanTheoNgay";
-            this.txtDuongDanTheoNgay.Size = new System.Drawing.Size(385, 22);
+            this.txtDuongDanTheoNgay.Size = new System.Drawing.Size(290, 20);
             this.txtDuongDanTheoNgay.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 50);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(43, 33);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
+            this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Thư mục lưu:";
             // 
             // btnTaoLichNgay
             // 
             this.btnTaoLichNgay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTaoLichNgay.Location = new System.Drawing.Point(968, 146);
-            this.btnTaoLichNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTaoLichNgay.Location = new System.Drawing.Point(560, 97);
+            this.btnTaoLichNgay.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaoLichNgay.Name = "btnTaoLichNgay";
-            this.btnTaoLichNgay.Size = new System.Drawing.Size(121, 36);
+            this.btnTaoLichNgay.Size = new System.Drawing.Size(91, 29);
             this.btnTaoLichNgay.TabIndex = 0;
             this.btnTaoLichNgay.Text = "Tạo lịch";
             this.btnTaoLichNgay.UseVisualStyleBackColor = true;
@@ -466,20 +465,21 @@
             // 
             this.panel2.Controls.Add(this.cmbDsLapLich);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1195, 70);
+            this.panel2.Size = new System.Drawing.Size(896, 57);
             this.panel2.TabIndex = 2;
             // 
             // cmbDsLapLich
             // 
+            this.cmbDsLapLich.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbDsLapLich.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDsLapLich.FormattingEnabled = true;
-            this.cmbDsLapLich.Location = new System.Drawing.Point(387, 14);
-            this.cmbDsLapLich.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDsLapLich.Location = new System.Drawing.Point(311, 9);
+            this.cmbDsLapLich.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDsLapLich.Name = "cmbDsLapLich";
-            this.cmbDsLapLich.Size = new System.Drawing.Size(364, 24);
+            this.cmbDsLapLich.Size = new System.Drawing.Size(274, 21);
             this.cmbDsLapLich.TabIndex = 0;
             this.cmbDsLapLich.SelectedIndexChanged += new System.EventHandler(this.cmbDsLapLich_SelectedIndexChanged);
             // 
@@ -489,11 +489,11 @@
             this.tabPage4.Controls.Add(this.girdControlWeekly);
             this.tabPage4.Controls.Add(this.girdControlDaily);
             this.tabPage4.Controls.Add(this.panel1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Size = new System.Drawing.Size(1203, 516);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Size = new System.Drawing.Size(900, 417);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Danh sách lịch";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -502,12 +502,12 @@
             // 
             this.girdControlWeekly.DataSource = this.bdsWeeklyJob;
             this.girdControlWeekly.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.girdControlWeekly.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.girdControlWeekly.Location = new System.Drawing.Point(3, 308);
+            this.girdControlWeekly.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.girdControlWeekly.Location = new System.Drawing.Point(2, 251);
             this.girdControlWeekly.MainView = this.gcWeeklyjob;
-            this.girdControlWeekly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.girdControlWeekly.Margin = new System.Windows.Forms.Padding(2);
             this.girdControlWeekly.Name = "girdControlWeekly";
-            this.girdControlWeekly.Size = new System.Drawing.Size(1197, 206);
+            this.girdControlWeekly.Size = new System.Drawing.Size(896, 164);
             this.girdControlWeekly.TabIndex = 2;
             this.girdControlWeekly.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gcWeeklyjob});
@@ -533,100 +533,102 @@
             this.colactiveendtime1,
             this.colenabled1,
             this.coldate_created1});
+            this.gcWeeklyjob.DetailHeight = 284;
             this.gcWeeklyjob.GridControl = this.girdControlWeekly;
             this.gcWeeklyjob.Name = "gcWeeklyjob";
+            this.gcWeeklyjob.OptionsEditForm.PopupEditFormWidth = 600;
             this.gcWeeklyjob.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gcWeeklyjob_FocusedRowChanged);
             // 
             // coljob_name1
             // 
             this.coljob_name1.Caption = "Tên";
             this.coljob_name1.FieldName = "job_name";
-            this.coljob_name1.MinWidth = 25;
+            this.coljob_name1.MinWidth = 19;
             this.coljob_name1.Name = "coljob_name1";
             this.coljob_name1.Visible = true;
             this.coljob_name1.VisibleIndex = 0;
-            this.coljob_name1.Width = 257;
+            this.coljob_name1.Width = 193;
             // 
             // colnext_run_day1
             // 
             this.colnext_run_day1.Caption = "Ngày tiếp theo";
             this.colnext_run_day1.FieldName = "next_run_day";
-            this.colnext_run_day1.MinWidth = 25;
+            this.colnext_run_day1.MinWidth = 19;
             this.colnext_run_day1.Name = "colnext_run_day1";
             this.colnext_run_day1.Visible = true;
             this.colnext_run_day1.VisibleIndex = 1;
-            this.colnext_run_day1.Width = 99;
+            this.colnext_run_day1.Width = 74;
             // 
             // colnextruntime1
             // 
             this.colnextruntime1.Caption = "Thời gian thực hiện";
             this.colnextruntime1.FieldName = "nextruntime";
-            this.colnextruntime1.MinWidth = 25;
+            this.colnextruntime1.MinWidth = 19;
             this.colnextruntime1.Name = "colnextruntime1";
             this.colnextruntime1.Visible = true;
             this.colnextruntime1.VisibleIndex = 2;
-            this.colnextruntime1.Width = 124;
+            this.colnextruntime1.Width = 93;
             // 
             // colExpr1
             // 
             this.colExpr1.Caption = "Thứ";
             this.colExpr1.FieldName = "freq_interval";
-            this.colExpr1.MinWidth = 25;
+            this.colExpr1.MinWidth = 19;
             this.colExpr1.Name = "colExpr1";
             this.colExpr1.Visible = true;
             this.colExpr1.VisibleIndex = 3;
-            this.colExpr1.Width = 41;
+            this.colExpr1.Width = 31;
             // 
             // colactivetime1
             // 
             this.colactivetime1.Caption = "Thời gian bắt đầu";
             this.colactivetime1.FieldName = "activetime";
-            this.colactivetime1.MinWidth = 25;
+            this.colactivetime1.MinWidth = 19;
             this.colactivetime1.Name = "colactivetime1";
             this.colactivetime1.Visible = true;
             this.colactivetime1.VisibleIndex = 4;
-            this.colactivetime1.Width = 109;
+            this.colactivetime1.Width = 82;
             // 
             // colactiveendtime1
             // 
             this.colactiveendtime1.Caption = "Thời gian kết thúc";
             this.colactiveendtime1.FieldName = "activeendtime";
-            this.colactiveendtime1.MinWidth = 25;
+            this.colactiveendtime1.MinWidth = 19;
             this.colactiveendtime1.Name = "colactiveendtime1";
             this.colactiveendtime1.Visible = true;
             this.colactiveendtime1.VisibleIndex = 5;
-            this.colactiveendtime1.Width = 107;
+            this.colactiveendtime1.Width = 80;
             // 
             // colenabled1
             // 
             this.colenabled1.Caption = "Trạng thái";
             this.colenabled1.FieldName = "enabled";
-            this.colenabled1.MinWidth = 25;
+            this.colenabled1.MinWidth = 19;
             this.colenabled1.Name = "colenabled1";
             this.colenabled1.Visible = true;
             this.colenabled1.VisibleIndex = 6;
-            this.colenabled1.Width = 65;
+            this.colenabled1.Width = 49;
             // 
             // coldate_created1
             // 
             this.coldate_created1.Caption = "Ngày tạo";
             this.coldate_created1.FieldName = "date_created";
-            this.coldate_created1.MinWidth = 25;
+            this.coldate_created1.MinWidth = 19;
             this.coldate_created1.Name = "coldate_created1";
             this.coldate_created1.Visible = true;
             this.coldate_created1.VisibleIndex = 7;
-            this.coldate_created1.Width = 71;
+            this.coldate_created1.Width = 53;
             // 
             // girdControlDaily
             // 
             this.girdControlDaily.DataSource = this.bdsDailyJob;
             this.girdControlDaily.Dock = System.Windows.Forms.DockStyle.Top;
-            this.girdControlDaily.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.girdControlDaily.Location = new System.Drawing.Point(3, 88);
+            this.girdControlDaily.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.girdControlDaily.Location = new System.Drawing.Point(2, 72);
             this.girdControlDaily.MainView = this.gcDailyjob;
-            this.girdControlDaily.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.girdControlDaily.Margin = new System.Windows.Forms.Padding(2);
             this.girdControlDaily.Name = "girdControlDaily";
-            this.girdControlDaily.Size = new System.Drawing.Size(1197, 220);
+            this.girdControlDaily.Size = new System.Drawing.Size(896, 179);
             this.girdControlDaily.TabIndex = 1;
             this.girdControlDaily.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gcDailyjob});
@@ -646,79 +648,81 @@
             this.colactiveendtime,
             this.colenabled,
             this.coldate_created});
+            this.gcDailyjob.DetailHeight = 284;
             this.gcDailyjob.GridControl = this.girdControlDaily;
             this.gcDailyjob.Name = "gcDailyjob";
+            this.gcDailyjob.OptionsEditForm.PopupEditFormWidth = 600;
             this.gcDailyjob.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gcDailyjob_FocusedRowChanged);
             // 
             // coljob_name
             // 
             this.coljob_name.Caption = "Tên";
             this.coljob_name.FieldName = "job_name";
-            this.coljob_name.MinWidth = 25;
+            this.coljob_name.MinWidth = 19;
             this.coljob_name.Name = "coljob_name";
             this.coljob_name.Visible = true;
             this.coljob_name.VisibleIndex = 0;
-            this.coljob_name.Width = 164;
+            this.coljob_name.Width = 123;
             // 
             // colnext_run_day
             // 
             this.colnext_run_day.Caption = "Ngày tiếp theo";
             this.colnext_run_day.FieldName = "next_run_day";
-            this.colnext_run_day.MinWidth = 25;
+            this.colnext_run_day.MinWidth = 19;
             this.colnext_run_day.Name = "colnext_run_day";
             this.colnext_run_day.Visible = true;
             this.colnext_run_day.VisibleIndex = 1;
-            this.colnext_run_day.Width = 105;
+            this.colnext_run_day.Width = 79;
             // 
             // colnextruntime
             // 
             this.colnextruntime.Caption = "Thời gian thực hiện";
             this.colnextruntime.FieldName = "nextruntime";
-            this.colnextruntime.MinWidth = 25;
+            this.colnextruntime.MinWidth = 19;
             this.colnextruntime.Name = "colnextruntime";
             this.colnextruntime.Visible = true;
             this.colnextruntime.VisibleIndex = 2;
-            this.colnextruntime.Width = 121;
+            this.colnextruntime.Width = 91;
             // 
             // colactivetime
             // 
             this.colactivetime.Caption = "Thời gian bắt đầu";
             this.colactivetime.FieldName = "activetime";
-            this.colactivetime.MinWidth = 25;
+            this.colactivetime.MinWidth = 19;
             this.colactivetime.Name = "colactivetime";
             this.colactivetime.Visible = true;
             this.colactivetime.VisibleIndex = 3;
-            this.colactivetime.Width = 141;
+            this.colactivetime.Width = 106;
             // 
             // colactiveendtime
             // 
             this.colactiveendtime.Caption = "Thời gian kết thúc";
             this.colactiveendtime.FieldName = "activeendtime";
-            this.colactiveendtime.MinWidth = 25;
+            this.colactiveendtime.MinWidth = 19;
             this.colactiveendtime.Name = "colactiveendtime";
             this.colactiveendtime.Visible = true;
             this.colactiveendtime.VisibleIndex = 4;
-            this.colactiveendtime.Width = 141;
+            this.colactiveendtime.Width = 106;
             // 
             // colenabled
             // 
             this.colenabled.Caption = "Trạng thái";
             this.colenabled.FieldName = "enabled";
-            this.colenabled.MinWidth = 25;
+            this.colenabled.MinWidth = 19;
             this.colenabled.Name = "colenabled";
             this.colenabled.Visible = true;
             this.colenabled.VisibleIndex = 5;
-            this.colenabled.Width = 79;
+            this.colenabled.Width = 59;
             // 
             // coldate_created
             // 
             this.coldate_created.Caption = "Ngày tạo";
             this.coldate_created.FieldName = "date_created";
-            this.coldate_created.MinWidth = 25;
+            this.coldate_created.MinWidth = 19;
             this.coldate_created.Name = "coldate_created";
             this.coldate_created.Visible = true;
             this.coldate_created.VisibleIndex = 6;
-            this.coldate_created.Width = 121;
+            this.coldate_created.Width = 91;
             // 
             // panel1
             // 
@@ -728,20 +732,20 @@
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.cmbDSJob);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1197, 86);
+            this.panel1.Size = new System.Drawing.Size(896, 70);
             this.panel1.TabIndex = 1;
             // 
             // btnReload
             // 
             this.btnReload.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnReload.ImageOptions.Image = global::TPNT.Properties.Resources.refresh;
-            this.btnReload.Location = new System.Drawing.Point(488, 43);
-            this.btnReload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReload.Location = new System.Drawing.Point(540, 35);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(2);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(95, 37);
+            this.btnReload.Size = new System.Drawing.Size(71, 30);
             this.btnReload.TabIndex = 4;
             this.btnReload.Text = "Reload";
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
@@ -750,10 +754,10 @@
             // 
             this.btnDisable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDisable.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDisable.ImageOptions.Image")));
-            this.btnDisable.Location = new System.Drawing.Point(336, 43);
-            this.btnDisable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDisable.Location = new System.Drawing.Point(454, 35);
+            this.btnDisable.Margin = new System.Windows.Forms.Padding(2);
             this.btnDisable.Name = "btnDisable";
-            this.btnDisable.Size = new System.Drawing.Size(95, 37);
+            this.btnDisable.Size = new System.Drawing.Size(71, 30);
             this.btnDisable.TabIndex = 3;
             this.btnDisable.Text = "Disable";
             this.btnDisable.Click += new System.EventHandler(this.btnDisable_Click);
@@ -762,10 +766,10 @@
             // 
             this.btnEnable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEnable.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEnable.ImageOptions.Image")));
-            this.btnEnable.Location = new System.Drawing.Point(178, 43);
-            this.btnEnable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEnable.Location = new System.Drawing.Point(366, 35);
+            this.btnEnable.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnable.Name = "btnEnable";
-            this.btnEnable.Size = new System.Drawing.Size(95, 37);
+            this.btnEnable.Size = new System.Drawing.Size(71, 30);
             this.btnEnable.TabIndex = 2;
             this.btnEnable.Text = "Enable";
             this.btnEnable.Click += new System.EventHandler(this.btnEnable_Click);
@@ -774,22 +778,23 @@
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXoa.ImageOptions.Image = global::TPNT.Properties.Resources.delete_3_1;
-            this.btnXoa.Location = new System.Drawing.Point(37, 43);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Location = new System.Drawing.Point(286, 35);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(95, 37);
+            this.btnXoa.Size = new System.Drawing.Size(71, 30);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // cmbDSJob
             // 
+            this.cmbDSJob.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbDSJob.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDSJob.FormattingEnabled = true;
-            this.cmbDSJob.Location = new System.Drawing.Point(387, 14);
-            this.cmbDSJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDSJob.Location = new System.Drawing.Point(311, 9);
+            this.cmbDSJob.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDSJob.Name = "cmbDSJob";
-            this.cmbDSJob.Size = new System.Drawing.Size(364, 24);
+            this.cmbDSJob.Size = new System.Drawing.Size(274, 21);
             this.cmbDSJob.TabIndex = 0;
             this.cmbDSJob.SelectedIndexChanged += new System.EventHandler(this.cmbDSJob_SelectedIndexChanged);
             // 
@@ -819,11 +824,10 @@
             // 
             // frmBackup_Restore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 545);
+            this.ClientSize = new System.Drawing.Size(908, 443);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBackup_Restore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Backup & Restore";
