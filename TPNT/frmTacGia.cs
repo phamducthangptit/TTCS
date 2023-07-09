@@ -37,7 +37,7 @@ namespace TPNT
             groupBox1.Visible = false;
             if (Program.mGroup.Equals("QUANLI"))
             {
-                this.btnThem.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnThem.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnImport.Enabled = this.btnExport.Enabled = true;
                 this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
 
                 string strLenh = "SELECT * FROM V_SLTG";
@@ -53,7 +53,7 @@ namespace TPNT
             } else
             {
                 this.btnReload.Enabled = this.btnThoat.Enabled = true;
-                this.btnThem.Enabled = this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
+                this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnHieuChinh.Enabled = false;
             }
 
             
@@ -70,7 +70,8 @@ namespace TPNT
 
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = true;
-            this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
+
+            this.btnImport.Enabled = this.btnExport.Enabled = this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
                 = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
@@ -88,7 +89,7 @@ namespace TPNT
             gcTacGia.Enabled = false;
             groupBox1.Enabled = true;
 
-            this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
+            this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 
                 = this.btnReload.Enabled = this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = true;
             this.btnChonAnh.Visible = true;
@@ -165,14 +166,14 @@ namespace TPNT
                 gcTacGia.Visible = true;
                 gcTacGia.Dock = DockStyle.Fill;
                 groupBox1.Visible = false;
-                this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = 
+                this.btnImport.Enabled = this.btnExport.Enabled = this.btnChiTiet.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = 
                     this.btnThoat.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = true;
                 this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
                 
             }
             else
             {
-                this.btnXoa.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
+                this.btnImport.Enabled = this.btnExport.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled = true;
                 this.btnLuu.Enabled = this.btnPhucHoi.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
                 this.btnChonAnh.Visible = this.btnThem.Enabled = false;
                 this.pnlAnh.Visible = true;
@@ -375,7 +376,7 @@ namespace TPNT
             }
             gcTacGia.Enabled = true;
 
-            this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled 
+            this.btnImport.Enabled = this.btnExport.Enabled = this.btnXoa.Enabled = this.btnReload.Enabled = this.btnThoat.Enabled 
                 = this.btnBackup.Enabled = this.btnRestore.Enabled = true;
             this.btnLuu.Enabled = this.btnPhucHoi.Enabled = false;
             this.btnChonAnh.Visible = false;
@@ -448,7 +449,7 @@ namespace TPNT
                 this.btnHieuChinh.Enabled = false;
                 if (Program.mGroup.Equals("QUANLI"))
                 {
-                    this.btnThem.Enabled = true;
+                    this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = true;
                 }
                     
             } else this.Close();
@@ -467,7 +468,7 @@ namespace TPNT
             }
             this.txtMaTacGia.Enabled = this.txtHoTen.Enabled = this.ngaySinh.Enabled = this.ngayMat.Enabled =
                 this.txtQuocTich.Enabled = this.txtPhongCach.Enabled = this.txtDienGiai.Enabled = false;
-            this.btnThem.Enabled = this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
+            this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = this.btnChiTiet.Enabled = this.btnBackup.Enabled = this.btnRestore.Enabled = false;
             gcTacGia.Visible = false;
             groupBox1.Visible = true;
             groupBox1.Dock = DockStyle.Fill;
