@@ -26,6 +26,159 @@
               <Mapping SourceColumn="NamSangTac" DataSetColumn="NamSangTac" />
               <Mapping SourceColumn="ChuDe" DataSetColumn="ChuDe" />
               <Mapping SourceColumn="TacGia" DataSetColumn="TacGia" />
+              <Mapping SourceColumn="TenTP" DataSetColumn="TenTP" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ListTPNTTableAdapter" GeneratorDataComponentClassName="View_ListTPNTTableAdapter" Name="View_ListTPNT" UserDataComponentName="View_ListTPNTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPNTConnectionString (Settings)" DbObjectName="TPNT.dbo.View_ListTPNT" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MaSoTP, ChuDe, TENTACGIA, NamSangTac, TenTP FROM View_ListTPNT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaSoTP" DataSetColumn="MaSoTP" />
+              <Mapping SourceColumn="ChuDe" DataSetColumn="ChuDe" />
+              <Mapping SourceColumn="TENTACGIA" DataSetColumn="TENTACGIA" />
+              <Mapping SourceColumn="NamSangTac" DataSetColumn="NamSangTac" />
+              <Mapping SourceColumn="TenTP" DataSetColumn="TenTP" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ListTPNT1TableAdapter" GeneratorDataComponentClassName="View_ListTPNT1TableAdapter" Name="View_ListTPNT1" UserDataComponentName="View_ListTPNT1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPNTConnectionString (Settings)" DbObjectName="TPNT.dbo.View_ListTPNT" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MaSoTP, ChuDe, TENTACGIA, NamSangTac, TenTP FROM dbo.View_ListTPNT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaSoTP" DataSetColumn="MaSoTP" />
+              <Mapping SourceColumn="ChuDe" DataSetColumn="ChuDe" />
+              <Mapping SourceColumn="TENTACGIA" DataSetColumn="TENTACGIA" />
+              <Mapping SourceColumn="NamSangTac" DataSetColumn="NamSangTac" />
+              <Mapping SourceColumn="TenTP" DataSetColumn="TenTP" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ListDieuKhacTacTuongTableAdapter" GeneratorDataComponentClassName="View_ListDieuKhacTacTuongTableAdapter" Name="View_ListDieuKhacTacTuong" UserDataComponentName="View_ListDieuKhacTacTuongTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPNTConnectionString (Settings)" DbObjectName="TPNT.dbo.View_ListDieuKhacTacTuong" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MaSoTP, VatLieu, KhoiLuong, ChieuCao, PhongCach, NamSangTac, ChuDe, QuocGia, TENTACGIA, TenTP FROM dbo.View_ListDieuKhacTacTuong</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaSoTP" DataSetColumn="MaSoTP" />
+              <Mapping SourceColumn="VatLieu" DataSetColumn="VatLieu" />
+              <Mapping SourceColumn="KhoiLuong" DataSetColumn="KhoiLuong" />
+              <Mapping SourceColumn="ChieuCao" DataSetColumn="ChieuCao" />
+              <Mapping SourceColumn="PhongCach" DataSetColumn="PhongCach" />
+              <Mapping SourceColumn="NamSangTac" DataSetColumn="NamSangTac" />
+              <Mapping SourceColumn="ChuDe" DataSetColumn="ChuDe" />
+              <Mapping SourceColumn="QuocGia" DataSetColumn="QuocGia" />
+              <Mapping SourceColumn="TENTACGIA" DataSetColumn="TENTACGIA" />
+              <Mapping SourceColumn="TenTP" DataSetColumn="TenTP" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_NullLoaiHinhSangTacTableAdapter" GeneratorDataComponentClassName="view_NullLoaiHinhSangTacTableAdapter" Name="view_NullLoaiHinhSangTac" UserDataComponentName="view_NullLoaiHinhSangTacTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPNTConnectionString (Settings)" DbObjectName="TPNT.dbo.view_NullLoaiHinhSangTac" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MaSoTP, TenTP, NamSangTac, ChuDe, QuocGia, ThoiDai, TacGia FROM dbo.view_NullLoaiHinhSangTac</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaSoTP" DataSetColumn="MaSoTP" />
+              <Mapping SourceColumn="TenTP" DataSetColumn="TenTP" />
+              <Mapping SourceColumn="NamSangTac" DataSetColumn="NamSangTac" />
+              <Mapping SourceColumn="ChuDe" DataSetColumn="ChuDe" />
+              <Mapping SourceColumn="QuocGia" DataSetColumn="QuocGia" />
+              <Mapping SourceColumn="ThoiDai" DataSetColumn="ThoiDai" />
+              <Mapping SourceColumn="TacGia" DataSetColumn="TacGia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_NullSoHuuTableAdapter" GeneratorDataComponentClassName="view_NullSoHuuTableAdapter" Name="view_NullSoHuu" UserDataComponentName="view_NullSoHuuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPNTConnectionString (Settings)" DbObjectName="TPNT.dbo.view_NullSoHuu" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MaSoTP, TenTP, ChuDe, NamSangTac, TacGia FROM dbo.view_NullSoHuu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaSoTP" DataSetColumn="MaSoTP" />
+              <Mapping SourceColumn="TenTP" DataSetColumn="TenTP" />
+              <Mapping SourceColumn="ChuDe" DataSetColumn="ChuDe" />
+              <Mapping SourceColumn="NamSangTac" DataSetColumn="NamSangTac" />
+              <Mapping SourceColumn="TacGia" DataSetColumn="TacGia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ListLoaiSoHuuTableAdapter" GeneratorDataComponentClassName="View_ListLoaiSoHuuTableAdapter" Name="View_ListLoaiSoHuu" UserDataComponentName="View_ListLoaiSoHuuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPNTConnectionString (Settings)" DbObjectName="TPNT.dbo.View_ListLoaiSoHuu" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT View_ListLoaiSoHuu.*
+FROM     View_ListLoaiSoHuu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Mã tác phẩm" DataSetColumn="Mã tác phẩm" />
+              <Mapping SourceColumn="Ngày sở hữu" DataSetColumn="Ngày sở hữu" />
+              <Mapping SourceColumn="Tình Trạng" DataSetColumn="Tình Trạng" />
+              <Mapping SourceColumn="Trị giá" DataSetColumn="Trị giá" />
+              <Mapping SourceColumn="Năm sáng tác" DataSetColumn="Năm sáng tác" />
+              <Mapping SourceColumn="Tên tác phẩm" DataSetColumn="Tên tác phẩm" />
+              <Mapping SourceColumn="Tác giả" DataSetColumn="Tác giả" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SP_TPNT_ChiTietCTLTableAdapter" GeneratorDataComponentClassName="SP_TPNT_ChiTietCTLTableAdapter" Name="SP_TPNT_ChiTietCTL" UserDataComponentName="SP_TPNT_ChiTietCTLTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPNTConnectionString (Settings)" DbObjectName="TPNT.dbo.SP_TPNT_ChiTietCTL" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SP_TPNT_ChiTietCTL</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@maCTL" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaSoTP" DataSetColumn="MaSoTP" />
+              <Mapping SourceColumn="TenTP" DataSetColumn="TenTP" />
+              <Mapping SourceColumn="NamSangTac" DataSetColumn="NamSangTac" />
+              <Mapping SourceColumn="TacGia" DataSetColumn="TacGia" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -34,28 +187,306 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="TPNTDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="TPNTDataSet1" msprop:Generator_DataSetName="TPNTDataSet1">
+  <xs:element name="TPNTDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TPNTDataSet1" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TPNTDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SP_CHITIETCUOCTRIENLAM" msprop:Generator_RowEvHandlerName="SP_CHITIETCUOCTRIENLAMRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_CHITIETCUOCTRIENLAMRowDeleted" msprop:Generator_RowDeletingName="SP_CHITIETCUOCTRIENLAMRowDeleting" msprop:Generator_RowEvArgName="SP_CHITIETCUOCTRIENLAMRowChangeEvent" msprop:Generator_TablePropName="SP_CHITIETCUOCTRIENLAM" msprop:Generator_RowChangedName="SP_CHITIETCUOCTRIENLAMRowChanged" msprop:Generator_RowChangingName="SP_CHITIETCUOCTRIENLAMRowChanging" msprop:Generator_TableClassName="SP_CHITIETCUOCTRIENLAMDataTable" msprop:Generator_RowClassName="SP_CHITIETCUOCTRIENLAMRow" msprop:Generator_TableVarName="tableSP_CHITIETCUOCTRIENLAM" msprop:Generator_UserTableName="SP_CHITIETCUOCTRIENLAM">
+        <xs:element name="SP_CHITIETCUOCTRIENLAM" msprop:Generator_RowEvHandlerName="SP_CHITIETCUOCTRIENLAMRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_CHITIETCUOCTRIENLAMRowDeleted" msprop:Generator_RowDeletingName="SP_CHITIETCUOCTRIENLAMRowDeleting" msprop:Generator_RowEvArgName="SP_CHITIETCUOCTRIENLAMRowChangeEvent" msprop:Generator_TablePropName="SP_CHITIETCUOCTRIENLAM" msprop:Generator_RowChangedName="SP_CHITIETCUOCTRIENLAMRowChanged" msprop:Generator_UserTableName="SP_CHITIETCUOCTRIENLAM" msprop:Generator_RowChangingName="SP_CHITIETCUOCTRIENLAMRowChanging" msprop:Generator_RowClassName="SP_CHITIETCUOCTRIENLAMRow" msprop:Generator_TableClassName="SP_CHITIETCUOCTRIENLAMDataTable" msprop:Generator_TableVarName="tableSP_CHITIETCUOCTRIENLAM">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MaSoTP" msprop:Generator_ColumnPropNameInRow="MaSoTP" msprop:Generator_ColumnPropNameInTable="MaSoTPColumn" msprop:Generator_ColumnVarNameInTable="columnMaSoTP" msprop:Generator_UserColumnName="MaSoTP">
+              <xs:element name="MaSoTP" msprop:Generator_ColumnPropNameInTable="MaSoTPColumn" msprop:Generator_ColumnPropNameInRow="MaSoTP" msprop:Generator_UserColumnName="MaSoTP" msprop:Generator_ColumnVarNameInTable="columnMaSoTP">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NamSangTac" msprop:Generator_ColumnPropNameInRow="NamSangTac" msprop:Generator_ColumnPropNameInTable="NamSangTacColumn" msprop:Generator_ColumnVarNameInTable="columnNamSangTac" msprop:Generator_UserColumnName="NamSangTac" type="xs:int" minOccurs="0" />
-              <xs:element name="ChuDe" msprop:Generator_ColumnPropNameInRow="ChuDe" msprop:Generator_ColumnPropNameInTable="ChuDeColumn" msprop:Generator_ColumnVarNameInTable="columnChuDe" msprop:Generator_UserColumnName="ChuDe" minOccurs="0">
+              <xs:element name="NamSangTac" msprop:Generator_ColumnPropNameInTable="NamSangTacColumn" msprop:Generator_ColumnPropNameInRow="NamSangTac" msprop:Generator_UserColumnName="NamSangTac" msprop:Generator_ColumnVarNameInTable="columnNamSangTac" type="xs:int" minOccurs="0" />
+              <xs:element name="ChuDe" msprop:Generator_ColumnPropNameInTable="ChuDeColumn" msprop:Generator_ColumnPropNameInRow="ChuDe" msprop:Generator_UserColumnName="ChuDe" msprop:Generator_ColumnVarNameInTable="columnChuDe" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TacGia" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="TacGia" msprop:Generator_ColumnPropNameInTable="TacGiaColumn" msprop:Generator_ColumnVarNameInTable="columnTacGia" msprop:Generator_UserColumnName="TacGia" minOccurs="0">
+              <xs:element name="TacGia" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="TacGiaColumn" msprop:Generator_ColumnPropNameInRow="TacGia" msprop:Generator_UserColumnName="TacGia" msprop:Generator_ColumnVarNameInTable="columnTacGia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenTP" msprop:Generator_ColumnPropNameInTable="TenTPColumn" msprop:Generator_ColumnPropNameInRow="TenTP" msprop:Generator_UserColumnName="TenTP" msprop:Generator_ColumnVarNameInTable="columnTenTP" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_ListTPNT" msprop:Generator_RowEvHandlerName="View_ListTPNTRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ListTPNTRowDeleted" msprop:Generator_RowDeletingName="View_ListTPNTRowDeleting" msprop:Generator_RowEvArgName="View_ListTPNTRowChangeEvent" msprop:Generator_TablePropName="View_ListTPNT" msprop:Generator_RowChangedName="View_ListTPNTRowChanged" msprop:Generator_UserTableName="View_ListTPNT" msprop:Generator_RowChangingName="View_ListTPNTRowChanging" msprop:Generator_RowClassName="View_ListTPNTRow" msprop:Generator_TableClassName="View_ListTPNTDataTable" msprop:Generator_TableVarName="tableView_ListTPNT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaSoTP" msprop:Generator_ColumnPropNameInTable="MaSoTPColumn" msprop:Generator_ColumnPropNameInRow="MaSoTP" msprop:Generator_UserColumnName="MaSoTP" msprop:Generator_ColumnVarNameInTable="columnMaSoTP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChuDe" msprop:Generator_ColumnPropNameInTable="ChuDeColumn" msprop:Generator_ColumnPropNameInRow="ChuDe" msprop:Generator_UserColumnName="ChuDe" msprop:Generator_ColumnVarNameInTable="columnChuDe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TENTACGIA" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="TENTACGIAColumn" msprop:Generator_ColumnPropNameInRow="TENTACGIA" msprop:Generator_UserColumnName="TENTACGIA" msprop:Generator_ColumnVarNameInTable="columnTENTACGIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NamSangTac" msprop:Generator_ColumnPropNameInTable="NamSangTacColumn" msprop:Generator_ColumnPropNameInRow="NamSangTac" msprop:Generator_UserColumnName="NamSangTac" msprop:Generator_ColumnVarNameInTable="columnNamSangTac" type="xs:int" minOccurs="0" />
+              <xs:element name="TenTP" msprop:Generator_ColumnPropNameInRow="TenTP" msprop:Generator_ColumnPropNameInTable="TenTPColumn" msprop:Generator_ColumnVarNameInTable="columnTenTP" msprop:Generator_UserColumnName="TenTP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_ListTPNT1" msprop:Generator_RowEvHandlerName="View_ListTPNT1RowChangeEventHandler" msprop:Generator_RowDeletedName="View_ListTPNT1RowDeleted" msprop:Generator_RowDeletingName="View_ListTPNT1RowDeleting" msprop:Generator_RowEvArgName="View_ListTPNT1RowChangeEvent" msprop:Generator_TablePropName="View_ListTPNT1" msprop:Generator_RowChangedName="View_ListTPNT1RowChanged" msprop:Generator_UserTableName="View_ListTPNT1" msprop:Generator_RowChangingName="View_ListTPNT1RowChanging" msprop:Generator_RowClassName="View_ListTPNT1Row" msprop:Generator_TableClassName="View_ListTPNT1DataTable" msprop:Generator_TableVarName="tableView_ListTPNT1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaSoTP" msprop:Generator_ColumnPropNameInTable="MaSoTPColumn" msprop:Generator_ColumnPropNameInRow="MaSoTP" msprop:Generator_UserColumnName="MaSoTP" msprop:Generator_ColumnVarNameInTable="columnMaSoTP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChuDe" msprop:Generator_ColumnPropNameInTable="ChuDeColumn" msprop:Generator_ColumnPropNameInRow="ChuDe" msprop:Generator_UserColumnName="ChuDe" msprop:Generator_ColumnVarNameInTable="columnChuDe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TENTACGIA" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="TENTACGIAColumn" msprop:Generator_ColumnPropNameInRow="TENTACGIA" msprop:Generator_UserColumnName="TENTACGIA" msprop:Generator_ColumnVarNameInTable="columnTENTACGIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NamSangTac" msprop:Generator_ColumnPropNameInTable="NamSangTacColumn" msprop:Generator_ColumnPropNameInRow="NamSangTac" msprop:Generator_UserColumnName="NamSangTac" msprop:Generator_ColumnVarNameInTable="columnNamSangTac" type="xs:int" minOccurs="0" />
+              <xs:element name="TenTP" msprop:Generator_ColumnPropNameInTable="TenTPColumn" msprop:Generator_ColumnPropNameInRow="TenTP" msprop:Generator_UserColumnName="TenTP" msprop:Generator_ColumnVarNameInTable="columnTenTP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_ListDieuKhacTacTuong" msprop:Generator_RowEvHandlerName="View_ListDieuKhacTacTuongRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ListDieuKhacTacTuongRowDeleted" msprop:Generator_RowDeletingName="View_ListDieuKhacTacTuongRowDeleting" msprop:Generator_RowEvArgName="View_ListDieuKhacTacTuongRowChangeEvent" msprop:Generator_TablePropName="View_ListDieuKhacTacTuong" msprop:Generator_RowChangedName="View_ListDieuKhacTacTuongRowChanged" msprop:Generator_UserTableName="View_ListDieuKhacTacTuong" msprop:Generator_RowChangingName="View_ListDieuKhacTacTuongRowChanging" msprop:Generator_RowClassName="View_ListDieuKhacTacTuongRow" msprop:Generator_TableClassName="View_ListDieuKhacTacTuongDataTable" msprop:Generator_TableVarName="tableView_ListDieuKhacTacTuong">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaSoTP" msprop:Generator_ColumnPropNameInTable="MaSoTPColumn" msprop:Generator_ColumnPropNameInRow="MaSoTP" msprop:Generator_UserColumnName="MaSoTP" msprop:Generator_ColumnVarNameInTable="columnMaSoTP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VatLieu" msprop:Generator_ColumnPropNameInTable="VatLieuColumn" msprop:Generator_ColumnPropNameInRow="VatLieu" msprop:Generator_UserColumnName="VatLieu" msprop:Generator_ColumnVarNameInTable="columnVatLieu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KhoiLuong" msprop:Generator_ColumnPropNameInTable="KhoiLuongColumn" msprop:Generator_ColumnPropNameInRow="KhoiLuong" msprop:Generator_UserColumnName="KhoiLuong" msprop:Generator_ColumnVarNameInTable="columnKhoiLuong" type="xs:double" minOccurs="0" />
+              <xs:element name="ChieuCao" msprop:Generator_ColumnPropNameInTable="ChieuCaoColumn" msprop:Generator_ColumnPropNameInRow="ChieuCao" msprop:Generator_UserColumnName="ChieuCao" msprop:Generator_ColumnVarNameInTable="columnChieuCao" type="xs:double" minOccurs="0" />
+              <xs:element name="PhongCach" msprop:Generator_ColumnPropNameInTable="PhongCachColumn" msprop:Generator_ColumnPropNameInRow="PhongCach" msprop:Generator_UserColumnName="PhongCach" msprop:Generator_ColumnVarNameInTable="columnPhongCach" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NamSangTac" msprop:Generator_ColumnPropNameInTable="NamSangTacColumn" msprop:Generator_ColumnPropNameInRow="NamSangTac" msprop:Generator_UserColumnName="NamSangTac" msprop:Generator_ColumnVarNameInTable="columnNamSangTac" type="xs:int" minOccurs="0" />
+              <xs:element name="ChuDe" msprop:Generator_ColumnPropNameInTable="ChuDeColumn" msprop:Generator_ColumnPropNameInRow="ChuDe" msprop:Generator_UserColumnName="ChuDe" msprop:Generator_ColumnVarNameInTable="columnChuDe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QuocGia" msprop:Generator_ColumnPropNameInTable="QuocGiaColumn" msprop:Generator_ColumnPropNameInRow="QuocGia" msprop:Generator_UserColumnName="QuocGia" msprop:Generator_ColumnVarNameInTable="columnQuocGia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TENTACGIA" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="TENTACGIAColumn" msprop:Generator_ColumnPropNameInRow="TENTACGIA" msprop:Generator_UserColumnName="TENTACGIA" msprop:Generator_ColumnVarNameInTable="columnTENTACGIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenTP" msprop:Generator_ColumnPropNameInTable="TenTPColumn" msprop:Generator_ColumnPropNameInRow="TenTP" msprop:Generator_UserColumnName="TenTP" msprop:Generator_ColumnVarNameInTable="columnTenTP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_NullLoaiHinhSangTac" msprop:Generator_RowEvHandlerName="view_NullLoaiHinhSangTacRowChangeEventHandler" msprop:Generator_RowDeletedName="view_NullLoaiHinhSangTacRowDeleted" msprop:Generator_RowDeletingName="view_NullLoaiHinhSangTacRowDeleting" msprop:Generator_RowEvArgName="view_NullLoaiHinhSangTacRowChangeEvent" msprop:Generator_TablePropName="view_NullLoaiHinhSangTac" msprop:Generator_RowChangedName="view_NullLoaiHinhSangTacRowChanged" msprop:Generator_UserTableName="view_NullLoaiHinhSangTac" msprop:Generator_RowChangingName="view_NullLoaiHinhSangTacRowChanging" msprop:Generator_RowClassName="view_NullLoaiHinhSangTacRow" msprop:Generator_TableClassName="view_NullLoaiHinhSangTacDataTable" msprop:Generator_TableVarName="tableview_NullLoaiHinhSangTac">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaSoTP" msprop:Generator_ColumnPropNameInTable="MaSoTPColumn" msprop:Generator_ColumnPropNameInRow="MaSoTP" msprop:Generator_UserColumnName="MaSoTP" msprop:Generator_ColumnVarNameInTable="columnMaSoTP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenTP" msprop:Generator_ColumnPropNameInTable="TenTPColumn" msprop:Generator_ColumnPropNameInRow="TenTP" msprop:Generator_UserColumnName="TenTP" msprop:Generator_ColumnVarNameInTable="columnTenTP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NamSangTac" msprop:Generator_ColumnPropNameInTable="NamSangTacColumn" msprop:Generator_ColumnPropNameInRow="NamSangTac" msprop:Generator_UserColumnName="NamSangTac" msprop:Generator_ColumnVarNameInTable="columnNamSangTac" type="xs:int" minOccurs="0" />
+              <xs:element name="ChuDe" msprop:Generator_ColumnPropNameInTable="ChuDeColumn" msprop:Generator_ColumnPropNameInRow="ChuDe" msprop:Generator_UserColumnName="ChuDe" msprop:Generator_ColumnVarNameInTable="columnChuDe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QuocGia" msprop:Generator_ColumnPropNameInTable="QuocGiaColumn" msprop:Generator_ColumnPropNameInRow="QuocGia" msprop:Generator_UserColumnName="QuocGia" msprop:Generator_ColumnVarNameInTable="columnQuocGia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ThoiDai" msprop:Generator_ColumnPropNameInTable="ThoiDaiColumn" msprop:Generator_ColumnPropNameInRow="ThoiDai" msprop:Generator_UserColumnName="ThoiDai" msprop:Generator_ColumnVarNameInTable="columnThoiDai" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TacGia" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="TacGiaColumn" msprop:Generator_ColumnPropNameInRow="TacGia" msprop:Generator_UserColumnName="TacGia" msprop:Generator_ColumnVarNameInTable="columnTacGia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_NullSoHuu" msprop:Generator_RowEvHandlerName="view_NullSoHuuRowChangeEventHandler" msprop:Generator_RowDeletedName="view_NullSoHuuRowDeleted" msprop:Generator_RowDeletingName="view_NullSoHuuRowDeleting" msprop:Generator_RowEvArgName="view_NullSoHuuRowChangeEvent" msprop:Generator_TablePropName="view_NullSoHuu" msprop:Generator_RowChangedName="view_NullSoHuuRowChanged" msprop:Generator_UserTableName="view_NullSoHuu" msprop:Generator_RowChangingName="view_NullSoHuuRowChanging" msprop:Generator_RowClassName="view_NullSoHuuRow" msprop:Generator_TableClassName="view_NullSoHuuDataTable" msprop:Generator_TableVarName="tableview_NullSoHuu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaSoTP" msprop:Generator_ColumnPropNameInTable="MaSoTPColumn" msprop:Generator_ColumnPropNameInRow="MaSoTP" msprop:Generator_UserColumnName="MaSoTP" msprop:Generator_ColumnVarNameInTable="columnMaSoTP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenTP" msprop:Generator_ColumnPropNameInTable="TenTPColumn" msprop:Generator_ColumnPropNameInRow="TenTP" msprop:Generator_UserColumnName="TenTP" msprop:Generator_ColumnVarNameInTable="columnTenTP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChuDe" msprop:Generator_ColumnPropNameInTable="ChuDeColumn" msprop:Generator_ColumnPropNameInRow="ChuDe" msprop:Generator_UserColumnName="ChuDe" msprop:Generator_ColumnVarNameInTable="columnChuDe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NamSangTac" msprop:Generator_ColumnPropNameInTable="NamSangTacColumn" msprop:Generator_ColumnPropNameInRow="NamSangTac" msprop:Generator_UserColumnName="NamSangTac" msprop:Generator_ColumnVarNameInTable="columnNamSangTac" type="xs:int" minOccurs="0" />
+              <xs:element name="TacGia" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="TacGiaColumn" msprop:Generator_ColumnPropNameInRow="TacGia" msprop:Generator_UserColumnName="TacGia" msprop:Generator_ColumnVarNameInTable="columnTacGia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_ListLoaiSoHuu" msprop:Generator_RowClassName="View_ListLoaiSoHuuRow" msprop:Generator_RowEvHandlerName="View_ListLoaiSoHuuRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ListLoaiSoHuuRowDeleted" msprop:Generator_RowDeletingName="View_ListLoaiSoHuuRowDeleting" msprop:Generator_RowEvArgName="View_ListLoaiSoHuuRowChangeEvent" msprop:Generator_TablePropName="View_ListLoaiSoHuu" msprop:Generator_RowChangedName="View_ListLoaiSoHuuRowChanged" msprop:Generator_UserTableName="View_ListLoaiSoHuu" msprop:Generator_RowChangingName="View_ListLoaiSoHuuRowChanging" msprop:Generator_TableClassName="View_ListLoaiSoHuuDataTable" msprop:Generator_TableVarName="tableView_ListLoaiSoHuu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mã_x0020_tác_x0020_phẩm" msprop:Generator_UserColumnName="Mã tác phẩm" msprop:Generator_ColumnPropNameInTable="Mã_tác_phẩmColumn" msprop:Generator_ColumnPropNameInRow="Mã_tác_phẩm" msprop:Generator_ColumnVarNameInTable="columnMã_tác_phẩm">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ngày_x0020_sở_x0020_hữu" msprop:Generator_UserColumnName="Ngày sở hữu" msprop:Generator_ColumnPropNameInTable="Ngày_sở_hữuColumn" msprop:Generator_ColumnPropNameInRow="Ngày_sở_hữu" msprop:Generator_ColumnVarNameInTable="columnNgày_sở_hữu" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Tình_x0020_Trạng" msprop:Generator_UserColumnName="Tình Trạng" msprop:Generator_ColumnPropNameInTable="Tình_TrạngColumn" msprop:Generator_ColumnPropNameInRow="Tình_Trạng" msprop:Generator_ColumnVarNameInTable="columnTình_Trạng" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trị_x0020_giá" msprop:Generator_UserColumnName="Trị giá" msprop:Generator_ColumnPropNameInTable="Trị_giáColumn" msprop:Generator_ColumnPropNameInRow="Trị_giá" msprop:Generator_ColumnVarNameInTable="columnTrị_giá" type="xs:int" minOccurs="0" />
+              <xs:element name="Năm_x0020_sáng_x0020_tác" msprop:Generator_UserColumnName="Năm sáng tác" msprop:Generator_ColumnPropNameInTable="Năm_sáng_tácColumn" msprop:Generator_ColumnPropNameInRow="Năm_sáng_tác" msprop:Generator_ColumnVarNameInTable="columnNăm_sáng_tác" type="xs:int" minOccurs="0" />
+              <xs:element name="Tên_x0020_tác_x0020_phẩm" msprop:Generator_UserColumnName="Tên tác phẩm" msprop:Generator_ColumnPropNameInTable="Tên_tác_phẩmColumn" msprop:Generator_ColumnPropNameInRow="Tên_tác_phẩm" msprop:Generator_ColumnVarNameInTable="columnTên_tác_phẩm" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tác_x0020_giả" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Tác giả" msprop:Generator_ColumnPropNameInTable="Tác_giảColumn" msprop:Generator_ColumnPropNameInRow="Tác_giả" msprop:Generator_ColumnVarNameInTable="columnTác_giả" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP_TPNT_ChiTietCTL" msprop:Generator_RowClassName="SP_TPNT_ChiTietCTLRow" msprop:Generator_RowEvHandlerName="SP_TPNT_ChiTietCTLRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_TPNT_ChiTietCTLRowDeleted" msprop:Generator_RowDeletingName="SP_TPNT_ChiTietCTLRowDeleting" msprop:Generator_RowEvArgName="SP_TPNT_ChiTietCTLRowChangeEvent" msprop:Generator_TablePropName="SP_TPNT_ChiTietCTL" msprop:Generator_RowChangedName="SP_TPNT_ChiTietCTLRowChanged" msprop:Generator_UserTableName="SP_TPNT_ChiTietCTL" msprop:Generator_RowChangingName="SP_TPNT_ChiTietCTLRowChanging" msprop:Generator_TableClassName="SP_TPNT_ChiTietCTLDataTable" msprop:Generator_TableVarName="tableSP_TPNT_ChiTietCTL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaSoTP" msprop:Generator_UserColumnName="MaSoTP" msprop:Generator_ColumnPropNameInTable="MaSoTPColumn" msprop:Generator_ColumnPropNameInRow="MaSoTP" msprop:Generator_ColumnVarNameInTable="columnMaSoTP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenTP" msprop:Generator_UserColumnName="TenTP" msprop:Generator_ColumnPropNameInTable="TenTPColumn" msprop:Generator_ColumnPropNameInRow="TenTP" msprop:Generator_ColumnVarNameInTable="columnTenTP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NamSangTac" msprop:Generator_UserColumnName="NamSangTac" msprop:Generator_ColumnPropNameInTable="NamSangTacColumn" msprop:Generator_ColumnPropNameInRow="NamSangTac" msprop:Generator_ColumnVarNameInTable="columnNamSangTac" type="xs:int" minOccurs="0" />
+              <xs:element name="TacGia" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TacGia" msprop:Generator_ColumnPropNameInTable="TacGiaColumn" msprop:Generator_ColumnPropNameInRow="TacGia" msprop:Generator_ColumnVarNameInTable="columnTacGia" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -67,5 +498,33 @@
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_ListTPNT" />
+      <xs:field xpath="mstns:MaSoTP" />
+    </xs:unique>
+    <xs:unique name="View_ListTPNT1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_ListTPNT1" />
+      <xs:field xpath="mstns:MaSoTP" />
+    </xs:unique>
+    <xs:unique name="View_ListDieuKhacTacTuong_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_ListDieuKhacTacTuong" />
+      <xs:field xpath="mstns:MaSoTP" />
+    </xs:unique>
+    <xs:unique name="view_NullLoaiHinhSangTac_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_NullLoaiHinhSangTac" />
+      <xs:field xpath="mstns:MaSoTP" />
+    </xs:unique>
+    <xs:unique name="view_NullSoHuu_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_NullSoHuu" />
+      <xs:field xpath="mstns:MaSoTP" />
+    </xs:unique>
+    <xs:unique name="View_ListLoaiSoHuu_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_ListLoaiSoHuu" />
+      <xs:field xpath="mstns:Mã_x0020_tác_x0020_phẩm" />
+    </xs:unique>
+    <xs:unique name="SP_TPNT_ChiTietCTL_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SP_TPNT_ChiTietCTL" />
+      <xs:field xpath="mstns:MaSoTP" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

@@ -31,29 +31,66 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v22.2" />
-    <Reference Include="DevExpress.Data.Desktop.v22.2" />
-    <Reference Include="DevExpress.Data.v22.2" />
-    <Reference Include="DevExpress.Utils.v22.2" />
-    <Reference Include="DevExpress.Sparkline.v22.2.Core" />
-    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v22.2" />
-    <Reference Include="DevExpress.Printing.v22.2.Core" />
-    <Reference Include="DevExpress.Drawing.v22.2" />
-    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v23.1" />
+    <Reference Include="DevExpress.Charts.v23.1.Core, Version=23.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v23.1" />
+    <Reference Include="DevExpress.Data.v23.1" />
+    <Reference Include="DevExpress.Utils.v23.1" />
+    <Reference Include="DevExpress.Sparkline.v23.1.Core" />
+    <Reference Include="DevExpress.Utils.v23.1.UI, Version=23.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v23.1, Version=23.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.1, Version=23.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.1.UI, Version=23.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.1.Wizard, Version=23.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v23.1" />
+    <Reference Include="DevExpress.Printing.v23.1.Core" />
+    <Reference Include="DevExpress.Drawing.v23.1" />
+    <Reference Include="DevExpress.XtraGrid.v23.1, Version=23.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v23.1, Version=23.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=49.0.0.1379, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\packages\GemBox.Spreadsheet.49.0.1379\lib\net461\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -66,17 +103,103 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmChiTietCuocTienLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietCuocTienLam.Designer.cs">
+      <DependentUpon>frmChiTietCuocTienLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChonTPNTNullSangTac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChonTPNTNullSangTac.Designer.cs">
+      <DependentUpon>frmChonTPNTNullSangTac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChonTPNTSoHuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChonTPNTSoHuu.Designer.cs">
+      <DependentUpon>frmChonTPNTSoHuu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsTPNT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTPNT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmChonTacPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChonTacPham.Designer.cs">
+      <DependentUpon>frmChonTacPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsTPNT123.cs">
+      <DependentUpon>dsTPNT123.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackup_Restore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackup_Restore.Designer.cs">
+      <DependentUpon>frmBackup_Restore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBoSuuTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBoSuuTap.Designer.cs">
+      <DependentUpon>frmBoSuuTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChonTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChonTacGia.Designer.cs">
+      <DependentUpon>frmChonTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChonTPNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChonTPNT.Designer.cs">
+      <DependentUpon>frmChonTPNT.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCuocTrienLam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCuocTrienLam.Designer.cs">
+    <Compile Include="frmCuocTrienLam.designer.cs">
       <DependentUpon>frmCuocTrienLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDieuKhacVaTacTuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDieuKhacVaTacTuong.Designer.cs">
+      <DependentUpon>frmDieuKhacVaTacTuong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHoiHoa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHoiHoa.Designer.cs">
       <DependentUpon>frmHoiHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoaiHinhDiMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiHinhDiMuon.Designer.cs">
+      <DependentUpon>frmLoaiHinhDiMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoaiHinhKhac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiHinhKhac.Designer.cs">
+      <DependentUpon>frmLoaiHinhKhac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginBK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginBK.Designer.cs">
+      <DependentUpon>frmLoginBK.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMainMenu.cs">
       <SubType>Form</SubType>
@@ -90,30 +213,92 @@
     <Compile Include="frmTacGia.Designer.cs">
       <DependentUpon>frmTacGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTaiSanBaoTang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaiSanBaoTang.Designer.cs">
+      <DependentUpon>frmTaiSanBaoTang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTPNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTPNT.Designer.cs">
+      <DependentUpon>frmTPNT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="dsTPNT.Designer.cs">
+    <Compile Include="dsTPNT123.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsTPNT.xsd</DependentUpon>
+      <DependentUpon>dsTPNT123.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TPNTDataSet1.cs">
+      <DependentUpon>TPNTDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="TPNTDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TPNTDataSet1.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmChiTietCuocTienLam.resx">
+      <DependentUpon>frmChiTietCuocTienLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChonTPNTNullSangTac.resx">
+      <DependentUpon>frmChonTPNTNullSangTac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChonTPNTSoHuu.resx">
+      <DependentUpon>frmChonTPNTSoHuu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChonTacPham.resx">
+      <DependentUpon>frmChonTacPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackup_Restore.resx">
+      <DependentUpon>frmBackup_Restore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBoSuuTap.resx">
+      <DependentUpon>frmBoSuuTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChonTacGia.resx">
+      <DependentUpon>frmChonTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChonTPNT.resx">
+      <DependentUpon>frmChonTPNT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCuocTrienLam.resx">
       <DependentUpon>frmCuocTrienLam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDieuKhacVaTacTuong.resx">
+      <DependentUpon>frmDieuKhacVaTacTuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHoiHoa.resx">
       <DependentUpon>frmHoiHoa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiHinhDiMuon.resx">
+      <DependentUpon>frmLoaiHinhDiMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiHinhKhac.resx">
+      <DependentUpon>frmLoaiHinhKhac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginBK.resx">
+      <DependentUpon>frmLoginBK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTacGia.resx">
       <DependentUpon>frmTacGia.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTPNT.resx">
+      <DependentUpon>frmTPNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaiSanBaoTang.resx">
+      <DependentUpon>frmTaiSanBaoTang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -127,16 +312,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
     <None Include="dsTPNT.xsc">
       <DependentUpon>dsTPNT.xsd</DependentUpon>
     </None>
@@ -147,6 +322,27 @@
     </None>
     <None Include="dsTPNT.xss">
       <DependentUpon>dsTPNT.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="dsTPNT123.xsc">
+      <DependentUpon>dsTPNT123.xsd</DependentUpon>
+    </None>
+    <None Include="dsTPNT123.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTPNT123.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsTPNT123.xss">
+      <DependentUpon>dsTPNT123.xsd</DependentUpon>
     </None>
     <None Include="TPNTDataSet1.xsc">
       <DependentUpon>TPNTDataSet1.xsd</DependentUpon>
@@ -161,14 +357,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\ImageTacGia\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\iconhoihoa.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="logo.ico" />
     <Content Include="Resources\add-group%281%29.png" />
     <Content Include="Resources\add-group.png" />
+    <None Include="Resources\backup.png" />
+    <None Include="Resources\data-recovery.png" />
     <Content Include="Resources\delete%281%29.png" />
     <Content Include="Resources\delete%282%29.png" />
     <None Include="Resources\logout%282%29.png" />
@@ -183,12 +379,20 @@
     <Content Include="Resources\edit%282%29.png" />
     <None Include="Resources\edit%282%291.png" />
     <Content Include="Resources\edit.png" />
+    <None Include="Resources\exporttoxlsx_16x16.png" />
+    <None Include="Resources\exporttoxlsx_16x161.png" />
     <Content Include="Resources\gallery.png" />
+    <None Include="Resources\importmap_16x16.png" />
+    <None Include="Resources\importmap_16x161.png" />
     <Content Include="Resources\logout%281%29.png" />
     <Content Include="Resources\logout.png" />
     <Content Include="Resources\makeup-artist.png" />
     <Content Include="Resources\refresh.png" />
+    <None Include="Resources\refresh_16x16.png" />
     <Content Include="Resources\replay.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\reset_16x16.png" />
+    <None Include="Resources\save_16x16.png" />
     <Content Include="Resources\theloaikhac.png" />
     <Content Include="Resources\theloaikhac1.png" />
   </ItemGroup>

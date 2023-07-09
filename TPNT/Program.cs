@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using GemBox.Spreadsheet;
 
 namespace TPNT
 {
@@ -17,30 +18,36 @@ namespace TPNT
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publisher = "Data Source=DESKTOP-863A14G\\SERVER;Initial Catalog=TPNT;Integrated Security=True";
+
+        //public static String connstr_publisher = "Data Source=MSI;Initial Catalog=TPNT;Integrated Security=True";
 
         public static SqlDataReader myReader;
-        public static String servername = "";
+        public static String servername = "DESKTOP-863A14G\\SERVER";
+
         public static String username = "";
         public static String mlogin = "";
         public static String password = "";
 
         public static String database = "TPNT";
-        public static String remotelogin = "HTKN";
-        public static String remotepassword = "123456";
-        public static String mloginDN = "";
-        public static String passwordDN = "";
-        public static String mGroup = "";
-        public static String mHoTen = "";
-        public static int mChiNhanh = 0;
+
+
+        public static String maSoTPNT = "";
+        public static String TenTPNT = "";
 
         public static BindingSource bds_dspm = new BindingSource(); // ds phan manh
+
+        public static String mGroup = "";
+
+
+        //public static BindingSource bds_dspm = new BindingSource(); // ds phan manh
+
         public static int KetNoi()
         {
             if (Program.conn != null && Program.conn.State == ConnectionState.Open) Program.conn.Close();
             try
             {
-                Program.connstr = connstr_publisher;
+                Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" +
+                    Program.database + ";User ID=" + Program.mlogin + ";password=" + Program.password;
                 Program.conn.ConnectionString = Program.connstr;
                 Program.conn.Open();
                 return 1;
@@ -84,13 +91,32 @@ namespace TPNT
             }
             catch (SqlException e)
             {
-                MessageBox.Show("Lỗi ghi  " + e.Message);
+                MessageBox.Show("Lỗi " + e.Message);
                 conn.Close();
                 return e.State;
             }
             return 0;
         }
-
+        public static int ExecSetUpJob(String cmd, String connectionstring)
+        {
+            conn = new SqlConnection(connectionstring);
+            SqlCommand Sqlcmd = new SqlCommand(cmd, conn);
+            Sqlcmd.CommandType = CommandType.Text;
+            Sqlcmd.CommandTimeout = 300; //5phut timeout
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sqlcmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (SqlException e)
+            {
+                //MessageBox.Show("Lỗi " + e.Message);
+                conn.Close();
+                return e.State;
+            }
+            return 0;
+        }
         public static DataTable ExecSqlDataTable(String cmd)
         {
             DataTable dt = new DataTable();
@@ -101,15 +127,58 @@ namespace TPNT
             return dt;
         }
 
+        public static DataTable docFileExcel(string filePath,int trang)
+        {
+
+            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+            // Đọc file Excel.
+            ExcelFile workbook = ExcelFile.Load(filePath);
+
+            // Lấy sheet đầu tiên trong workbook.
+            ExcelWorksheet worksheet = workbook.Worksheets[trang];
+
+
+            // Lấy số lượng hàng và cột trong sheet.
+            int rowCount = worksheet.Rows.Count;
+            int columnCount = worksheet.CalculateMaxUsedColumns();
+            DataTable dataTable = new DataTable();
+
+            // Lấy danh sách cột từ hàng đầu tiên trong bảng tính và thêm chúng vào DataTable
+            for (int column = 0; column < columnCount; column++)
+            {
+                string columnName = worksheet.Cells[0, column].Value?.ToString();
+                dataTable.Columns.Add(columnName, typeof(object));
+            }
+
+            // Đọc dữ liệu từ các ô trong bảng tính và thêm vào DataTable
+            for (int row = 1; row < rowCount; row++)
+            {
+                DataRow dataRow = dataTable.NewRow();
+                for (int column = 0; column < columnCount; column++)
+                {
+                    dataRow[column] = worksheet.Cells[row, column].Value?.ToString();
+                }
+                dataTable.Rows.Add(dataRow);
+            }
+            return dataTable;
+        }
 
         [STAThread]
         static void Main()
         {
-            if (KetNoi() == 0) return;
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            frmLogin loginForm = new frmLogin();
+            DialogResult loginResult = loginForm.ShowDialog();
 
-            Application.Run(new frmMainMenu());
+            if (loginResult == DialogResult.OK)
+            {
+                // Thực hiện các xử lý sau khi đăng nhập thành công
+                frmMainMenu mainMenuForm = new frmMainMenu();
+                Application.Run(mainMenuForm);
+            }
         }
     }
 }
