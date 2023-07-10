@@ -23,7 +23,7 @@ namespace TPNT
 
         public static SqlDataReader myReader;
 
-        public static String servername = "MSI";
+        public static String servername = "ADMIN-PC";
 
 
         public static String username = "";
@@ -150,7 +150,7 @@ namespace TPNT
             for (int column = 0; column < columnCount; column++)
             {
                 string columnName = worksheet.Cells[0, column].Value?.ToString();
-                dataTable.Columns.Add(columnName, typeof(object));
+                dataTable.Columns.Add(columnName,typeof(object));
             }
 
             // Đọc dữ liệu từ các ô trong bảng tính và thêm vào DataTable
@@ -159,7 +159,7 @@ namespace TPNT
                 DataRow dataRow = dataTable.NewRow();
                 for (int column = 0; column < columnCount; column++)
                 {
-                    dataRow[column] = worksheet.Cells[row, column].Value?.ToString();
+                        dataRow[column] = worksheet.Cells[row, column].Value?.ToString();
                 }
                 dataTable.Rows.Add(dataRow);
             }
