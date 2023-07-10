@@ -28,10 +28,10 @@ namespace TPNT
         String hoatdong = "";
         String PhucHoi = "";
         string MaCTL = "";
-        string maCTLPH = "";
-        string tenCTLPH = "";
-        DateTime timeFromPH;
-        DateTime timeToPH;
+        string maCTLPH = ""; string maCTLxoa = ""; string maCTLThem = "";
+        string tenCTLPH = ""; string tenCTLxoa = "";
+        DateTime timeFromPH; DateTime timeFromXoa;
+        DateTime timeToPH; DateTime timeToXoa;
         List<string> tpntList = new List<string>();
         public frmCuocTrienLam()
         {
@@ -306,7 +306,7 @@ namespace TPNT
                         try
                         {
 
-                            maCTLPH = txtMaCTL.Text;
+                            maCTLThem = txtMaCTL.Text;
                             PhucHoi = "THEM";
                             DateTime TGBD = dtpFrom.DateTime;
                             DateTime TGKT = dtpTo.DateTime;
@@ -447,15 +447,7 @@ namespace TPNT
         
         }
 
-        private void grbThemCTL_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void grbDSTPNT_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -478,10 +470,10 @@ namespace TPNT
                     PhucHoi = "XOA";
                     DataRowView rowView = (DataRowView)bdsCuocTrienLam[bdsCuocTrienLam.Position];
                     string MaCTL = rowView["MaSoCTL"].ToString();
-                    tenCTLPH = rowView["Ten"].ToString();
-                    maCTLPH = rowView["MaSoCTL"].ToString();
-                    timeFromPH = (DateTime)rowView["NgayBD"];
-                    timeToPH = (DateTime)rowView["NgayKT"];
+                    tenCTLxoa = rowView["Ten"].ToString();
+                    maCTLxoa = rowView["MaSoCTL"].ToString();
+                    timeFromXoa = (DateTime)rowView["NgayBD"];
+                    timeToXoa = (DateTime)rowView["NgayKT"];
 
                     using (SqlConnection connection = new SqlConnection(Program.connstr))
                     {
@@ -657,7 +649,7 @@ namespace TPNT
                                 command.CommandType = CommandType.StoredProcedure;
 
                                 // Thêm các tham số vào Stored Procedure
-                                command.Parameters.AddWithValue("@maCTL", maCTLPH);
+                                command.Parameters.AddWithValue("@maCTL", maCTLThem);
 
                                 // Thực thi Stored Procedure
                                 command.ExecuteNonQuery();
@@ -744,10 +736,10 @@ namespace TPNT
                                 command.CommandType = CommandType.StoredProcedure;
 
                                 // Thêm các tham số vào Stored Procedure
-                                command.Parameters.AddWithValue("@maCTL", maCTLPH);
-                                command.Parameters.AddWithValue("@Ten", tenCTLPH);
-                                command.Parameters.AddWithValue("@TGBD", timeFromPH);
-                                command.Parameters.AddWithValue("@TGKT", timeToPH);
+                                command.Parameters.AddWithValue("@maCTL", maCTLxoa);
+                                command.Parameters.AddWithValue("@Ten", tenCTLxoa);
+                                command.Parameters.AddWithValue("@TGBD", timeFromXoa);
+                                command.Parameters.AddWithValue("@TGKT", timeToXoa);
 
                                 // Thực thi Stored Procedure
                                 command.ExecuteNonQuery();
@@ -762,7 +754,7 @@ namespace TPNT
                                             command.CommandType = CommandType.StoredProcedure;
 
                                             // Thêm các tham số vào Stored Procedure
-                                            command.Parameters.AddWithValue("@maCTL", maCTLPH);
+                                            command.Parameters.AddWithValue("@maCTL", maCTLxoa);
                                             command.Parameters.AddWithValue("@maTPNT", maTPNT);
 
                                             // Thực thi Stored Procedure

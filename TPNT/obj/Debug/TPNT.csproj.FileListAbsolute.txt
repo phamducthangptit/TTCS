@@ -695,4 +695,3 @@ E:\Dev\C#\TPNT\TPNT\bin\Debug\System.Memory.xml
 E:\Dev\C#\TPNT\TPNT\bin\Debug\System.Numerics.Vectors.xml
 E:\Dev\C#\TPNT\TPNT\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\Dev\C#\TPNT\TPNT\obj\Debug\TPNT.frmLoginBK.resources
-

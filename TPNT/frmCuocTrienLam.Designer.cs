@@ -521,7 +521,7 @@
             this.grbDSTPNT.TabIndex = 1;
             this.grbDSTPNT.TabStop = false;
             this.grbDSTPNT.Text = "Chọn  Tác Phẩm  Trong Cuộc Triển Lãm";
-            this.grbDSTPNT.Enter += new System.EventHandler(this.grbDSTPNT_Enter);
+       
             // 
             // dataGridViewDanhSach
             // 
@@ -572,7 +572,7 @@
             this.grbThemCTL.TabIndex = 20;
             this.grbThemCTL.Text = "Thêm Cuộc Triển Lãm Mới";
             this.grbThemCTL.Visible = false;
-            this.grbThemCTL.Paint += new System.Windows.Forms.PaintEventHandler(this.grbThemCTL_Paint);
+
             // 
             // simpleButton3
             // 

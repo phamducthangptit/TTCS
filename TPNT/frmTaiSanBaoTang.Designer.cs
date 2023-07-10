@@ -328,14 +328,13 @@
             this.txtTriGia.Location = new System.Drawing.Point(662, 136);
             this.txtTriGia.MenuManager = this.barManager1;
             this.txtTriGia.Name = "txtTriGia";
-            this.txtTriGia.Properties.DisplayFormat.FormatString = "n0";
+            this.txtTriGia.Properties.DisplayFormat.FormatString = "n";
             this.txtTriGia.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtTriGia.Properties.EditFormat.FormatString = "n0";
+            this.txtTriGia.Properties.EditFormat.FormatString = "n";
             this.txtTriGia.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtTriGia.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtTriGia.Properties.MaskSettings.Set("mask", "d");
             this.txtTriGia.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
-            this.txtTriGia.Properties.ReadOnly = true;
             this.txtTriGia.Size = new System.Drawing.Size(109, 22);
             this.txtTriGia.TabIndex = 11;
             // 

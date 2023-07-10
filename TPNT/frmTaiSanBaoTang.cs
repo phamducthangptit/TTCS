@@ -17,12 +17,15 @@ namespace TPNT
         String hoatDong = "";
         String PhucHoi = "";
         String TinhTrang;
-        String maSoTPPH ;
+        String maSoTPPH; String maSoTPThem;
         String TriGia;
-
         DateTime TimeSoHuuPH;
+        String TinhTrangXoa;
+        String maSoTPXoa;
+        String TriGiaXoa;
 
-       
+        DateTime TimeSoHuuXoa;
+
         int viTri;
 
         public frmTaiSanBaoTang()
@@ -131,7 +134,7 @@ namespace TPNT
             {
                 if (kiemTra())
                 {
-                    PhucHoi = "THEM"; maSoTPPH = txtMaTP.Text;
+                    PhucHoi = "THEM"; maSoTPThem = txtMaTP.Text;
                     DateTime timeSoHuu = dtpSoHuu.DateTime;
                     try
                     {
@@ -319,10 +322,10 @@ namespace TPNT
                   
                     DataRowView rowView = (DataRowView)bdsLoaiSoHuu[bdsLoaiSoHuu.Position];
                     string maTPNT = rowView["Mã tác phẩm"].ToString();
-                    TinhTrang = rowView["Tình Trạng"].ToString();
-                    maSoTPPH = rowView["Mã tác phẩm"].ToString();
-                    TriGia = rowView["Trị giá"].ToString();
-                    TimeSoHuuPH = (DateTime)rowView["Ngày sở hữu"];
+                    TinhTrangXoa = rowView["Tình Trạng"].ToString();
+                    maSoTPXoa = rowView["Mã tác phẩm"].ToString();
+                    TriGiaXoa = rowView["Trị giá"].ToString();
+                    TimeSoHuuXoa = (DateTime)rowView["Ngày sở hữu"];
                     using (SqlConnection connection = new SqlConnection(Program.connstr))
                     {
                         connection.Open();
@@ -370,6 +373,7 @@ namespace TPNT
             btnLuu.Enabled = false;
             btnHieuChinh.Enabled = true;
             btnReload.Enabled = true;
+            btnHoanTac.Enabled = true;
             view_ListLoaiSoHuuGridControl.Enabled = true;
             if (hoatDong.Equals("THEM"))
             {
@@ -410,7 +414,7 @@ namespace TPNT
                                 command.CommandType = CommandType.StoredProcedure;
 
                                 // Thêm các tham số vào Stored Procedure
-                                command.Parameters.AddWithValue("@maTPNT", maSoTPPH);
+                                command.Parameters.AddWithValue("@maTPNT", maSoTPThem);
                                 // Thực thi Stored Procedure
                                 command.ExecuteNonQuery();
                             }
@@ -502,10 +506,10 @@ namespace TPNT
                                 command.CommandType = CommandType.StoredProcedure;
 
                                 // Thêm các tham số vào Stored Procedure
-                                command.Parameters.AddWithValue("@maTPNT", maSoTPPH);
-                                command.Parameters.AddWithValue("@NgaySoHuu", TimeSoHuuPH);
-                                command.Parameters.AddWithValue("@TinhTrang",TinhTrang);
-                                command.Parameters.AddWithValue("@TriGia", int.Parse(TriGia));
+                                command.Parameters.AddWithValue("@maTPNT", maSoTPXoa);
+                                command.Parameters.AddWithValue("@NgaySoHuu", TimeSoHuuXoa);
+                                command.Parameters.AddWithValue("@TinhTrang",TinhTrangXoa);
+                                command.Parameters.AddWithValue("@TriGia", int.Parse(TriGiaXoa));
 
                                 // Thực thi Stored Procedure
                                 command.ExecuteNonQuery();
