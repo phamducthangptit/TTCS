@@ -258,7 +258,7 @@
             this.colTacGia1});
             this.gridView2.GridControl = this.sP_TPNT_ChiTietCTLGridControl;
             this.gridView2.Name = "gridView2";
-           // this.gridView2.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView2_FocusedRowChanged);
+            this.gridView2.OptionsBehavior.ReadOnly = true;
             // 
             // colMaSoTP1
             // 
@@ -338,6 +338,7 @@
             this.colTacGia});
             this.gridView1.GridControl = this.sP_CHITIETCUOCTRIENLAMGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
             // colMaSoTP
             // 
