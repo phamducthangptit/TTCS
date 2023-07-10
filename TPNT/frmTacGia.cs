@@ -570,6 +570,7 @@ namespace TPNT
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Đã xảy ra lỗi khi nhập dữ liệu từ Excel: \n{ex.Message}", "Lỗi nhập từ Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.WriteLine(ex.ToString());
                 }
                 this.TacGiaTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.TacGiaTableAdapter.Fill(this.tPNTDataSet.TacGia);
