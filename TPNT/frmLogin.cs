@@ -19,7 +19,7 @@ namespace TPNT
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
       
@@ -87,8 +87,9 @@ namespace TPNT
             Program.myReader.Close();
             Program.conn.Close();
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            Form frmMain = new frmMainMenu(this);
+            frmMain.Show();
+            this.Hide();
         }
 
         private void btnDNKhach_Click(object sender, EventArgs e)
@@ -113,8 +114,9 @@ namespace TPNT
             Program.mGroup = Program.myReader.GetString(1);
             Program.myReader.Close();
             Program.conn.Close();
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            Form frmMain = new frmMainMenu(this);
+            frmMain.Show();
+            this.Hide();
         }
 
         private void txtMatKhau_KeyPress(object sender, KeyPressEventArgs e)

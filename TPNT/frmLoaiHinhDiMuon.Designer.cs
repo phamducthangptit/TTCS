@@ -260,7 +260,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Caption = "Mượn";
+            this.btnThem.Caption = "Thêm";
             this.btnThem.Id = 0;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.Name = "btnThem";

@@ -22,7 +22,9 @@ namespace TPNT
         private void frmChonTPNT_Load(object sender, EventArgs e)
         {
             tPNTDataSet2.EnforceConstraints = false;
+            this.v_TAC_GIATableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_TAC_GIATableAdapter.Fill(this.tPNTDataSet2.V_TAC_GIA);
+            this.sP_CHON_TPNTTableAdapter.Connection.ConnectionString = Program.connstr;
             this.sP_CHON_TPNTTableAdapter.Fill(this.tPNTDataSet2.SP_CHON_TPNT);
 
         }
@@ -47,6 +49,11 @@ namespace TPNT
         {
             _parentForm.setTPNT((DataRowView)bdsTPNT[bdsTPNT.Position]);
             this.Close();
+        }
+
+        private void frmChonTPNT_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _parentForm.setTPNT((DataRowView)bdsTPNT[bdsTPNT.Position]);
         }
     }
 }
