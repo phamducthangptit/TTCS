@@ -295,7 +295,7 @@
             // dtpSoHuu
             // 
             this.dtpSoHuu.EditValue = null;
-            this.dtpSoHuu.Location = new System.Drawing.Point(171, 135);
+            this.dtpSoHuu.Location = new System.Drawing.Point(171, 132);
             this.dtpSoHuu.MenuManager = this.barManager1;
             this.dtpSoHuu.Name = "dtpSoHuu";
             this.dtpSoHuu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -307,7 +307,7 @@
             // 
             // txtTrangThai
             // 
-            this.txtTrangThai.Location = new System.Drawing.Point(442, 135);
+            this.txtTrangThai.Location = new System.Drawing.Point(442, 132);
             this.txtTrangThai.MenuManager = this.barManager1;
             this.txtTrangThai.Name = "txtTrangThai";
             this.txtTrangThai.Size = new System.Drawing.Size(109, 22);
@@ -325,7 +325,7 @@
             // txtTriGia
             // 
             this.txtTriGia.EditValue = "";
-            this.txtTriGia.Location = new System.Drawing.Point(662, 136);
+            this.txtTriGia.Location = new System.Drawing.Point(662, 133);
             this.txtTriGia.MenuManager = this.barManager1;
             this.txtTriGia.Name = "txtTriGia";
             this.txtTriGia.Properties.DisplayFormat.FormatString = "n";
@@ -360,7 +360,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(596, 139);
+            this.labelControl5.Location = new System.Drawing.Point(596, 136);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(47, 16);
             this.labelControl5.TabIndex = 4;
@@ -368,7 +368,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(316, 138);
+            this.labelControl4.Location = new System.Drawing.Point(336, 135);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(72, 16);
             this.labelControl4.TabIndex = 3;
@@ -376,7 +376,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(76, 135);
+            this.labelControl3.Location = new System.Drawing.Point(53, 135);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(87, 16);
             this.labelControl3.TabIndex = 2;
