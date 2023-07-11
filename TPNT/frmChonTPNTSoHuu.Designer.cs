@@ -162,7 +162,7 @@
             this.Controls.Add(this.view_NullSoHuuGridControl);
             this.Name = "frmChonTPNTSoHuu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmChonTPNTSoHuu";
+            this.Text = "Chọn Tác Phẩm Nghệ Thuật";
             this.Load += new System.EventHandler(this.frmChonTPNTSoHuu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tPNTDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNullSoHuu)).EndInit();

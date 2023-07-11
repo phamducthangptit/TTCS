@@ -86,8 +86,9 @@ namespace TPNT
             txtTenTP.Text = Program.TenTPNT;
             btnChonLai.Enabled = true;
             btnChonLai.Visible = true;
-            dtpSoHuu.EditValue = DateTime.Today.ToString("dd-MM-yyyy");
-           
+            dtpSoHuu.EditValue = "01/01/2023";
+
+
         }
 
         private void btnChonLai_Click(object sender, EventArgs e)
@@ -238,6 +239,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.view_ListLoaiSoHuuTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hiệu Chỉnh. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.view_ListLoaiSoHuuTableAdapter.Fill(this.tPNTDataSet1.View_ListLoaiSoHuu);
                         // tro ve vi tri cua nhan vien dang bi loi
@@ -350,10 +352,16 @@ namespace TPNT
                     MessageBox.Show("Xóa thành công ", "Thông báo", MessageBoxButtons.OK);
                     hoatDong = "";
                     this.btnHoanTac.Enabled = true;
+                    if (bdsLoaiSoHuu.Count <= 0)
+                    {
+                        btnXoa.Enabled = false;
+                        btnHieuChinh.Enabled = false;
+                    }    
                 }
                 catch (Exception ex)
                 {
                     /*Step 4*/
+                    this.view_ListLoaiSoHuuTableAdapter.Connection.ConnectionString = Program.connstr;
                     MessageBox.Show("Lỗi xóa thông tin. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                     this.view_ListLoaiSoHuuTableAdapter.Fill(this.tPNTDataSet1.View_ListLoaiSoHuu);
                     // tro ve vi tri cua nhan vien dang bi loi
@@ -433,6 +441,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.view_ListLoaiSoHuuTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hoàn Tác. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.view_ListLoaiSoHuuTableAdapter.Fill(this.tPNTDataSet1.View_ListLoaiSoHuu);
                         // tro ve vi tri cua nhan vien dang bi loi
@@ -482,6 +491,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.view_ListLoaiSoHuuTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hoàn Tác. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.view_ListLoaiSoHuuTableAdapter.Fill(this.tPNTDataSet1.View_ListLoaiSoHuu);
                         // tro ve vi tri cua nhan vien dang bi loi
