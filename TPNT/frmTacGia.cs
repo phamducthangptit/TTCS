@@ -87,7 +87,7 @@ namespace TPNT
         {
             vitri = bdsTacGia.Position;
             suKien = "HC";
-            gcTacGia.Enabled = false;
+            gcTacGia.Enabled = false;   
             groupBox1.Enabled = true;
 
             this.btnImport.Enabled = this.btnExport.Enabled = this.btnThem.Enabled = this.btnXoa.Enabled = this.btnHieuChinh.Enabled 

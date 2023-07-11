@@ -174,14 +174,7 @@ namespace TPNT
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmLogin loginForm = new frmLogin();
-            DialogResult loginResult = loginForm.ShowDialog();
-
-            if (loginResult == DialogResult.OK)
-            {
-                // Thực hiện các xử lý sau khi đăng nhập thành công
-                frmMainMenu mainMenuForm = new frmMainMenu();
-                Application.Run(mainMenuForm);
-            }
+            Application.Run(loginForm);
         }
     }
 }

@@ -85,6 +85,8 @@ namespace TPNT
         {
             if (bdsLoaiDiMuon.Count == 0)
             {
+                pictureTPNT.Image = new Bitmap(Application.StartupPath + "//Resources//" + "macDinh.png");
+                txtTacGia.ResetText();
                 btnHieuChinh.Enabled = btnXoa.Enabled = false;
                 return;
             }
