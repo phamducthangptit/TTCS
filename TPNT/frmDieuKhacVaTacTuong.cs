@@ -248,6 +248,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.view_ListDieuKhacTacTuongTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hiệu Chỉnh. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
                         // tro ve vi tri cua nhan vien dang bi loi
@@ -305,10 +306,16 @@ namespace TPNT
                     hoatDong = "";
                     this.btnHoanTac.Enabled = true;
                     PhucHoi = "XOA";
+                    if (bdsDieuKhacTacTuong.Count <= 0)
+                    {
+                        btnXoa.Enabled = false;
+                        btnHieuChinh.Enabled = false;
+                    }    
                 }
                 catch (Exception ex)
                 {
                     /*Step 4*/
+                    this.view_ListDieuKhacTacTuongTableAdapter.Connection.ConnectionString = Program.connstr;
                     MessageBox.Show("Lỗi xóa thông tin. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                     this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
                     // tro ve vi tri cua nhan vien dang bi loi
@@ -446,6 +453,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.view_ListDieuKhacTacTuongTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hoàn Tác. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
                         // tro ve vi tri cua nhan vien dang bi loi
@@ -496,6 +504,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.view_ListDieuKhacTacTuongTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hoàn Tác. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
                         // tro ve vi tri cua nhan vien dang bi loi
