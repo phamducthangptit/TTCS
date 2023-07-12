@@ -91,6 +91,7 @@
             this.sP_BOSUUTAP_TPNTTableAdapter = new TPNT.TPNTDataSet2TableAdapters.SP_BOSUUTAP_TPNTTableAdapter();
             this.bdsTG = new System.Windows.Forms.BindingSource(this.components);
             this.v_TAC_GIATableAdapter = new TPNT.TPNTDataSet2TableAdapters.V_TAC_GIATableAdapter();
+            this.btnChonTP = new System.Windows.Forms.Button();
             loiDienGiaiLabel = new System.Windows.Forms.Label();
             thoiDaiLabel = new System.Windows.Forms.Label();
             quốc_giaLabel = new System.Windows.Forms.Label();
@@ -189,7 +190,7 @@
             // tênLabel
             // 
             tênLabel.AutoSize = true;
-            tênLabel.Location = new System.Drawing.Point(21, 16);
+            tênLabel.Location = new System.Drawing.Point(21, 34);
             tênLabel.Name = "tênLabel";
             tênLabel.Size = new System.Drawing.Size(82, 13);
             tênLabel.TabIndex = 0;
@@ -198,7 +199,7 @@
             // ngày_mượnLabel
             // 
             ngày_mượnLabel.AutoSize = true;
-            ngày_mượnLabel.Location = new System.Drawing.Point(39, 53);
+            ngày_mượnLabel.Location = new System.Drawing.Point(39, 71);
             ngày_mượnLabel.Name = "ngày_mượnLabel";
             ngày_mượnLabel.Size = new System.Drawing.Size(64, 13);
             ngày_mượnLabel.TabIndex = 2;
@@ -207,7 +208,7 @@
             // ngày_trảLabel
             // 
             ngày_trảLabel.AutoSize = true;
-            ngày_trảLabel.Location = new System.Drawing.Point(53, 88);
+            ngày_trảLabel.Location = new System.Drawing.Point(53, 106);
             ngày_trảLabel.Name = "ngày_trảLabel";
             ngày_trảLabel.Size = new System.Drawing.Size(50, 13);
             ngày_trảLabel.TabIndex = 4;
@@ -374,6 +375,7 @@
             // panelThongTin2
             // 
             this.panelThongTin2.AutoScroll = true;
+            this.panelThongTin2.Controls.Add(this.btnChonTP);
             this.panelThongTin2.Controls.Add(this.deNgayTra);
             this.panelThongTin2.Controls.Add(this.deNgayMuon);
             this.panelThongTin2.Controls.Add(ngày_trảLabel);
@@ -391,7 +393,7 @@
             // 
             this.deNgayTra.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLoaiDiMuon, "Ngày trả", true));
             this.deNgayTra.EditValue = null;
-            this.deNgayTra.Location = new System.Drawing.Point(109, 85);
+            this.deNgayTra.Location = new System.Drawing.Point(109, 103);
             this.deNgayTra.MenuManager = this.barManager1;
             this.deNgayTra.Name = "deNgayTra";
             this.deNgayTra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -410,7 +412,7 @@
             // 
             this.deNgayMuon.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLoaiDiMuon, "Ngày mượn", true));
             this.deNgayMuon.EditValue = null;
-            this.deNgayMuon.Location = new System.Drawing.Point(109, 50);
+            this.deNgayMuon.Location = new System.Drawing.Point(109, 68);
             this.deNgayMuon.MenuManager = this.barManager1;
             this.deNgayMuon.Name = "deNgayMuon";
             this.deNgayMuon.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -424,7 +426,7 @@
             // 
             this.txtBST.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsBoSuuTap, "Tên", true));
             this.txtBST.Enabled = false;
-            this.txtBST.Location = new System.Drawing.Point(109, 13);
+            this.txtBST.Location = new System.Drawing.Point(109, 31);
             this.txtBST.Name = "txtBST";
             this.txtBST.Size = new System.Drawing.Size(245, 20);
             this.txtBST.TabIndex = 1;
@@ -571,6 +573,7 @@
             this.colNgàytrả});
             this.gridView1.GridControl = this.sP_BOSUUTAP_TPNTGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // colMãtácphẩm
@@ -632,6 +635,7 @@
             this.colĐịachỉ});
             this.gridView2.GridControl = this.v_BO_SUU_TAPGridControl;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.ReadOnly = true;
             this.gridView2.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView2_FocusedRowChanged);
             // 
             // colMãbộsưutập
@@ -684,6 +688,17 @@
             // v_TAC_GIATableAdapter
             // 
             this.v_TAC_GIATableAdapter.ClearBeforeFill = true;
+            // 
+            // btnChonTP
+            // 
+            this.btnChonTP.Location = new System.Drawing.Point(147, 3);
+            this.btnChonTP.Name = "btnChonTP";
+            this.btnChonTP.Size = new System.Drawing.Size(75, 23);
+            this.btnChonTP.TabIndex = 7;
+            this.btnChonTP.Text = "Chọn TPNT";
+            this.btnChonTP.UseVisualStyleBackColor = true;
+            this.btnChonTP.Visible = false;
+            this.btnChonTP.Click += new System.EventHandler(this.btnChonTP_Click);
             // 
             // frmLoaiHinhDiMuon
             // 
@@ -782,5 +797,6 @@
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.BindingSource bdsTG;
         private TPNTDataSet2TableAdapters.V_TAC_GIATableAdapter v_TAC_GIATableAdapter;
+        private System.Windows.Forms.Button btnChonTP;
     }
 }

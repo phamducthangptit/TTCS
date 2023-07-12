@@ -86,7 +86,7 @@ namespace TPNT
             Program.mGroup = Program.myReader.GetString(1);
             Program.myReader.Close();
             Program.conn.Close();
-
+            txtMatKhau.ResetText();
             Form frmMain = new frmMainMenu(this);
             frmMain.Show();
             this.Hide();

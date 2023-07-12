@@ -63,15 +63,8 @@ namespace TPNT
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (bdsTPNT.Count == 0)
-            {  if(Program.mGroup.Equals("KHACH"))
-                {
-                    btnExport.Enabled = false;
-                }
-                else
-                {
-                    btnExport.Enabled = true;
-                }
-
+            {  
+                btnExport.Enabled = false;
                 return;
             } 
             string hinhAnh = ((DataRowView)bdsTPNT[bdsTPNT.Position])["HinhAnh"].ToString();
