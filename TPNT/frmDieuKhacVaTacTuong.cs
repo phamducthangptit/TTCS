@@ -16,11 +16,11 @@ namespace TPNT
     {
         String hoatDong = "";
         String PhucHoi = "";
-        String maSoTPNTPH = "";
-        String ChieuCao;
-        String KhoiLuong;
-        String PhongCach;
-        String VatLieu;
+        String maSoTPNTPH = ""; String maSoTPNTXoa = ""; String maSoTPNTThem = "";
+        String ChieuCao; String ChieuCaoXoa;
+        String KhoiLuong; String KhoiLuongXoa;
+        String PhongCach; String PhongCachXoa;
+        String VatLieu; String VatLieuXoa;
         int viTri;
         public frmDieuKhacVaTacTuong()
         {
@@ -158,7 +158,7 @@ namespace TPNT
                                 // Thực thi Stored Procedure
                                 command.ExecuteNonQuery();
                             }
-                            maSoTPNTPH = txtMaSoTP.Text;
+                            maSoTPNTThem = txtMaSoTP.Text;
                             groupThongTin.Visible = false;
 
                             btnThem.Enabled = true;
@@ -248,6 +248,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.view_ListDieuKhacTacTuongTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hiệu Chỉnh. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
                         // tro ve vi tri cua nhan vien dang bi loi
@@ -275,11 +276,11 @@ namespace TPNT
                 {
                     DataRowView rowView = (DataRowView)bdsDieuKhacTacTuong[bdsDieuKhacTacTuong.Position];
                     string maTPNT = rowView["MaSoTP"].ToString();
-                    KhoiLuong = rowView["KhoiLuong"].ToString();
-                    maSoTPNTPH = rowView["MaSoTP"].ToString();
-                    ChieuCao = rowView["ChieuCao"].ToString();
-                    VatLieu = rowView["VatLieu"].ToString();
-                    PhongCach = rowView["PhongCach"].ToString();
+                    KhoiLuongXoa = rowView["KhoiLuong"].ToString();
+                    maSoTPNTXoa = rowView["MaSoTP"].ToString();
+                    ChieuCaoXoa = rowView["ChieuCao"].ToString();
+                    VatLieuXoa = rowView["VatLieu"].ToString();
+                    PhongCachXoa = rowView["PhongCach"].ToString();
                     using (SqlConnection connection = new SqlConnection(Program.connstr))
                     {
                         connection.Open();
@@ -305,10 +306,16 @@ namespace TPNT
                     hoatDong = "";
                     this.btnHoanTac.Enabled = true;
                     PhucHoi = "XOA";
+                    if (bdsDieuKhacTacTuong.Count <= 0)
+                    {
+                        btnXoa.Enabled = false;
+                        btnHieuChinh.Enabled = false;
+                    }    
                 }
                 catch (Exception ex)
                 {
                     /*Step 4*/
+                    this.view_ListDieuKhacTacTuongTableAdapter.Connection.ConnectionString = Program.connstr;
                     MessageBox.Show("Lỗi xóa thông tin. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                     this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
                     // tro ve vi tri cua nhan vien dang bi loi
@@ -367,6 +374,7 @@ namespace TPNT
             btnLuu.Enabled = false;
             btnHieuChinh.Enabled = true;
             btnReload.Enabled = true;
+            btnHoanTac.Enabled = true;
             view_ListDieuKhacTacTuongGridControl.Enabled = true;
             if (hoatDong.Equals("THEM"))
             {
@@ -426,7 +434,7 @@ namespace TPNT
                                 command.CommandType = CommandType.StoredProcedure;
 
                                 // Thêm các tham số vào Stored Procedure
-                                command.Parameters.AddWithValue("@maTPNT", maSoTPNTPH);
+                                command.Parameters.AddWithValue("@maTPNT", maSoTPNTThem);
                                 // Thực thi Stored Procedure
                                 command.ExecuteNonQuery();
                             }
@@ -445,6 +453,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.view_ListDieuKhacTacTuongTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hoàn Tác. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
                         // tro ve vi tri cua nhan vien dang bi loi
@@ -495,6 +504,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.view_ListDieuKhacTacTuongTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hoàn Tác. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.view_ListDieuKhacTacTuongTableAdapter.Fill(this.tPNTDataSet1.View_ListDieuKhacTacTuong);
                         // tro ve vi tri cua nhan vien dang bi loi
@@ -519,11 +529,11 @@ namespace TPNT
                                 command.CommandType = CommandType.StoredProcedure;
 
                                 // Thêm các tham số vào Stored Procedure
-                                command.Parameters.AddWithValue("@maTPNT", maSoTPNTPH);
-                                command.Parameters.AddWithValue("@KhoiLuong", float.Parse(KhoiLuong));
-                                command.Parameters.AddWithValue("@VatLieu", VatLieu);
-                                command.Parameters.AddWithValue("@ChieuCao", float.Parse(ChieuCao));
-                                command.Parameters.AddWithValue("@PhongCach", PhongCach);
+                                command.Parameters.AddWithValue("@maTPNT", maSoTPNTXoa);
+                                command.Parameters.AddWithValue("@KhoiLuong", float.Parse(KhoiLuongXoa));
+                                command.Parameters.AddWithValue("@VatLieu", VatLieuXoa);
+                                command.Parameters.AddWithValue("@ChieuCao", float.Parse(ChieuCaoXoa));
+                                command.Parameters.AddWithValue("@PhongCach", PhongCachXoa);
 
                                 // Thực thi Stored Procedure
                                 command.ExecuteNonQuery();

@@ -80,9 +80,9 @@
             // 
             maLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             maLabel.AutoSize = true;
-            maLabel.Location = new System.Drawing.Point(118, 67);
+            maLabel.Location = new System.Drawing.Point(36, 45);
             maLabel.Name = "maLabel";
-            maLabel.Size = new System.Drawing.Size(108, 20);
+            maLabel.Size = new System.Drawing.Size(89, 17);
             maLabel.TabIndex = 0;
             maLabel.Text = "Mã tác phẩm:";
             // 
@@ -90,9 +90,9 @@
             // 
             tenLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             tenLabel.AutoSize = true;
-            tenLabel.Location = new System.Drawing.Point(118, 145);
+            tenLabel.Location = new System.Drawing.Point(36, 123);
             tenLabel.Name = "tenLabel";
-            tenLabel.Size = new System.Drawing.Size(113, 20);
+            tenLabel.Size = new System.Drawing.Size(92, 17);
             tenLabel.TabIndex = 2;
             tenLabel.Text = "Tên tác phẩm:";
             // 
@@ -100,9 +100,9 @@
             // 
             theLoaiLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             theLoaiLabel.AutoSize = true;
-            theLoaiLabel.Location = new System.Drawing.Point(658, 70);
+            theLoaiLabel.Location = new System.Drawing.Point(512, 48);
             theLoaiLabel.Name = "theLoaiLabel";
-            theLoaiLabel.Size = new System.Drawing.Size(72, 20);
+            theLoaiLabel.Size = new System.Drawing.Size(58, 17);
             theLoaiLabel.TabIndex = 4;
             theLoaiLabel.Text = "Thể loại:";
             // 
@@ -110,9 +110,9 @@
             // 
             phongCachLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             phongCachLabel.AutoSize = true;
-            phongCachLabel.Location = new System.Drawing.Point(659, 150);
+            phongCachLabel.Location = new System.Drawing.Point(513, 128);
             phongCachLabel.Name = "phongCachLabel";
-            phongCachLabel.Size = new System.Drawing.Size(97, 20);
+            phongCachLabel.Size = new System.Drawing.Size(80, 17);
             phongCachLabel.TabIndex = 6;
             phongCachLabel.Text = "Phong cách:";
             // 
@@ -228,34 +228,34 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1208, 40);
+            this.barDockControlTop.Size = new System.Drawing.Size(915, 32);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 812);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 507);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1208, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(915, 20);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 32);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 772);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 475);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1208, 40);
+            this.barDockControlRight.Location = new System.Drawing.Point(915, 32);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 772);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 475);
             // 
             // btnChiTiet
             // 
@@ -302,11 +302,11 @@
             // 
             this.gcLoaiHinhKhac.DataSource = this.bdsLoaiHinhKhac;
             this.gcLoaiHinhKhac.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcLoaiHinhKhac.Location = new System.Drawing.Point(0, 40);
+            this.gcLoaiHinhKhac.Location = new System.Drawing.Point(0, 32);
             this.gcLoaiHinhKhac.MainView = this.gridView1;
             this.gcLoaiHinhKhac.MenuManager = this.barManager1;
             this.gcLoaiHinhKhac.Name = "gcLoaiHinhKhac";
-            this.gcLoaiHinhKhac.Size = new System.Drawing.Size(1208, 548);
+            this.gcLoaiHinhKhac.Size = new System.Drawing.Size(915, 288);
             this.gcLoaiHinhKhac.TabIndex = 5;
             this.gcLoaiHinhKhac.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -329,6 +329,7 @@
             this.colPhongCach});
             this.gridView1.GridControl = this.gcLoaiHinhKhac;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.RowHeight = 20;
             // 
             // colMa
@@ -382,9 +383,9 @@
             this.groupBox1.Controls.Add(maLabel);
             this.groupBox1.Controls.Add(this.txtMa);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 588);
+            this.groupBox1.Location = new System.Drawing.Point(0, 320);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1208, 224);
+            this.groupBox1.Size = new System.Drawing.Size(915, 187);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
@@ -393,45 +394,45 @@
             // 
             this.txtPhongCach.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPhongCach.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "PhongCach", true));
-            this.txtPhongCach.Location = new System.Drawing.Point(766, 147);
+            this.txtPhongCach.Location = new System.Drawing.Point(620, 125);
             this.txtPhongCach.Name = "txtPhongCach";
-            this.txtPhongCach.Size = new System.Drawing.Size(256, 28);
+            this.txtPhongCach.Size = new System.Drawing.Size(256, 24);
             this.txtPhongCach.TabIndex = 7;
             // 
             // txtTheLoai
             // 
             this.txtTheLoai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTheLoai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "TheLoai", true));
-            this.txtTheLoai.Location = new System.Drawing.Point(766, 67);
+            this.txtTheLoai.Location = new System.Drawing.Point(620, 45);
             this.txtTheLoai.Name = "txtTheLoai";
-            this.txtTheLoai.Size = new System.Drawing.Size(256, 28);
+            this.txtTheLoai.Size = new System.Drawing.Size(256, 24);
             this.txtTheLoai.TabIndex = 5;
             // 
             // txtTen
             // 
             this.txtTen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "Ten", true));
-            this.txtTen.Location = new System.Drawing.Point(254, 142);
+            this.txtTen.Location = new System.Drawing.Point(172, 120);
             this.txtTen.Name = "txtTen";
             this.txtTen.ReadOnly = true;
-            this.txtTen.Size = new System.Drawing.Size(225, 28);
+            this.txtTen.Size = new System.Drawing.Size(225, 24);
             this.txtTen.TabIndex = 3;
             // 
             // txtMa
             // 
             this.txtMa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLoaiHinhKhac, "Ma", true));
-            this.txtMa.Location = new System.Drawing.Point(254, 64);
+            this.txtMa.Location = new System.Drawing.Point(172, 42);
             this.txtMa.Name = "txtMa";
             this.txtMa.ReadOnly = true;
-            this.txtMa.Size = new System.Drawing.Size(225, 28);
+            this.txtMa.Size = new System.Drawing.Size(225, 24);
             this.txtMa.TabIndex = 1;
             // 
             // frmLoaiHinhKhac
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 832);
+            this.ClientSize = new System.Drawing.Size(915, 527);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gcLoaiHinhKhac);
             this.Controls.Add(this.barDockControlLeft);

@@ -20,7 +20,8 @@ namespace TPNT
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        public frmMainMenu()
+        private frmLogin frmLG;
+        public frmMainMenu(frmLogin frmLG)
         {
             InitializeComponent();
 
@@ -33,7 +34,8 @@ namespace TPNT
             if (Program.mGroup.Equals("KHACH"))
             {
                 btnBackupRestore.Visible = false;
-            } else
+            }
+            else
             {
                 btnBackupRestore.Visible = true;
             }
@@ -41,6 +43,7 @@ namespace TPNT
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.frmLG = frmLG;
         }
 
         private struct RGBColors
@@ -51,11 +54,11 @@ namespace TPNT
             public static Color color4 = Color.FromArgb(255, 0, 128, 0);
             public static Color color5 = Color.FromArgb(255, 0, 191, 255);
             public static Color color6 = Color.FromArgb(255, 255, 182, 193);
-            public static Color color7 = Color.FromArgb(255, 255, 182, 193);
-            public static Color color8 = Color.FromArgb(255, 255, 182, 193);
-            public static Color color9 = Color.FromArgb(255, 255, 182, 193);
-            public static Color color10 = Color.FromArgb(255, 255, 182, 193);
-            public static Color color11 = Color.FromArgb(255, 255, 182, 193);
+            public static Color color7 = Color.FromArgb(255, 0, 255, 255);
+            public static Color color8 = Color.FromArgb(255, 255, 0, 255);
+            public static Color color9 = Color.FromArgb(255, 192, 192, 192);
+            public static Color color10 = Color.FromArgb(255, 128, 128, 128);
+            public static Color color11 = Color.FromArgb(255, 255, 165, 0);
         }
 
         private void ActivateButton(object senderBtn, Color color)
@@ -283,7 +286,8 @@ namespace TPNT
                 return;
             }
             if (Program.conn != null && Program.conn.State == ConnectionState.Open) Program.conn.Close();
-            Application.Exit();
+            this.frmLG.Show();
+            this.Close();
         }
 
         private void btnBackupRestore_Click(object sender, EventArgs e)

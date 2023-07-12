@@ -186,7 +186,7 @@
             this.Controls.Add(this.view_NullLoaiHinhSangTacGridControl);
             this.Name = "frmChonTPNTNullSangTac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmChonTPNTNullSangTac";
+            this.Text = "Chọn Tác Phẩm Nghệ Thuật";
             this.Load += new System.EventHandler(this.frmChonTPNTNullSangTac_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tPNTDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsNullLoaiHinhSangTac)).EndInit();

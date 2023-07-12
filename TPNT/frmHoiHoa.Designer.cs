@@ -79,7 +79,7 @@
             // 
             this.tenLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tenLabel.AutoSize = true;
-            this.tenLabel.Location = new System.Drawing.Point(194, 148);
+            this.tenLabel.Location = new System.Drawing.Point(25, 115);
             this.tenLabel.Name = "tenLabel";
             this.tenLabel.Size = new System.Drawing.Size(34, 17);
             this.tenLabel.TabIndex = 9;
@@ -89,7 +89,7 @@
             // 
             this.truongPhaiLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.truongPhaiLabel.AutoSize = true;
-            this.truongPhaiLabel.Location = new System.Drawing.Point(782, 220);
+            this.truongPhaiLabel.Location = new System.Drawing.Point(504, 184);
             this.truongPhaiLabel.Name = "truongPhaiLabel";
             this.truongPhaiLabel.Size = new System.Drawing.Size(82, 17);
             this.truongPhaiLabel.TabIndex = 6;
@@ -99,7 +99,7 @@
             // 
             this.chatLieuLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chatLieuLabel.AutoSize = true;
-            this.chatLieuLabel.Location = new System.Drawing.Point(194, 216);
+            this.chatLieuLabel.Location = new System.Drawing.Point(25, 183);
             this.chatLieuLabel.Name = "chatLieuLabel";
             this.chatLieuLabel.Size = new System.Drawing.Size(63, 17);
             this.chatLieuLabel.TabIndex = 4;
@@ -109,7 +109,7 @@
             // 
             this.vatLieuLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vatLieuLabel.AutoSize = true;
-            this.vatLieuLabel.Location = new System.Drawing.Point(782, 128);
+            this.vatLieuLabel.Location = new System.Drawing.Point(504, 92);
             this.vatLieuLabel.Name = "vatLieuLabel";
             this.vatLieuLabel.Size = new System.Drawing.Size(57, 17);
             this.vatLieuLabel.TabIndex = 2;
@@ -119,7 +119,7 @@
             // 
             this.maSoTPLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.maSoTPLabel.AutoSize = true;
-            this.maSoTPLabel.Location = new System.Drawing.Point(194, 89);
+            this.maSoTPLabel.Location = new System.Drawing.Point(25, 56);
             this.maSoTPLabel.Name = "maSoTPLabel";
             this.maSoTPLabel.Size = new System.Drawing.Size(106, 17);
             this.maSoTPLabel.TabIndex = 0;
@@ -190,7 +190,7 @@
             // 
             this.btnLuu.Caption = "Lưu";
             this.btnLuu.Id = 6;
-            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
+            this.btnLuu.ImageOptions.Image = global::TPNT.Properties.Resources.floppy_disk;
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuu_ItemClick);
             // 
@@ -237,34 +237,34 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1313, 53);
+            this.barDockControlTop.Size = new System.Drawing.Size(966, 32);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 724);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 615);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1313, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(966, 20);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 53);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 32);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 671);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 583);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1313, 53);
+            this.barDockControlRight.Location = new System.Drawing.Point(966, 32);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 671);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 583);
             // 
             // btnChiTiet
             // 
@@ -311,11 +311,11 @@
             // 
             this.gcHoiHoa.DataSource = this.bdsHoiHoa;
             this.gcHoiHoa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcHoiHoa.Location = new System.Drawing.Point(0, 53);
+            this.gcHoiHoa.Location = new System.Drawing.Point(0, 32);
             this.gcHoiHoa.MainView = this.gridView1;
             this.gcHoiHoa.MenuManager = this.barManager1;
             this.gcHoiHoa.Name = "gcHoiHoa";
-            this.gcHoiHoa.Size = new System.Drawing.Size(1313, 377);
+            this.gcHoiHoa.Size = new System.Drawing.Size(966, 332);
             this.gcHoiHoa.TabIndex = 33;
             this.gcHoiHoa.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -339,6 +339,7 @@
             this.colTruongPhai});
             this.gridView1.GridControl = this.gcHoiHoa;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.RowHeight = 20;
             // 
             // colMa
@@ -404,9 +405,9 @@
             this.groupBox1.Controls.Add(this.vatLieuLabel);
             this.groupBox1.Controls.Add(this.maSoTPLabel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 430);
+            this.groupBox1.Location = new System.Drawing.Point(0, 364);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1313, 294);
+            this.groupBox1.Size = new System.Drawing.Size(966, 251);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
@@ -415,7 +416,7 @@
             // 
             this.txtTruongPhai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTruongPhai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHoiHoa, "TruongPhai", true));
-            this.txtTruongPhai.Location = new System.Drawing.Point(952, 220);
+            this.txtTruongPhai.Location = new System.Drawing.Point(674, 184);
             this.txtTruongPhai.Name = "txtTruongPhai";
             this.txtTruongPhai.Size = new System.Drawing.Size(243, 24);
             this.txtTruongPhai.TabIndex = 17;
@@ -424,7 +425,7 @@
             // 
             this.txtChatLieu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtChatLieu.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHoiHoa, "ChatLieu", true));
-            this.txtChatLieu.Location = new System.Drawing.Point(362, 213);
+            this.txtChatLieu.Location = new System.Drawing.Point(193, 180);
             this.txtChatLieu.Name = "txtChatLieu";
             this.txtChatLieu.Size = new System.Drawing.Size(246, 24);
             this.txtChatLieu.TabIndex = 16;
@@ -433,7 +434,7 @@
             // 
             this.txtVatLieu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtVatLieu.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHoiHoa, "VatLieu", true));
-            this.txtVatLieu.Location = new System.Drawing.Point(952, 70);
+            this.txtVatLieu.Location = new System.Drawing.Point(674, 34);
             this.txtVatLieu.Multiline = true;
             this.txtVatLieu.Name = "txtVatLieu";
             this.txtVatLieu.Size = new System.Drawing.Size(243, 131);
@@ -443,7 +444,7 @@
             // 
             this.txtTen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHoiHoa, "Ten", true));
-            this.txtTen.Location = new System.Drawing.Point(362, 148);
+            this.txtTen.Location = new System.Drawing.Point(193, 115);
             this.txtTen.Name = "txtTen";
             this.txtTen.ReadOnly = true;
             this.txtTen.Size = new System.Drawing.Size(246, 24);
@@ -453,7 +454,7 @@
             // 
             this.txtMaTP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMaTP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHoiHoa, "Ma", true));
-            this.txtMaTP.Location = new System.Drawing.Point(362, 89);
+            this.txtMaTP.Location = new System.Drawing.Point(193, 56);
             this.txtMaTP.Name = "txtMaTP";
             this.txtMaTP.ReadOnly = true;
             this.txtMaTP.Size = new System.Drawing.Size(246, 24);
@@ -463,7 +464,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 744);
+            this.ClientSize = new System.Drawing.Size(966, 635);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gcHoiHoa);
             this.Controls.Add(this.barDockControlLeft);

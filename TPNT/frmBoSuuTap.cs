@@ -35,16 +35,16 @@ namespace TPNT
             }
             else
             {
-                btnThem.Enabled = btnHieuChinh.Enabled =
-                    btnXoa.Enabled  = true;
+                if (bdsBoSuuTap.Count == 0)
+                {
+                    btnHieuChinh.Enabled = btnXoa.Enabled = false;
+                }
+                else
+                {
+                    btnHieuChinh.Enabled = btnXoa.Enabled = true;
+                }
             }
-            if (bdsBoSuuTap.Count == 0)
-            {
-                btnHieuChinh.Enabled = btnXoa.Enabled = false;
-            } else
-            {
-                btnHieuChinh.Enabled = btnXoa.Enabled = true;
-            }
+            
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -56,6 +56,7 @@ namespace TPNT
             panelThongTin.Enabled = true;
             btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled  = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
+            txtMa.Enabled = true;
         }
 
         private void btnHieuChinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -66,11 +67,13 @@ namespace TPNT
             panelThongTin.Enabled = true;
             btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
+            txtMa.Enabled = false;
         }
 
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (suKien.Equals("")) return;
+            this.v_BO_SUU_TAPTableAdapter.Fill(this.tPNTDataSet.V_BO_SUU_TAP);
             bdsBoSuuTap.Position = viTri ;
             suKien = "";
             panelDSBoSuuTap.Enabled = true;
@@ -142,7 +145,7 @@ namespace TPNT
                 lenh = "SP_INSERT_BST '"
                         + ma + "', N'"
                         + ten + "', N'"
-                + hinhThuc + "', '"
+                + hinhThuc + "', N'"
                          + moTa + "', N'"
                          + diaChi + "', N'"
                         + nguoiGD + "', N'"
@@ -154,7 +157,7 @@ namespace TPNT
                 lenh = "SP_UPDATE_BST '"
                         + ma + "', N'"
                         + ten + "', N'"
-                + hinhThuc + "', '"
+                + hinhThuc + "', N'"
                          + moTa + "', N'"
                          + diaChi + "', N'"
                         + nguoiGD + "', N'"
@@ -168,8 +171,9 @@ namespace TPNT
                 MessageBox.Show("Lưu thành công", "", MessageBoxButtons.OK);
             }
             suKien = "";
-            panelDSBoSuuTap.Enabled = false;
-            panelThongTin.Enabled = true;
+            this.v_BO_SUU_TAPTableAdapter.Fill(this.tPNTDataSet.V_BO_SUU_TAP);
+            panelDSBoSuuTap.Enabled = true;
+            panelThongTin.Enabled = false;
             btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = btnXoa.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
         }
@@ -191,20 +195,13 @@ namespace TPNT
                     MessageBox.Show("Xoá bộ sưu tập thành công", "", MessageBoxButtons.OK);
                 }
                 this.v_BO_SUU_TAPTableAdapter.Fill(this.tPNTDataSet.V_BO_SUU_TAP);
+                if (bdsBoSuuTap.Count == 0)
+                {
+                    btnHieuChinh.Enabled = btnXoa.Enabled = false;
+                }
             }
         }
 
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            if (bdsBoSuuTap.Count == 0)
-            {
-                btnHieuChinh.Enabled = btnXoa.Enabled = false;
-                return;
-            }
-            else
-            {
-                btnHieuChinh.Enabled = btnXoa.Enabled = true;
-            }
-        }
+       
     }
 }

@@ -28,11 +28,13 @@ namespace TPNT
         String hoatdong = "";
         String PhucHoi = "";
         string MaCTL = "";
-        string maCTLPH = "";
-        string tenCTLPH = "";
-        DateTime timeFromPH;
-        DateTime timeToPH;
+        string maCTLPH = ""; string maCTLxoa = ""; string maCTLThem = "";
+        string tenCTLPH = ""; string tenCTLxoa = "";
+        DateTime timeFromPH; DateTime timeFromXoa;
+        DateTime timeToPH; DateTime timeToXoa;
         List<string> tpntList = new List<string>();
+      
+
         public frmCuocTrienLam()
         {
             InitializeComponent();
@@ -71,6 +73,7 @@ namespace TPNT
                 btnHoanTac.Enabled = false;
                 btnSaveData.Enabled = false;
                 btnExport.Enabled = false;
+                btnReport.Enabled = false;
                 btnImport.Enabled = false;
             }
             if (bdsCuocTrienLam.Count <= 0)
@@ -78,6 +81,8 @@ namespace TPNT
                 btnChiTiet.Enabled = false;
                 btnXoa.Enabled = false;
                 btnHieuChinh.Enabled = false;
+                btnExport.Enabled=false;
+                btnReport.Enabled=false;
             }
 
         }
@@ -155,6 +160,7 @@ namespace TPNT
             btnReload.Enabled = false;
             btnImport.Enabled = false;
             btnExport.Enabled = false;
+            btnReport.Enabled = false;
             btnSaveData.Enabled = true;
          
             dtpFrom.EditValue = "01/01/2023";
@@ -306,7 +312,7 @@ namespace TPNT
                         try
                         {
 
-                            maCTLPH = txtMaCTL.Text;
+                            maCTLThem = txtMaCTL.Text;
                             PhucHoi = "THEM";
                             DateTime TGBD = dtpFrom.DateTime;
                             DateTime TGKT = dtpTo.DateTime;
@@ -369,6 +375,10 @@ namespace TPNT
                                 btnChiTiet.Enabled = true;
                                 btnHoanTac.Enabled = true;
                                 btnReload.Enabled = true;
+                                btnExport.Enabled = true;
+                                btnReport.Enabled = true;
+                                btnImport.Enabled = true;
+                                btnSaveData.Enabled = false;
                                 MessageBox.Show("Thêm Thành Công.\n" + MessageBoxButtons.OK);
                                 frmCuocTrienLam_Load(sender, e);
                                 return;
@@ -422,7 +432,9 @@ namespace TPNT
                         dtpFrom.ReadOnly = false;
                         dtpTo.ReadOnly = false;
                         btnThem.Enabled = true;
-
+                        btnExport.Enabled = true;
+                        btnReport.Enabled = true;
+                        btnImport.Enabled = true;
                         btnHieuChinh.Enabled = true;
                         btnXoa.Enabled = true;
                         btnHoanTac.Enabled = true;
@@ -434,6 +446,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.cuocTrienLamTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi hiệu chỉnh Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
                         // tro ve vi tri cua nhan vien dang bi loi
@@ -447,15 +460,7 @@ namespace TPNT
         
         }
 
-        private void grbThemCTL_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void grbDSTPNT_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -478,11 +483,11 @@ namespace TPNT
                     PhucHoi = "XOA";
                     DataRowView rowView = (DataRowView)bdsCuocTrienLam[bdsCuocTrienLam.Position];
                     string MaCTL = rowView["MaSoCTL"].ToString();
-                    tenCTLPH = rowView["Ten"].ToString();
-                    maCTLPH = rowView["MaSoCTL"].ToString();
-                    timeFromPH = (DateTime)rowView["NgayBD"];
-                    timeToPH = (DateTime)rowView["NgayKT"];
-
+                    tenCTLxoa = rowView["Ten"].ToString();
+                    maCTLxoa = rowView["MaSoCTL"].ToString();
+                    timeFromXoa = (DateTime)rowView["NgayBD"];
+                    timeToXoa = (DateTime)rowView["NgayKT"];
+                    tpntList.Clear();
                     using (SqlConnection connection = new SqlConnection(Program.connstr))
                     {
                         connection.Open();
@@ -521,11 +526,21 @@ namespace TPNT
 
                         MessageBox.Show("Xóa thành công ", "Thông báo", MessageBoxButtons.OK);
                         this.btnHoanTac.Enabled = true;
+                        if (bdsCuocTrienLam.Count <= 0)
+                        {
+                            btnChiTiet.Enabled = false;
+                            btnXoa.Enabled = false;
+                            btnHieuChinh.Enabled = false;
+                            btnExport.Enabled = false;
+                            btnReport.Enabled = false;
+                            btnImport.Enabled = true;
+                        }    
                     }
                 }
                 catch (Exception ex)
                 {
                     /*Step 4*/
+                    this.cuocTrienLamTableAdapter.Connection.ConnectionString = Program.connstr;
                     MessageBox.Show("Lỗi xóa . Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                     this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
                     // tro ve vi tri cua nhan vien dang bi loi
@@ -545,6 +560,7 @@ namespace TPNT
         {
             if (MessageBox.Show("Bạn có thật sự muốn hủy bỏ ?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
+                bdsCuocTrienLam.CancelEdit();
                 if (hoatdong.Equals("THEM"))
                 {
                     bdsCuocTrienLam.EndEdit();
@@ -552,10 +568,11 @@ namespace TPNT
                    
                 }
                 btnSaveData.Enabled = false;
-                bdsCuocTrienLam.CancelEdit();
+             
                 cuocTrienLamGridControl.Enabled = true;
                 btnThem.Enabled = true;
                 btnExport.Enabled = true;
+                btnReport.Enabled = true;
                 btnImport.Enabled = true;
                 btnHieuChinh.Enabled = true;
                 btnXoa.Enabled = true;
@@ -613,6 +630,7 @@ namespace TPNT
             btnReload.Enabled = false;
             grbNhap.Enabled = true;
             btnExport.Enabled = false;
+            btnReport.Enabled = false;
             btnImport.Enabled = false;
             grbThemCTL.Visible = true;
             grbDSTPNT.Visible = false;
@@ -657,7 +675,7 @@ namespace TPNT
                                 command.CommandType = CommandType.StoredProcedure;
 
                                 // Thêm các tham số vào Stored Procedure
-                                command.Parameters.AddWithValue("@maCTL", maCTLPH);
+                                command.Parameters.AddWithValue("@maCTL", maCTLThem);
 
                                 // Thực thi Stored Procedure
                                 command.ExecuteNonQuery();
@@ -675,6 +693,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.cuocTrienLamTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hoàn Tác. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
                         // tro ve vi tri cua nhan vien dang bi loi
@@ -717,6 +736,7 @@ namespace TPNT
                     catch (Exception ex)
                     {
                         /*Step 4*/
+                        this.cuocTrienLamTableAdapter.Connection.ConnectionString = Program.connstr;
                         MessageBox.Show("Lỗi Hoàn Tác. Hãy thử lại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
                         // tro ve vi tri cua nhan vien dang bi loi
@@ -732,22 +752,24 @@ namespace TPNT
                 if (MessageBox.Show("Bạn có thật sự muốn Hoàn Tác?", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
 
-
+                 
                     try
                     {
                         using (SqlConnection connection = new SqlConnection(Program.connstr))
                         {
+                           
                             connection.Open();
 
                             using (SqlCommand command = new SqlCommand("SP_InsertCuocTrienLam", connection))
                             {
+
                                 command.CommandType = CommandType.StoredProcedure;
 
                                 // Thêm các tham số vào Stored Procedure
-                                command.Parameters.AddWithValue("@maCTL", maCTLPH);
-                                command.Parameters.AddWithValue("@Ten", tenCTLPH);
-                                command.Parameters.AddWithValue("@TGBD", timeFromPH);
-                                command.Parameters.AddWithValue("@TGKT", timeToPH);
+                                command.Parameters.AddWithValue("@maCTL", maCTLxoa);
+                                command.Parameters.AddWithValue("@Ten", tenCTLxoa);
+                                command.Parameters.AddWithValue("@TGBD", timeFromXoa);
+                                command.Parameters.AddWithValue("@TGKT", timeToXoa);
 
                                 // Thực thi Stored Procedure
                                 command.ExecuteNonQuery();
@@ -762,18 +784,25 @@ namespace TPNT
                                             command.CommandType = CommandType.StoredProcedure;
 
                                             // Thêm các tham số vào Stored Procedure
-                                            command.Parameters.AddWithValue("@maCTL", maCTLPH);
+                                            command.Parameters.AddWithValue("@maCTL", maCTLxoa);
                                             command.Parameters.AddWithValue("@maTPNT", maTPNT);
 
                                             // Thực thi Stored Procedure
                                             command.ExecuteNonQuery();
                                         }
-                                    
-
+                                   
                             }
+                   
                             btnHoanTac.Enabled = false;
                             PhucHoi = "";
+                            btnChiTiet.Enabled = true;
+                            btnXoa.Enabled = true;
+                            btnHieuChinh.Enabled = true;
+                            btnExport.Enabled = true;
+                            btnReport.Enabled = true;
+                            tpntList.Clear();
                             MessageBox.Show("Hoàn Tác Thành Công.\n" + MessageBoxButtons.OK);
+
                             frmCuocTrienLam_Load(sender, e);
                             return;
                         }
@@ -781,6 +810,7 @@ namespace TPNT
                     }
                     catch (Exception ex)
                     {
+                        
                         // Xử lý ngoại lệ, ví dụ: in thông báo lỗi hoặc thực hiện các hành động khác
                         MessageBox.Show("Lỗi hoàn tác Cuộc Triển Lãm.\n" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         return;
@@ -1008,6 +1038,13 @@ namespace TPNT
 
                         }
                         MessageBox.Show("Dữ liệu đã được nhập thành công từ tập tin Excel!", "Nhập từ Excel thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnExport.Enabled = true;
+                        btnReport.Enabled = true;
+                        btnChiTiet.Enabled = true;
+                        btnHieuChinh.Enabled = true;
+                        btnXoa.Enabled = true;
+                        btnHoanTac.Enabled = false;
+                        PhucHoi = "";
                     }
                     catch (Exception ex)
                     {
@@ -1021,6 +1058,12 @@ namespace TPNT
 
                 this.cuocTrienLamTableAdapter.Fill(this.tPNTDataSet.CuocTrienLam);
             }
+        }
+
+        private void btnReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = new FrmRPCuocTrienLam();
+            frm.Show();
         }
     }
 }

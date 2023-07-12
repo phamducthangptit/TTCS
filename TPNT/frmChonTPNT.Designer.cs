@@ -174,8 +174,9 @@
             // 
             this.loiDienGiaiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "LoiDienGiai", true));
             this.loiDienGiaiTextBox.Location = new System.Drawing.Point(77, 276);
+            this.loiDienGiaiTextBox.Multiline = true;
             this.loiDienGiaiTextBox.Name = "loiDienGiaiTextBox";
-            this.loiDienGiaiTextBox.Size = new System.Drawing.Size(100, 20);
+            this.loiDienGiaiTextBox.Size = new System.Drawing.Size(275, 170);
             this.loiDienGiaiTextBox.TabIndex = 57;
             // 
             // bdsTPNT
@@ -351,7 +352,6 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
-
             this.tableAdapterManager.UpdateOrder = TPNT.TPNTDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // bdsTG
@@ -372,6 +372,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmChonTPNT";
             this.Text = "frmChonTPNT";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmChonTPNT_FormClosing);
             this.Load += new System.EventHandler(this.frmChonTPNT_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
