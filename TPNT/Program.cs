@@ -23,7 +23,7 @@ namespace TPNT
 
         public static SqlDataReader myReader;
 
-        public static String servername = "ADMIN-PC";
+        public static String servername = "MSI";
 
 
 
