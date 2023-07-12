@@ -33,11 +33,11 @@ namespace TPNT
             lbUser.Text = "Tên: " + Program.username;
             if (Program.mGroup.Equals("KHACH"))
             {
-                btnBackupRestore.Visible = false;
+                btnBackupRestore.Visible= btnUser.Visible = false;
             }
             else
             {
-                btnBackupRestore.Visible = true;
+                btnBackupRestore.Visible = btnUser.Visible = true;
             }
             this.Text = string.Empty;
             this.ControlBox = false;
@@ -179,13 +179,14 @@ namespace TPNT
 
         private void btnLoaiHinhSangTac_Click(object sender, EventArgs e)
         {
+            showSubMenu(panelLoaiHinhSangTac);
             ActivateButton(sender, RGBColors.color5);
             lblTitleFormChild.Text = "Loại hình sáng tác";
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
-            showSubMenu(panelLoaiHinhSangTac);
+            
         }
 
 
@@ -211,13 +212,14 @@ namespace TPNT
 
         private void btnLoaiHinhSoHuu_Click_1(object sender, EventArgs e)
         {
+            showSubMenu(panelLoaiHinhSoHuu);
             ActivateButton(sender, RGBColors.color9);
             lblTitleFormChild.Text = "LoaiHinhDiMuon";
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
-            showSubMenu(panelLoaiHinhSoHuu);
+           
         }
 
         private void btnHoiHoa_Click(object sender, EventArgs e)
@@ -299,7 +301,7 @@ namespace TPNT
             if (loginResult == DialogResult.OK)
             {
                 Form frm = new frmBackup_Restore();
-                currentChildForm = frm;
+                //currentChildForm = frm;
                 frm.Show();
             }
         }
@@ -313,6 +315,18 @@ namespace TPNT
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmTaoLogin();
+            DialogResult frmResult = frm.ShowDialog();
+            if (frmResult == DialogResult.OK)
+            {
+                if (Program.conn != null && Program.conn.State == ConnectionState.Open) Program.conn.Close();
+                this.frmLG.Show();
+                this.Close();
+            }
         }
     }
 }
