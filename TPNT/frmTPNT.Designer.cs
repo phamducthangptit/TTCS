@@ -474,6 +474,7 @@
             this.colQuốcgia});
             this.gridView1.GridControl = this.v_TPNTGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // colMãtácphẩm
@@ -610,8 +611,9 @@
             // 
             this.txtLoiDienGiai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTPNT, "LoiDienGiai", true));
             this.txtLoiDienGiai.Location = new System.Drawing.Point(75, 307);
+            this.txtLoiDienGiai.Multiline = true;
             this.txtLoiDienGiai.Name = "txtLoiDienGiai";
-            this.txtLoiDienGiai.Size = new System.Drawing.Size(100, 20);
+            this.txtLoiDienGiai.Size = new System.Drawing.Size(270, 151);
             this.txtLoiDienGiai.TabIndex = 31;
             // 
             // panelThongTin

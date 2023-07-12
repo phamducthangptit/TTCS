@@ -39,31 +39,34 @@ namespace TPNT
             }
             else
             {
-                btnThem.Enabled = btnHieuChinh.Enabled =
-                    btnXoa.Enabled  = true;
+                if (bdsBoSuuTap.Count == 0)
+                {
+                    btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = false;
+                }
+                else
+                {
+                    btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = true;
+                }
+                if (bdsLoaiDiMuon.Count == 0)
+                {
+                    btnHieuChinh.Enabled = btnXoa.Enabled = false;
+                } else
+                {
+                    btnHieuChinh.Enabled = btnXoa.Enabled = true;
+                }
             }
-            if (bdsBoSuuTap.Count == 0)
-            {
-                btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = false;
-            }
-            else
-            {
-                btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = true;
-            }
+            
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            
             if (bdsLoaiDiMuon.Count == 0)
             {
-                btnHieuChinh.Enabled = btnXoa.Enabled = false;
                 return;
-            } else
-            {
-                btnHieuChinh.Enabled = btnXoa.Enabled = true;
             }
-                
-            
+
+
             string hinhAnh = ((DataRowView)bdsLoaiDiMuon[bdsLoaiDiMuon.Position])["HinhAnh"].ToString();
             if (hinhAnh.Equals(""))
             {
@@ -83,16 +86,12 @@ namespace TPNT
 
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            
             if (bdsLoaiDiMuon.Count == 0)
             {
                 pictureTPNT.Image = new Bitmap(Application.StartupPath + "//Resources//" + "macDinh.png");
                 txtTacGia.ResetText();
-                btnHieuChinh.Enabled = btnXoa.Enabled = false;
                 return;
-            }
-            else
-            {
-                btnHieuChinh.Enabled = btnXoa.Enabled = true;
             }
 
             viTriBST = bdsBoSuuTap.Position;
@@ -117,6 +116,7 @@ namespace TPNT
             panelDSBoSuuTap.Enabled = false;
             btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = btnXoa.Enabled = false;
             btnPhucHoi.Enabled = btnGhi.Enabled =true;
+            btnChonTP.Visible = true;
             Form form = new frmChonTPNT(this);
             form.Show();
         }
@@ -228,6 +228,7 @@ namespace TPNT
             panelDSBoSuuTap.Enabled = true;
             btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = btnXoa.Enabled = true;
             btnPhucHoi.Enabled = btnGhi.Enabled =false;
+            btnChonTP.Visible = false;
             suKien = "";
             viTri = bdsLoaiDiMuon.Position;
         }
@@ -243,7 +244,9 @@ namespace TPNT
             panelDSBoSuuTap.Enabled = true;
             btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = btnXoa.Enabled = true;
             btnPhucHoi.Enabled = btnGhi.Enabled =false;
+            btnChonTP.Visible = false;
             suKien = "";
+            this.sP_BOSUUTAP_TPNTTableAdapter.Fill(this.tPNTDataSet.SP_BOSUUTAP_TPNT);
             bdsLoaiDiMuon.Position = viTri;
         }
 
@@ -266,6 +269,12 @@ namespace TPNT
                     MessageBox.Show("Xoá tác phẩm thành công", "", MessageBoxButtons.OK);
                 }
                 this.sP_BOSUUTAP_TPNTTableAdapter.Fill(this.tPNTDataSet.SP_BOSUUTAP_TPNT);
+                if (bdsLoaiDiMuon.Count == 0)
+                {
+                    pictureTPNT.Image = new Bitmap(Application.StartupPath + "//Resources//" + "macDinh.png");
+                    txtTacGia.ResetText();
+                    btnHieuChinh.Enabled = btnXoa.Enabled = false;
+                }
             }
         }
 
@@ -288,6 +297,17 @@ namespace TPNT
             panelDSBoSuuTap.Enabled = false;
             btnThem.Enabled = btnHieuChinh.Enabled = btnReload.Enabled = btnXoa.Enabled = false;
             btnPhucHoi.Enabled = btnGhi.Enabled = true;
+        }
+
+        private void btnChonTP_Click(object sender, EventArgs e)
+        {
+            Form frm = frmMainMenu.CheckExist(typeof(frmChonTPNT));
+            if (frm != null) { frm.Show(); }
+            else
+            {
+                Form form = new frmChonTPNT(this);
+                form.Show();
+            }
         }
     }
 }

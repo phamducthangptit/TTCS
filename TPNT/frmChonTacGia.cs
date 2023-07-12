@@ -22,6 +22,7 @@ namespace TPNT
         private void frmChonTacGia_Load(object sender, EventArgs e)
         {
             tPNTDataSet.EnforceConstraints = false;
+            this.v_TAC_GIATableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_TAC_GIATableAdapter.Fill(this.tPNTDataSet.V_TAC_GIA);
 
         }
