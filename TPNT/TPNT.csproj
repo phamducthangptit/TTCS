@@ -236,6 +236,12 @@
     <Compile Include="frmTaiSanBaoTang.Designer.cs">
       <DependentUpon>frmTaiSanBaoTang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTaoLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaoLogin.Designer.cs">
+      <DependentUpon>frmTaoLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTPNT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,6 +325,9 @@
     <EmbeddedResource Include="frmTacGia.resx">
       <DependentUpon>frmTacGia.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaoLogin.resx">
+      <DependentUpon>frmTaoLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTPNT.resx">
       <DependentUpon>frmTPNT.cs</DependentUpon>
